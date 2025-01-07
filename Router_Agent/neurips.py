@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
+import pdfplumber  # Library for reading PDFs
 
 # Load environment variables from .env file
 load_dotenv()
@@ -25,9 +26,15 @@ class RouteQuery(BaseModel):
 
 # Define Router class
 class Router:
-    def __init__(self, model, api_key):
-        self.llm = ChatGroq(model=model, api_key=api_key)
-        self.system_prompt = """You are an expert at routing research papers to the most suitable academic journal.\n        Use the provided journal name, paper title, and abstract to make an informed decision."""
+    def __init__(self, api_key):
+        self.llm = ChatGroq(
+            model="mixtral-8x7b-32768",
+            temperature=0,  # Set the temperature for deterministic output
+            max_tokens=None,  # No limit on the number of tokens
+            timeout=None,  # No timeout
+            max_retries=2,  # Retry up to 2 times if the request fails
+        )
+        self.system_prompt = """You are an expert at routing research papers to the most suitable academic journal.\nUse the provided journal name, paper title, and abstract to make an informed decision."""
         self.structured_llm_router = self.llm.with_structured_output(RouteQuery)
         self.route_prompt = ChatPromptTemplate.from_messages(
             [
@@ -48,16 +55,21 @@ class Router:
         return result
 
 # Path to the dataset folder
-dataset_folder = r'C:\Users\Anushree\Desktop\KDSH\KDSH\Data'
+dataset_folder = "/home/anushree/KDSH/Papers"
+
+# Check if the dataset folder exists
+if not os.path.exists(dataset_folder):
+    raise FileNotFoundError(f"Dataset folder not found at {dataset_folder}")
 
 # Function to load research papers from the dataset folder
 def load_research_papers(folder_path):
     papers = {}
     for file_name in os.listdir(folder_path):
-        if file_name.endswith(".txt") or file_name.endswith(".pdf"):
+        if file_name.endswith(".pdf"):
             file_path = os.path.join(folder_path, file_name)
-            with open(file_path, 'r', encoding='utf-8') as file:
-                papers[file_name] = file.read()
+            with pdfplumber.open(file_path) as pdf:
+                text = ''.join(page.extract_text() for page in pdf.pages if page.extract_text())
+                papers[file_name] = text
     return papers
 
 # Function to determine if a paper fits into a journal based on its title and abstract
@@ -69,15 +81,12 @@ def check_paper_fit_with_router_agent(router, paper_title, paper_abstract, journ
 papers = load_research_papers(dataset_folder)
 
 # Initialize the Router
-router = Router(model="groq", api_key=groq_api_key)
+router = Router(api_key=groq_api_key)
 
-# Example: Using the router agent on a specific paper and journal
-paper_title = "Deep Learning for Natural Language Processing: Advances and Trends"
-paper_abstract = (
-    "This paper reviews recent advances in deep learning techniques and their applications "
-    "in natural language processing, highlighting key trends and challenges."
-)
-journal_name = "NeurIPS"
-
-result = check_paper_fit_with_router_agent(router, paper_title, paper_abstract, journal_name)
-print(f"Result for paper '{paper_title}' in journal '{journal_name}': {result}")
+# Example: Using the router agent on the first paper in the folder
+for file_name, content in papers.items():
+    paper_title = file_name.replace(".pdf", "")  # Use the filename as the title
+    paper_abstract = content[:500]  # Use the first 500 characters as the abstract
+    journal_name = "NeurIPS"
+    result = check_paper_fit_with_router_agent(router, paper_title, paper_abstract, journal_name)
+    print(f"Result for paper '{paper_title}' in journal '{journal_name}': {result}")
