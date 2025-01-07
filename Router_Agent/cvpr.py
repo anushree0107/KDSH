@@ -87,6 +87,6 @@ router = Router(api_key=groq_api_key)
 for file_name, content in papers.items():
     paper_title = file_name.replace(".pdf", "")  # Use the filename as the title
     paper_abstract = content[:500]  # Use the first 500 characters as the abstract
-    journal_name = "NeurIPS"
+    journal_name = "CVPR"
     result = check_paper_fit_with_router_agent(router, paper_title, paper_abstract, journal_name)
     print(f"Result for paper '{paper_title}' in journal '{journal_name}': {result}")
