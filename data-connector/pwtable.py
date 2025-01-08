@@ -2,7 +2,7 @@ import pathway as pw
 
 # Define the Google Drive connector
 table = pw.io.gdrive.read(
-    object_id="10Tn2WmWaYkysgaEsGcC1k-vcTbLNb5QY",
+    object_id="1OEkkw7LAwF4fXMo1wUub1KeAFCMEWSCY",
     service_user_credentials_file="credentials.json",
     mode="streaming",
     with_metadata=True,
