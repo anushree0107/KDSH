@@ -55,7 +55,7 @@ class Router:
         return result
 
 # Path to the dataset folder
-dataset_folder = "/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Data/Papers"
+dataset_folder = "/home/anushree/KDSH/Papers"
 
 # Check if the dataset folder exists
 if not os.path.exists(dataset_folder):
