@@ -10,13 +10,15 @@ table = pw.io.gdrive.read(
 )
 
 # Select metadata and content from the table
-def process_files(table: pw.Table):
-    return table.select(
-        file_id=table._metadata["id"],         # File ID
-        file_name=table._metadata["name"],     # File name
-        file_type=table._metadata["mimeType"], # MIME type
-        content=table.data                     # Binary content
-    )
+# def process_files(table: pw.Table):
+#     return table.select(
+#         file_id=table._metadata["id"],         # File ID
+#         file_name=table._metadata["name"],     # File name
+#         file_type=table._metadata["mimeType"], # MIME type
+#         content=table.data                     # Binary content
+#     )
 
-processed_table = process_files(table)
-print(processed_table)
+# processed_table = process_files(table)
+print(*table)
+
+pw.run()
