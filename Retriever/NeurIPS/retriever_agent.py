@@ -68,7 +68,7 @@ class NeuripsRulebook:
             host="127.0.0.1", 
             port=PATHWAY_PORT, 
             threaded=True, 
-            with_cache=True,
+            with_cache=False,
         )
         time.sleep(60)  # Wait for server initialization
 
@@ -195,7 +195,7 @@ def get_query_results(query):
     ○ Insufficient clarity on how Theorem 1 directly informs the proposed algorithm.
     """
 
-    output_file = "/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Rulebook/rulebook_documents/neurips_rulebook.txt"
+    output_file = "/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Retriever/Rulebook/neurips_rulebook.txt"
     
     # Instantiating the class will handle everything automatically
     neurips = NeuripsRulebook(rulebook_content, output_file)
