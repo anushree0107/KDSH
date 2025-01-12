@@ -1,4 +1,7 @@
 import os
+import sys
+sys.path.append('/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Retriever')
+from emnlp_retriever import EMNLPRulebook
 from typing import Literal
 from pydantic import BaseModel, Field
 from langchain_core.prompts import ChatPromptTemplate
@@ -55,7 +58,7 @@ class Router:
         return result
 
 # Path to the dataset folder
-dataset_folder = "/home/anushree/KDSH/Papers"
+dataset_folder = "/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Papers"
 
 # Check if the dataset folder exists
 if not os.path.exists(dataset_folder):
@@ -83,10 +86,13 @@ papers = load_research_papers(dataset_folder)
 # Initialize the Router
 router = Router(api_key=groq_api_key)
 
+emnlp = EMNLPRulebook()
 # Example: Using the router agent on the first paper in the folder
 for file_name, content in papers.items():
     paper_title = file_name.replace(".pdf", "")  # Use the filename as the title
     paper_abstract = content[:500]  # Use the first 500 characters as the abstract
     journal_name = "EMNLP"
     result = check_paper_fit_with_router_agent(router, paper_title, paper_abstract, journal_name)
-    print(f"Result for paper '{paper_title}' in journal '{journal_name}': {result}")
+    print(f"Result for paper '{paper_title}' in journal '{journal_name}': {result.decision}")
+    if result.decision == "Fits":
+        print(emnlp.query_vector_store(result.explanation))

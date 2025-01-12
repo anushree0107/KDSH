@@ -7,7 +7,7 @@ import pdfplumber  # Use pdfplumber to read the streamed PDF data
 # Define the scope and load credentials
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
 credentials = Credentials.from_service_account_file(
-    '/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/data-connector/credentials.json', 
+    '/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Data Connector/credentials.json', 
     scopes=SCOPES
 )
 
@@ -50,9 +50,16 @@ for pdf in pdf_files:
     print(f"Streaming: {pdf['name']}")
     pdf_stream = stream_pdf_file(service, pdf['id'])
     
-    # Example: Read the PDF using pdfplumber
+    # Example: Read the first 500 characters using pdfplumber
+    # Example: Read the first 500 characters using pdfplumber with fixed spaces
     with pdfplumber.open(pdf_stream) as pdf_reader:
-        print(f"Content of {pdf['name']}:")
+        content = ""
         for page in pdf_reader.pages:
-            print(page.extract_text())
-            break  # Print only the first page for brevity
+            # Use 'page.extract_text(x_tolerance=2, y_tolerance=2)' to better handle spaces
+            page_text = page.extract_text(x_tolerance=2, y_tolerance=2)
+            if page_text:
+                content += page_text
+            if len(content) >= 500:
+                break  # Stop if we have 500 characters
+        print(f"First 500 characters of {pdf['name']}:\n{content[:500]}")
+

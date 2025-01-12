@@ -1,0 +1,73 @@
+● R014
+
+Review of "Addressing Min-Max Challenges in Nonconvex-Nonconcave
+Problems with Solutions Exhibiting Weak Minty Properties"
+Strengths:
+1. Novel Contribution: The introduction of weak Minty solutions and their application
+to nonconvex-nonconcave min-max problems extends existing monotonicity
+concepts, offering new insights into challenging optimization scenarios.
+2. Methodological Innovation: Proposes OGDA+ and an adaptive step-size
+variant of EG+, achieving convergence rates comparable to or better than
+traditional methods like extragradient (EG).
+3. Practical Relevance: Adaptive step-size EG+ removes the dependency on the
+Lipschitz constant, making it more versatile for real-world problems with varying
+curvature.
+4. Robust Experiments: The inclusion of numerical experiments (e.g., von
+Neumann’s ratio game, "Forsaken," and lower bound examples) validates the
+theoretical results and demonstrates the utility of the proposed methods.
+Weaknesses:
+1. Limited Generality: While weak Minty solutions broaden the scope of solvable
+problems, the paper lacks a detailed discussion on their applicability across
+various domains beyond theoretical cases.
+2. Complexity of Analysis: The mathematical framework, particularly around
+step-size constraints and adaptive methods, may be challenging for readers
+without a strong background in variational inequalities.
+3. Scalability Concerns: The practical implementation of adaptive methods in
+large-scale or high-dimensional settings remains unclear.
+Questions:
+1. How do weak Minty solutions compare to other generalizations of monotonicity in
+terms of practical problem applicability?
+2. Are there scenarios where OGDA+ provides a clear advantage over EG+ beyond
+the specific lower bound example?
+
+3. What are the computational trade-offs of adaptive step-size EG+ versus
+backtracking methods?
+Suggestions for Improvement:
+1. Provide more examples of real-world applications where weak Minty solutions
+and the proposed methods are beneficial.
+2. Simplify the explanation of theoretical concepts like step-size constraints and
+parameter tuning for broader accessibility.
+3. Explore scalability and efficiency of adaptive step-size methods in
+high-dimensional optimization problems.
+Minor Issues:
+● Clarify the role of the parameter γ\gammaγ in OGDA+ and how it affects
+convergence rates.
+● Improve figures to highlight key experimental results more effectively.
+● Discuss limitations of weak Minty solutions in greater depth.
+
+● RO15
+
+Review of "Examining the Convergence of Denoising Diffusion
+Probabilistic Models: A Quantitative Analysis"
+Strengths:
+1. Novel Contribution: Provides a quantitative upper bound on the Wasserstein
+distance for diffusion models without relying on restrictive assumptions or
+exponential dependencies.
+2. Theoretical Rigor: Avoids relying on the learned score function or SDE toolkit,
+offering a robust alternative with straightforward proofs.
+3. Practical Implications: Demonstrates applicability across various
+data-generating distributions, even those lacking density relative to the Lebesgue
+measure.
+Weaknesses:
+1. Complexity: Dense mathematical framework might limit accessibility for readers
+unfamiliar with Wasserstein metrics or diffusion models.
+
+2. Empirical Validation: Limited experimental results to illustrate real-world
+applicability of the theoretical bounds.
+Suggestions:
+1. Include intuitive explanations or visualizations to enhance accessibility.
+2. Expand on empirical evaluation, showcasing benefits for practical applications
+like image generation.
+Overall Assessment:
+A solid theoretical contribution that strengthens the understanding of diffusion model
+convergence. Improved accessibility and practical validation would enhance its impact.

@@ -5,7 +5,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import pdfplumber  # Library for reading PDFs
-
+import sys
+import os
 # Load environment variables from .env file
 load_dotenv()
 
@@ -55,7 +56,7 @@ class Router:
         return result
 
 # Path to the dataset folder
-dataset_folder = "/home/anushree/KDSH/Papers"
+dataset_folder = "/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Papers"
 
 # Check if the dataset folder exists
 if not os.path.exists(dataset_folder):
@@ -89,4 +90,6 @@ for file_name, content in papers.items():
     paper_abstract = content[:500]  # Use the first 500 characters as the abstract
     journal_name = "NeurIPS"
     result = check_paper_fit_with_router_agent(router, paper_title, paper_abstract, journal_name)
-    print(f"Result for paper '{paper_title}' in journal '{journal_name}': {result}")
+    print(f"Result for paper '{paper_title}' in journal '{journal_name}': {result.decision}")
+    if result.decision == "Fits":
+        print(get_query_results(content))

@@ -1,0 +1,79 @@
+● R010
+
+Review of "Detecting Medication Usage in Parkinson’s Disease Through Multi-modal
+Indoor Positioning: A Pilot Study in a Naturalistic Environment"
+Strengths:
+1. Novel Contribution: The study introduces the MDCSA model, leveraging RSSI and
+accelerometer data for indoor localization, and applies it to monitor Parkinson's disease
+(PD) symptoms, a unique and impactful application.
+2. Real-World Dataset: Data collected from smart homes with PD and healthy control
+participants provides ecological validity, emphasizing naturalistic and free-living
+conditions.
+3. Innovative Framework: The integration of multi-modal data with the MDCSA model
+effectively captures temporal dynamics and reduces noise, improving room-level
+localization and medication state classification.
+4. Clinical Relevance: The use of in-home gait speed features for detecting medication
+states highlights practical implications for monitoring PD progression and aiding clinical
+decision-making.
+Weaknesses:
+1. Sample Size: The small participant cohort limits the generalizability of findings and
+statistical robustness.
+2. Model Transferability: The MDCSA model’s performance may vary in diverse home
+layouts, necessitating additional pre-training for new environments.
+3. Limited Feature Exploration: Only a subset of gait speed features is used for
+medication state prediction; exploring additional features may enhance accuracy.
+Suggestions for Improvement:
+1. Validate the model on larger, more diverse cohorts to improve generalizability.
+2. Address transferability challenges by testing the model in varied home layouts and
+conditions.
+3. Explore additional features and alternative sensor modalities to enrich medication state
+predictions.
+Minor Issues:
+● Provide detailed visualizations of room-to-room transitions for clearer interpretation.
+● Clarify the limitations of the accelerometer data in cases of severe PD symptoms.
+
+● R011
+Review of the Paper "Addressing Popularity Bias with
+Popularity-Conscious Alignment and Contrastive Learning"
+Strengths:
+1. Novelty: The introduction of the Popularity-Aware Alignment and Contrast (PAAC)
+method is innovative. It effectively addresses two key issues—insufficient representation
+learning for unpopular items and representation separation caused by popularity bias.
+2. Methodological Rigor: The paper provides a detailed explanation of the PAAC
+framework, including the supervised alignment and re-weighted contrastive learning
+modules. The inclusion of dynamic grouping and adjustable hyperparameters enhances
+flexibility and applicability across different datasets.
+3. Experimental Validation: The paper presents thorough experiments on three real-world
+datasets (Amazon-Book, Yelp2018, Gowalla), with significant performance
+improvements shown over various baselines.
+4. Ablation Study: The ablation study clearly highlights the contributions of different
+components of PAAC, demonstrating its effectiveness.
+5. Comprehensive Evaluation: Metrics such as Recall@K, HR@K, and NDCG@K are
+used, and the model’s performance across varying popularity item groups is analyzed.
+Weaknesses:
+1. Clarity of Mathematical Formulations: Some equations, particularly those for
+re-weighted contrastive learning, lack intuitive explanations for non-expert readers.
+Clarifying the underlying reasoning could improve understanding.
+2. Limited Discussion on Hyperparameter Sensitivity: While the authors present
+experiments on hyperparameters (α, β, λ1, λ2), a deeper discussion on the choice of
+optimal values and their generalizability across datasets is missing.
+3. Sparse Dataset Limitation: The model’s performance improvements on sparser
+datasets like Gowalla are less pronounced. Further refinement for such datasets could
+improve robustness.
+Questions:
+1. How does PAAC handle highly dynamic environments where item popularity changes
+frequently?
+2. Can the authors elaborate on potential extensions of PAAC to other types of biases
+beyond popularity bias?
+3. Have the authors considered alternative grouping strategies beyond binary
+(popular/unpopular) to account for intermediate popularity levels?
+Minor Suggestions:
+
+● Figure Descriptions: Some figures lack detailed captions, making it difficult for readers
+to interpret results at a glance.
+● Typographical Issues: Minor typos and formatting inconsistencies, such as missing
+spaces around certain symbols in equations, should be corrected.
+● Line 13-16: The sentence structure is difficult to follow and could be revised for better
+readability.
+● Table Formatting: The presentation of tables could be improved by including clearer
+labels for metrics and datasets.
