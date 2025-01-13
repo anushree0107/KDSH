@@ -53,7 +53,7 @@ class KDDRulebook:
         # Replace embedder initialization
         embedder = embedders.SentenceTransformerEmbedder(model="sentence-transformers/all-MiniLM-L6-v2")
         
-        PATHWAY_PORT = 8000
+        PATHWAY_PORT = 8040
 
         self.vector_server = VectorStoreServer(
             *self.data_sources,
@@ -72,7 +72,7 @@ class KDDRulebook:
         """Initializes the VectorStoreClient."""
         self.client = VectorStoreClient(
             host="127.0.0.1",
-            port=8000,
+            port=8040,
             timeout=60
         )
     def query_vector_store(self, query)->List:

@@ -53,7 +53,7 @@ class NeurIPSRulebook:
         # Replace embedder initialization
         embedder = embedders.SentenceTransformerEmbedder(model="sentence-transformers/all-MiniLM-L6-v2")
         
-        PATHWAY_PORT = 8000
+        PATHWAY_PORT = 8060
 
         self.vector_server = VectorStoreServer(
             *self.data_sources,
@@ -72,7 +72,7 @@ class NeurIPSRulebook:
         """Initializes the VectorStoreClient."""
         self.client = VectorStoreClient(
             host="127.0.0.1",
-            port=8000,
+            port=8060,
             timeout=60
         )
     def query_vector_store(self, query)->List:
