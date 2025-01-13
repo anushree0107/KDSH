@@ -26,7 +26,7 @@ class TMLRRulebook:
         """Reads data from the output file into data_sources."""
         self.data_sources.append(
             pw.io.fs.read(
-                "/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Retriever/Rulebook/tmlr_rulebook.txt",
+                "../Retriever/Rulebook/master_rulebook.txt",
                 format="binary",
                 mode="streaming",
                 with_metadata=True

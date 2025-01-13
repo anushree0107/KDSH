@@ -23,7 +23,7 @@ class GDriveRulebook:
         self.data_sources.append(
             pw.io.gdrive.read(
                 object_id="17PIcscuzfyemPbr1UJmv7nUzLDkUJQQm",
-                service_user_credentials_file="/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Retriever/credentials.json",
+                service_user_credentials_file="/home/anushree/KDSH/Retriever/credentials.json",
                 mode="static",
                 with_metadata=True,
                 file_name_pattern="*.pdf"  # Only process PDFs
@@ -97,3 +97,14 @@ class GDriveRulebook:
                 }
             )
         return final_results
+
+
+if __name__ == "__main__":
+    rulebook = GDriveRulebook()
+    query = "What is scale GMN?"
+    results = rulebook.query_vector_store(query)
+
+    if results:
+        print(f"Text: {results[0]['text']}")
+    else:
+        print("No results found.")

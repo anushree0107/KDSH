@@ -1,0 +1,646 @@
+● R006
+Review of "Detailed Action Identification in Baseball Game Recordings"
+The paper introduces MLB-YouTube, a new dataset tailored for fine-grained activity recognition
+in baseball videos, focusing on segmented and continuous video tasks. The authors evaluate
+various temporal feature aggregation methods, emphasizing sub-events and super-events to
+enhance recognition and detection performance.
+Strengths:
+1. Novel Dataset: MLB-YouTube fills a gap in sports analytics by providing densely
+annotated baseball activities with nuanced distinctions.
+2. Comprehensive Methods: A thorough comparison of temporal pooling, LSTMs, and
+convolutional approaches enriches understanding of their strengths.
+3. Practical Relevance: Tasks like pitch speed regression and pitch type classification
+demonstrate the dataset's utility in real-world scenarios.
+Weaknesses:
+1. Limited Generalizability: The dataset focuses exclusively on baseball, which may
+restrict broader applications.
+2. Overfitting Concerns: High-parameter models like LSTMs and temporal convolutions
+suffer from overfitting.
+3. Modest Accuracy for Pitch Type Classification: While sub-events improve results,
+overall performance remains low for certain pitch types.
+Suggestions:
+● Extend the dataset's scope to other sports for wider applicability.
+● Optimize models to reduce overfitting.
+● Enhance visualizations of temporal hierarchies for clarity.
+Minor Issues:
+● Include confidence intervals for results to ensure robustness.
+● Elaborate on how frame rates influence pitch speed prediction accuracy.
+Overall:
+This paper provides a valuable contribution to sports video analysis, but addressing limitations
+in generalization, model optimization, and presentation could further enhance its impact.
+
+● R007
+Review of "Advancements in 3D Food Modeling: A Review of the MetaFood Challenge
+Techniques and Outcomes"
+Strengths:
+1. Novel Dataset and Benchmark: The MetaFood Challenge introduces a valuable
+dataset and evaluation pipeline, specifically designed for 3D food reconstruction,
+addressing critical gaps in dietary monitoring and nutrition tracking.
+2. Comprehensive Methodologies: The paper provides an in-depth review of innovative
+techniques employed by top-performing teams, including multi-view and single-view 3D
+reconstruction, sub-event scaling, and advanced mesh refinement.
+3. Practical Relevance: By focusing on volumetric accuracy and realistic 3D modeling of
+food items, the challenge offers significant implications for dietary assessment and
+broader health applications.
+Weaknesses:
+1. Dataset Scope: While comprehensive, the dataset is limited to 20 food items, which
+might not capture the diversity of real-world dietary scenarios.
+2. Dependence on Manual Inputs: Several approaches relied on manual scaling and
+segmentation, limiting scalability and automation potential.
+3. Limited Testing Environments: The methods were not evaluated under complex
+conditions, such as diverse lighting, backgrounds, or camera variations, which could
+impact real-world applicability.
+Suggestions for Improvement:
+1. Expand the dataset to include more diverse food items and complex scenarios to
+improve generalizability.
+2. Automate manual steps like scaling factor determination and segmentation to enhance
+usability.
+3. Test methods in more challenging environments to evaluate robustness.
+Minor Issues:
+● Include more detailed visualizations of reconstructed models to enhance clarity.
+● Provide quantitative analyses of computational efficiency across different methods.
+Overall:
+The paper presents a significant step forward in 3D food modeling, showcasing innovative
+solutions and setting a strong foundation for future research. Addressing limitations related to
+dataset diversity, automation, and robustness will further solidify its impact in the field.
+
+● R008
+Advanced techniques for through and contextually
+Interpreting Noun-Noun Compounds
+This paper investigates the effectiveness of transfer learning (TL) and multi-task learning (MTL)
+in the context of interpreting noun-noun compounds, a complex semantic classification task.
+The authors present a comprehensive experimental study, demonstrating that TL and MTL
+enhance classification accuracy, particularly for infrequent relations in highly imbalanced
+datasets. A notable strength of the paper is its novel use of dual-annotated datasets (NomBank
+and PCEDT) to explore TL and MTL, which had not previously been applied to this task. The
+proposed models show consistent improvements in macro F1 scores, especially for PCEDT
+relations, with TL yielding significant benefits when transferring embedding layer weights.
+However, the paper also highlights certain limitations. Despite improvements, the accuracy
+gains remain relatively modest, and the models exhibit signs of lexical memorization, particularly
+for frequent relations. Furthermore, while TL and MTL improve performance on unseen
+compounds, the paper acknowledges that these gains may be partly due to memorization of
+lexical patterns rather than true generalization. Additionally, the MTL model with fully shared
+layers performs poorly on certain relations, underscoring the challenge of balancing
+task-specific and shared representations.
+Overall, this research provides valuable insights into the potential of TL and MTL for semantic
+classification in NLP. Future work could focus on addressing lexical memorization and exploring
+other related tasks to enhance compound interpretation further. Despite some areas for
+improvement, the findings offer a promising direction for tackling imbalanced classification in
+natural language processing tasks.
+
+● R009
+Review of the Paper "The Importance of Written Explanations in
+Aggregating Crowdsourced Predictions"
+Strengths:
+The paper is well-organized and presents a compelling study on the role of written justifications
+in enhancing the accuracy of aggregated crowdsourced forecasts. The authors provide a
+thorough analysis of their dataset, which includes over 96,000 forecasts across various
+geopolitical, economic, and social questions. A significant contribution of the study is the
+development of a neural network model that integrates both numerical predictions and textual
+
+justifications, achieving superior results compared to baseline aggregation methods. The
+quantitative experiments are well-designed, covering different phases of question duration and
+varying levels of question difficulty. Additionally, the qualitative analysis of justifications provides
+valuable insights into features that distinguish accurate from inaccurate forecasts.
+Weaknesses:
+The main limitation of the paper is that the neural network models, while generally
+outperforming baselines in the earlier phases of a question’s duration, underperform during the
+final phase. This suggests that the crowd’s aggregated predictions become more reliable over
+time, reducing the added value of incorporating justifications. Another issue is that shorter
+justifications, which are more prone to errors, dominate the dataset, potentially biasing the
+models towards poorer-quality forecasts. Moreover, while the authors mention the role of logical
+argumentation in justifications, they do not explore this aspect deeply in the quantitative
+analysis.
+Questions:
+1. Have the authors considered filtering out extremely short justifications or weighting them
+differently during model training?
+2. Can the approach be extended to multi-class or continuous prediction tasks beyond
+binary questions?
+3. How would the model perform on questions with drastically different thematic content,
+such as scientific or technical domains, where crowd knowledge may be more variable?
+Minor Suggestions:
+● Clarify the interpretation of the sentiment polarity metric in Table 2.
+● The readability analysis in Table 2 is insightful, but the authors could elaborate on how
+readability correlates with forecast accuracy.
+● Consider including error bars in the results to indicate the variance across multiple runs
+of the experiments.
+
+
+1
+Summary of the Accepted Paper 1
+This paper addresses the task of slot filling with a focus on handling zero-shot scenarios,
+where models must generalize to novel domains not seen during training. The key challenge
+lies in mitigating performance degradation caused by domain shifts. To tackle this, the
+authors propose an end-to-end metric learning scheme tailored specifically for zero-shot
+slot filling. They introduce context-aware soft label representations to enhance the
+model’s understanding of slot labels in varying contexts. Additionally, they employ slot-level
+contrastive learning to improve generalization, enabling better performance on unseen
+domains. Through extensive experiments, the paper validates its approach and provides
+insights into advancing zero-shot slot filling.
+Strengths of the Paper
+1. Novel Metric Learning Approach:
+The paper introduces a new end-to-end metric learning scheme that is both
+efficient and effective for zero-shot slot filling, addressing a key gap in current
+research. This innovation advances the field by targeting a critical challenge in
+domain adaptation.
+2. Context-Aware Representations:
+The introduction of soft label representations that consider contextual information
+improves upon static label representations commonly used in the field. This
+showcases the authors' ability to enhance the model’s interpretability and adaptability
+to diverse scenarios.
+3. Slot-Level Contrastive Learning:
+By leveraging contrastive learning at the slot level, the paper explores alternative
+strategies to improve generalization, offering a comprehensive approach to the task.
+4. Empirical Validation:
+The experimental results validate the superiority of the proposed methods over
+existing approaches. The findings provide useful insights for future research on
+zero-shot learning in natural language processing.
+Scores and Justifications
+● Soundness (4/5): The paper provides robust support for its claims, but it could
+benefit from addressing the loss function design and baseline comparisons.
+● Excitement (3/5): While the work is promising, it is somewhat incremental and
+requires additional revisions to address the noted weaknesses.
+● Reproducibility (4/5): The methods are described well enough for reproduction,
+though minor variations may occur.
+● Ethical Concerns: None were identified.
+● Reviewer Confidence (2/5): The reviewer acknowledges their understanding might
+be incomplete and suggests further scrutiny.
+Reasons for Acceptance
+The paper's acceptance stems from its innovative contributions to zero-shot slot filling,
+particularly the metric learning framework and context-aware representations. These
+advancements are relevant and significant for the field. Although there are areas for
+improvement, such as comparisons with recent baselines and loss function explanations, the
+strengths outweigh the weaknesses. The proposed methods offer state-of-the-art
+performance and fresh perspectives, warranting acceptance at a prestigious venue like
+NeurIPS.
+Summary of the Accepted Paper 2
+This paper focuses on addressing the gap in natural language processing (NLP) resources
+for low-resource languages by building large language models (LLMs) for Finnish. The
+authors create a monolingual corpus, train LLMs of varying sizes (186M to 13B parameters),
+and extend the BLOOM model to include Finnish without degrading English performance.
+They also introduce Fin-Bench, a benchmark derived from Big-Bench, for evaluating Finnish
+language models. The work is a comprehensive effort that spans data collection,
+preprocessing, model training, and evaluation, offering insights that can be extended to other
+low-resource languages.
+Strengths of the Paper
+1. End-to-End Contribution:
+The authors perform the entire pipeline of LLM development, including data
+collection, cleaning (with PII removal), training, and releasing models along with
+associated scripts, ensuring reproducibility and transparency.
+2. Multilingual and Standalone Models:
+In addition to creating standalone Finnish models, they extend the BLOOM model to
+Finnish while maintaining English performance, demonstrating effective multilingual
+adaptation.
+3. Holistic Evaluation:
+The paper goes beyond task-level evaluation by testing for biases, human
+alignment, and toxicity in the models, offering practical insights for real-world
+applications and cautioning their use in production systems.
+4. Benchmark Creation:
+The introduction of Fin-Bench provides a valuable resource for evaluating Finnish
+LLMs, contributing to the broader NLP community working on low-resource
+languages.
+5. Detailed Methodology:
+The authors provide comprehensive details about the training process, including
+hyperparameters, architecture, and hardware, ensuring that others can replicate or
+build upon their work.
+6. Broader Applicability:
+Although the work focuses on Finnish, the methodology and ideologies can be
+extended to other low-resource languages, making this work highly impactful.
+Scores and Justifications
+● Soundness (4/5):
+The study is methodologically sound and provides sufficient evidence to support its
+claims. The detailed pipeline and transparency add robustness to the paper.
+● Excitement (4/5):
+The work addresses a significant gap in NLP for low-resource languages, providing
+meaningful advancements and resources that can stimulate further research in this
+direction.
+● Reproducibility (3/5):
+While the paper provides detailed scripts and data, some parameter settings and
+evaluation details are underspecified, which could introduce challenges in
+reproducing the results exactly.
+● Ethical Concerns: None identified.
+● Reviewer Confidence (4/5):
+The reviewer has carefully evaluated the important aspects of the paper and is
+confident in the assessment.
+Reasons for Acceptance
+This paper makes a significant contribution to the field by addressing the challenges of
+NLP for low-resource languages like Finnish. The creation of LLMs, the extension of
+multilingual models like BLOOM, and the development of Fin-Bench demonstrate a
+comprehensive and impactful effort. The practical evaluations, along with the
+open-source release of scripts and data, enhance its value to the community. These factors,
+combined with the broader applicability of the methods, justify its acceptance.
+Summary of the Accepted Paper 3
+This paper introduces GenPPN, a reinforcement learning (RL)-based post-processing
+method for the natural language generation (NLG) component of task-oriented dialogue
+systems. NLG is more challenging than other components (such as NLU, DST, or Policy)
+because its output is a sequence of tokens rather than discrete slots. The proposed method
+leverages RL-based optimization and a transformer-based generative model to refine the
+generated text, resulting in improved performance across multiple datasets. The approach
+enhances the NLG pipeline and demonstrates its effectiveness over existing baselines.
+Strengths of the Paper
+1. Thorough Methodology:
+The paper provides a detailed explanation of the method, making it easy to follow
+and replicable. It incorporates RL-based optimization and transformer-based
+architectures to improve NLG output quality.
+2. Comprehensive Evaluation:
+The authors conduct experiments across multiple datasets and present clear results.
+The inclusion of an ablation study highlights the contributions of individual
+components of GenPPN.
+3. Improved Post-Processing for NLG:
+The method addresses a crucial gap in the task-oriented dialogue pipeline by
+offering a post-processing mechanism for NLG, which has historically been more
+challenging than other components.
+4. Strong Baseline Comparison:
+GenPPN provides significant relative improvements for weaker baselines like
+SC-LSTM and SC-GPT. The results demonstrate its potential to enhance models with
+lower initial performance.
+5. Highlighting Limitations of Existing Approaches:
+The paper highlights the limitations of template-based approaches, providing a case
+where GenPPN enables SC-LSTM to generate text for dialogue acts that templates
+cannot handle.
+Scores and Justifications
+● Soundness (4/5):
+The methodology is well-supported with clear experimental design and results. The
+ablation study adds robustness to the claims.
+● Excitement (3/5):
+While the approach is novel and addresses a key challenge in NLG, its incremental
+improvements over template baselines limit the excitement. The work is solid but
+does not redefine the state-of-the-art.
+● Reproducibility (4/5):
+The paper includes sufficient details for reproducing the results, but some variance
+in results may occur due to RL training and model tuning.
+● Ethical Concerns: None identified.
+● Reviewer Confidence (3/5):
+The reviewer has a general understanding of the area but acknowledges the
+possibility of missing subtle details in the methodology or analysis.
+Reasons for Acceptance
+The paper provides a novel and thorough post-processing method for task-oriented
+dialogue systems, addressing the challenging NLG component. The authors clearly explain
+their approach, conduct comprehensive evaluations, and offer an informative ablation study.
+GenPPN’s ability to improve performance on weaker baselines highlights its utility, even
+though it does not outperform strong baselines like Template. This work fills an important
+gap in the dialogue system pipeline and provides a stepping stone for further research.
+Summary of the Accepted Paper 4
+This paper focuses on Academic Writing Formalization (AWF) tasks, aiming to enhance
+the quality of academic essays through improved formal language use. It introduces the
+AWF task to address the limitations of traditional language touch-up methods. The authors
+propose a Metric-Optimized Reinforcement Learning (MORL) method, which combines
+reinforcement learning with metric optimization. By incorporating automated feedback at
+varying levels, MORL improves the quality of generated formal academic text, demonstrating
+its effectiveness for formal text conversion and academic writing quality improvement. The
+study leverages the DOOLITTLE dataset, consisting of real academic texts, to evaluate its
+methodology.
+Strengths of the Paper
+1. Novel Task and Approach:
+The introduction of the AWF task and the MORL method is a significant contribution
+to addressing the challenges of academic text formalization. The combination of RL
+techniques with metric optimization is innovative.
+2. High-Quality Dataset:
+The use of the DOOLITTLE dataset, which includes authentic academic texts from
+multiple disciplines, ensures that the model is trained and tested on realistic data.
+3. Integration with LLMs:
+The application of MORL to large language models (LLMs) demonstrates the
+adaptability of the method and its potential for improving automated academic
+writing.
+4. Compatibility with Publication Goals:
+The paper aligns well with the journal's focus, presenting practical advancements in
+formal language generation.
+5. Clear Experimental Design:
+The experiments are well-structured, with comparisons to strong baselines like
+ChatGPT, showing the method's relative effectiveness.
+Scores and Justifications
+● Soundness (4/5):
+The study is well-supported by data and methodology. The combination of MORL
+with LLMs is innovative, and the results are clear and robust.
+● Excitement (3/5):
+The task is important and the method is novel, but the paper’s incremental
+improvements and lack of practical application discussion reduce its excitement.
+● Reproducibility (4/5):
+The experimental setup is detailed enough to allow reproduction, though minor
+variations due to RL techniques and feedback levels might occur.
+● Ethical Concerns: None identified.
+● Reviewer Confidence (4/5):
+The reviewer has carefully evaluated the paper and is confident about its
+contributions, though minor nuances could have been overlooked.
+Reasons for Acceptance
+The paper introduces a novel approach (MORL) to a new task (AWF), addressing a critical
+gap in academic writing formalization. The use of high-quality data and the alignment with
+journal goals make it a valuable contribution. While there are areas for improvement, the
+study offers a strong foundation for future research in automated academic text generation
+and formalization.
+Summary of the Accepted Paper 5
+This paper critiques existing knowledge graph injection techniques, suggesting that their
+effects are indistinguishable from injecting random noise. The authors propose a simple yet
+effective refinement step before injecting knowledge into models. Their findings reveal that
+injecting smaller, carefully refined amounts of knowledge significantly improves model
+performance compared to existing methods, which often function as regularizers.
+Strengths of the Paper
+1. Relevance to the Community:
+The paper addresses a critical issue in knowledge-enhanced language models,
+which is highly pertinent to the research community.
+2. Simplicity and Effectiveness:
+The proposed refinement approach is both conceptually simple and computationally
+efficient, making it easy to adopt.
+3. Interesting Results:
+The findings challenge existing assumptions and demonstrate that injecting refined
+knowledge yields better outcomes than larger-scale, less targeted injections.
+4. Comprehensive Analysis:
+The paper provides an insightful exploration of the connection between knowledge
+injection and regularization, supported by empirical evidence and theoretical
+conjectures.
+Scores and Justifications
+● Soundness (4/5):
+The study is well-supported by empirical evidence and aligns with prior research.
+However, the lack of hyperparameter optimization and embedding analysis slightly
+detracts from its rigor.
+● Excitement (4/5):
+The findings challenge traditional approaches and offer a fresh perspective on
+knowledge injection. The simplicity of the method and its potential impact on
+research directions make it exciting.
+● Reproducibility (4/5):
+The methodology is clear and reproducible, but slight variations may arise due to
+sample variance or reliance on prior hyperparameter settings.
+● Ethical Concerns: None identified.
+● Reviewer Confidence (4/5):
+The reviewer has carefully analyzed the claims and findings and is confident about
+the paper's strengths and limitations.
+Reasons for Acceptance
+1. Novel Insight:
+The paper challenges existing paradigms in knowledge graph injection, offering a
+simple and effective alternative with strong empirical backing.
+2. Community Relevance:
+The findings are directly relevant to ongoing research in knowledge-enhanced
+language models, addressing critical issues of noise and regularization.
+3. Strong Experimental Results:
+The proposed method demonstrates consistent performance improvements across
+multiple datasets, suggesting broad applicability.
+4. Potential for Future Work:
+The paper opens avenues for exploring the theoretical underpinnings of knowledge
+injection and its relationship with regularization.
+
+● R010
+
+Review of "Detecting Medication Usage in Parkinson’s Disease Through Multi-modal
+Indoor Positioning: A Pilot Study in a Naturalistic Environment"
+Strengths:
+1. Novel Contribution: The study introduces the MDCSA model, leveraging RSSI and
+accelerometer data for indoor localization, and applies it to monitor Parkinson's disease
+(PD) symptoms, a unique and impactful application.
+2. Real-World Dataset: Data collected from smart homes with PD and healthy control
+participants provides ecological validity, emphasizing naturalistic and free-living
+conditions.
+3. Innovative Framework: The integration of multi-modal data with the MDCSA model
+effectively captures temporal dynamics and reduces noise, improving room-level
+localization and medication state classification.
+4. Clinical Relevance: The use of in-home gait speed features for detecting medication
+states highlights practical implications for monitoring PD progression and aiding clinical
+decision-making.
+Weaknesses:
+1. Sample Size: The small participant cohort limits the generalizability of findings and
+statistical robustness.
+2. Model Transferability: The MDCSA model’s performance may vary in diverse home
+layouts, necessitating additional pre-training for new environments.
+3. Limited Feature Exploration: Only a subset of gait speed features is used for
+medication state prediction; exploring additional features may enhance accuracy.
+Suggestions for Improvement:
+1. Validate the model on larger, more diverse cohorts to improve generalizability.
+2. Address transferability challenges by testing the model in varied home layouts and
+conditions.
+3. Explore additional features and alternative sensor modalities to enrich medication state
+predictions.
+Minor Issues:
+● Provide detailed visualizations of room-to-room transitions for clearer interpretation.
+● Clarify the limitations of the accelerometer data in cases of severe PD symptoms.
+
+● R011
+Review of the Paper "Addressing Popularity Bias with
+Popularity-Conscious Alignment and Contrastive Learning"
+Strengths:
+1. Novelty: The introduction of the Popularity-Aware Alignment and Contrast (PAAC)
+method is innovative. It effectively addresses two key issues—insufficient representation
+learning for unpopular items and representation separation caused by popularity bias.
+2. Methodological Rigor: The paper provides a detailed explanation of the PAAC
+framework, including the supervised alignment and re-weighted contrastive learning
+modules. The inclusion of dynamic grouping and adjustable hyperparameters enhances
+flexibility and applicability across different datasets.
+3. Experimental Validation: The paper presents thorough experiments on three real-world
+datasets (Amazon-Book, Yelp2018, Gowalla), with significant performance
+improvements shown over various baselines.
+4. Ablation Study: The ablation study clearly highlights the contributions of different
+components of PAAC, demonstrating its effectiveness.
+5. Comprehensive Evaluation: Metrics such as Recall@K, HR@K, and NDCG@K are
+used, and the model’s performance across varying popularity item groups is analyzed.
+Weaknesses:
+1. Clarity of Mathematical Formulations: Some equations, particularly those for
+re-weighted contrastive learning, lack intuitive explanations for non-expert readers.
+Clarifying the underlying reasoning could improve understanding.
+2. Limited Discussion on Hyperparameter Sensitivity: While the authors present
+experiments on hyperparameters (α, β, λ1, λ2), a deeper discussion on the choice of
+optimal values and their generalizability across datasets is missing.
+3. Sparse Dataset Limitation: The model’s performance improvements on sparser
+datasets like Gowalla are less pronounced. Further refinement for such datasets could
+improve robustness.
+Questions:
+1. How does PAAC handle highly dynamic environments where item popularity changes
+frequently?
+2. Can the authors elaborate on potential extensions of PAAC to other types of biases
+beyond popularity bias?
+3. Have the authors considered alternative grouping strategies beyond binary
+(popular/unpopular) to account for intermediate popularity levels?
+Minor Suggestions:
+
+● Figure Descriptions: Some figures lack detailed captions, making it difficult for readers
+to interpret results at a glance.
+● Typographical Issues: Minor typos and formatting inconsistencies, such as missing
+spaces around certain symbols in equations, should be corrected.
+● Line 13-16: The sentence structure is difficult to follow and could be revised for better
+readability.
+● Table Formatting: The presentation of tables could be improved by including clearer
+labels for metrics and datasets.
+
+Rejected Paper Review (Federated Learning):
+● Summary: The paper explores asynchronous federated contextual bandit and reinforcement learning, proposing algorithms that use exploration-based bonus functions. Finite-time convergence and communication complexities are analyzed.
+● Strengths:
+○ Introduces trigger-based communication for multi-agent systems.
+○ Focuses on asynchronous sampling and communication with a server.
+● Weaknesses:
+○ Key notations and concepts (e.g., in Theorems 4.3 and 5.1) are unclear.
+○ Poor explanation of the bonus term computation oracle.
+○ Confusing statements and multiple typos (e.g., Line 141, Line 154).
+● Rating: 5 (Borderline Accept).
+
+Accepted Paper Review (Stable Diffusion Optimization):
+● Summary: Proposes a three-stage post-training optimization (Refiner, Retriever, Composer) to personalize stable diffusion models for prompts, achieving enhanced image generation quality.
+● Strengths:
+○ Novel approach focusing on model adaptation instead of prompt engineering.
+○ Well-designed optimization pipeline with promising experimental results.
+● Weaknesses:
+○ Higher resource usage compared to static stable diffusion models.
+○ Comparison fairness questioned due to Stylus personalization process.
+● Rating: 7 (Accept).
+
+Summary of Reviews:
+Accepted Paper Review (ScaleGMN):
+● Summary: This work introduces ScaleGMNs, GNN-based metanetworks that extend permutation equivariance to account for scaling symmetries in input neural networks' parameters. These networks are expressive enough to simulate forward and backward passes and demonstrate improved performance over prior approaches without using data augmentation or random Fourier features.
+● Strengths:
+○ Excellent writing and clear theoretical setup.
+○ Strong theoretical results supporting scaling equivariances and expressive power.
+○ Significant empirical improvements, particularly in INR classification, without reliance on unfair optimization tricks.
+○ Interesting findings, such as the bidirectional version's varied performance and robustness without additional features.
+● Weaknesses:
+○ Limited scope of experimental tasks, lacking tests on equivariant tasks like INR editing.
+○ Some inconsistencies in describing ScaleInv equations and canonicalization approaches.
+● Rating: 8 (Strong Accept).
+● Confidence: 4 (High confidence).
+
+Accepted Paper Review (Causal Discovery in Ancestral Graphs):
+● Summary: The paper proposes a greedy search-and-score algorithm for causal structure discovery in ancestral graphs, leveraging a decomposition of the likelihood function into multivariate cross-information over ac-connected components. It demonstrates scalability and experimental efficacy on synthetic and benchmark datasets.
+● Strengths:
+○ Introduces a scalable, practical algorithm for causal structure discovery.
+○ Shows higher precision compared to existing algorithms on experimental datasets.
+● Weaknesses:
+○ Theoretical guarantees for algorithm convergence are missing.
+○ The main theorem lacks novelty as it overlaps with prior work.
+○ Sensitivity to noise in cross-information computations is a concern.
+○ The connection between theoretical results and algorithm implementation needs better elucidation.
+● Rating: 5 (Borderline Accept).
+● Confidence: 3 (Moderate confidence).
+
+Accepted Paper Review:
+1. Strengths:
+○ Introduces a novel and practical framework for quantifying and optimizing Chain-of-Thought (CoT) reasoning.
+○ Extensive experiments validate generalizability and utility.
+○ Provides actionable optimization strategies for CoT.
+2. Weaknesses:
+○ Limited to four tasks; broader evaluation is needed for generalization.
+○ Relies on task difficulty as input, which might not always be readily available.
+3. Rating and Assessment:
+○ The paper is technically solid and impactful within its area.
+○ Clear presentation and well-justified claims.
+○ Review highlights specific strengths and offers constructive feedback for improvement.
+○ High confidence in the assessment (rating: 7/10, accept).
+
+Rejected Paper Review:
+1. Strengths:
+○ Reviewer acknowledges the potential contributions but struggles with understanding the methodology and presentation.
+○ Transparent admission of difficulty in following the paper.
+2. Weaknesses:
+○ Lacks clarity in explanation, especially for key terms, concepts, and contributions.
+○ Insufficient details on experimental procedures and methodology.
+○ Over-reliance on jargon without clear definitions.
+○ No adequate comparison to related work, particularly Yang et al.’s 2024 study.
+○ Numerous unaddressed questions about methodology, datasets, and contributions.
+3. Rating and Assessment:
+○ The paper's potential is overshadowed by its lack of clarity and organization.
+○ Reviewer shows limited confidence due to unclear methodology (rating: 4/10, borderline reject).
+○ Suggestions focus heavily on improving readability and detailing methodology.
+
+Accepted Paper : Self-Preference and Recognition in LLMs
+● Key Idea: Investigates whether language models exhibit self-preference due to self-recognition.
+● Strengths:
+○ Insightful separation of self-recognition and self-preference.
+○ Thoughtful evaluation, including human cross-checking and diverse control tasks.
+○ Addressed potential confounds and ordering effects.
+● Weaknesses:
+○ Limited task scope (summarization); potential dataset memorization confound.
+○ Lack of results for larger models like Llama 70B; scaling trends unclear.
+● Suggestions:
+○ Explore other domains to reduce confounding.
+○ Add statistical tests for significance claims.
+○ Mitigation experiments (e.g., anti-bias prompts) would be valuable.
+● Rating: 7 (Accept)
+○ Technically solid with significant impact, strong evaluation, and reproducibility.
+
+Rejected Paper Review:
+The paper introduces a greedy search-and-score algorithm for causal structure discovery in ancestral graphs, accommodating directed and bidirected edges. It decomposes the likelihood function into multivariate cross-information over ac-connected components, building on prior head-and-tail factorization work. The authors claim this approach provides a novel theoretical foundation for causal graph discovery and demonstrate its application through experimental evaluations.
+Key Strengths
+1. Algorithm Development:
+○ Novel empirical algorithm motivated by theoretical decomposition of the likelihood function.
+○ Scalable to graphs with several dozen vertices and links.
+2. Experimental Validation:
+○ Tested on synthetic datasets and bnlearn benchmarks.
+○ Demonstrates higher precision and comparable recall to the MIIC algorithm.
+Key Weaknesses
+1. Lack of Theoretical Guarantees:
+○ No convergence guarantees for the proposed algorithm.
+○ Algorithm relies heavily on MIIC and lacks independence from its base.
+2. Sensitivity to Noise:
+○ Multivariate cross-information may be highly sensitive to noise, particularly with large variable sets.
+3. Novelty Concerns:
+○ Theorem 1 is equivalent to a decomposition from prior work, questioning its originality.
+4. Limited Explanation:
+○ Insufficient clarity on how Theorem 1 directly informs the proposed algorithm.
+    
+● R014
+
+Review of "Addressing Min-Max Challenges in Nonconvex-Nonconcave
+Problems with Solutions Exhibiting Weak Minty Properties"
+Strengths:
+1. Novel Contribution: The introduction of weak Minty solutions and their application
+to nonconvex-nonconcave min-max problems extends existing monotonicity
+concepts, offering new insights into challenging optimization scenarios.
+2. Methodological Innovation: Proposes OGDA+ and an adaptive step-size
+variant of EG+, achieving convergence rates comparable to or better than
+traditional methods like extragradient (EG).
+3. Practical Relevance: Adaptive step-size EG+ removes the dependency on the
+Lipschitz constant, making it more versatile for real-world problems with varying
+curvature.
+4. Robust Experiments: The inclusion of numerical experiments (e.g., von
+Neumann’s ratio game, "Forsaken," and lower bound examples) validates the
+theoretical results and demonstrates the utility of the proposed methods.
+Weaknesses:
+1. Limited Generality: While weak Minty solutions broaden the scope of solvable
+problems, the paper lacks a detailed discussion on their applicability across
+various domains beyond theoretical cases.
+2. Complexity of Analysis: The mathematical framework, particularly around
+step-size constraints and adaptive methods, may be challenging for readers
+without a strong background in variational inequalities.
+3. Scalability Concerns: The practical implementation of adaptive methods in
+large-scale or high-dimensional settings remains unclear.
+Questions:
+1. How do weak Minty solutions compare to other generalizations of monotonicity in
+terms of practical problem applicability?
+2. Are there scenarios where OGDA+ provides a clear advantage over EG+ beyond
+the specific lower bound example?
+
+3. What are the computational trade-offs of adaptive step-size EG+ versus
+backtracking methods?
+Suggestions for Improvement:
+1. Provide more examples of real-world applications where weak Minty solutions
+and the proposed methods are beneficial.
+2. Simplify the explanation of theoretical concepts like step-size constraints and
+parameter tuning for broader accessibility.
+3. Explore scalability and efficiency of adaptive step-size methods in
+high-dimensional optimization problems.
+Minor Issues:
+● Clarify the role of the parameter γ\gammaγ in OGDA+ and how it affects
+convergence rates.
+● Improve figures to highlight key experimental results more effectively.
+● Discuss limitations of weak Minty solutions in greater depth.
+
+● RO15
+
+Review of "Examining the Convergence of Denoising Diffusion
+Probabilistic Models: A Quantitative Analysis"
+Strengths:
+1. Novel Contribution: Provides a quantitative upper bound on the Wasserstein
+distance for diffusion models without relying on restrictive assumptions or
+exponential dependencies.
+2. Theoretical Rigor: Avoids relying on the learned score function or SDE toolkit,
+offering a robust alternative with straightforward proofs.
+3. Practical Implications: Demonstrates applicability across various
+data-generating distributions, even those lacking density relative to the Lebesgue
+measure.
+Weaknesses:
+1. Complexity: Dense mathematical framework might limit accessibility for readers
+unfamiliar with Wasserstein metrics or diffusion models.
+
+2. Empirical Validation: Limited experimental results to illustrate real-world
+applicability of the theoretical bounds.
+Suggestions:
+1. Include intuitive explanations or visualizations to enhance accessibility.
+2. Expand on empirical evaluation, showcasing benefits for practical applications
+like image generation.
+Overall Assessment:
+A solid theoretical contribution that strengthens the understanding of diffusion model
+convergence. Improved accessibility and practical validation would enhance its impact.
