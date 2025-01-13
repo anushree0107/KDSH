@@ -26,7 +26,7 @@ class EMNLPRulebook:
         """Reads data from the output file into data_sources."""
         self.data_sources.append(
             pw.io.fs.read(
-                "/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Retriever/Rulebook/emnlp_rulebook.txt",
+                "../Retriever/Rulebook/master_rulebook.txt",
                 format="binary",
                 mode="streaming",
                 with_metadata=True
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     rulebook = EMNLPRulebook()
     query = "What are the rules to getting selected in EMNLP?"
     results = rulebook.query_vector_store(query)
-    print("retrieved results: ", results[0]['text'])
+    print("retrieved results: ", results)
     
     agent = EMNLPAgent()
     response = agent.query(query, results)

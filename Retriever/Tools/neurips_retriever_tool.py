@@ -21,7 +21,6 @@ def query_rulebook(query: str) -> str:
     return query_results
 
 
-# Create the tool
 neurips_retriever_tool = StructuredTool.from_function(
     func=query_rulebook,
     name="NeuripsRetriever",
