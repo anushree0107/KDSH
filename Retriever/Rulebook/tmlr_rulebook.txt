@@ -71,3 +71,174 @@ like image generation.
 Overall Assessment:
 A solid theoretical contribution that strengthens the understanding of diffusion model
 convergence. Improved accessibility and practical validation would enhance its impact.
+
+Accepted Paper Review (Highway Graph: RL) 
+Summary of Contributions: 
+The paper proposes a graph-based algorithm to improve reinforcement learning 
+efficiency in discrete state-action spaces. By merging non-branching sequences 
+of transitions into "highways," the algorithm reduces learning iterations. 
+Experiments across diverse environments demonstrate its effectiveness 
+compared to benchmarks. 
+Strengths: 
+1. Enhanced Training Efficiency: The method effectively reduces learning 
+iterations. 
+2. Clear Presentation: Detailed and comprehensible methodology. 
+3. Extensive Experiments: Demonstrated efficiency across diverse test 
+environments. 
+Weaknesses: 
+1. Limited Related Work Discussion: Broader coverage of similar 
+approaches (e.g., Graph Highway Networks, Hierarchical RL) is missing. 
+2. Experiment Ambiguity: Unclear if highway graph construction is included 
+in performance evaluation. 
+3. Time Complexity Clarification: Needs more detail on how graph 
+simplifications relate to time complexity. 
+Rating and Confidence: 
+● Rating: 6/10 (Moderate Accept) 
+● Confidence: 4/5 (High Confidence) 
+
+Accepted Paper Review (Gaussian Mixture Models) 
+Summary of Contributions: 
+The paper extends the GMMOT framework to domain adaptation, proposing two 
+strategies that reduce time complexity and improve benchmark performance. 
+Strengths: 
+1. Clarity: The paper is well-structured and easy to follow. 
+2. Improved Scalability: The GMM-OTDA method scales better than 
+previous OT-based approaches. 
+3. Theoretical Support: Provides detailed theoretical analysis. 
+4. Empirical Evidence: Demonstrates improvements across multiple 
+benchmarks. 
+Weaknesses: 
+1. Limited Scalability: Underperforms on large datasets (e.g., Office-31, 
+Office-Home) and omits complex datasets like VisDA and DomainNet. 
+2. Narrow Comparisons: Lacks broader evaluations with OT-based and 
+state-of-the-art UDA methods. 
+3. Practical Limitations: Relies on pretrained features and struggles with 
+class imbalance. 
+4. Unclear Details: Missing clarity on GMM-OTDA_T and Table 1 
+comparisons. 
+Rating and Confidence: 
+● Rating: 6/10 (Moderate Accept) 
+● Confidence: 4/5 (High Confidence) 
+
+Accepted Paper Review (Partial Label Learning) 
+Summary of Contributions: 
+The paper introduces a kNN-style Partial Label Learning (PLL) algorithm 
+with a "reject option," leveraging Dempster-Shafer Theory (DFT) to predict 
+labels and confidence scores. The approach improves accuracy-rejection 
+trade-offs and includes theoretical consistency results. 
+Strengths: 
+1. Novel Contribution: First to introduce a "reject option" in PLL. 
+2. Innovative Use of DFT: Applies DFT to aggregate candidate label sets for 
+predictions and confidence scores. 
+3. Empirical Effectiveness: Demonstrates better accuracy-rejection 
+trade-offs than baselines. 
+4. Theoretical Support: Provides consistency results under specific 
+assumptions. 
+Weaknesses: 
+1. Justification Gaps: Probability assignments in Algorithm 1 lack sufficient 
+rationale. 
+2. Limited Intuition: Confidence measure and prediction rule need clearer 
+practical explanations. 
+3. Dense Background: Section 3.2 on DFT is too brief and complex for new 
+readers. 
+4. Experimental Comparisons: Metrics in Tables 1 and 2 could be more 
+standardized by fixing rejection rates. 
+Rating and Confidence: 
+● Rating: 7/10 (Accept) 
+● Confidence: 4/5 (High Confidence) 
+
+Review Summary 
+Summary of Contributions: 
+The paper connects opinion dynamics in social networks with neural 
+message passing in GNNs. It introduces a novel message-passing 
+mechanism inspired by opinion dynamics, addressing oversmoothing and 
+achieving state-of-the-art performance in node prediction tasks. 
+Strengths: 
+1. Novel Connection: Links opinion dynamics to GNN message passing, 
+leveraging insights to improve performance. 
+2. Strong Theoretical Basis: Grounded in established work in opinion 
+dynamics. 
+3. Intuitive Explanations: Effectively explains and resolves oversmoothing. 
+4. Comprehensive Experiments: Demonstrates strong results across 
+diverse connectivity patterns. 
+5. Clear Writing: Well-structured and thorough, with sound claims. 
+Weaknesses: 
+1. Limited Novelty: Connections between message passing and opinion 
+dynamics have been studied before. 
+2. Incremental Results: Contributions build directly on existing work. 
+Rating and Confidence: 
+● Rating: 8/10 (Strong Accept) 
+● Confidence: 5/5 (Very High Confidence) 
+
+Review Summary 
+Summary of Contributions: 
+The paper investigates the adversarial robustness of active vision systems 
+inspired by neuroscience, focusing on FALcon and GFNet architectures. These 
+systems are compared to deep learning models like ResNet, demonstrating 
+slightly better robustness to adversarial attacks, including natural adversarial 
+images and foreground distortions, through transfer attack analysis. 
+Strengths: 
+1. Interesting Insights: Highlights the potential robustness of active vision 
+systems over passive models against adversarial attacks. 
+2. Comprehensive Background: Detailed explanations of active vision 
+systems make the paper accessible and self-contained. 
+3. Clear and Concise Writing: Well-structured with effective key takeaway 
+sections. 
+Weaknesses: 
+1. Limited Attack Diversity: Focuses mainly on FGSM/PGD, missing 
+broader attacks like Carlini-Wagner or universal perturbations. 
+2. Overstated Title: Robustness claims in the title are exaggerated and 
+should be refined. 
+3. Presentation Issues: Figures need better resolution, and typographic 
+issues (e.g., inconsistent capitalization and citation formatting) should be 
+addressed. 
+Rating and Confidence: 
+● Rating: 6/10 (Moderate Accept) 
+● Confidence: 4/5 (High Confidence) 
+
+Review Summary (Quasar Spectra) 
+Summary of Contributions: 
+The paper extends the SVI-GPLVM of Lalchand et al. to multimodal data, 
+allowing for different kernels and hyperparameters across modalities. This 
+adaptation addresses challenges in handling diverse data types (e.g., visual and 
+continuous covariates). The method is evaluated on astrophysical applications, 
+demonstrating its effectiveness in reconstructing corrupted samples and 
+predicting scientific labels from quasar spectra. 
+Strengths: 
+1. Novel Approach: Extends SVI-GPLVM to handle multimodal data 
+effectively. 
+2. Comprehensive Evaluation: Tested on diverse astrophysical use cases 
+with strong results. 
+3. Application Alignment: Well-suited for astrophysical challenges. 
+Weaknesses: 
+1. Notation Clarity: Section 2’s notation and equations (e.g., 3, 7) are 
+unclear. 
+2. Baseline Comparison: Missing comparison to standard predictive models. 
+3. Overstated Claims: Some conclusions in the "Scientific Interpretation and 
+Significance" section need toning down or further evidence. 
+Rating and Confidence: 
+● Rating: 6/10 (Moderate Accept) 
+● Confidence: 4/5 (High Confidence)
+ 
+Review Summary 
+Summary of Contributions: 
+The paper combines sliced optimal transport (SOT) and unbalanced optimal 
+transport (UOT) into two formulations: SUOT and USOT. These approaches 
+address challenges in high-dimensional settings and non-equal mass measures. 
+The authors prove favorable statistical properties, propose a Frank-Wolfe type 
+algorithm, and demonstrate competitive experimental performance. 
+Strengths: 
+1. Clarity: Well-written and easy to follow. 
+2. Logical Extensions: Combines SOT and UOT effectively with interesting 
+insights. 
+3. Strong Theory: Rigorous theoretical support and practical algorithmic 
+contributions. 
+Weaknesses: 
+1. Incremental Contribution: Builds on existing methods without introducing 
+groundbreaking ideas. 
+2. Experiment Fairness: Hyperparameters for UOT and sliced variants are 
+tuned differently; cross-validation results should be included in the main 
+text. 
+Rating and Confidence: 
+● Rating: 7/10 (Accept) 
+● Confidence: 4/5 (High Confidence)

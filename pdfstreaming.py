@@ -7,7 +7,7 @@ import pdfplumber  # Use pdfplumber to read the streamed PDF data
 # Define the scope and load credentials
 SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
 credentials = Credentials.from_service_account_file(
-    '/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Data Connector/credentials.json', 
+    '/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Retriever/credentials.json', 
     scopes=SCOPES
 )
 
@@ -41,7 +41,7 @@ def stream_pdf_file(service, file_id):
     return pdf_stream
 
 # Folder ID from Google Drive
-folder_id = "1OEkkw7LAwF4fXMo1wUub1KeAFCMEWSCY"  # Replace with your folder ID
+folder_id = "1zY8vrCXC2ore-wuNGDVZCAqCggS1FIOB"  # Replace with your folder ID
 
 # List PDFs in the folder
 pdf_files = list_files_in_folder(service, folder_id)
@@ -59,7 +59,6 @@ for pdf in pdf_files:
             page_text = page.extract_text(x_tolerance=2, y_tolerance=2)
             if page_text:
                 content += page_text
-            if len(content) >= 500:
-                break  # Stop if we have 500 characters
-        print(f"First 500 characters of {pdf['name']}:\n{content[:500]}")
-
+            # if len(content) >= 500:
+            #     break  # Stop if we have 500 characters
+        print(f"Content of {pdf['name']}:\n{content}")
