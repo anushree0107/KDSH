@@ -77,3 +77,250 @@ spaces around certain symbols in equations, should be corrected.
 readability.
 ● Table Formatting: The presentation of tables could be improved by including clearer
 labels for metrics and datasets.
+
+Review Summary: On Early DetecƟon of HallucinaƟons in Factual QuesƟon Answering
+Summary of ContribuƟons:
+The paper proposes a novel approach for early detecƟon of hallucinaƟons in factual quesƟon answering using
+arƟfacts from large language models (LLMs). It invesƟgates model outputs (SoŌmax probabiliƟes), intermediate
+states (self-aƩenƟon and fully-connected layer acƟvaƟons), and input aƩribuƟons (Integrated Gradients) to
+disƟnguish hallucinated responses from factual ones. Classifiers trained on these arƟfacts achieve up to 0.81
+AUROC and demonstrate the feasibility of detecƟng hallucinaƟons even before the hallucinated content is
+generated. The work provides a robust experimental evaluaƟon across mulƟple datasets (TriviaQA and T-REx)
+and model variants.
+
+Strengths:
+1. InnovaƟve Approach: Introduces a lightweight method leveraging model arƟfacts to detect
+hallucinaƟons without requiring model fine-tuning.
+2. Early DetecƟon Capability: Demonstrates hallucinaƟon detecƟon potenƟal before the generaƟon of
+incorrect content, improving applicability in real-Ɵme systems.
+3. Comprehensive EvaluaƟon: Evaluates mulƟple LLMs and arƟfacts across datasets, ensuring
+generalizability of the findings.
+4. Insighƞul Analysis: Provides a detailed comparison of arƟfact performance and layer-wise
+contribuƟons, offering new understanding into LLM behavior.
+5. PracƟcal ImplicaƟons: Suggests deploying classifiers internally in LLM pipelines for real-world
+applicaƟons.
+
+Weaknesses:
+1. Baseline Comparisons: While SelfCheckGPT is compared, further benchmarks against state-of-the-art
+hallucinaƟon detecƟon methods would provide more context.
+2. ArƟfact CombinaƟon: Combining different arƟfacts does not improve performance, indicaƟng a need
+for more sophisƟcated integraƟon methods.
+3. Dataset LimitaƟons: While TriviaQA and T-REx are used, exploring a broader range of tasks (e.g.,
+conversaƟonal AI, summarizaƟon) would strengthen claims of generality.
+4. Blackbox Constraints: The method relies on access to model internals, limiƟng its applicability for
+closed-source or API-only LLMs.
+5. Complexity of InterpretaƟons: Some technical explanaƟons, such as differences in entropy trends,
+could be elaborated for clarity.
+
+RaƟng and Confidence:
+ RaƟng: 8/10 (Strong Accept with SuggesƟons for Improvement)
+ Confidence: 4/5 (High Confidence)
+
+Review Summary: MSSRNet: ManipulaƟng SequenƟal Style RepresentaƟon for Unsupervised Text Style
+Transfer
+Summary of ContribuƟons:
+The paper introduces MSSRNet, a novel approach for unsupervised text style transfer. Unlike tradiƟonal
+
+methods using fixed-size style vectors, MSSRNet employs sequenƟal style representaƟon, allowing for token-
+level fine-grained control of stylisƟc features. The model integrates a teacher-student learning framework into
+
+a GeneraƟve Adversarial Network (GAN) for stable training and improved style representaƟon generaƟon.
+Extensive experiments demonstrate superior performance across mulƟple datasets (Yelp, IMDb, and
+SenƟment-Formality) in transfer accuracy, content preservaƟon, and fluency, including support for mulƟ-style
+transfer tasks.
+
+Strengths:
+1. InnovaƟve RepresentaƟon: The introducƟon of sequenƟal style representaƟon offers precise control
+at the token level, addressing limitaƟons of fixed-size vectors.
+2. Teacher-Student Learning IntegraƟon: This addiƟon enhances the stability of adversarial training, a
+significant improvement over standard GAN frameworks.
+3. Comprehensive EvaluaƟon: Demonstrates robust results on mulƟple datasets and metrics, including
+new benchmarks for mulƟ-style transfer.
+4. PracƟcal ApplicaƟon: Achieves high performance in preserving content and fluency, making the
+method valuable for real-world tasks.
+5. Extensive Comparisons and AblaƟons: Provides thorough comparisons with baselines and detailed
+ablaƟon studies to jusƟfy design choices.
+
+Weaknesses:
+1. Model Complexity: The sequenƟal representaƟon and dual discriminator framework significantly
+increase model complexity and computaƟonal requirements.
+2. Limited ApplicaƟon Scope: The evaluaƟon focuses primarily on senƟment and formality transfer;
+broader stylisƟc dimensions could strengthen claims of generalizability.
+3. Reproducibility Concerns: Some implementaƟon details, parƟcularly regarding hyperparameters for
+teacher-student learning, could be clarified for reproducibility.
+4. Human EvaluaƟon Details: Although human evaluaƟon is included, more informaƟon on annotator
+experƟse and consistency metrics would enhance credibility.
+
+RaƟng and Confidence:
+ RaƟng: 8/10 (Strong Accept)
+ Confidence: 4/5 (High Confidence)
+
+Review Summary: TransPlace: Transferable Circuit Global Placement via Graph Neural Network
+
+Summary of ContribuƟons:
+The paper introduces TransPlace, a novel framework for global placement in integrated circuit (IC) design using
+graph neural networks (GNNs). Key contribuƟons include:
+1. Development of Netlist Graph and Cell-flow representaƟons for efficient topology-aware circuit
+modeling.
+2. IntroducƟon of Transferable Placement Graph Neural Network (TPGNN) to learn transferable
+placement knowledge.
+3. A two-stage placement strategy combining inducƟve placement and circuit-adapƟve fine-tuning to
+improve placement quality.
+4. Comprehensive evaluaƟon across benchmarks, demonstraƟng enhanced performance in placement
+speed, congesƟon reducƟon, wirelength opƟmizaƟon, and Ɵming improvement.
+Strengths:
+
+1. InnovaƟve Framework: The use of GNNs to address large-scale IC placement challenges is well-
+conceived and technically sound.
+
+2. Performance Gains: Demonstrates significant improvements in congesƟon, wirelength, and Ɵming
+compared to state-of-the-art methods (e.g., DREAMPlace).
+3. PracƟcal Impact: The framework is adaptable to diverse circuits and design objecƟves, with promising
+implicaƟons for acceleraƟng design cycles in real-world IC design.
+4. Comprehensive Experiments: Results across mulƟple benchmarks, including ISPD2015, ISPD2019, and
+ICCAD2015, validate the framework’s effecƟveness and generalizability.
+Weaknesses:
+1. Limited Baseline Comparisons: While comparisons with DREAMPlace are provided, evaluaƟons
+against broader baselines (e.g., reinforcement learning-based methods) would strengthen the claims.
+2. Scalability Insights: While TransPlace handles millions of cells, further discussion on its scalability
+limits (e.g., memory and computaƟonal requirements) would enhance clarity.
+3. NotaƟon Complexity: SecƟons detailing SE(2)-invariant encoding and decoding could benefit from
+clearer explanaƟons, as the current notaƟon may challenge readers unfamiliar with geometric
+invariance.
+4. AblaƟon Studies: The contribuƟon of individual components like Netlist Graph and TPGNN to the
+overall performance needs beƩer isolaƟon and analysis.
+RaƟng and Confidence:
+ RaƟng: 7/10 (Strong Accept)
+ Confidence: 4/5 (High Confidence)
+
+Review for "CollaboraƟon of Large Language Models and Small RecommendaƟon Models for Device-Cloud
+RecommendaƟon"
+Summary of ContribuƟons:
+The paper introduces LSC4Rec, a device-cloud collaboraƟve recommendaƟon framework that integrates Large
+Language Models (LLMs) and Small RecommendaƟon Models (SRMs). Key contribuƟons include:
+1. A novel framework addressing real-Ɵme user preferences by leveraging LLMs for candidate generaƟon
+and SRMs for on-device reranking.
+2. Design of collaboraƟve training, inference, and intelligent request strategies to enhance efficiency and
+performance.
+3. Extensive experiments validaƟng the effecƟveness of LSC4Rec on mulƟple datasets, demonstraƟng
+improvements in ranking metrics and resource opƟmizaƟon.
+Strengths:
+1. InnovaƟve Framework: LSC4Rec effecƟvely bridges the gap between LLMs’ generalizaƟon capabiliƟes
+and SRMs’ real-Ɵme responsiveness.
+2. PracƟcal Relevance: The framework opƟmizes resource usage in device-cloud scenarios, making it
+suitable for real-world recommendaƟon systems.
+3. Comprehensive EvaluaƟon: Extensive experiments with mulƟple datasets and models substanƟate
+the claims, showing consistent improvements.
+4. Robust Methodology: The collaboraƟve strategies—training, inference, and intelligent request—are
+well-designed and address key challenges in hybrid recommendaƟon systems.
+Weaknesses:
+1. Baseline Comparison: Limited exploraƟon of comparisons with advanced LLM-only or SRM-only
+methods in specific use cases might leave gaps in understanding the compeƟƟve edge of LSC4Rec.
+2. Scalability Insights: The paper lacks detailed discussion on the scalability of LSC4Rec in handling
+massive datasets and dynamic user bases.
+3. NotaƟon Clarity: Some equaƟons and processes, parƟcularly in collaboraƟve inference and intelligent
+request strategies, could benefit from clearer descripƟons for broader accessibility.
+4. Dataset Diversity: The evaluaƟon primarily focuses on e-commerce datasets, leaving open quesƟons
+about the generalizability of LSC4Rec to other domains like healthcare or social media.
+RaƟng and Confidence:
+ RaƟng: 7/10 (Strong Accept)
+ Confidence: 4/5 (High Confidence)
+
+Review for "On Measuring UnnoƟceability of Graph Adversarial AƩacks: ObservaƟons, New Measure, and
+ApplicaƟons"
+Summary of ContribuƟons:
+The paper introduces HideNSeek, a novel framework to measure the noƟceability of graph adversarial aƩacks,
+addressing the limitaƟons of exisƟng methods. The contribuƟons include:
+1. IdenƟficaƟon of criƟcal limitaƟons in exisƟng noƟceability measures, such as bypassability and
+overlooking aƩacks with low perturbaƟons.
+2. Development of a learnable edge scorer (LEO) that uses a graph neural network-based approach to
+detect aƩack edges.
+3. Proposal of an imbalance-aware aggregaƟon method to compute the final noƟceability score.
+4. Extensive empirical evaluaƟons across real-world datasets, demonstraƟng superior performance of
+HideNSeek in detecƟng aƩacks and improving GNN robustness.
+Strengths:
+1. InnovaƟve Approach: The combinaƟon of learnable edge scoring and imbalance-aware aggregaƟon
+provides a robust and adapƟve measure for graph adversarial aƩack detecƟon.
+2. Thorough EvaluaƟon: The framework is validated across six real-world datasets using mulƟple aƩack
+methods, highlighƟng its generalizability.
+3. PracƟcal Impact: Demonstrates improvements in GNN performance by filtering out aƩack-like edges,
+showcasing real-world applicability.
+4. Empirical JusƟficaƟon: Detailed ablaƟon studies and comparisons against eleven baselines solidify the
+claims regarding the effecƟveness of LEO and HideNSeek.
+Weaknesses:
+1. Complexity: The proposed methodology involves mulƟple components (e.g., ensemble models in
+LEO), which might limit its scalability to larger graphs.
+2. Baseline Coverage: While comparisons are extensive, inclusion of more recent baselines or broader
+aƩack types (e.g., node injecƟon) could strengthen the findings.
+3. NotaƟon and ExplanaƟon: Certain secƟons, such as the imbalance-aware aggregaƟon and AUROC
+computaƟon, could benefit from clearer explanaƟons for a wider audience.
+4. Limited Domain Scope: While the evaluaƟon focuses on real-world graphs, tesƟng on addiƟonal
+domains, like social networks or biological networks, could enhance generalizability.
+RaƟng and Confidence:
+ RaƟng: 8/10 (Strong Accept)
+ Confidence: 4/5 (High Confidence)
+
+Review Summary (AutoSTF: Decoupled Neural Architecture Search for Cost-EffecƟve Automated SpaƟo-
+Temporal ForecasƟng)
+
+Summary of ContribuƟons
+The paper introduces AutoSTF, a novel framework for automated spaƟo-temporal forecasƟng that decouples
+the search space into temporal and spaƟal domains. This approach reduces computaƟonal overhead while
+maintaining accuracy. The authors also introduce a mulƟ-patch transfer module for fine-grained temporal
+dependency modeling and layer-wise spaƟal search for adapƟve spaƟal dependency. Extensive experiments on
+
+eight datasets highlight AutoSTF’s efficiency and effecƟveness, achieving up to a 13.48× speed-up over state-of-
+the-art methods while delivering superior forecasƟng accuracy.
+
+Strengths
+1. Efficiency Focus: By decoupling the search space into temporal and spaƟal components, the method
+significantly reduces computaƟonal costs, making automated forecasƟng more pracƟcal.
+2. InnovaƟon in Modeling: The mulƟ-patch transfer module and extended spaƟal search space provide
+novel soluƟons for fine-grained spaƟo-temporal dependency modeling.
+3. Robust EvaluaƟon: Comprehensive experiments on diverse datasets demonstrate the framework’s
+adaptability and effecƟveness.
+
+Weaknesses
+1. NotaƟon Clarity: SecƟons introducing mathemaƟcal formulaƟons (e.g., spaƟal and temporal DAGs)
+lack clarity, potenƟally hindering reproducibility.
+2. Baseline Comparisons: The paper could benefit from comparisons with manually designed models
+beyond efficiency metrics, to evaluate qualitaƟve performance differences.
+3. PracƟcal ImplementaƟon Details: While efficiency claims are compelling, addiƟonal real-world
+deployment scenarios or case studies could validate these results further.
+
+RaƟng and Confidence
+ RaƟng: 7/10 (Strong Accept)
+ Confidence: 4/5 (High Confidence)
+
+Review Summary (Mining of Switching Sparse Networks for Missing Value ImputaƟon in MulƟvariate Time
+Series)
+Summary of ContribuƟons
+The paper introduces MissNet, a novel method for missing value imputaƟon in mulƟvariate Ɵme series data.
+MissNet combines temporal dependency modeling with inter-correlaƟon exploitaƟon using inferred sparse
+networks that switch over Ɵme (regimes). The approach leverages graphical lasso to infer sparse networks and
+uses a state-space model for temporal imputaƟon. The algorithm demonstrates scalability, interpretability, and
+effecƟveness in experiments conducted on syntheƟc and real-world datasets.
+
+Strengths
+1. InnovaƟve Framework: MissNet effecƟvely integrates temporal and inter-correlaƟon modeling,
+addressing challenges in mulƟvariate Ɵme series imputaƟon.
+
+2. Regime-Switching Networks: The use of switching sparse networks adapts dynamically to Ɵme-
+varying data, enhancing interpretability and precision.
+
+3. Comprehensive EvaluaƟon: Extensive experiments across syntheƟc and real-world datasets showcase
+the method’s superiority over exisƟng baselines.
+4. Scalability: Demonstrates linear scalability with respect to the length of the Ɵme series, making it
+suitable for large-scale applicaƟons.
+
+Weaknesses
+1. Complexity in ImplementaƟon: The opƟmizaƟon process and algorithmic details (e.g., EM algorithm
+and Viterbi approximaƟon) may hinder reproducibility for non-expert pracƟƟoners.
+2. Baseline Comparisons: While the paper compares against many baselines, a deeper evaluaƟon
+against recent state-of-the-art deep learning methods would further validate its claims.
+3. GeneralizaƟon: Real-world deployment and applicability beyond the tested datasets remain
+unaddressed, limiƟng the method's broader appeal.
+
+RaƟng and Confidence
+ RaƟng: 8/10 (Strong Accept)
+ Confidence: 4/5 (High Confidence)
