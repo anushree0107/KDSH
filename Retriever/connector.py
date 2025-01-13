@@ -1,13 +1,13 @@
+import io 
 import time
+import PyPDF2
 import pathway as pw
 from pathway.xpacks.llm.splitters import TokenCountSplitter
 from pathway.xpacks.llm.vector_store import VectorStoreClient, VectorStoreServer
 from sentence_transformers import SentenceTransformer
 from pathway.xpacks.llm import embedders
-import PyPDF2
-import io 
 
-class EMNLPRulebook:
+class GDriveRulebook:
     def __init__(self):
         self.data_sources = []
         self.vector_server = None
@@ -22,8 +22,8 @@ class EMNLPRulebook:
         """Reads data from the output file into data_sources."""
         self.data_sources.append(
             pw.io.gdrive.read(
-                object_id="15tocVTjKm-uySTd4t8HpHMXpSP8HqAH_",
-                service_user_credentials_file="/home/anushree/KDSH/Data Connector/credentials.json",
+                object_id="17PIcscuzfyemPbr1UJmv7nUzLDkUJQQm",
+                service_user_credentials_file="/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Retriever/credentials.json",
                 mode="static",
                 with_metadata=True,
                 file_name_pattern="*.pdf"  # Only process PDFs
@@ -88,8 +88,12 @@ class EMNLPRulebook:
     def query_vector_store(self, query):
         """Queries the vector store and returns results."""
         query_results = self.client(query)
-        return query_results
-    
-emnlp = EMNLPRulebook()
-
-emnlp.query_vector_store("What is wisdom of the crowd?")
+        final_results = []
+        for result in query_results:
+            final_results.append(
+                {
+                    "text": result["text"],
+                    "score": result["dist"]
+                }
+            )
+        return final_results

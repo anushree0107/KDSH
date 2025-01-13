@@ -88,7 +88,7 @@ class EMNLPRulebook:
                     "score": result["dist"]
                 }
             )
-        return query_results
+        return final_results
     
 
     
