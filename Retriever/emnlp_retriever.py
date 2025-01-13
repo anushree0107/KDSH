@@ -5,11 +5,9 @@ from pathway.xpacks.llm.splitters import TokenCountSplitter
 from pathway.xpacks.llm.vector_store import VectorStoreClient, VectorStoreServer
 from sentence_transformers import SentenceTransformer
 from pathway.xpacks.llm import embedders
-from langchain.tools import BaseTool, StructuredTool, tool
 from typing import List
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain.agents import AgentExecutor, create_tool_calling_agent
 
 
 load_dotenv()
@@ -28,7 +26,7 @@ class EMNLPRulebook:
         """Reads data from the output file into data_sources."""
         self.data_sources.append(
             pw.io.fs.read(
-                "/home/anushree/KDSH/Retriever/Rulebook/emnlp_rulebook.txt",
+                "/mnt/c/Users/HP/OneDrive/Desktop/kdsh-task-2/KDSH/Retriever/Rulebook/emnlp_rulebook.txt",
                 format="binary",
                 mode="streaming",
                 with_metadata=True
