@@ -1,18 +1,11 @@
 import time
-import os
 import pathway as pw
 from pathway.xpacks.llm.splitters import TokenCountSplitter
 from pathway.xpacks.llm.vector_store import VectorStoreClient, VectorStoreServer
 from sentence_transformers import SentenceTransformer
 from pathway.xpacks.llm import embedders
-from langchain.tools import BaseTool, StructuredTool, tool
-from typing import List
-from dotenv import load_dotenv
-from langchain_groq import ChatGroq
-from langchain.agents import AgentExecutor, create_tool_calling_agent
-
-
-load_dotenv()
+import PyPDF2
+import io 
 
 class EMNLPRulebook:
     def __init__(self):
@@ -20,6 +13,7 @@ class EMNLPRulebook:
         self.vector_server = None
         self.client = None
 
+        # Automatically save the rulebook to the file
         self.read_data_sources()
         self.initialize_vector_server()
         self.initialize_client()
@@ -27,11 +21,12 @@ class EMNLPRulebook:
     def read_data_sources(self):
         """Reads data from the output file into data_sources."""
         self.data_sources.append(
-            pw.io.fs.read(
-                "/home/anushree/KDSH/Retriever/Rulebook/emnlp_rulebook.txt",
-                format="binary",
-                mode="streaming",
-                with_metadata=True
+            pw.io.gdrive.read(
+                object_id="15tocVTjKm-uySTd4t8HpHMXpSP8HqAH_",
+                service_user_credentials_file="/home/anushree/KDSH/Data Connector/credentials.json",
+                mode="static",
+                with_metadata=True,
+                file_name_pattern="*.pdf"  # Only process PDFs
             )
         )
         print("Data Connector Initialized")
@@ -55,12 +50,24 @@ class EMNLPRulebook:
         # Replace embedder initialization
         embedder = embedders.SentenceTransformerEmbedder(model="sentence-transformers/all-MiniLM-L6-v2")
         
-        PATHWAY_PORT = 8000
+        PATHWAY_PORT = 8765
+
+        def pdf_parser(data):
+            try:
+                pdf_reader = PyPDF2.PdfReader(io.BytesIO(data))
+                text = ""
+                for page in pdf_reader.pages:
+                    text += page.extract_text() + "\n"
+                return [(text, {})]
+            except Exception as e:
+                print(f"Error parsing PDF: {e}")
+                return [("", {})]
 
         self.vector_server = VectorStoreServer(
             *self.data_sources,
             embedder=embedder,
             splitter=text_splitter,
+            parser=pdf_parser
         )
         self.vector_server.run_server(
             host="127.0.0.1", 
@@ -74,55 +81,15 @@ class EMNLPRulebook:
         """Initializes the VectorStoreClient."""
         self.client = VectorStoreClient(
             host="127.0.0.1",
-            port=8000,
+            port=8765,
             timeout=60
         )
-    def query_vector_store(self, query)->List:
+    
+    def query_vector_store(self, query):
         """Queries the vector store and returns results."""
         query_results = self.client(query)
-        final_results = []
-        for result in query_results:
-            final_results.append(
-                {
-                    "text": result["text"],
-                    "score": result["dist"]
-                }
-            )
         return query_results
     
+emnlp = EMNLPRulebook()
 
-    
-
-class EMNLPAgent:
-    def __init__(self):
-        # self.rulebook = EMNLPRulebook()
-        # self.retriever_tool = self.rulebook.setup_tools()
-        self.agent = ChatGroq(
-            model = "llama3-70b-8192",
-            max_retries = 5,
-            api_key = os.getenv("GROQ_API_KEY")
-        )
-    def query(self, query, retrieved_results):
-        # retrieved_results = self.rulebook.query_vector_store(query)
-        final_prompt = f"""
-            This is the query of the user : {query}
-            These are the retrieved results from the rulebook:
-            {retrieved_results}
-"""
-        messages = [
-            ("system", "Think yourself as a EMNLP reviewer, based on the tool results and your knowledge, what would be the best answer to the following question?"),
-            ("user", final_prompt)
-        ]
-        response = self.agent.invoke(messages)
-        return response.content
-    
-    
-if __name__ == "__main__":
-    rulebook = EMNLPRulebook()
-    query = "What are the rules to getting selected in EMNLP?"
-    results = rulebook.query_vector_store(query)
-    print("retrieved results: ", results[0]['text'])
-    
-    agent = EMNLPAgent()
-    response = agent.query(query, results)
-    print("response: ", response)
+emnlp.query_vector_store("What is wisdom of the crowd?")
