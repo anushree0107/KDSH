@@ -4,6 +4,9 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 import os
 from dotenv import load_dotenv
+from langchain.globals import set_llm_cache
+from langchain.cache import InMemoryCache
+set_llm_cache(InMemoryCache())
 
 class GradeHallucinations(BaseModel):
     """Binary score for hallucination present in generation answer."""

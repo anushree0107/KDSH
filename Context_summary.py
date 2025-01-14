@@ -2,6 +2,9 @@ import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
+from langchain.globals import set_llm_cache
+from langchain.cache import InMemoryCache
+set_llm_cache(InMemoryCache())
 
 load_dotenv()
 

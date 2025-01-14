@@ -4,6 +4,9 @@ from langchain.agents import AgentExecutor, create_react_agent
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
+from langchain.globals import set_llm_cache
+from langchain.cache import InMemoryCache
+set_llm_cache(InMemoryCache())
 
 class PaperReviewAgent:
     def __init__(self):

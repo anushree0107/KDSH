@@ -10,7 +10,11 @@ from Grader.grader_agent import PaperGrader
 from Hallucinator.hallucination_agent import HallucinationGrader
 from Question_Rewriter.question_rewriter import QueryRewriter
 from ReactAgent.react_agent import PaperReviewAgent
+from Context_summary import summarization_agent
 from ReflectionAgent.reflectionAgent import IntrospectiveAgentManager
+from langchain.globals import set_llm_cache
+from langchain.cache import InMemoryCache
+set_llm_cache(InMemoryCache())
 
 
 def pipeline(text, content, file, key):
@@ -110,16 +114,13 @@ def extract_text_from_pdf(pdf_path):
     sections["title"] = sections["title"].strip()
     print(f"Extracted title: {sections['title']}")
     
-    # Get all text from the PDF with better formatting preservation
     for page in doc:
         text_content += page.get_text("text", sort=True) + "\n"
     
-    # Split text into lines while preserving formatting
     lines = text_content.split('\n')
     current_section = None
     section_content = ""
     
-    # Common section header patterns
     section_patterns = {
         "abstract": ["abstract"],
         "introduction": ["introduction", "1. introduction", "i. introduction", "1 Introduction"],
@@ -133,52 +134,42 @@ def extract_text_from_pdf(pdf_path):
         "references": ["references", "bibliography"]
     }
     
-    # Process each line with better section detection
     for i, line in enumerate(lines):
         line = line.strip()
         line_lower = line.lower()
         
-        # Check if this line is a section header
         is_header = False
         next_section = None
         
         for section, patterns in section_patterns.items():
             if any(pattern == line_lower or pattern == line_lower.strip('0123456789. ') for pattern in patterns):
                 if current_section:
-                    # Save the content of the previous section
                     sections[current_section] += section_content.strip() + "\n"
                 current_section = section
                 section_content = ""
                 is_header = True
                 break
             
-            # Look ahead for next section to determine section boundaries
             if i < len(lines) - 1:
                 next_line_lower = lines[i + 1].lower().strip()
                 if any(pattern == next_line_lower or pattern == next_line_lower.strip('0123456789. ') for pattern in patterns):
                     next_section = section
         
-        # Add content to current section if we're in one and it's not a header
         if current_section and not is_header:
-            if line.strip():  # Only add non-empty lines
+            if line.strip(): 
                 section_content += line + " "
         
-        # If we've found the next section header, save current section content
         if next_section and current_section:
             sections[current_section] += section_content.strip() + "\n"
             section_content = ""
     
-    # Add the last section's content
     if current_section and section_content:
         sections[current_section] += section_content.strip()
     
-    # Clean up the sections
     for section in sections:
-        if section != "title":  # Don't process title section
-            # Remove section headers from content
+        if section != "title":  
             for pattern in section_patterns.get(section, []):
                 sections[section] = sections[section].replace(pattern, "")
-            # Clean up extra whitespace while preserving paragraphs
             sections[section] = ' '.join(sections[section].split())
     
     return sections
@@ -187,15 +178,12 @@ dataset_folder = "Papers"
 
 
 
-def recommend(index):
-    target_file_name = f"P{index:03}.pdf"  # Format the file name to match P001, P002, etc.
+def recommend():
     for file_name in os.listdir(dataset_folder):
-        if file_name == target_file_name:  # Only process the target file
             file_path = os.path.join(dataset_folder, file_name)
             paper = extract_text_from_pdf(file_path)
             file = file_name.removesuffix('.pdf')
 
-            # Ensure the output folder exists
             context_file = f"GDrive/{file}"
 
             for key, value in paper.items():
@@ -204,8 +192,11 @@ def recommend(index):
                     file_content = ''
                     with open(query_file, "r", encoding="utf-8") as f:
                         file_content = f.read()
+                    if key == 'methodology' or key == 'experimental results':
+                        file_content = summarization_agent(file_content)
                     pipeline(value, file_content, file, key)
 
-            break  # Exit the loop after processing the target file
+            break 
 
-recommend(4)
+if __name__ == "__main__":
+    recommend()

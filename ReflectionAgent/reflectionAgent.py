@@ -6,6 +6,9 @@ from llama_index.core import Settings
 from llama_index.core.agent import FunctionCallingAgentWorker
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.tools.tavily_research.base import TavilyToolSpec
+from langchain.globals import set_llm_cache
+from langchain.cache import InMemoryCache
+set_llm_cache(InMemoryCache())
 load_dotenv()
 
 class IntrospectiveAgentManager:

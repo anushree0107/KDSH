@@ -7,7 +7,9 @@ from llama_index.llms.groq import Groq
 from llama_index.core import Settings
 
 import sys
-
+from langchain.globals import set_llm_cache
+from langchain.cache import InMemoryCache
+set_llm_cache(InMemoryCache())
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)

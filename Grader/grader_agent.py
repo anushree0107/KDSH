@@ -4,6 +4,8 @@ from langchain_groq import ChatGroq
 import os
 import sys
 import time
+from langchain.globals import set_llm_cache
+from langchain.cache import InMemoryCache
 current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
@@ -13,6 +15,8 @@ from Retriever.emnlp_retriever import EMNLPRulebook
 from Retriever.neurips_retriever import NeurIPSRulebook
 from Retriever.kdd_retriever import KDDRulebook
 from Retriever.tmlr_retriever import TMLRRulebook
+
+set_llm_cache(InMemoryCache())
 
 
 load_dotenv()
