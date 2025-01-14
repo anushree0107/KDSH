@@ -1,0 +1,24 @@
+function is smooth.
+3 Application to Aircraft Collision Avoidance
+Aircraft collision avoidance requires robust safety guarantees. The Next-Generation Collision
+Avoidance System (ACAS X), which issues advisories to prevent near mid-air collisions, has both
+manned (ACAS Xa) and unmanned (ACAS Xu) variants. The system was originally designed to
+choose optimal advisories while minimizing disruptive alerts by solving a partially observable Markov
+decision process. The solution took the form of a large look-up table, mapping each possible input
+combination to scores for all possible advisories. The advisory with the highest score would then be
+issued.undertake scripted activities such as moving from room to room) to fully validate the performance of our approach in other settings.
+6 Conclusion
+We have presented the MDCSA model, a new deep learning approach for indoor localization utilizing RSSI and wrist-worn
+accelerometer data. The evaluation on our unique real-world free-living pilot dataset, which includes subjects with and without PD,
+shows that MDCSA achieves state-of-the-art accuracy for indoor localization. The availability of accelerometer data does indeed
+enrich the RSSI features, which, in turn, improves the accuracy of indoor localization.
+Accurate room localization using these data modalities has a wide range of potential applications within healthcare. This could
+ These models may be required
+to satisfy specific input-output specifications to ensure the algorithms comply with physical laws,
+can be executed safely, and are consistent with prior domain knowledge. Furthermore, these models
+should demonstrate adversarial robustness, meaning their outputs should not change abruptly within
+small input regions – a property that neural networks often fail to satisfy.
+Recent studies have shown the capacity to verify formally input-output specifications and adversarial
+robustness properties of neural networks. For instance, the Satisability Modulo Theory (SMT) solver
+Reluplex was employed to verify properties of networks being used in the Next-Generation Aircraft
+Collision Avoidance System for Unmanned aircraft (ACAS Xu).

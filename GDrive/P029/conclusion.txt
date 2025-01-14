@@ -1,0 +1,29 @@
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+an activity, eliminating the need for the model to identify the start and end of activities. Our methods
+are based on a CNN that generates a per-frame or per-segment representation, derived from standard
+two-stream CNNs using deep CNNs like I3D or InceptionV3.
+Given video features vof dimensions T×D, where Trepresents the video’s temporal length and D
+is the feature’s dimensionality, the usual approach for feature pooling involves max- or mean-pooling
+across the temporal dimension, followed by a fully-connected layer for video clip classification, as
+depicted in Fig. 5(a). This approach, however, yields a single representation for the entire video,
+losing temporal information.sequential processing of video features, whereas other methods can be fully parallelized.
+Table 3: Additional parameters required for models when added to the base model (e.g., I3D or
+Inception V3).
+Model # Parameters
+Max/Mean Pooling 16K
+Pyramid Pooling 115K
+LSTM 10.5M
+Temporal Conv 31.5M
+Sub-events 36K
+Table 4: Mean Average Precision (mAP) results on segmented videos for multi-label classification.
+Learning sub-intervals for pooling is found to be crucial for activity recognition.
+Method RGB Flow Two-stream
+Random 16.3 16.3 16.3

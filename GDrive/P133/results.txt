@@ -1,0 +1,25 @@
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+ Nevertheless, even such
+imperfect correspondences can provide a training signal that assists the TL and MTL models in
+learning relations like TWHEN and ACT.
+Since the TLE model outperforms STL in predicting REG by ten absolute points, we examined
+all REG compounds correctly classified by TLE but misclassified by STL. We found that STL
+misclassified them as RSTR, indicating that TL from NomBank helps TLE recover from STL’s
+overgeneralization in RSTR prediction.
+The two NomBank relations that receive the highest boost in F1 score (about five absolute points)
+are ARG0 and ARGM-MNR, but the improvement in the latter corresponds to only one additional

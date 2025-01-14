@@ -1,0 +1,24 @@
+I3D + super-events 38.7 38.6 39.1
+I3D + sub+super-events 38.2 39.4 40.4
+InceptionV3 31.2 31.8 31.9
+InceptionV3 + max-pooling 31.8 34.1 35.2
+InceptionV3 + pyramid 32.2 35.1 36.8
+InceptionV3 + LSTM 32.1 33.5 34.1
+InceptionV3 + temporal conv 28.4 34.4 33.4
+InceptionV3 + sub-events 32.3 53.4 57.2
+I3D + pyramid 53.2 56.7 58.7
+I3D + LSTM 48.2 53.1 53.1
+I3D + temporal conv 52.8 57.1 58.4
+I3D + sub-events 55.5 61.2 61.3
+Table 5 shows the average precision for each activity class. Learning temporal structure is particularly
+beneficial for frame-based features (e.g., InceptionV3), which capture less temporal information
+5
+compared to segment-based features (e.g., I3D). Sub-event learning significantly aids in detecting
+provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from

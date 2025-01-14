@@ -1,0 +1,28 @@
+We have compiled an extensive dataset from 20 baseball games of the 2017 MLB postseason, available
+on YouTube, totaling over 42 hours of video. Our dataset includes two main parts: segmented videos
+intended for activity recognition and continuous videos designed for activity classification. The
+dataset’s complexity is amplified by the fact that it originates from televised baseball games, where a
+single camera perspective is shared among various activities. Additionally, there is minimal variance
+in motion and appearance among different activities, such as swinging a bat versus bunting. In
+contrast to datasets like THUMOS and ActivityNet, which encompass a broad spectrum of activities
+with diverse settings, scales, and camera angles, our dataset features activities where a single frame
+ Utilizing the 60fps rate available in YouTube videos, we
+recalculated optical flow and extracted RGB frames at this higher rate. Employing a fully-connected
+layer with a single output for pitch speed prediction and minimizing the L1 loss between predicted
+and actual speeds, we achieved an average error of 3.6mph. Table 6 compares different models, and
+Fig. 8 illustrates the sub-events learned for various speeds.
+Table 6: Results for pitch speed regression on segmented videos, reporting root-mean-squared errors.
+Method Two-stream
+I3D 4.3 mph
+I3D + LSTM 4.1 mph
+I3D + sub-events 3.9 mph
+This paper introduces MLB-YouTube, a novel dataset that includes densely annotated frames of activi-
+ties extracted from broadcast baseball videos. Unlike many current datasets for activity recognition or
+detection, our dataset emphasizes fine-grained activity recognition. The differences between activities
+are often minimal, primarily involving the movement of a single individual, with a consistent scene
+structure across activities. The determination of activity is based on a single camera perspective. This
+study compares various methods for temporal feature aggregation, both for classifying activities in
+segmented videos and for detecting them in continuous video streams.
+2 Related Work
+The field of activity recognition has garnered substantial attention in computer vision research. Initial
+successes were achieved with hand-engineered features such as dense trajectories.

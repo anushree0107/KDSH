@@ -1,0 +1,31 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.preferences for recommendations.
+3 Experiments
+In this section, we assess the efficacy of PAAC through comprehensive experiments, aiming to address the following research
+questions:
+• How does PAAC compare to existing debiasing methods?
+• How do different designed components play roles in our proposed PAAC?
+3
+• How does PAAC alleviate the popularity bias?
+• How do different hyper-parameters affect the PAAC recommendation performance?
+3.1 Experiments Settings
+3.1.1 Datasets
+In our experiments, we use three widely public datasets: Amazon-book, Yelp2018, and Gowalla. We retained users and items with a
+minimum of 10 interactions.
+3.1.2 Baselines and Evaluation Metrics
+PCEDT have distinctly high ratios compared to other relations in Figure 2. These relations also
+have the second-highest F1 score in their datasets—except for STL on PCEDT (see Tables 4 and
+5). Lexical memorization is therefore a likely cause of these high F1 scores. We also observed that
+lower ratios of relation-specific constituents correlate with lower F1 scores, such as APP and REG in
+PCEDT. Based on these insights, we can’t dismiss the possibility that our models show some degree
+of lexical memorization, despite manual analysis also presenting cases where models demonstrate
+generalization and correct predictions in situations where lexical memorization is impossible.
+8 Conclusion

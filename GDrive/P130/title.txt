@@ -1,0 +1,24 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation. Prior research includes
+both predictive models (using language samples to predict attributes about the author) and models
+that provide valuable insights (using language samples and author attributes to identify differentiating
+linguistic features). Previous studies have examined factors such as gender and age, political ideology,
+health outcomes, and personality traits. In this paper, models are constructed to predict outcomes
+based on crowd-sourced forecasts without knowledge of individual forecasters’ identities.
+Previous research has also explored how language use varies depending on the relationships between
+individuals. For instance, studies have analyzed language patterns in social networks, online commu-
+nities, and corporate emails to understand how individuals in positions of authority communicate.
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.

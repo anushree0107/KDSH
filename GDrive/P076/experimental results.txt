@@ -1,0 +1,21 @@
+Gait quantification using wearables or smartphones is an area where a significant amount of work has been done. Cameras can
+also detect parkinsonian gait and some gait features, including step length and average walking speed. Time-of-flight devices,
+which measure distances between the subject and the camera, have been used to assess medication adherence through gait analysis.
+From free-living data, one approach to gait and room use evaluation in home settings is by emitting and detecting radio waves to
+non-invasively track movement. Gait analysis using radio wave technology shows promise to track disease progression, severity, and
+medication response. However, this approach cannot identify who is doing the movement and also suffers from technical issues
+ Evaluation on this dataset, including individuals with and
+without PD, demonstrates that our network outperforms other methods across all cross-validation categories.
+(2) We demonstrate how accurate room-level localization predictions can be transformed into in-home gait speed biomarkers (e.g.,
+number of room-to-room transitions, room-to-room transition duration). These biomarkers can effectively classify the OFF or ON
+medication state of a PD patient from this pilot study data.
+2 Related Work
+Extensive research has utilized home-based passive sensing systems to evaluate how the activities and behavior of individuals with
+neurological conditions, primarily cognitive dysfunction, change over time. However, there is limited work assessing room use in
+the home setting in people with Parkinson’s.
+ Localization could also provide valuable information in the measurement of other behaviors such as non-motor symptoms like
+urinary function (e.g., how many times someone visits the toilet room overnight).
+IoT-based platforms with sensors capturing various modalities of data, combined with machine learning, can be used for unobtrusive
+and continuous indoor localization in home environments. Many of these techniques utilize radio-frequency signals, specifically the
+Received Signal Strength Indication (RSSI), emitted by wearables and measured at access points (AP) throughout a home. These
+signals estimate the user’s position based on perceived signal strength, creating radio-map features for each room. To improve

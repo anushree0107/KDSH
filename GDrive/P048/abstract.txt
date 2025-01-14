@@ -1,0 +1,21 @@
+02426 230×265 (294 ×431×2.353)
+7 Burger 0.1043478261 0.02435 208×264 (378 ×400×2.353)
+8 Cake 0.1276595745 0.02143 256×300 (298 ×310×4.706)
+9 Blueberry muffin 0.08759124088 0.01801 291×357 (441 ×443×2.353)
+10 Banana 0.08759124088 0.01705 315×377 (446 ×857×1.176)
+Medium 11 Salmon 0.1043478261 0.In our experiments, while keeping other hyperparameters constant, we search αandβwithin the range {0, 0.2, 0.4, 0.6, 0.8, 1}. As
+αandβincrease, performance initially improves and then declines. The optimal hyperparameters for the Yelp2018 and Gowalla
+datasets are α= 0.8,β= 0.6andα= 0.2,β= 0.2, respectively. This may be attributed to the characteristics of the datasets. The
+Yelp2018 dataset, with a higher average interaction frequency per item, benefits more from a higher weight αfor popular items as
+positive samples.26% of right constituents of compounds annotated as AIM occur
+in other compounds annotated as RSTR. This explains the models’ inability to learn AIM but raises
+questions about their ability to learn relational representations, which we explore further in Section
+7.3.
+Table 8: Macro-average F1 score on the test split.
+Model NomBank PCEDT
+STL 52.66 40.15
+TLE 52.83 48.34
+TLH 52.98 46.52
+TLEH 53.31 47.12
+MTLE 53.21 47.23
+MTLF 42.07 40.73

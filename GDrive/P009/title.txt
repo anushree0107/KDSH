@@ -1,0 +1,18 @@
+credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7
+ This approach has been demonstrated as a state-of-the-art
+method for alleviating popularity bias. It employs data augmentation techniques such as graph augmentation or feature
+augmentation to generate different views, maximizing positive pair consistency and minimizing negative pair consistency
+to promote more uniform representations. Specifically, Adap- τadjusts user/item embeddings to specific values, while
+SimGCL integrates InfoNCE loss to enhance representation uniformity and alleviate popularity bias.
+4.2 Representation Learning for CF
+Representation learning is crucial in recommendation systems, especially in modern collaborative filtering (CF) techniques. It
+creates personalized embeddings that capture user preferences and item characteristics. The quality of these representations critically
+ Intuitively, items interacted with by the same user have
+some similar characteristics. In this section, we utilize common supervisory signals in popular item representations and suggest a
+popularity-aware supervised alignment method to improve the representations of unpopular items.
+We initially filter items with similar characteristics based on the user’s interests. For any user, we define the set of items they interact
+with. We count the frequency of each item appearing in the training dataset as its popularity. Subsequently, we group items based on
+their relative popularity. We divide items into two groups: the popular item group and the unpopular item group. The popularity of
+each item in the popular group is higher than that of any item in the unpopular group.

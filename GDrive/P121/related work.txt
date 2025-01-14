@@ -1,0 +1,21 @@
+ Reluplex has also been used to
+verify adversarial robustness. While Reluplex and other similar techniques can effectively determine
+if a network satisfies a given specification, they do not offer a way to guarantee that the network will
+meet those specifications. Therefore, additional methods are needed to adjust networks if it is found
+that they are not meeting the desired properties.
+There has been an increase in techniques for designing networks with certified adversarial robustness,
+but enforcing more general safety properties in neural networks is still largely unexplored. One ap-
+proach to achieving provably correct neural networks is through abstraction-refinement optimization.
+This approach has been applied to the ACAS-Xu dataset, but the network was not guaranteed to meet
+to utilize a recurrent neural network such as a long-short term memory (LSTM) approach. However, in LSTM layers, the local
+context is summarized based on the previous context and the current input. Two similar patterns separated by a long period of time
+might have different contexts if they are processed by the LSTM layers. We utilize a combination of causal convolution layers and
+self-attention layers, which we name Dual Convolutional Self-Attention (DCSA). The DCSA takes in a primary input ˆx1∈RN×d
+and a secondary input ˆx2∈RN×dand yields:
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6

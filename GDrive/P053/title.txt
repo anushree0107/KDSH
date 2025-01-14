@@ -1,0 +1,19 @@
+ However, in the presence of weak Minty solutions, there is additional interest in
+choosing large step sizes. We observed in Theorem 3.1 and related works the fact that a crucial ingredient in the analysis is that the
+step size is chosen larger than a multiple of the weak Minty parameter ρto guarantee convergence at all. For these reasons, we want
+to outline a method using adaptive step sizes, meaning that no step size needs to be supplied by the user and no line-search is carried
+out.
+Since the analysis of OGDA+ is already quite involved in the constant step size regime, we choose to equip EG+ with an adaptive
+Appendix C: Details of VerticalCAS Experiment
+C.1 Safeability Constraints
+The "safeability" property, originally introduced and used to verify the safety of the VerticalCAS
+neural networks can be encoded into a set of input-output constraints. The "safeable region" for
+a given advisory represents input locations where that advisory can be selected such that future
+advisories exist that will prevent an NMAC. If no future advisories exist, the advisory is "unsafeable"
+and the corresponding input region is the "unsafeable region". Examples of these regions, and their
+proximity functions are shown in Figure 5 for the CL1500 advisory.
+ It was observed that a specific parameterization of the von Neumann ratio game exhibits a novel type of solution,
+termed "weak Minty," without having any of the previously known characteristics like (negative) comonotonicity or Minty solutions.
+Convergence in the presence of such solutions was demonstrated for EG, provided that the extrapolation step size is twice as large as
+the update step. Subsequently, it was shown that the condition on the weak Minty parameter can be relaxed by further reducing the
+length of the update step, and this is done adaptively. To avoid the need for additional hyperparameters, a backtracking line search is

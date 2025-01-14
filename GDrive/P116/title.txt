@@ -1,0 +1,20 @@
+Broader Impact
+Supervised machine learning now affects both personal and public lives significantly. Generalization is
+critical to the reliability and safety of empirically trained models. Our analysis aims to achieve a deeper
+understanding of the relationships between generalization, architectural design, and available data.
+We have discussed the concepts and demonstrated the effectiveness of using uniform concentration
+events for generalization guarantees of common supervised machine learning algorithms.
+7
+parameter search for the number of trees (200, 250), the minimum number of samples in a leaf node (1, 5), and whether a warm start
+is needed. The Gini impurity is used to measure splits.
+**Evaluation Metrics:** We are interested in developing a system to monitor PD motor symptoms in home environments. For
+example, we will consider if there is any significant difference in the performance of the system when it is trained with PD data
+compared to being trained with healthy control (HC) data. We tailored our training procedure to test our hypothesis by performing
+variations of cross-validation. Apart from training our models on all HC subjects (ALL-HC), we also perform four different kinds of
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6

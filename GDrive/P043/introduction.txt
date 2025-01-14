@@ -1,0 +1,24 @@
+02021 249×318 (186 ×95×0.987)
+19 Waffle 0.01034482759 0.01902 294×338 (465 ×537×0.8)
+20 Pizza 0.01034482759 0.01913 292×336 (442 ×651×1.176)
+After finding keyframes, PixSfM estimated the poses and point cloud. After generating scaled meshes,
+the team calculated volumes and Chamfer distance with and without transformation metrics. Meshes
+were registered with ground truth meshes using ICP to obtain transformation metrics.
+Table 3 presents quantitative comparisons of the team’s volumes and Chamfer distance with and
+without estimated transformation metrics from ICP.scaling relative to real-world dimensions. Finally, the fine-tuned scaling factor Sfis applied to the
+cleaned food mesh RCf, producing the final scaled food mesh RFf. This step culminates in an
+accurately scaled 3D representation of the food object, enabling precise volume estimation.
+4.1.3 Detecting the scaling factor
+Generally, 3D reconstruction methods produce unitless meshes by default. To address this, the team
+manually determines the scaling factor by measuring the distance for each block of the reference
+object mesh. The average of all block lengths lavgis calculated, while the actual real-world length is
+constant at lreal= 0.012meters.The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

@@ -1,0 +1,22 @@
+We confirm the efficacy and logic of PAAC in reducing popularity bias through thorough experiments on three
+real-world datasets.
+1 Introduction
+Contemporary recommender systems are essential in reducing information overload. Personalized recommendations frequently
+employ collaborative filtering (CF) to assist users in discovering items that may interest them. CF-based techniques primarily
+learn user preferences and item attributes by matching the representations of users with the items they engage with. Despite their
+achievements, CF-based methods frequently encounter the issue of popularity bias, which leads to considerable disparities in
+accuracy between items that are popular and those that are not. Popularity bias occurs because there are limited supervisory signals
+ This approach has been demonstrated as a state-of-the-art
+method for alleviating popularity bias. It employs data augmentation techniques such as graph augmentation or feature
+augmentation to generate different views, maximizing positive pair consistency and minimizing negative pair consistency
+to promote more uniform representations. Specifically, Adap- τadjusts user/item embeddings to specific values, while
+SimGCL integrates InfoNCE loss to enhance representation uniformity and alleviate popularity bias.
+4.2 Representation Learning for CF
+Representation learning is crucial in recommendation systems, especially in modern collaborative filtering (CF) techniques. It
+creates personalized embeddings that capture user preferences and item characteristics. The quality of these representations critically
+To reduce popularity bias in collaborative filtering tasks, we employ a multi-task training strategy to jointly optimize the classic
+recommendation loss ( LREC ), supervised alignment loss ( LSA), and re-weighting contrast loss ( LCL).
+L=LREC+λ1LSA+λ2LCL+λ3||Θ||2, (7)
+where Θis the set of model parameters in LREC as we do not introduce additional parameters, λ1andλ2are hyperparameters that
+control the strengths of the popularity-aware supervised alignment loss and the re-weighting contrastive learning loss respectively,
+andλ3is the L2regularization coefficient. After completing the model training process, we use the dot product to predict unknown

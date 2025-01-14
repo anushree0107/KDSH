@@ -1,0 +1,22 @@
+PCEDT functors appear less than 20 times), making it doubtful whether any ML model could learn
+them under any circumstances.
+Given this imbalanced distribution, it is evident that accuracy alone is insufficient to determine the
+best-performing model. Therefore, in the subsequent section, we report and analyze the F1 scores of
+the predicted NomBank and PCEDT relations across all STL, TL, and MTL models.
+7.2 Per-Relation F1 Scores
+Tables 4 and 5 present the per-relation F1 scores for NomBank and PCEDT, respectively. We only
+include results for relations that are actually predicted by at least one of the models.
+5
+Data Models Kitch-Livin Kitch-Dinin Dinin-Livin
+Ground Truth 18.71 (18.52) 14.65 (6.03) 10.64 (11.99)
+ALL-HCRF 16.18 (12.08) 14.58 (10.22) 10.19 (9.46)
+TENER 15.58 (8.75) 16.30 (12.94) 12.01 (13.01)
+Alt DTML 15.27 (7.51) 13.40 (6.43) 10.84 (10.81)
+MDCSA 17.70 (16.on accuracy scores is inadequate for evaluating the effectiveness of TL and MTL for this task and
+dataset.
+Secondly, with the exception of the MTLF model, all TL and MTL models consistently improve
+the F1 score for all PCEDT relations except PAT. Notably, the F1 scores for the relations TWHEN
+and ACT show a substantial increase compared to other PCEDT relations when only the embedding
+layer’s weights are shared (MTLE) or transferred (TLE). This outcome can be partially understood
+by examining the correspondence matrices between NomBank arguments and PCEDT functors,
+presented in Tables 7 and 6.

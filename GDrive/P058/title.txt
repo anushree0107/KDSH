@@ -1,0 +1,22 @@
+to utilize a recurrent neural network such as a long-short term memory (LSTM) approach. However, in LSTM layers, the local
+context is summarized based on the previous context and the current input. Two similar patterns separated by a long period of time
+might have different contexts if they are processed by the LSTM layers. We utilize a combination of causal convolution layers and
+self-attention layers, which we name Dual Convolutional Self-Attention (DCSA). The DCSA takes in a primary input ˆx1∈RN×d
+and a secondary input ˆx2∈RN×dand yields:
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in

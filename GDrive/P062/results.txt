@@ -1,0 +1,22 @@
+in the label sets, where it exists, can be leveraged through transfer and multi-task learning, especially
+since the overall distribution of relations differs between the two frameworks.
+4 Transfer vs. Multi-Task Learning
+In this section, we employ the terminology and definitions established by Pan and Yang (2010) to
+articulate our framework for transfer and multi-task learning. Our classification task can be described
+in terms of all training pairs (X, Y) and a probability distribution P(X), where X represents the input
+feature space, Y denotes the set of all labels, and N is the training data size. The domain of a task is
+defined by X, P(X).but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+and MTL models are trained using the same hyperparameters as the STL model.
+5.2 Transfer Learning Models
+In our experiments, transfer learning involves training an STL model on PCEDT relations and then
+using some of its weights to initialize another model for NomBank relations. Given the neural
+classifier architecture detailed in Section 5.1, we identify three ways to implement TL: 1) TLE:
+Transferring the embedding layer weights, 2) TLH: Transferring the hidden layer weights, and 3)
+TLEH: Transferring both the embedding and hidden layer weights. Furthermore, we differentiate
+between transfer learning from PCEDT to NomBank and vice versa. This results in six setups,

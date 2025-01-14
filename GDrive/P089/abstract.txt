@@ -1,0 +1,19 @@
+a common aspect of the aforementioned studies is that their bounds are contingent on the error of the score estimator. According to
+some, providing precise guarantees for the estimation of the score function is challenging, as it necessitates an understanding of the
+non-convex training dynamics of neural network optimization, which is currently beyond reach. Therefore, upper bounds are derived
+without making assumptions about the learned score function. Instead, the bound presented here is dependent on a reconstruction
+loss calculated over a finite independent and identically distributed (i.i.d.) sample. Intuitively, a loss function is defined, which
+quantifies the average Euclidean distance between a sample from the data-generating distribution and the reconstruction obtained by
+ Inspired by utilizing multihead self-attention, we utilize our DCSA with various kernel lengths with the same
+aim: allowing asymmetric long-term learning. The multihead DCSA takes in two inputs ˆx1,ˆx2∈RN×dand yields:
+MDCSA k1,...,k n(ˆx1,ˆx2) = Ξ n(φk1,...,k n(ˆx1,ˆx2)) (4)
+with
+ We prove this property in a network
+recovery setting in Theorem 2, and also an agnostic learning setting in Theorem 3. These results
+ensure a small generalization error, when any optimization algorithm finds a network with a small
+empirical risk. We develop the key proof techniques for deriving the sample complexity of achieving
+NeuRIPs in Section V , by using the chaining theory of stochastic processes. The derived results are
+summarized in Section VI, where we also explore potential future research directions.
+2 Notation and Assumptions
+In this section, we will define the key notations and assumptions for the neural networks examined
+in this study.

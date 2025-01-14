@@ -1,0 +1,22 @@
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e. We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+To extend the sub-event model to continuous videos, we follow a similar approach but set T=Lin
+Eq. 1, resulting in filters of length L. The T×Dvideo representation is convolved with the sub-event
+filters F, producing an N×D×T-dimensional representation used as input to a fully-connected
+layer for frame classification.
+The model is trained to minimize per-frame binary classification:
+L(v) =X
+t,czt,clog(p(c|H(vt))) + (1 −zt,c) log(1 −p(c|H(vt)))
+where vtis the per-frame or per-segment feature at time t,H(vt)is the sliding window application of

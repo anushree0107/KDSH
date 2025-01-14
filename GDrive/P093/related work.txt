@@ -1,0 +1,20 @@
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+majority of problems, as the reduced iteration cost is counterbalanced by the smaller step size. An exception is presented by problem
+(7), which is not covered by theory, and OGDA+ is the only method capable of converging.
+Finally, we note that the previous paradigm in pure minimization of "smaller step size ensures convergence" but "larger step size
+gets there faster," where the latter is typically constrained by the reciprocal of the gradient’s Lipschitz constant, does not appear
+to hold true for min-max problems anymore. The analysis of various methods in the presence of weak Minty solutions indicates
+that convergence can be lost if the step size is excessively small and sometimes needs to be larger than1
+ For the modified transformer encoder, at each time step t, RSSI xr
+tand accelerometer xa
+tfeatures are combined via a
+linear layer before they are processed by the networks. A grid search on the parameters of each network is performed to find the best
+parameter for each model. The parameters to tune are the embedding dimension din 128, 256, the number of epochs in 200, 300,
+and the learning rate in 0.01, 0.0001. The dropout rate is set to 0.15, and a specific optimizer in combination with a Look-Ahead
+algorithm is used for the training with early stopping using the validation performance. For the RF, we perform a cross-validated

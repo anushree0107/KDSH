@@ -1,0 +1,18 @@
+and cocoercive operators, which fulfill:
+⟨F(u)−F(v), u−v⟩ ≥β∥F(u)−F(v)∥2. (2)
+Strongly monotone operators emerge as gradients of strongly convex functions or in strongly-convex-strongly-concave min-max
+problems. Cocoercive operators appear, for instance, as gradients of smooth convex functions, in which case (2) holds with βequal
+to the inverse of the gradient’s Lipschitz constant.
+Departing from monotonicity. Both of the aforementioned subclasses of monotonicity can serve as starting points for exploring
+the non-monotone domain. Given that general non-monotone operators may display erratic behavior, such as periodic cycles and
+spurious attractors, it is reasonable to seek settings that extend the monotone framework while remaining manageable. First and
+foremost is the extensively studied setting of ν-weak monotonicity:
+⟨F(u)−F(v), u−v⟩ ≥ − ν∥u−v∥2.
+Such operators arise as the gradients of the well-studied class of weakly convex functions, a rather general class of functions as it
+includes all functions without upward cusps. In particular, every smooth function with a Lipschitz gradient turns out to fulfill this
+property. On the other hand, extending the notion of cocoercivity to allow for negative coefficients, referred to as cohypomonotonicity,
+has received much less attention and is given by:
+⟨F(u)−F(v), u−v⟩ ≥ − γ∥F(u)−F(v)∥2.
+Clearly, if a Stampacchia solution exists for such an operator, then it also fulfills Assumption 1.
+Behavior with respect to the solution. While the above properties are standard assumptions in the literature, it is usually sufficient
+to require the corresponding condition to hold when one of the arguments is a (Stampacchia) solution. This means that instead of

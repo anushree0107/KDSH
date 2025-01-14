@@ -1,0 +1,21 @@
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e. Conversely, SGMs
+employ score-matching methods to approximate the score function of the data-generating distribution, subsequently generating new
+samples through Langevin dynamics. Recognizing that real-world distributions might lack a defined score function, adding varying
+noise levels to training samples to encompass the entire instance space and training a neural network to concurrently learn the score
+function for all noise levels has been proposed.
+Although DDPMs and SGMs may initially seem distinct, it has been demonstrated that DDPMs implicitly approximate the score
+function, with the sampling process resembling Langevin dynamics. Moreover, a unified perspective of both methods using stochastic
+differential equations (SDEs) has been derived. The "majority vote" baseline determines the answer to a
+question based on the most frequent prediction among the forecasts. The "weighted vote" baseline,
+on the other hand, assigns weights to the probabilities in the predictions and then aggregates them.
+4.2 Neural Network Architecture
+A neural network architecture is employed, which consists of three main components: one to generate
+a representation of the question, another to generate a representation of each forecast, and an LSTM
+to process the sequence of forecasts and ultimately call the question.
+The representation of a question is obtained using BERT, followed by a fully connected layer with 256
+neurons, ReLU activation, and dropout. The representation of a forecast is created by concatenating

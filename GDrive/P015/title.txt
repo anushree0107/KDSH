@@ -1,0 +1,25 @@
+Safe Predictors for Input-Output Specification
+Enforcement
+Abstract
+This paper presents an approach for designing neural networks, along with other
+machine learning models, which adhere to a collection of input-output specifica-
+tions. Our method involves the construction of a constrained predictor for each set
+of compatible constraints, and combining these predictors in a safe manner using a
+convex combination of their predictions. We demonstrate the applicability of this
+method with synthetic datasets and on an aircraft collision avoidance problem.
+1 Introduction
+The increasing adoption of machine learning models, such as neural networks, in safety-critical
+applications, such as autonomous vehicles and aircraft collision avoidance, highlights an urgent
+need for the development of guarantees on safety and robustness.credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7
+has been discovered that pooling intervals from varying locations and durations is advantageous for
+activity recognition. It was demonstrated that identifying and classifying key sub-event intervals can
+lead to better performance.
+Recently, segment-based 3D CNNs have been employed to capture spatio-temporal data concurrently
+for activity detection. These methods depend on the 3D CNN to capture temporal dynamics, which
+typically span only 16 frames. Although longer-term temporal structures have been explored, this was
+usually accomplished with temporal pooling of localized features or (spatio-)temporal convolutions
+with extended fixed intervals. Recurrent Neural Networks (RNNs) have also been applied to represent
+transitions in activity between frames.
+3 MLB-YouTube Dataset

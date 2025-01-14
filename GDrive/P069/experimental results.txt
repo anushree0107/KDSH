@@ -1,0 +1,24 @@
+PCEDT have distinctly high ratios compared to other relations in Figure 2. These relations also
+have the second-highest F1 score in their datasets—except for STL on PCEDT (see Tables 4 and
+5). Lexical memorization is therefore a likely cause of these high F1 scores. We also observed that
+lower ratios of relation-specific constituents correlate with lower F1 scores, such as APP and REG in
+PCEDT. Based on these insights, we can’t dismiss the possibility that our models show some degree
+of lexical memorization, despite manual analysis also presenting cases where models demonstrate
+generalization and correct predictions in situations where lexical memorization is impossible.
+8 Conclusion
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+research suggests that gains in noun-noun compound interpretation using word embeddings and
+similar neural classification models might be due to lexical memorization. In other words, the models
+learn that specific nouns are strong indicators of specific relations. To assess the role of lexical
+memorization in our models, we quantify the number of unseen compounds that the STL, TL, and
+MTL models predict correctly.
+We differentiate between ’partly’ and ’completely’ unseen compounds. A compound is ’partly’
+unseen if one of its constituents (left or right) is not present in the training data. A ’completely’
+unseen compound is one where neither the left nor the right constituent appears in the training data.

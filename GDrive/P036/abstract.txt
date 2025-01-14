@@ -1,0 +1,22 @@
+01786 320×360 (238 ×257×2.353)
+2 Cinnamon bun 0.1043478261 0.02347 236×274 (363 ×419×2.353)
+3 Pork rib 0.1043478261 0.02381 246×270 (435 ×778×1.176)
+Easy 4 Corn 0.08823529412 0.01897 291×339 (262 ×976×2.353)
+5 French toast 0.1034482759 0.02202 266×292 (530 ×581×2.53)
+6 Sandwich 0.1276595745 0.the overhead depth and reference images, yielding a segmented depth image for the reference object.
+The average depth is then calculated using the segmented reference object depth ( dr). Similarly,
+employing binary image segmentation with an overhead food object mask and depth image, the
+average depth for the segmented food depth image ( df) is computed. The estimated food height fhis
+the absolute difference between dranddf. To assess the accuracy of the scaling factor S, the food
+bounding box volume (fw×fl×fh)×PPU is computed. The team evaluates if the scaling factor
+Sgenerates a food volume close to this potential volume, resulting in Sfine. Table 2 lists the scaling
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

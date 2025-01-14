@@ -1,0 +1,20 @@
+sample, there will be a corresponding demographic feature data sample that is used to train a different binary classifier to predict
+whether a person with PD is ON or OFF medications.
+**Ethical approval:** Full approval from the NHS Wales Research Ethics Committee was granted on December 17, 2019, and
+Health Research Authority and Health and Care Research Wales approval was confirmed on January 14, 2020; the research was
+3
+conducted in accord with the Helsinki Declaration of 1975; written informed consent was gained from all study participants. In
+order to protect participant privacy, supporting data is not shared openly. It will be made available to bona fide researchers subject to
+a data access agreement.
+4 Methodologies and Framework
+the ON/OFF medication state, participants with PD were asked to withhold their dopaminergic medications so that they were in
+the practically-defined OFF medications state for a temporary period of several hours during the study. Withholding medications
+removes their mitigation on symptoms, leading to mobility deterioration, which can include slowing of gait.
+**Data pre-processing for indoor localization:** The data from the two wearable sensors worn by each participant were combined at
+each time point, based on their modality, i.e., twenty RSSI values (corresponding to 10 APs for each of the two wearable sensors)
+Gait quantification using wearables or smartphones is an area where a significant amount of work has been done. Cameras can
+also detect parkinsonian gait and some gait features, including step length and average walking speed. Time-of-flight devices,
+which measure distances between the subject and the camera, have been used to assess medication adherence through gait analysis.
+From free-living data, one approach to gait and room use evaluation in home settings is by emitting and detecting radio waves to
+non-invasively track movement. Gait analysis using radio wave technology shows promise to track disease progression, severity, and
+medication response. However, this approach cannot identify who is doing the movement and also suffers from technical issues

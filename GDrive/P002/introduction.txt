@@ -1,0 +1,20 @@
+I3D + super-events 38.7 38.6 39.1
+I3D + sub+super-events 38.2 39.4 40.4
+InceptionV3 31.2 31.8 31.9
+InceptionV3 + max-pooling 31.8 34.1 35.2
+InceptionV3 + pyramid 32.2 35.1 36.8
+InceptionV3 + LSTM 32.1 33.5 34.1
+InceptionV3 + temporal conv 28.4 34.4 33.4
+InceptionV3 + sub-events 32.represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.

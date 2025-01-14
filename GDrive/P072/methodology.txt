@@ -1,0 +1,24 @@
+use in safety-critical machine learning systems, demonstrating it on an aircraft collision avoidance
+problem. The novelty of our approach is its simplicity and guaranteed enforcement of specifications
+through combinations of convex output constraints during all stages of training. Future work includes
+adapting and using techniques from optimization and control barrier functions, as well as incorporating
+notions of adversarial robustness into our design, such as extending the work to bound the Lipschitz
+constant of our networks.
+Appendix A: Proof of Theorem 2.1
+Proof. Fixiand assume that x∈Ai. It follows that σi(x) = 0 , so for all b∈Owhere bi= 0,
+ x∈
+Aunsafeable ,i⇒Fi(x)<max jFj(x), where Fj(x)is the output score for the jthadvisory.
+Table 1 shows the performance of a standard, unconstrained network and our safe predictor. For both
+networks, we present the percentage accuracy (ACC) and violations (percentage of inputs for which
+the network outputs an unsafe advisory). We train and test using PyTorch with two separate datasets,
+based on the previous advisory being Clear of Conflict (COC) and Climb at 1500 ft/min (CL1500).
+As shown in the table, our safe predictor adheres to the required safeability property. Furthermore,
+When used to produce proximity functions as given in Equation 1, these values help ensure safety.
+Figure 5 shows examples of the unsafeable region, distance function, and proximity function for the
+CL1500 advisory.
+C.3 Structure of Predictors
+The compressed versions of the policy tables from prior work are neural networks with six hidden
+layers, 45 dimensions in each layer, and ReLU activation functions. We use the same architecture
+for our standard, unconstrained network. For constrained predictors, we use a similar architecture.
+However, the first four hidden layers are shared between all of the predictors. This learns a single,
+shared input space representation, and also allows each predictor to adapt to its constraints. Each

@@ -1,0 +1,27 @@
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to
+However, none of these prior works have specifically aimed to call questions throughout their entire
+duration.
+2
+3 Dataset
+The research utilizes data from the Good Judgment Open, a platform where questions are posted, and
+individuals submit their forecasts. The questions primarily revolve around geopolitics, encompassing
+areas such as domestic and international politics, the economy, and social matters. For this study, all
+binary questions were collected, along with their associated forecasts, each comprising a prediction
+and a justification. In total, the dataset contains 441 questions and 96,664 forecasts submitted
+over 32,708 days. This dataset significantly expands upon previous research, nearly doubling the
+number of forecasts analyzed.34 23.98
+20 130.96 119.83 15.59 31.05
+Table 4: Quantitative Comparison with Ground Truth Using MAPE and Chamfer Distance
+MAPE Ch. w/ t.m Ch. w/o t.m
+(%) sum mean sum mean
+10.973 0.130 0.007 1.715 0.095
+5 Second Place Team - ININ-VIAUN
+5.1 Methodology
+This section details the team’s proposed network, illustrating the step-by-step process from original
+images to final mesh models.
+5.1.1 Scale factor estimation

@@ -1,0 +1,23 @@
+include tracking of gait speed during rehabilitation from orthopedic surgery, monitoring wandering behavior in dementia, or
+triggering an alert for a possible fall (and long lie on the floor) if someone is in one room for an unusual length of time. Furthermore,
+accurate room use and room-to-room transfer statistics could be used in occupational settings, e.g., to check factory worker location.
+7
+Table 1: Room-level and medication state accuracy of all models. Standard deviation is shown in (.), the best performer is bold,
+while the second best is italicized. Note that our proposed model is the one named MDCSA1,4,7
+!Training ModelRoom-Level Localisation Medication State
+ A secondary goal is to determine if indoor localization, particularly in-home gait
+speed features (like the time to walk between rooms), can be used to identify motor fluctuations by detecting if a
+person with PD is taking their levodopa medication or not. The method is evaluated using a real-world dataset
+collected in a free-living setting, where movements are varied and unstructured. Twenty-four participants, living
+in pairs (one with PD and one control), resided in a sensor-equipped smart home for five days. The results show
+that the proposed network surpasses other methods for indoor localization. The evaluation of the secondary goal
+Detecting Medication Usage in Parkinson’s Disease Through
+Multi-modal Indoor Positioning: A Pilot Study in a Naturalistic
+Environment
+Abstract
+Parkinson’s disease (PD) is a progressive neurodegenerative disorder that leads to motor symptoms, including gait
+impairment. The effectiveness of levodopa therapy, a common treatment for PD, can fluctuate, causing periods of
+improved mobility ("on" state) and periods where symptoms re-emerge ("off" state). These fluctuations impact
+gait speed and increase in severity as the disease progresses. This paper proposes a transformer-based method that
+uses both Received Signal Strength Indicator (RSSI) and accelerometer data from wearable devices to enhance
+indoor localization accuracy.

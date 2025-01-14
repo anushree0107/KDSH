@@ -1,0 +1,21 @@
+ Conversely, SGMs
+employ score-matching methods to approximate the score function of the data-generating distribution, subsequently generating new
+samples through Langevin dynamics. Recognizing that real-world distributions might lack a defined score function, adding varying
+noise levels to training samples to encompass the entire instance space and training a neural network to concurrently learn the score
+function for all noise levels has been proposed.
+Although DDPMs and SGMs may initially seem distinct, it has been demonstrated that DDPMs implicitly approximate the score
+function, with the sampling process resembling Langevin dynamics. Moreover, a unified perspective of both methods using stochastic
+differential equations (SDEs) has been derived.but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+smartphone IMU sensor data and Wi-Fi-received signal strength indication (RSSI) measurements to estimate the exact location (in
+Euclidean position X, Y) of a person in indoor environments. The proposed sensor fusion framework uses location fingerprinting in
+combination with a pedestrian dead reckoning (PDR) algorithm to reduce positioning errors.
+Looking at this multi-modality classification/regression problem from a time series perspective, there has been a lot of exploration
+in tackling a problem where each modality can be categorized as multivariate time series data. LSTM and attention layers are
+often used in parallel to directly transform raw multivariate time series data into a low-dimensional feature representation for each
+modality.

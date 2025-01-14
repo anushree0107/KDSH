@@ -1,0 +1,21 @@
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+Table 9 shows that Transfer Learning (TL) and Multi-Task Learning (MTL) approaches reduce
+generalization error in NomBank across all scenarios, with the exception of TLH and TLEH for
+completely unseen compounds, where error increases. The greatest error reductions are achieved
+by MTL models across all three types of unseen compounds. Specifically, MTLE reduces the error
+by approximately six points for compounds with unseen right constituents and by eleven points for
+fully unseen compounds. Moreover, MTLF reduces the error by five points when the left constituent
+is unseen. It’s important to interpret these results in conjunction with the Count row in Table 9 for
+a comprehensive view.assumptions about the data distribution or the learned score function, and with simple proofs that do not need the SDE toolkit.
+Furthermore, the bounds presented here do not involve any complex discretization steps, as the forward and backward processes are
+considered discrete-time from the beginning, rather than being viewed as discretizations of continuous-time processes.
+1.1 Related Works
+There has been an increasing amount of research aimed at providing theoretical findings on the convergence of SGMs. However,
+these studies frequently depend on restrictive assumptions regarding the data-generating distribution, produce non-quantitative upper
+bounds, or exhibit exponential dependencies on certain parameters. This work successfully circumvents all three of these limitations.

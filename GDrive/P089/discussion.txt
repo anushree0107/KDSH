@@ -1,0 +1,24 @@
+a common aspect of the aforementioned studies is that their bounds are contingent on the error of the score estimator. According to
+some, providing precise guarantees for the estimation of the score function is challenging, as it necessitates an understanding of the
+non-convex training dynamics of neural network optimization, which is currently beyond reach. Therefore, upper bounds are derived
+without making assumptions about the learned score function. Instead, the bound presented here is dependent on a reconstruction
+loss calculated over a finite independent and identically distributed (i.i.d.) sample. Intuitively, a loss function is defined, which
+quantifies the average Euclidean distance between a sample from the data-generating distribution and the reconstruction obtained by
+assumptions about the data distribution or the learned score function, and with simple proofs that do not need the SDE toolkit.
+Furthermore, the bounds presented here do not involve any complex discretization steps, as the forward and backward processes are
+considered discrete-time from the beginning, rather than being viewed as discretizations of continuous-time processes.
+1.1 Related Works
+There has been an increasing amount of research aimed at providing theoretical findings on the convergence of SGMs. However,
+these studies frequently depend on restrictive assumptions regarding the data-generating distribution, produce non-quantitative upper
+bounds, or exhibit exponential dependencies on certain parameters. This work successfully circumvents all three of these limitations.
+ Intuitively, the difference between πθ(·|xi
+0)andπθ(·)
+is determined by the corresponding initial distributions: q(xT|xi
+0)andp(xT)forπθ(·). Hence, if the two initial distributions are
+close, and if the steps of the backward process are smooth (see Assumption 1), then πθ(·|xi
+0)andπθ(·)are close to each other.
+3
+3 Main Result
+3.1 Theorem Statement
+We are now ready to present the main result: a quantitative upper bound on the Wasserstein distance between the data-generating
+distribution μand the learned distribution πθ(·).

@@ -1,0 +1,19 @@
+particularly when collected from wrist-worn devices, which are a common and well-accepted placement location. Naively combining
+accelerometer data with RSSI may degrade indoor localization performance due to varying tremor levels in the acceleration signal.
+This work makes two primary contributions to address these challenges.
+(1) We detail the use of RSSI, augmented by accelerometer data, to achieve room-level localization. Our proposed network
+intelligently selects accelerometer features that can enhance RSSI performance in indoor localization. To rigorously assess our
+method, we utilize a free-living dataset (where individuals live without external intervention) developed by our group, encompassing
+diverse and unstructured movements as expected in real-world scenarios. A secondary goal is to determine if indoor localization, particularly in-home gait
+speed features (like the time to walk between rooms), can be used to identify motor fluctuations by detecting if a
+person with PD is taking their levodopa medication or not. The method is evaluated using a real-world dataset
+collected in a free-living setting, where movements are varied and unstructured. Twenty-four participants, living
+in pairs (one with PD and one control), resided in a sensor-equipped smart home for five days. The results show
+that the proposed network surpasses other methods for indoor localization. The evaluation of the secondary goal
+smartphone IMU sensor data and Wi-Fi-received signal strength indication (RSSI) measurements to estimate the exact location (in
+Euclidean position X, Y) of a person in indoor environments. The proposed sensor fusion framework uses location fingerprinting in
+combination with a pedestrian dead reckoning (PDR) algorithm to reduce positioning errors.
+Looking at this multi-modality classification/regression problem from a time series perspective, there has been a lot of exploration
+in tackling a problem where each modality can be categorized as multivariate time series data. LSTM and attention layers are
+often used in parallel to directly transform raw multivariate time series data into a low-dimensional feature representation for each
+modality.

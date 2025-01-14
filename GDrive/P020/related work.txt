@@ -1,0 +1,30 @@
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned
+ While these traditional complexity
+notions have been successful in classification problems, they do not apply to generic regression
+problems with unbounded risk functions, which are the focus of this study. Moreover, traditional
+tools in statistical learning theory have not been able to provide a fully satisfying generalization
+theory for neural networks.
+Understanding the risk surface during neural network training is crucial for establishing a strong
+theoretical foundation for neural network-based machine learning, particularly for understanding
+generalization. Recent studies on neural networks suggest intriguing properties of the risk surface.
+In large networks, local minima of the risk form a small bond at the global minimum. Surprisingly,
+global minima exist in each connected component of the risk’s sublevel set and are path-connected.
+Generalization in ReLU Networks via Restricted
+Isometry and Norm Concentration
+Abstract
+Regression tasks, while aiming to model relationships across the entire input space,
+are often constrained by limited training data. Nevertheless, if the hypothesis func-
+tions can be represented effectively by the data, there is potential for identifying a
+model that generalizes well. This paper introduces the Neural Restricted Isometry
+Property (NeuRIPs), which acts as a uniform concentration event that ensures all
+shallow ReLU networks are sketched with comparable quality. To determine the
+sample complexity necessary to achieve NeuRIPs, we bound the covering numbers
+of the networks using the Sub-Gaussian metric and apply chaining techniques. As-

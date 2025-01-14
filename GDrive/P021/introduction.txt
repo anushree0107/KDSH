@@ -1,0 +1,29 @@
+Safe Predictors for Input-Output Specification
+Enforcement
+Abstract
+This paper presents an approach for designing neural networks, along with other
+machine learning models, which adhere to a collection of input-output specifica-
+tions. Our method involves the construction of a constrained predictor for each set
+of compatible constraints, and combining these predictors in a safe manner using a
+convex combination of their predictions. We demonstrate the applicability of this
+method with synthetic datasets and on an aircraft collision avoidance problem.
+1 Introduction
+The increasing adoption of machine learning models, such as neural networks, in safety-critical
+applications, such as autonomous vehicles and aircraft collision avoidance, highlights an urgent
+need for the development of guarantees on safety and robustness.the specifications until after training. Our work seeks to design networks with enforced input-output
+constraints even before training has been completed. This will allow for online learning scenarios
+where a system has to guarantee safety throughout its operation.
+This paper presents an approach for designing a safe predictor (a neural network or any other
+machine learning model) that will always meet a set of constraints on the input-output relationship.
+This assumes that the constrained output regions can be formulated to be convex. Our correct-
+by-construction safe predictor is guaranteed to satisfy the constraints, even before training, and at
+every training step. We describe our approach in Section 2, and show its use in an aircraft collision
+avoidance problem in Section 3.• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned

@@ -1,0 +1,24 @@
+this task is influenced by factors such as the label set used and its distribution. For the experiments
+detailed in this paper, we utilize a noun-noun compounds dataset that features compounds annotated
+with two distinct taxonomies of relations. This means that each noun-noun compound is associated
+with two different relations, each based on different linguistic theories. This dataset is derived from
+established linguistic resources, including NomBank and the Prague Czech-English Dependency
+Treebank 2.0 (PCEDT). We chose this dataset for two primary reasons: firstly, the dual annotation of
+relations on the same set of compounds is ideal for exploring TL and MTL approaches; secondly,
+aligning two different annotation frameworks on the same data allows for a comparative analysis
+across these frameworks.
+Specifically, we use a portion of the dataset, focusing on type-based instances of two-word compounds.
+The original dataset also encompasses multi-word compounds (those made up of more than two
+nouns) and multiple instances per compound type. We further divide the dataset into three parts:
+training, development, and test sets. Table 1 details the number of compound types and the vocabulary
+size for each set, including a breakdown of words appearing in the right-most (right constituents)
+and left-most (left constituents) positions. The two label sets consist of 35 PCEDT functors and 18
+2
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are

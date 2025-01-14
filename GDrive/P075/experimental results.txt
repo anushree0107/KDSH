@@ -1,0 +1,28 @@
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+was computed and clipped to [−20,20]. For InceptionV3, features were computed every 3 frames
+(8 fps), while for I3D, every frame was used, with I3D having a temporal stride of 8, resulting in
+3 features per second (3 fps). Models were implemented in PyTorch and trained using the Adam
+optimizer with a learning rate of 0.01, decayed by a factor of 0.1 every 10 epochs, for a total of 50
+epochs.
+4
+6.2 Segmented Video Activity Recognition
+We initially conducted binary pitch/non-pitch classification for each video segment. This task is
+sequential processing of video features, whereas other methods can be fully parallelized.
+Table 3: Additional parameters required for models when added to the base model (e.g., I3D or
+Inception V3).
+Model # Parameters
+Max/Mean Pooling 16K
+Pyramid Pooling 115K
+LSTM 10.5M
+Temporal Conv 31.5M
+Sub-events 36K
+Table 4: Mean Average Precision (mAP) results on segmented videos for multi-label classification.
+Learning sub-intervals for pooling is found to be crucial for activity recognition.
+Method RGB Flow Two-stream
+Random 16.3 16.3 16.3

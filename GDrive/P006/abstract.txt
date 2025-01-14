@@ -1,0 +1,23 @@
+ This method refined the uniformity of representations and successfully reduced separation. We
+validated our method, PAAC, on three publicly available datasets, demonstrating its effectiveness and underlying rationale.
+In the future, we will explore deeper alignment and contrast adjustments tailored to specific tasks to further mitigate popularity
+bias. We aim to investigate the synergies between alignment and contrast and extend our approach to address other biases in
+recommendation systems.
+Acknowledgments
+This work was supported in part by grants from the National Key Research and Development Program of China, the National Natural
+Science Foundation of China, the Fundamental Research Funds for the Central Universities, and Quan Cheng Laboratory.
+8
+the full ranking strategy, considering all non-interacted items as candidate items to avoid selection bias during the test stage. We
+repeated each experiment five times with different random seeds and reported the average scores.
+3.2 Overall Performance
+As shown in Table 1, we compare our model with several baselines across three datasets. The best performance for each metric
+is highlighted in bold, while the second best is underlined. Our model consistently outperforms all compared methods across all
+metrics in every dataset.
+•Our proposed model PAAC consistently outperforms all baselines and significantly mitigates the popularity bias. Specif-
+ically, PAAC enhances LightGCN, achieving improvements of 282.65%, 180.several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every

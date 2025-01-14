@@ -1,0 +1,25 @@
+ Evaluation on this dataset, including individuals with and
+without PD, demonstrates that our network outperforms other methods across all cross-validation categories.
+(2) We demonstrate how accurate room-level localization predictions can be transformed into in-home gait speed biomarkers (e.g.,
+number of room-to-room transitions, room-to-room transition duration). These biomarkers can effectively classify the OFF or ON
+medication state of a PD patient from this pilot study data.
+2 Related Work
+Extensive research has utilized home-based passive sensing systems to evaluate how the activities and behavior of individuals with
+neurological conditions, primarily cognitive dysfunction, change over time. However, there is limited work assessing room use in
+the home setting in people with Parkinson’s.
+particularly when collected from wrist-worn devices, which are a common and well-accepted placement location. Naively combining
+accelerometer data with RSSI may degrade indoor localization performance due to varying tremor levels in the acceleration signal.
+This work makes two primary contributions to address these challenges.
+(1) We detail the use of RSSI, augmented by accelerometer data, to achieve room-level localization. Our proposed network
+intelligently selects accelerometer features that can enhance RSSI performance in indoor localization. To rigorously assess our
+method, we utilize a free-living dataset (where individuals live without external intervention) developed by our group, encompassing
+diverse and unstructured movements as expected in real-world scenarios.Detecting Medication Usage in Parkinson’s Disease Through
+Multi-modal Indoor Positioning: A Pilot Study in a Naturalistic
+Environment
+Abstract
+Parkinson’s disease (PD) is a progressive neurodegenerative disorder that leads to motor symptoms, including gait
+impairment. The effectiveness of levodopa therapy, a common treatment for PD, can fluctuate, causing periods of
+improved mobility ("on" state) and periods where symptoms re-emerge ("off" state). These fluctuations impact
+gait speed and increase in severity as the disease progresses. This paper proposes a transformer-based method that
+uses both Received Signal Strength Indicator (RSSI) and accelerometer data from wearable devices to enhance
+indoor localization accuracy.

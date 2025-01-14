@@ -1,0 +1,23 @@
+ It was observed that a specific parameterization of the von Neumann ratio game exhibits a novel type of solution,
+termed "weak Minty," without having any of the previously known characteristics like (negative) comonotonicity or Minty solutions.
+Convergence in the presence of such solutions was demonstrated for EG, provided that the extrapolation step size is twice as large as
+the update step. Subsequently, it was shown that the condition on the weak Minty parameter can be relaxed by further reducing the
+length of the update step, and this is done adaptively. To avoid the need for additional hyperparameters, a backtracking line search is
+of EG+ that adaptively chooses the ratio of extrapolation and update steps. In addition, a backtracking linesearch is performed with
+an initial guess made by second-order information, whose extra cost we ignore in the experiments.
+5.1 Von Neumann’s ratio game
+We consider von Neumann’s ratio game, which is given by:
+min
+x∈∆mmax
+y∈∆nV(x, y) =⟨x, Ry⟩
+⟨x, Sy⟩, (5)
+ Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.

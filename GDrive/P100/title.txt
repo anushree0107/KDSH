@@ -1,0 +1,24 @@
+ Utilizing the 60fps rate available in YouTube videos, we
+recalculated optical flow and extracted RGB frames at this higher rate. Employing a fully-connected
+layer with a single output for pitch speed prediction and minimizing the L1 loss between predicted
+and actual speeds, we achieved an average error of 3.6mph. Table 6 compares different models, and
+Fig. 8 illustrates the sub-events learned for various speeds.
+Table 6: Results for pitch speed regression on segmented videos, reporting root-mean-squared errors.
+Method Two-stream
+I3D 4.3 mph
+I3D + LSTM 4.1 mph
+I3D + sub-events 3.9 mph
+In practice, large batch sizes of order O(ε−1)are typically not desirable; instead, a small or decreasing step size is preferred. In the
+weak Minty setting, this causes additional trouble due to the necessity of large step sizes to guarantee convergence. Unfortunately,
+the current analysis does not allow for variable γ.
+4 EG+ with adaptive step sizes
+In this section, we present Algorithm 3, which is able to solve the previously mentioned problems without any knowledge of the
+Lipschitz constant L, as it is typically difficult to compute in practice. Additionally, it is well known that rough estimates will lead to
+small step sizes and slow convergence behavior.on accuracy scores is inadequate for evaluating the effectiveness of TL and MTL for this task and
+dataset.
+Secondly, with the exception of the MTLF model, all TL and MTL models consistently improve
+the F1 score for all PCEDT relations except PAT. Notably, the F1 scores for the relations TWHEN
+and ACT show a substantial increase compared to other PCEDT relations when only the embedding
+layer’s weights are shared (MTLE) or transferred (TLE). This outcome can be partially understood
+by examining the correspondence matrices between NomBank arguments and PCEDT functors,
+presented in Tables 7 and 6.

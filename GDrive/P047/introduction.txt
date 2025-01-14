@@ -1,0 +1,18 @@
+their predictions on events that might not occur or have not yet occurred. The sentiment polarity of
+3
+the justifications is generally neutral. In terms of readability, both the Flesch and Dale-Chall scores
+suggest that approximately a quarter of the justifications require a college-level education for full
+comprehension.
+Regarding verbs and nouns, an analysis using WordNet lexical files reveals that the most common
+verb classes are "change" (e.g., "happen," "remain," "increase"), "social" (e.g., "vote," "support,"
+"help"), "cognition" (e.g., "think," "believe," "know"), and "motion" (e.g.the RSSI signals, in particular to help distinguish adjacent rooms, which RSSI-only systems typically struggle with. If it will, how
+can we incorporate these extra features (and modalities) into the existing features for accurate room predictions, particularly in the
+context of PD where the acceleration signal may be significantly impacted by the disease itself?
+(2) Modeling local and global temporal dynamics. The true correlations between inputs both intra-modality (i.e., RSSI signal among
+access points) and inter-modality (i.e., RSSI signal against accelerometer fluctuation) are dynamic. These dynamics can affect one
+another within a local context (e.g., cyclical patterns) or across long-term relationships.represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.

@@ -1,0 +1,18 @@
+It has been suggested that we cannot rely on RSSI alone for indoor localization in home environments for PD subjects due to
+shadowing rooms with tight separation. Some researchers combine RSSI signals and inertial measurement unit (IMU) data to test
+the viability of leveraging other sensors in aiding the positioning system to produce a more accurate location estimate. Classic
+machine learning approaches such as Random Forest (RF), Artificial Neural Network (ANN), and k-Nearest Neighbor (k-NN) are
+tested, and the result shows that the RF outperforms other methods in tracking a person in indoor environments. Others combine
+undertake scripted activities such as moving from room to room) to fully validate the performance of our approach in other settings.
+6 Conclusion
+We have presented the MDCSA model, a new deep learning approach for indoor localization utilizing RSSI and wrist-worn
+accelerometer data. The evaluation on our unique real-world free-living pilot dataset, which includes subjects with and without PD,
+shows that MDCSA achieves state-of-the-art accuracy for indoor localization. The availability of accelerometer data does indeed
+enrich the RSSI features, which, in turn, improves the accuracy of indoor localization.
+Accurate room localization using these data modalities has a wide range of potential applications within healthcare. This could
+We introduce Multihead Dual Convolutional Self Attention (MDCSA), a deep neural network that utilizes dual modalities for indoor
+localization in home environments. The network addresses two challenges that arise from multimodality and time-series data:
+(1) Capturing multivariate features and filtering multimodal noises. RSSI signals, which are measured at multiple access points
+within a home received from wearable communication, have been widely used for indoor localization, typically using a fingerprinting
+technique that produces a ground truth radio map of a home. Naturally, the wearable also produces acceleration measurements which
+can be used to identify typical activities performed in a specific room, and thus we can explore if accelerometer data will enrich

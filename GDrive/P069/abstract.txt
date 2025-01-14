@@ -1,0 +1,23 @@
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.layers: 1) an input layer, 2) an embedding layer, 3) a hidden layer, and 4) an output layer. The input
+3
+layer consists of two integers that indicate the indices of a compound’s constituents in the embedding
+layer, where the word embedding vectors are stored. These selected vectors are then passed to a fully
+connected hidden layer, the size of which matches the dimensionality of the word embedding vectors.
+Finally, a softmax function is applied to the output layer to select the most probable relation.
+The compound’s constituents are represented using a 300-dimensional word embedding model trained
+on an English Wikipedia dump and the English Gigaword Fifth Edition. The embedding model was
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.

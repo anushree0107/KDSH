@@ -1,0 +1,26 @@
+For Structure from Motion (SfM), the team enhanced the advanced COLMAP method by integrating
+SuperPoint and SuperGlue techniques. This integration significantly addressed the issue of limited
+keypoints in scenes with minimal texture, as illustrated in Figure 15.
+In the mesh reconstruction phase, the team’s approach builds upon 2D Gaussian Splatting, which
+employs a differentiable 2D Gaussian renderer and includes regularization terms for depth distortion
+9
+and normal consistency. The Truncated Signed Distance Function (TSDF) results are utilized to
+produce a dense point cloud.
+During post-processing, the team applied filtering and outlier removal methods, identified the outline
+i=1, keyframes {IK
+j}k
+j=1⊆ {IDi}n
+i=1are
+chosen. A method is implemented to detect and remove duplicate and blurry images, ensuring
+high-quality frames. This involves applying a Gaussian blurring kernel followed by the fast Fourier
+transform method. Near-Image Similarity uses perceptual hashing and Hamming distance threshold-
+ing to detect similar images and retain overlapping ones. Duplicates and blurry images are excluded
+to maintain data integrity and accuracy.
+Using the selected keyframes {IK
+j}k
+j=1, the team estimates camera poses through a method called
+ The improvement is more significant in the 4m-HC and 4m-PD validations, when the training data are limited, with an
+average improvement of almost 9% for the F1-score over the alternative to the state-of-the-art model.
+The LOO-HC and LOO-PD validations show that a model that has the ability to capture the temporal dynamics across time steps will
+perform better than a standard baseline technique such as a Random Forest. The modified transformer encoder and the state-of-the-art
+model perform better in those two validations due to their ability to capture asynchronous relations across modalities. However,

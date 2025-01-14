@@ -1,0 +1,27 @@
+ Next, ICP registration is performed for further alignment, significantly
+reducing the Chamfer distance. Finally, gradient descent is used for additional fine-tuning to obtain
+the final transformation matrix.
+The total Chamfer distance between all 18 predicted models and the ground truths is 0.069441169.
+8
+Table 5: Estimated Scale Factors
+Object Index Food Item Scale Factor
+1 Strawberry 0.060058
+2 Cinnamon bun 0.081829
+3 Pork rib 0.073861
+4 Corn 0.083594
+5 French toast 0.078632
+6 Sandwich 0.088368
+7 Burger 0.103124
+8 Cake 0.068496
+ Inspired by utilizing multihead self-attention, we utilize our DCSA with various kernel lengths with the same
+aim: allowing asymmetric long-term learning. The multihead DCSA takes in two inputs ˆx1,ˆx2∈RN×dand yields:
+MDCSA k1,...,k n(ˆx1,ˆx2) = Ξ n(φk1,...,k n(ˆx1,ˆx2)) (4)
+with
+ They select the best reconstruction results from these methods and
+extract the mesh. The extracted mesh is scaled using the estimated scale factor, and optimization
+techniques are applied to obtain a refined mesh.
+For the last five single-view objects, the team experiments with several single-view reconstruction
+methods, including Zero123, Zero123++, One2345, ZeroNVS, and DreamGaussian. They choose
+ZeroNVS to obtain a 3D food model consistent with the distribution of the input image. The
+intrinsic camera parameters from the fifteenth object are used, and an optimization method based
+on reprojection error refines the extrinsic parameters of the single camera. Due to limitations in

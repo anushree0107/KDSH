@@ -1,0 +1,33 @@
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details
+ Next, ICP registration is performed for further alignment, significantly
+reducing the Chamfer distance. Finally, gradient descent is used for additional fine-tuning to obtain
+the final transformation matrix.
+The total Chamfer distance between all 18 predicted models and the ground truths is 0.069441169.
+8
+Table 5: Estimated Scale Factors
+Object Index Food Item Scale Factor
+1 Strawberry 0.060058
+2 Cinnamon bun 0.081829
+3 Pork rib 0.073861
+4 Corn 0.083594
+5 French toast 0.078632
+6 Sandwich 0.088368
+7 Burger 0.103124
+8 Cake 0.068496
+with ground truth meshes using MAPE and Chamfer distance metrics. The team’s approach was
+applied separately to each food scene. A one-shot food volume estimation approach was used if
+the number of keyframes kequaled 1; otherwise, a few-shot food volume estimation was applied.
+Notably, the keyframe selection process chose 34.8% of the total frames for the rest of the pipeline,
+showing the minimum frames with the highest information.
+Table 2: List of Extracted Information Using RGBD and Masks
+Level Id Label Sf PPU Rw×Rl (fw×fl×fh)
+1 Strawberry 0.08955223881 0.

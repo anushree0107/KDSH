@@ -1,0 +1,27 @@
+ On the other hand, extending the notion of cocoercivity to allow for negative coefficients, referred to as cohypomonotonicity,
+has received much less attention and is given by:
+⟨F(u)−F(v), u−v⟩ ≥ − γ∥F(u)−F(v)∥2.
+Clearly, if a Stampacchia solution exists for such an operator, then it also fulfills Assumption 1.
+Behavior with respect to the solution. While the above properties are standard assumptions in the literature, it is usually sufficient
+to require the corresponding condition to hold when one of the arguments is a (Stampacchia) solution. This means that instead of
+Cψ2≥0 :E"
+exp 
+|φ ̄p(x)−φ ̄q(x)|2
+C2
+ψ2!#
+≤2)
+.
+A small Sub-Gaussian metric between random variables indicates that their values are likely to be
+close. To capture the Sub-Gaussian structure of a process, we introduce ε-nets in the Sub-Gaussian
+metric. For a given ε >0, these are subsets  ̄Q⊆ ̄Psuch that for every  ̄p∈ ̄P, there is a  ̄q∈ ̄Q
+satisfying
+ Specifically, there are nonmonotone problems with Stampacchia solutions but
+without any Minty solutions.
+2.2 Notions of monotonicity
+This section aims to revisit some fundamental and more contemporary concepts of monotonicity and the relationships between them.
+An operator Fis considered monotone if:
+⟨F(u)−F(v), u−v⟩ ≥0.
+Such operators naturally arise as the gradients of convex functions, from convex-concave min-max problems, or from equilibrium
+problems.
+Two frequently studied notions that fall into this category are strongly monotone operators, which satisfy:
+⟨F(u)−F(v), u−v⟩ ≥μ∥u−v∥2,

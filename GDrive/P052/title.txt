@@ -1,0 +1,28 @@
+pθ(x0|x1) =gθ
+1(x1),
+where the variance parameters σ2
+t∈R≥0are defined by a fixed schedule, the mean functions gθ
+t:RD→RDare learned using a
+neural network (with parameters θ) for2≤t≤T, andgθ
+1:RD→Xis a separate function dependent on σ1. In practice, the same
+network has been used for the functions gθ
+tfor2≤t≤T, and a separate discrete decoder for gθ
+1.
+2
+We use PyTorch for defining our networks and performing parameter optimization. We optimize both
+the unconstrained and safe predictors using the asymmetric loss function to select advisories while
+also accurately predicting scores. The data is split using an 80/20 train/test split with a random seed
+of 0. The optimizer is ADAM with a learning rate of 0.0003 and batch size of 216, with training for
+500 epochs.
+Appendix A: Proof of Theorem 2.1
+Proof. Letx∈Ai. Then, σi(x) = 0 , and for all b∈Owhere bi= 0,wb(x) = 0 . Thus,
+F(x) =X
+neural network configurations, except for the one using only predictions and justifications.
+**Encoding Questions and Justifications** The neural network that only utilizes the prediction
+to represent a forecast surpasses both baseline methods. Notably, integrating the question, the
+justification, or both into the forecast representation yields further improvements. These results
+indicate that incorporating the question and forecaster-provided justifications into the model enhances
+the accuracy of question calling.
+**Calling Questions Throughout Their Life** When examining the results across the four quartiles of
+a question’s duration, it’s observed that while using active forecasts is beneficial across all quartiles
+for both baselines and all network configurations, the neural networks surprisingly outperform the

@@ -1,0 +1,22 @@
+trained by Fares et al. (2017). If a word is not found during lookup in the embedding model, we
+check if the word is uppercased and attempt to find the lowercase version. For hyphenated words
+not found in the embedding vocabulary, we split the word at the hyphen and average the vectors of
+its parts, if they are present in the vocabulary. If the word remains unrepresented after these steps, a
+designated vector for unknown words is employed.
+5.1.1 Architecture and Hyperparameters
+Our selection of hyperparameters is informed by multiple rounds of experimentation with the single-
+task learning model, as well as the choices made by prior work. The weights of the embedding layer
+and MTL models are trained using the same hyperparameters as the STL model.
+5.2 Transfer Learning Models
+In our experiments, transfer learning involves training an STL model on PCEDT relations and then
+using some of its weights to initialize another model for NomBank relations. Given the neural
+classifier architecture detailed in Section 5.1, we identify three ways to implement TL: 1) TLE:
+Transferring the embedding layer weights, 2) TLH: Transferring the hidden layer weights, and 3)
+TLEH: Transferring both the embedding and hidden layer weights. Furthermore, we differentiate
+between transfer learning from PCEDT to NomBank and vice versa. This results in six setups,
+generating the refined embedding at time step t, its decision is independent; it does not take into account the actual decision made by
+other refined embeddings t. We use a CRF layer to cover just that, i.e., to maximize the probability of the refined embeddings of all
+time steps, so it can better model cases where refined embeddings closest to one another must be compatible (i.e., minimizing the
+possibility for impossible room transitions). When finding the best sequence of room location ˆyt, the Viterbi Algorithm is used as a
+standard for the CRF layer.
+For the second layer, we choose a particular room as a reference and perform a binary classification at each time step t. The binary

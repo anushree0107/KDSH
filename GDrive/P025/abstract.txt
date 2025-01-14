@@ -1,0 +1,24 @@
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+We assessed various temporal feature aggregation methods by calculating the mean average precision
+(mAP) for each video clip, a standard metric for multi-label classification. Table 4 compares the
+performance of these methods. All methods surpass mean/max-pooling, highlighting the importance
+of preserving temporal structure for activity recognition. Fixed temporal pyramid pooling and LSTMs
+show some improvement. Temporal convolution offers a more significant performance boost but
+requires substantially more parameters (see Table 3). Learning sub-events, as per previous research,
+yields the best results. While LSTMs and temporal convolutions have been used before, they need
+more parameters and perform less effectively, likely due to overfitting. Moreover, LSTMs necessitate
+several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every

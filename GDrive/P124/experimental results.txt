@@ -1,0 +1,21 @@
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e. Later, various processes are done to further extract correlations across modalities through the use of various layers (e.g.,
+concatenation, CNN layer, transformer, self-attention). Our work is inspired by prior research where we only utilize accelerometer
+2
+data to enrich the RSSI, instead of utilizing all IMU sensors, in order to reduce battery consumption. In addition, unlike previous
+work that stops at predicting room locations, we go a step further and use room-to-room transition behaviors as features for a binary
+classifier predicting whether people with PD are taking their medications or withholding them.
+3 Cohort and Dataset
+ The central problem addressed in
+this work is termed "calling a question," which refers to the process of determining a final prediction
+by aggregating individual forecasts. Two strategies are employed for calling questions each day
+throughout their life: considering forecasts submitted on the given day ("daily") and considering the
+last forecast submitted by each forecaster ("active").
+Inspired by prior research on recognizing and fostering skilled forecasters, and analyzing written
+justifications to assess the quality of individual or collective forecasts, this paper investigates the
+automated calling of questions throughout their duration based on the forecasts available each day.
+The primary contributions are empirical findings that address the following research questions:

@@ -1,0 +1,25 @@
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation. Prior research includes
+both predictive models (using language samples to predict attributes about the author) and models
+that provide valuable insights (using language samples and author attributes to identify differentiating
+linguistic features). Previous studies have examined factors such as gender and age, political ideology,
+health outcomes, and personality traits. In this paper, models are constructed to predict outcomes
+based on crowd-sourced forecasts without knowledge of individual forecasters’ identities.
+Previous research has also explored how language use varies depending on the relationships between
+individuals. For instance, studies have analyzed language patterns in social networks, online commu-
+nities, and corporate emails to understand how individuals in positions of authority communicate.

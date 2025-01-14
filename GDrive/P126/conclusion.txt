@@ -1,0 +1,25 @@
+Broader Impact
+Supervised machine learning now affects both personal and public lives significantly. Generalization is
+critical to the reliability and safety of empirically trained models. Our analysis aims to achieve a deeper
+understanding of the relationships between generalization, architectural design, and available data.
+We have discussed the concepts and demonstrated the effectiveness of using uniform concentration
+events for generalization guarantees of common supervised machine learning algorithms.
+7
+A key reason for utilizing multi-task learning is to enhance generalization by making use of the
+domain-specific details present in the training data of related tasks. In this study, we demonstrate that
+TL and MTL can serve as a form of regularization, enabling the prediction of infrequent relations
+within a dataset marked by a highly skewed distribution of relations. This dataset is particularly
+well-suited for TL and MTL experimentation, as elaborated in Section 3.
+Our contributions are summarized as follows:
+1. Through meticulous analysis of results, we discover that TL and MTL, especially when applied
+to the embedding layer, enhance overall accuracy and F1 scores for less frequent relations in a
+suming the NeuRIPs event, we then provide bounds on the expected risk, applicable
+to networks within any sublevel set of the empirical risk. Our results show that all
+networks with sufficiently small empirical risk achieve uniform generalization.
+1 Introduction
+A fundamental requirement of any scientific model is a clear evaluation of its limitations. In recent
+years, supervised machine learning has seen the development of tools for automated model discovery
+from training data. However, these methods often lack a robust theoretical framework to estimate
+model limitations. Statistical learning theory quantifies the limitation of a trained model by the
+generalization error. This theory uses concepts such as the VC-dimension and Rademacher complexity
+to analyze generalization error bounds for classification problems.

@@ -1,0 +1,29 @@
+Safe Predictors for Input-Output Specification
+Enforcement
+Abstract
+This paper presents an approach for designing neural networks, along with other
+machine learning models, which adhere to a collection of input-output specifica-
+tions. Our method involves the construction of a constrained predictor for each set
+of compatible constraints, and combining these predictors in a safe manner using a
+convex combination of their predictions. We demonstrate the applicability of this
+method with synthetic datasets and on an aircraft collision avoidance problem.
+1 Introduction
+The increasing adoption of machine learning models, such as neural networks, in safety-critical
+applications, such as autonomous vehicles and aircraft collision avoidance, highlights an urgent
+need for the development of guarantees on safety and robustness.the specifications until after training. Our work seeks to design networks with enforced input-output
+constraints even before training has been completed. This will allow for online learning scenarios
+where a system has to guarantee safety throughout its operation.
+This paper presents an approach for designing a safe predictor (a neural network or any other
+machine learning model) that will always meet a set of constraints on the input-output relationship.
+This assumes that the constrained output regions can be formulated to be convex. Our correct-
+by-construction safe predictor is guaranteed to satisfy the constraints, even before training, and at
+every training step. We describe our approach in Section 2, and show its use in an aircraft collision
+avoidance problem in Section 3.function is smooth.
+3 Application to Aircraft Collision Avoidance
+Aircraft collision avoidance requires robust safety guarantees. The Next-Generation Collision
+Avoidance System (ACAS X), which issues advisories to prevent near mid-air collisions, has both
+manned (ACAS Xa) and unmanned (ACAS Xu) variants. The system was originally designed to
+choose optimal advisories while minimizing disruptive alerts by solving a partially observable Markov
+decision process. The solution took the form of a large look-up table, mapping each possible input
+combination to scores for all possible advisories. The advisory with the highest score would then be
+issued.

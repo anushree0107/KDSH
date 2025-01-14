@@ -1,0 +1,24 @@
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+was computed and clipped to [−20,20]. For InceptionV3, features were computed every 3 frames
+(8 fps), while for I3D, every frame was used, with I3D having a temporal stride of 8, resulting in
+3 features per second (3 fps). Models were implemented in PyTorch and trained using the Adam
+optimizer with a learning rate of 0.01, decayed by a factor of 0.1 every 10 epochs, for a total of 50
+epochs.
+4
+6.2 Segmented Video Activity Recognition
+We initially conducted binary pitch/non-pitch classification for each video segment. This task is
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6

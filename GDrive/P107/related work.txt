@@ -1,0 +1,25 @@
+ The "majority vote" baseline determines the answer to a
+question based on the most frequent prediction among the forecasts. The "weighted vote" baseline,
+on the other hand, assigns weights to the probabilities in the predictions and then aggregates them.
+4.2 Neural Network Architecture
+A neural network architecture is employed, which consists of three main components: one to generate
+a representation of the question, another to generate a representation of each forecast, and an LSTM
+to process the sequence of forecasts and ultimately call the question.
+The representation of a question is obtained using BERT, followed by a fully connected layer with 256
+neurons, ReLU activation, and dropout. The representation of a forecast is created by concatenating
+three elements: (a) a binary flag indicating whether the forecast was submitted on the day the question
+is being called or on a previous day, (b) the prediction itself (a numerical value between 0.0 and 1.0),
+and (c) a representation of the justification. The representation of the justification is also obtained
+using BERT, followed by a fully connected layer with 256 neurons, ReLU activation, and dropout.
+The LSTM has a hidden state with a dimensionality of 256 and processes the sequence of forecasts
+as its input. During the tuning process, it was discovered that providing the representation of the
+question alongside each forecast is more effective than processing forecasts independently of the
+question.neural network configurations, except for the one using only predictions and justifications.
+**Encoding Questions and Justifications** The neural network that only utilizes the prediction
+to represent a forecast surpasses both baseline methods. Notably, integrating the question, the
+justification, or both into the forecast representation yields further improvements. These results
+indicate that incorporating the question and forecaster-provided justifications into the model enhances
+the accuracy of question calling.
+**Calling Questions Throughout Their Life** When examining the results across the four quartiles of
+a question’s duration, it’s observed that while using active forecasts is beneficial across all quartiles
+for both baselines and all network configurations, the neural networks surprisingly outperform the

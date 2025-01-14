@@ -1,0 +1,18 @@
+three elements: (a) a binary flag indicating whether the forecast was submitted on the day the question
+is being called or on a previous day, (b) the prediction itself (a numerical value between 0.0 and 1.0),
+and (c) a representation of the justification. The representation of the justification is also obtained
+using BERT, followed by a fully connected layer with 256 neurons, ReLU activation, and dropout.
+The LSTM has a hidden state with a dimensionality of 256 and processes the sequence of forecasts
+as its input. During the tuning process, it was discovered that providing the representation of the
+question alongside each forecast is more effective than processing forecasts independently of the
+question. the best baseline (the
+relative improvements are denoted as Imp.).
+!ModelYelp2018 Gowalla Amazon-book
+Recall@20 HR@20 NDCG@20 Recall@20 HR@20 NDCG@20 Recall@20 HR@20 NDCG@20
+MF 0.0050 0.0109 0.0093 0.0343 0.0422 0.0280 0.0370 0.0388 0.0270
+LightGCN 0.0048 0.0111 0.0098 0.0380 0.0468 0.0302 0.0421 0.We implement the state-of-the-art LightGCN to instantiate PAAC, aiming to investigate how it alleviates popularity bias. We
+compare PAAC with several debiased baselines, including re-weighting-based models, decorrelation-based models, and contrastive
+learning-based models.
+We utilize three widely used metrics, namely Recall@K, HR@K, and NDCG@K, to evaluate the performance of Top-K recommen-
+dation. Recall@K and HR@K assess the number of target items retrieved in the recommendation results, emphasizing coverage. In
+contrast, NDCG@K evaluates the positions of target items in the ranking list, with a focus on their positions in the list. We use

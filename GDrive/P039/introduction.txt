@@ -1,0 +1,25 @@
+I3D + super-events 38.7 38.6 39.1
+I3D + sub+super-events 38.2 39.4 40.4
+InceptionV3 31.2 31.8 31.9
+InceptionV3 + max-pooling 31.8 34.1 35.2
+InceptionV3 + pyramid 32.2 35.1 36.8
+InceptionV3 + LSTM 32.1 33.5 34.1
+InceptionV3 + temporal conv 28.4 34.4 33.4
+InceptionV3 + sub-events 32.applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38. These tables illustrate how PCEDT functors map to NomBank arguments
+in the training split (Table 6) and vice versa (Table 7). Table 6 reveals that 80% of the compounds
+annotated as TWHEN in PCEDT were annotated as ARGM-TMP in NomBank. Additionally, 47% of
+ACT (Actor) relations map to ARG0 (Proto-Agent) in NomBank. While this mapping is not as distinct
+as one might hope, it is still relatively high when compared to how other PCEDT relations map to
+ARG0. The correspondence matrices also demonstrate that the presumed theoretical similarities
+between NomBank and PCEDT relations do not always hold in practice.

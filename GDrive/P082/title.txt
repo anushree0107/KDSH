@@ -1,0 +1,26 @@
+We use PyTorch for defining our networks and performing parameter optimization. We optimize both
+the unconstrained and safe predictors using the asymmetric loss function to select advisories while
+also accurately predicting scores. The data is split using an 80/20 train/test split with a random seed
+of 0. The optimizer is ADAM with a learning rate of 0.0003 and batch size of 216, with training for
+500 epochs.
+Appendix A: Proof of Theorem 2.1
+Proof. Letx∈Ai. Then, σi(x) = 0 , and for all b∈Owhere bi= 0,wb(x) = 0 . Thus,
+F(x) =X
+pθ(x0|x1) =gθ
+1(x1),
+where the variance parameters σ2
+t∈R≥0are defined by a fixed schedule, the mean functions gθ
+t:RD→RDare learned using a
+neural network (with parameters θ) for2≤t≤T, andgθ
+1:RD→Xis a separate function dependent on σ1. In practice, the same
+network has been used for the functions gθ
+tfor2≤t≤T, and a separate discrete decoder for gθ
+1.
+2
+We apply two different layers to produce two different outputs during training. The room-level predictions are produced via a single
+conditional random field (CRF) layer in combination with a linear layer applied to the output of Eq. 7 to produce the final predictions
+as:
+ˆyt=CRF (φ(ht)) (7)
+q′(ht) =Wpht+bp (8)
+where Wp∈Rd×mandbp∈Rmare the weight and bias to learn, mis the number of room locations, and h= [h1, ..., h T]∈RT×d
+is the refined embedding produced by Eq. 7. Even though the transformer can take into account neighbor information before

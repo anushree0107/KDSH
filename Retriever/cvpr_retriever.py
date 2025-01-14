@@ -38,11 +38,11 @@ class CVPRRulebook:
     def initialize_vector_server(self):
         """Initializes the VectorStoreServer with data sources and an embedder."""
         text_splitter = TokenCountSplitter(
-            min_tokens=50,  # Ensure small meaningful chunks
-            max_tokens=150,  # Cover larger reviews in one chunk
-            encoding_name="cl100k_base",  # Token encoding for compatibility 
+            min_tokens=50, 
+            max_tokens=150, 
+            encoding_name="cl100k_base",  
         )
-        # Define custom embedder class
+        
         class SentenceTransformerEmbedder:
             def __init__(self, model_name="sentence-transformers/all-MiniLM-L6-v2"):
                 self.model = SentenceTransformer(model_name, trust_remote_code=True)
@@ -50,7 +50,7 @@ class CVPRRulebook:
             def __call__(self, texts):
                 return self.model.encode(texts)
 
-        # Replace embedder initialization
+        
         embedder = embedders.SentenceTransformerEmbedder(model="sentence-transformers/all-MiniLM-L6-v2")
         
         PATHWAY_PORT = 8000
@@ -66,7 +66,7 @@ class CVPRRulebook:
             threaded=True, 
             with_cache=True,
         )
-        time.sleep(60)  # Wait for server initialization
+        time.sleep(60)  
 
     def initialize_client(self):
         """Initializes the VectorStoreClient."""

@@ -1,0 +1,28 @@
+has been discovered that pooling intervals from varying locations and durations is advantageous for
+activity recognition. It was demonstrated that identifying and classifying key sub-event intervals can
+lead to better performance.
+Recently, segment-based 3D CNNs have been employed to capture spatio-temporal data concurrently
+for activity detection. These methods depend on the 3D CNN to capture temporal dynamics, which
+typically span only 16 frames. Although longer-term temporal structures have been explored, this was
+usually accomplished with temporal pooling of localized features or (spatio-)temporal convolutions
+with extended fixed intervals. Recurrent Neural Networks (RNNs) have also been applied to represent
+transitions in activity between frames.
+3 MLB-YouTube Dataset
+ The focus of more
+recent studies has shifted towards the application of Convolutional Neural Networks (CNNs) for
+activity recognition. Two-stream CNN architectures utilize both spatial RGB frames and optical
+flow frames. To capture spatio-temporal characteristics, 3D XYT convolutional models have been
+developed. The development of these advanced CNN models has been supported by large datasets
+such as Kinetics, THUMOS, and ActivityNet.
+Several studies have investigated the aggregation of temporal features for the purpose of activity
+recognition. Research has compared several pooling techniques and determined that both Long Short-
+.
+Term Memory networks (LSTMs) and max-pooling across entire videos yielded the best outcomes. It
+was computed and clipped to [−20,20]. For InceptionV3, features were computed every 3 frames
+(8 fps), while for I3D, every frame was used, with I3D having a temporal stride of 8, resulting in
+3 features per second (3 fps). Models were implemented in PyTorch and trained using the Adam
+optimizer with a learning rate of 0.01, decayed by a factor of 0.1 every 10 epochs, for a total of 50
+epochs.
+4
+6.2 Segmented Video Activity Recognition
+We initially conducted binary pitch/non-pitch classification for each video segment. This task is

@@ -1,0 +1,24 @@
+ These models may be required
+to satisfy specific input-output specifications to ensure the algorithms comply with physical laws,
+can be executed safely, and are consistent with prior domain knowledge. Furthermore, these models
+should demonstrate adversarial robustness, meaning their outputs should not change abruptly within
+small input regions – a property that neural networks often fail to satisfy.
+Recent studies have shown the capacity to verify formally input-output specifications and adversarial
+robustness properties of neural networks. For instance, the Satisability Modulo Theory (SMT) solver
+Reluplex was employed to verify properties of networks being used in the Next-Generation Aircraft
+Collision Avoidance System for Unmanned aircraft (ACAS Xu).function is smooth.
+3 Application to Aircraft Collision Avoidance
+Aircraft collision avoidance requires robust safety guarantees. The Next-Generation Collision
+Avoidance System (ACAS X), which issues advisories to prevent near mid-air collisions, has both
+manned (ACAS Xa) and unmanned (ACAS Xu) variants. The system was originally designed to
+choose optimal advisories while minimizing disruptive alerts by solving a partially observable Markov
+decision process. The solution took the form of a large look-up table, mapping each possible input
+combination to scores for all possible advisories. The advisory with the highest score would then be
+issued.Appendix C: Details of VerticalCAS Experiment
+C.1 Safeability Constraints
+The "safeability" property, originally introduced and used to verify the safety of the VerticalCAS
+neural networks can be encoded into a set of input-output constraints. The "safeable region" for
+a given advisory represents input locations where that advisory can be selected such that future
+advisories exist that will prevent an NMAC. If no future advisories exist, the advisory is "unsafeable"
+and the corresponding input region is the "unsafeable region". Examples of these regions, and their
+proximity functions are shown in Figure 5 for the CL1500 advisory.

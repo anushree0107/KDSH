@@ -1,0 +1,31 @@
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details
+Advancements in 3D Food Modeling: A Review of the
+MetaFood Challenge Techniques and Outcomes
+Abstract
+The growing focus on leveraging computer vision for dietary oversight and nutri-
+tion tracking has spurred the creation of sophisticated 3D reconstruction methods
+for food. The lack of comprehensive, high-fidelity data, coupled with limited
+collaborative efforts between academic and industrial sectors, has significantly
+hindered advancements in this domain. This study addresses these obstacles by
+introducing the MetaFood Challenge, aimed at generating precise, volumetrically
+accurate 3D food models from 2D images, utilizing a checkerboard for size cal-
+ibration. The challenge was structured around 20 food items across three levels
+ For overall method performance, Table 4 shows
+the MAPE and Chamfer distance with and without transformation metrics.
+Additionally, qualitative results on one- and few-shot 3D reconstruction from the challenge dataset
+are shown. The model excels in texture details, artifact correction, missing data handling, and color
+adjustment across different scene parts.
+Limitations: Despite promising results, several limitations need to be addressed in future work:
+•Manual processes: The current pipeline includes manual steps like providing segmentation
+prompts and identifying scaling factors, which should be automated to enhance efficiency.
+•Input requirements: The method requires extensive input information, including food
+masks and depth data. Streamlining these inputs would simplify the process and increase

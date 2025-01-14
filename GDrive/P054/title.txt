@@ -1,0 +1,27 @@
+technologies are vital for fostering healthier eating behaviors and addressing health issues linked to
+diet.
+By concentrating on the development of accurate 3D models of food derived from various visual
+inputs, including multiple views and single perspectives, this challenge endeavors to bridge the
+disparity between current methodologies and practical needs. It promotes the creation of unique
+solutions capable of managing the intricacies of food morphology, texture, and illumination, while also
+meeting the real-world demands of dietary evaluation. This initiative gathers experts from computer
+vision, machine learning, and nutrition science to propel 3D food reconstruction technologies forward.
+These advancements have the potential to substantially enhance the precision and utility of food
+Advancements in 3D Food Modeling: A Review of the
+MetaFood Challenge Techniques and Outcomes
+Abstract
+The growing focus on leveraging computer vision for dietary oversight and nutri-
+tion tracking has spurred the creation of sophisticated 3D reconstruction methods
+for food. The lack of comprehensive, high-fidelity data, coupled with limited
+collaborative efforts between academic and industrial sectors, has significantly
+hindered advancements in this domain. This study addresses these obstacles by
+introducing the MetaFood Challenge, aimed at generating precise, volumetrically
+accurate 3D food models from 2D images, utilizing a checkerboard for size cal-
+ibration. The challenge was structured around 20 food items across three levels
+exhibited superior performance in Phase-II, highlighting a competitive and high-caliber field of
+entries for 3D mesh reconstruction. The challenge has successfully advanced the field of 3D food
+reconstruction, demonstrating the potential for accurate volume estimation and shape reconstruction
+in nutritional analysis and food presentation applications. The novel methods developed by the
+participating teams establish a strong foundation for future research in this area, potentially leading
+to more precise and user-friendly approaches for dietary assessment and monitoring.
+10

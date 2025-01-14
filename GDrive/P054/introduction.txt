@@ -1,0 +1,29 @@
+portion estimation across diverse applications, from individual health tracking to extensive nutritional
+investigations.
+Conventional methods for assessing diet, like 24-Hour Recall or Food Frequency Questionnaires
+(FFQs), are frequently reliant on manual data entry, which is prone to inaccuracies and can be
+burdensome. The lack of 3D data in 2D RGB food images further complicates the use of regression-
+based methods for estimating food portions directly from images of eating occasions. By enhancing
+3D reconstruction for food, the aim is to provide more accurate and intuitive nutritional assessment
+tools. This technology could revolutionize the sharing of culinary experiences and significantly
+impact nutrition science and public health.
+technologies are vital for fostering healthier eating behaviors and addressing health issues linked to
+diet.
+By concentrating on the development of accurate 3D models of food derived from various visual
+inputs, including multiple views and single perspectives, this challenge endeavors to bridge the
+disparity between current methodologies and practical needs. It promotes the creation of unique
+solutions capable of managing the intricacies of food morphology, texture, and illumination, while also
+meeting the real-world demands of dietary evaluation. This initiative gathers experts from computer
+vision, machine learning, and nutrition science to propel 3D food reconstruction technologies forward.
+These advancements have the potential to substantially enhance the precision and utility of food
+of complexity: easy (200 images), medium (30 images), and hard (1 image). A
+total of 16 teams participated in the final assessment phase. The methodologies
+developed during this challenge have yielded highly encouraging outcomes in
+3D food reconstruction, showing great promise for refining portion estimation in
+dietary evaluations and nutritional tracking. Further information on this workshop
+challenge and the dataset is accessible via the provided URL.
+1 Introduction
+The convergence of computer vision technologies with culinary practices has pioneered innovative
+approaches to dietary monitoring and nutritional assessment. The MetaFood Workshop Challenge
+represents a landmark initiative in this emerging field, responding to the pressing demand for precise
+and scalable techniques for estimating food portions and monitoring nutritional consumption. Such

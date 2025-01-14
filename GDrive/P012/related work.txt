@@ -1,0 +1,23 @@
+PCEDT have distinctly high ratios compared to other relations in Figure 2. These relations also
+have the second-highest F1 score in their datasets—except for STL on PCEDT (see Tables 4 and
+5). Lexical memorization is therefore a likely cause of these high F1 scores. We also observed that
+lower ratios of relation-specific constituents correlate with lower F1 scores, such as APP and REG in
+PCEDT. Based on these insights, we can’t dismiss the possibility that our models show some degree
+of lexical memorization, despite manual analysis also presenting cases where models demonstrate
+generalization and correct predictions in situations where lexical memorization is impossible.
+8 Conclusion
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+assumptions about the data distribution or the learned score function, and with simple proofs that do not need the SDE toolkit.
+Furthermore, the bounds presented here do not involve any complex discretization steps, as the forward and backward processes are
+considered discrete-time from the beginning, rather than being viewed as discretizations of continuous-time processes.
+1.1 Related Works
+There has been an increasing amount of research aimed at providing theoretical findings on the convergence of SGMs. However,
+these studies frequently depend on restrictive assumptions regarding the data-generating distribution, produce non-quantitative upper
+bounds, or exhibit exponential dependencies on certain parameters. This work successfully circumvents all three of these limitations.

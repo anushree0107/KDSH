@@ -1,0 +1,26 @@
+02426 230×265 (294 ×431×2.353)
+7 Burger 0.1043478261 0.02435 208×264 (378 ×400×2.353)
+8 Cake 0.1276595745 0.02143 256×300 (298 ×310×4.706)
+9 Blueberry muffin 0.08759124088 0.01801 291×357 (441 ×443×2.353)
+10 Banana 0.08759124088 0.01705 315×377 (446 ×857×1.176)
+Medium 11 Salmon 0.1043478261 0.applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.InceptionV3 5.3 mph
+InceptionV3 + LSTM 4.5 mph
+InceptionV3 + sub-events 3.6 mph
+6.2.3 Pitch Type Classification
+We conducted experiments to determine the feasibility of predicting pitch types from video, a task
+made challenging by pitchers’ efforts to disguise their pitches from batters and the subtle differences
+between pitches, such as grip and rotation. We incorporated pose data extracted using OpenPose,
+utilizing heatmaps of joint and body part locations as input to a newly trained InceptionV3 CNN.
+Pose features were considered due to variations in body mechanics between different pitches. Our
+dataset includes six pitch types, with results presented in Table 7.

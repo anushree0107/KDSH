@@ -1,0 +1,26 @@
+PCEDT have distinctly high ratios compared to other relations in Figure 2. These relations also
+have the second-highest F1 score in their datasets—except for STL on PCEDT (see Tables 4 and
+5). Lexical memorization is therefore a likely cause of these high F1 scores. We also observed that
+lower ratios of relation-specific constituents correlate with lower F1 scores, such as APP and REG in
+PCEDT. Based on these insights, we can’t dismiss the possibility that our models show some degree
+of lexical memorization, despite manual analysis also presenting cases where models demonstrate
+generalization and correct predictions in situations where lexical memorization is impossible.
+8 Conclusion
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+ However, since
+these improvements are relatively minor, we further analyze the results to understand if and how TL
+and MTL are beneficial.
+7 Results Analysis
+This section provides a detailed analysis of the models’ performance, drawing on insights from the
+dataset and the classification errors made by the models. The discussion in the following sections is
+primarily based on the results from the test split, as it is larger than the development split.
+7.1 Relation Distribution
+To illustrate the complexity of the task, we depict the distribution of the most frequent relations in
+NomBank and PCEDT across the three data splits in Figure 1. Notably, approximately 71.18% of the

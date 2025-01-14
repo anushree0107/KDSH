@@ -1,0 +1,28 @@
+industries as it enables them to anticipate and address potential challenges. This study focuses on
+questions spanning the political, economic, and social domains, utilizing forecasts submitted by a
+crowd of individuals without specialized training. Each forecast comprises a prediction and a natural
+language justification.
+6
+The research demonstrates that aggregating the weighted predictions of forecasters is a solid baseline
+for calling a question throughout its duration. However, models that incorporate both the question
+and the justifications achieve significantly better results, particularly during the first three quartiles of
+a question’s life. Importantly, the models developed in this study do not profile individual forecasters
+or utilize any information about their identities. This work lays the groundwork for evaluating the
+However, none of these prior works have specifically aimed to call questions throughout their entire
+duration.
+2
+3 Dataset
+The research utilizes data from the Good Judgment Open, a platform where questions are posted, and
+individuals submit their forecasts. The questions primarily revolve around geopolitics, encompassing
+areas such as domestic and international politics, the economy, and social matters. For this study, all
+binary questions were collected, along with their associated forecasts, each comprising a prediction
+and a justification. In total, the dataset contains 441 questions and 96,664 forecasts submitted
+over 32,708 days. This dataset significantly expands upon previous research, nearly doubling the
+number of forecasts analyzed.large groups, it is important to determine whether the individual inputs were made independently. If
+not, factors like group psychology and the influence of persuasive arguments can skew individual
+judgments, thus negating the positive effects of crowd wisdom.
+This paper focuses on forecasts concerning questions spanning political, economic, and social
+domains. Each forecast includes a prediction, estimating the probability of a particular event, and
+a written justification that explains the reasoning behind the prediction. Forecasts with identical
+predictions can have justifications of varying strength, which, in turn, affects the perceived reliability
+of the predictions. For instance, a justification that simply refers to an external source without

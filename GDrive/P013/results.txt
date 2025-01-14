@@ -1,0 +1,20 @@
+their predictions on events that might not occur or have not yet occurred. The sentiment polarity of
+3
+the justifications is generally neutral. In terms of readability, both the Flesch and Dale-Chall scores
+suggest that approximately a quarter of the justifications require a college-level education for full
+comprehension.
+Regarding verbs and nouns, an analysis using WordNet lexical files reveals that the most common
+verb classes are "change" (e.g., "happen," "remain," "increase"), "social" (e.g., "vote," "support,"
+"help"), "cognition" (e.g., "think," "believe," "know"), and "motion" (e.g.50% on the Gowalla and Yelp2018 datasets, respectively.
+This indicates that our method treats items from different groups fairly, effectively alleviating the impact of popularity
+bias. This success can be attributed to our re-weighted contrast module, which addresses representation separation from a
+popularity-centric perspective, resulting in more consistent recommendation results across different groups.
+3.5 Hyperparameter Sensitivities
+In this section, we analyze the impact of hyperparameters in PAAC. Firstly, we investigate the influence of λ1andλ2, which
+respectively control the impact of the popularity-aware supervised alignment and re-weighting contrast loss. Additionally, in the
+79%, and 82.89% in NDCG@20 on the
+Yelp2018, Gowalla, and Amazon-Book datasets, respectively. Compared to the strongest baselines, PAAC delivers better
+performance. The most significant improvements are observed on Yelp2018, where our model achieves an 8.70% increase
+in Recall@20, a 10.81% increase in HR@20, and a 30.2% increase in NDCG@20. This improvement can be attributed
+to our use of popularity-aware supervised alignment to enhance the representation of less popular items and re-weighted
+contrastive learning to address representation separation from a popularity-centric perspective.

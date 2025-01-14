@@ -1,0 +1,28 @@
+Examining the Convergence of Denoising Diffusion Probabilistic
+Models: A Quantitative Analysis
+Abstract
+Deep generative models, particularly diffusion models, are a significant family within deep learning. This study
+provides a precise upper limit for the Wasserstein distance between a learned distribution by a diffusion model
+and the target distribution. In contrast to earlier research, this analysis does not rely on presumptions regarding
+the learned score function. Furthermore, the findings are applicable to any data-generating distributions within
+restricted instance spaces, even those lacking a density relative to the Lebesgue measure, and the upper limit is not
+exponentially dependent on the ambient space dimension. The primary finding expands upon recent research by
+The latter is an upper bound on the empirical risk, which real-world optimization algorithms can be
+expected to achieve.
+5 Size Control of Stochastic Processes on Shallow Networks
+In this section, we introduce the key techniques for deriving concentration statements for the em-
+pirical norm, uniformly valid for sets of shallow ReLU networks. We begin by rewriting the event
+NeuRIPs(  ̄P) by treating μas a stochastic process, indexed by the parameter set  ̄P. The event
+NeuRIPs(  ̄P) holds if and only if we have
+sup
+Generalization in ReLU Networks via Restricted
+Isometry and Norm Concentration
+Abstract
+Regression tasks, while aiming to model relationships across the entire input space,
+are often constrained by limited training data. Nevertheless, if the hypothesis func-
+tions can be represented effectively by the data, there is potential for identifying a
+model that generalizes well. This paper introduces the Neural Restricted Isometry
+Property (NeuRIPs), which acts as a uniform concentration event that ensures all
+shallow ReLU networks are sketched with comparable quality. To determine the
+sample complexity necessary to achieve NeuRIPs, we bound the covering numbers
+of the networks using the Sub-Gaussian metric and apply chaining techniques. As-

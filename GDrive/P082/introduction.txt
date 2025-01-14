@@ -1,0 +1,25 @@
+an activity, eliminating the need for the model to identify the start and end of activities. Our methods
+are based on a CNN that generates a per-frame or per-segment representation, derived from standard
+two-stream CNNs using deep CNNs like I3D or InceptionV3.
+Given video features vof dimensions T×D, where Trepresents the video’s temporal length and D
+is the feature’s dimensionality, the usual approach for feature pooling involves max- or mean-pooling
+across the temporal dimension, followed by a fully-connected layer for video clip classification, as
+depicted in Fig. 5(a). This approach, however, yields a single representation for the entire video,
+losing temporal information.A key reason for utilizing multi-task learning is to enhance generalization by making use of the
+domain-specific details present in the training data of related tasks. In this study, we demonstrate that
+TL and MTL can serve as a form of regularization, enabling the prediction of infrequent relations
+within a dataset marked by a highly skewed distribution of relations. This dataset is particularly
+well-suited for TL and MTL experimentation, as elaborated in Section 3.
+Our contributions are summarized as follows:
+1. Through meticulous analysis of results, we discover that TL and MTL, especially when applied
+to the embedding layer, enhance overall accuracy and F1 scores for less frequent relations in a
+ The focus of more
+recent studies has shifted towards the application of Convolutional Neural Networks (CNNs) for
+activity recognition. Two-stream CNN architectures utilize both spatial RGB frames and optical
+flow frames. To capture spatio-temporal characteristics, 3D XYT convolutional models have been
+developed. The development of these advanced CNN models has been supported by large datasets
+such as Kinetics, THUMOS, and ActivityNet.
+Several studies have investigated the aggregation of temporal features for the purpose of activity
+recognition. Research has compared several pooling techniques and determined that both Long Short-
+.
+Term Memory networks (LSTMs) and max-pooling across entire videos yielded the best outcomes. It

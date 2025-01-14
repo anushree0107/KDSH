@@ -1,0 +1,24 @@
+layer for the constrained predictors, G0andG1. Training uses a sampled subset of points from
+the input space. Figure 3 shows an example of applying our safe predictor to a notional regression
+problem with a 2-D input and 1-D output, using two overlapping constraints. The unconstrained
+network has two hidden layers of dimension 20 and ReLU activations, followed by a fully connected
+layer. The constrained predictors, G00,G10,G01, and G11, share the hidden layers but also have an
+additional hidden layer of size 20 with ReLU, followed by a fully connected layer. Training uses a
+sampled subset of points from the input space.
+ The training uses a sampled subset of points from the input space and the learned
+predictors are shown for the continuous input space.
+Figure 3 shows an example of applying the safe predictor to a notional regression problem with a 2-D
+input and 1-D output and two overlapping constraints. The unconstrained network has two hidden
+layers of dimension 20 with ReLU activations, followed by a fully connected layer. The constrained
+predictors G00,G10,G01andG11share the hidden layers and have an additional hidden layer of size
+20 with ReLU followed by a fully connected layer. Again, training uses a sampled subset of points
+from the input space and the learned predictors are shown for the continuous input space.
+ Results on synthetic datasets can be found in Appendix B.
+.
+2 Method
+Considering two normed vector spaces, an input space X and an output space Y , and a collection
+of c different pairs of input-output constraints, (Ai, Bi), where Ai⊆XandBiis a convex subset
+ofYfor each constraint i, the goal is to design a safe predictor, F:X→Y, that guarantees
+x∈Ai⇒F(x)∈Bi.
+Letbbe a bit-string of length c. Define Obas the set of points zsuch that, for all i,bi= 1implies
+z∈Ai, and bi= 0implies z /∈Ai.

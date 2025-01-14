@@ -1,0 +1,22 @@
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned
+a common aspect of the aforementioned studies is that their bounds are contingent on the error of the score estimator. According to
+some, providing precise guarantees for the estimation of the score function is challenging, as it necessitates an understanding of the
+non-convex training dynamics of neural network optimization, which is currently beyond reach. Therefore, upper bounds are derived
+without making assumptions about the learned score function. Instead, the bound presented here is dependent on a reconstruction
+loss calculated over a finite independent and identically distributed (i.i.d.) sample. Intuitively, a loss function is defined, which
+quantifies the average Euclidean distance between a sample from the data-generating distribution and the reconstruction obtained by
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL

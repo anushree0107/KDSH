@@ -1,0 +1,20 @@
+the full ranking strategy, considering all non-interacted items as candidate items to avoid selection bias during the test stage. We
+repeated each experiment five times with different random seeds and reported the average scores.
+3.2 Overall Performance
+As shown in Table 1, we compare our model with several baselines across three datasets. The best performance for each metric
+is highlighted in bold, while the second best is underlined. Our model consistently outperforms all compared methods across all
+metrics in every dataset.
+•Our proposed model PAAC consistently outperforms all baselines and significantly mitigates the popularity bias. Specif-
+ically, PAAC enhances LightGCN, achieving improvements of 282.65%, 180.We implement the state-of-the-art LightGCN to instantiate PAAC, aiming to investigate how it alleviates popularity bias. We
+compare PAAC with several debiased baselines, including re-weighting-based models, decorrelation-based models, and contrastive
+learning-based models.
+We utilize three widely used metrics, namely Recall@K, HR@K, and NDCG@K, to evaluate the performance of Top-K recommen-
+dation. Recall@K and HR@K assess the number of target items retrieved in the recommendation results, emphasizing coverage. In
+contrast, NDCG@K evaluates the positions of target items in the ranking list, with a focus on their positions in the list. We use
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6

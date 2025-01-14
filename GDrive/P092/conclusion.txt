@@ -1,0 +1,21 @@
+DCSA (ˆx1,ˆx2) =GRN (Norm (φ(ˆx1) + ˆx1), Norm (φ(ˆx2) + ˆx2)) (2)
+with
+φ(ˆx) =SA(Φk(ˆx)WQ,Φk(ˆx)WK,Φk(ˆx)WV) (3)
+where GRN (.)is the Gated Residual Network to integrate dual inputs into one integrated embedding, Norm (.)is a standard layer
+normalization, SA(.)is a scaled dot-product self-attention, Φk(. Fixed temporal pyramid pooling outperforms max-pooling, while LSTM and temporal
+6
+Table 7: Accuracy of pitch type classification using I3D for video inputs and InceptionV3 for pose
+heatmaps.
+Method Accuracy
+Random 17.0%
+I3D 25.8%
+I3D + LSTM 18.5%
+I3D + sub-events 34.5%
+Pose 28.4%
+Pose + LSTM 27.6%
+Pose + sub-events 36.4%
+convolution appear to overfit. Convolutional sub-events, especially when combined with super-event
+representation, significantly enhance performance, particularly for frame-based features.
+φki(ˆx1,ˆx2) =SA(Φki(ˆx1)WQ,Φki(ˆx2)WK,Φki(ˆx1,ˆx2)WV) (5)
+where Φki(.)is a 1D-convolutional layer with a kernel size {1, ki}and a stride ki,WK∈Rd×d, WQ∈Rd×d, WV∈Rd×dare
+weights for keys, queries, and values of the self-attention layer, and Ξn(.)concatenates the output of each DCSA ki(.)in temporal

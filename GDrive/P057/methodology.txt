@@ -1,0 +1,28 @@
+ The "majority vote" baseline determines the answer to a
+question based on the most frequent prediction among the forecasts. The "weighted vote" baseline,
+on the other hand, assigns weights to the probabilities in the predictions and then aggregates them.
+4.2 Neural Network Architecture
+A neural network architecture is employed, which consists of three main components: one to generate
+a representation of the question, another to generate a representation of each forecast, and an LSTM
+to process the sequence of forecasts and ultimately call the question.
+The representation of a question is obtained using BERT, followed by a fully connected layer with 256
+neurons, ReLU activation, and dropout. The representation of a forecast is created by concatenating
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.was computed and clipped to [−20,20]. For InceptionV3, features were computed every 3 frames
+(8 fps), while for I3D, every frame was used, with I3D having a temporal stride of 8, resulting in
+3 features per second (3 fps). Models were implemented in PyTorch and trained using the Adam
+optimizer with a learning rate of 0.01, decayed by a factor of 0.1 every 10 epochs, for a total of 50
+epochs.
+4
+6.2 Segmented Video Activity Recognition
+We initially conducted binary pitch/non-pitch classification for each video segment. This task is

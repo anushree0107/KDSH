@@ -1,0 +1,26 @@
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details
+ They then projected the 3D
+object back onto the original 2D image to obtain a more precise scale for the object.
+6.2 Experimental Results
+Through a process of nonlinear optimization, the team sought to identify a transformation that
+minimizes the Chamfer distance between their mesh and the ground truth mesh. This optimization
+aimed to align the two meshes as closely as possible in three-dimensional space. Upon completion
+of this process, the average Chamfer dis- tance across the final reconstructions of the 20 objects
+amounted to 0.0032175 meters. As shown in Table 7, Team FoodRiddle achieved the best scores for
+02021 249×318 (186 ×95×0.987)
+19 Waffle 0.01034482759 0.01902 294×338 (465 ×537×0.8)
+20 Pizza 0.01034482759 0.01913 292×336 (442 ×651×1.176)
+After finding keyframes, PixSfM estimated the poses and point cloud. After generating scaled meshes,
+the team calculated volumes and Chamfer distance with and without transformation metrics. Meshes
+were registered with ground truth meshes using ICP to obtain transformation metrics.
+Table 3 presents quantitative comparisons of the team’s volumes and Chamfer distance with and
+without estimated transformation metrics from ICP.

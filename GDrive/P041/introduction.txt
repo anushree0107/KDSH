@@ -1,0 +1,23 @@
+provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from
+3 53.4 57.2
+I3D + pyramid 53.2 56.7 58.7
+I3D + LSTM 48.2 53.1 53.1
+I3D + temporal conv 52.8 57.1 58.4
+I3D + sub-events 55.5 61.2 61.3
+Table 5 shows the average precision for each activity class. Learning temporal structure is particularly
+beneficial for frame-based features (e.g., InceptionV3), which capture less temporal information
+5
+compared to segment-based features (e.g., I3D). Sub-event learning significantly aids in detecting
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to

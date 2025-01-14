@@ -1,0 +1,25 @@
+our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.
+ Our goal is to learn a function f(X) that predicts Y based on the input features X.
+Considering two ML tasks, Ta and Tb, we would train two distinct models to learn separate functions
+fa and fb for predicting Ya and Yb in a single-task learning scenario. However, if Ta and Tb are
+related, either explicitly or implicitly, TL and MTL can enhance the generalization of either or both
+tasks. Two tasks are deemed related when their domains are similar but their label sets differ, or when
+their domains are dissimilar but their label sets are identical. Consequently, noun-noun compound
+interpretation using the dataset is well-suited for TL and MTL, as the training examples are identical,
+ Besides differing in the NLP tasks they investigate, the aforementioned
+studies employ slightly varied definitions of TL and MTL. Our research aligns with certain studies in
+that we apply TL and MTL to learn different semantic annotations of noun-noun compounds using
+the same dataset. However, our experimental design is more akin to other work in that we experiment
+with initializing parameters across all layers of the neural network and concurrently train a single
+MTL model on two sets of relations.
+3 Task Definition and Dataset
+The objective of this task is to train a model to categorize the semantic relationships between pairs
+of nouns in a labeled dataset, where each pair forms a noun-noun compound. The complexity of

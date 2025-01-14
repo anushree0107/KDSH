@@ -1,0 +1,22 @@
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+and MTL models are trained using the same hyperparameters as the STL model.
+5.2 Transfer Learning Models
+In our experiments, transfer learning involves training an STL model on PCEDT relations and then
+using some of its weights to initialize another model for NomBank relations. Given the neural
+classifier architecture detailed in Section 5.1, we identify three ways to implement TL: 1) TLE:
+Transferring the embedding layer weights, 2) TLH: Transferring the hidden layer weights, and 3)
+TLEH: Transferring both the embedding and hidden layer weights. Furthermore, we differentiate
+between transfer learning from PCEDT to NomBank and vice versa. This results in six setups,
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL

@@ -1,0 +1,23 @@
+ Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.
+Here, Σiis a set of parameters σ1∈(0,∞)andσ2∈(1,∞), which can be specified based on
+engineering judgment, or learned using optimization over training data. In our experiments in
+this paper, we use proximity functions of this form and learn independent parameters for each
+input-constrained region. We plan to explore other choices for proximity functions in future work.
+2
+2.2 Learning
+If we have families of differentiable functions Gb(x;θb), continuously parameterized by θb, and
+majority of problems, as the reduced iteration cost is counterbalanced by the smaller step size. An exception is presented by problem
+(7), which is not covered by theory, and OGDA+ is the only method capable of converging.
+Finally, we note that the previous paradigm in pure minimization of "smaller step size ensures convergence" but "larger step size
+gets there faster," where the latter is typically constrained by the reciprocal of the gradient’s Lipschitz constant, does not appear
+to hold true for min-max problems anymore. The analysis of various methods in the presence of weak Minty solutions indicates
+that convergence can be lost if the step size is excessively small and sometimes needs to be larger than1

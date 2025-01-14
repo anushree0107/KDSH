@@ -1,0 +1,18 @@
+79%, and 82.89% in NDCG@20 on the
+Yelp2018, Gowalla, and Amazon-Book datasets, respectively. Compared to the strongest baselines, PAAC delivers better
+performance. The most significant improvements are observed on Yelp2018, where our model achieves an 8.70% increase
+in Recall@20, a 10.81% increase in HR@20, and a 30.2% increase in NDCG@20. This improvement can be attributed
+to our use of popularity-aware supervised alignment to enhance the representation of less popular items and re-weighted
+contrastive learning to address representation separation from a popularity-centric perspective.
+We implement the state-of-the-art LightGCN to instantiate PAAC, aiming to investigate how it alleviates popularity bias. We
+compare PAAC with several debiased baselines, including re-weighting-based models, decorrelation-based models, and contrastive
+learning-based models.
+We utilize three widely used metrics, namely Recall@K, HR@K, and NDCG@K, to evaluate the performance of Top-K recommen-
+dation. Recall@K and HR@K assess the number of target items retrieved in the recommendation results, emphasizing coverage. In
+contrast, NDCG@K evaluates the positions of target items in the ranking list, with a focus on their positions in the list. We use
+overrepresentation of popular items across various batches, we implement a hyperparameter x. This hyperparameter readjusts the
+classification of items within the current batch. By adjusting the hyperparameter x, we maintain a balance between different item
+popularity levels. This enhances the model’s ability to generalize across diverse item sets by accurately reflecting the popularity
+distribution in the current training context. Specifically, we denote the set of items within each batch as IB. And then we divide IB
+into a popular group Ipopand an unpopular group Iunpop based on their respective popularity levels, classifying the top x%of items
+asIpop:

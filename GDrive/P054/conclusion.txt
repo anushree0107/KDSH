@@ -1,0 +1,28 @@
+exhibited superior performance in Phase-II, highlighting a competitive and high-caliber field of
+entries for 3D mesh reconstruction. The challenge has successfully advanced the field of 3D food
+reconstruction, demonstrating the potential for accurate volume estimation and shape reconstruction
+in nutritional analysis and food presentation applications. The novel methods developed by the
+participating teams establish a strong foundation for future research in this area, potentially leading
+to more precise and user-friendly approaches for dietary assessment and monitoring.
+10
+both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective
+Advancements in 3D Food Modeling: A Review of the
+MetaFood Challenge Techniques and Outcomes
+Abstract
+The growing focus on leveraging computer vision for dietary oversight and nutri-
+tion tracking has spurred the creation of sophisticated 3D reconstruction methods
+for food. The lack of comprehensive, high-fidelity data, coupled with limited
+collaborative efforts between academic and industrial sectors, has significantly
+hindered advancements in this domain. This study addresses these obstacles by
+introducing the MetaFood Challenge, aimed at generating precise, volumetrically
+accurate 3D food models from 2D images, utilizing a checkerboard for size cal-
+ibration. The challenge was structured around 20 food items across three levels

@@ -1,0 +1,26 @@
+Generalization in ReLU Networks via Restricted
+Isometry and Norm Concentration
+Abstract
+Regression tasks, while aiming to model relationships across the entire input space,
+are often constrained by limited training data. Nevertheless, if the hypothesis func-
+tions can be represented effectively by the data, there is potential for identifying a
+model that generalizes well. This paper introduces the Neural Restricted Isometry
+Property (NeuRIPs), which acts as a uniform concentration event that ensures all
+shallow ReLU networks are sketched with comparable quality. To determine the
+sample complexity necessary to achieve NeuRIPs, we bound the covering numbers
+of the networks using the Sub-Gaussian metric and apply chaining techniques. As-
+ This approach has been demonstrated as a state-of-the-art
+method for alleviating popularity bias. It employs data augmentation techniques such as graph augmentation or feature
+augmentation to generate different views, maximizing positive pair consistency and minimizing negative pair consistency
+to promote more uniform representations. Specifically, Adap- τadjusts user/item embeddings to specific values, while
+SimGCL integrates InfoNCE loss to enhance representation uniformity and alleviate popularity bias.
+4.2 Representation Learning for CF
+Representation learning is crucial in recommendation systems, especially in modern collaborative filtering (CF) techniques. It
+creates personalized embeddings that capture user preferences and item characteristics. The quality of these representations critically
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6

@@ -1,0 +1,22 @@
+We confirm the efficacy and logic of PAAC in reducing popularity bias through thorough experiments on three
+real-world datasets.
+1 Introduction
+Contemporary recommender systems are essential in reducing information overload. Personalized recommendations frequently
+employ collaborative filtering (CF) to assist users in discovering items that may interest them. CF-based techniques primarily
+learn user preferences and item attributes by matching the representations of users with the items they engage with. Despite their
+achievements, CF-based methods frequently encounter the issue of popularity bias, which leads to considerable disparities in
+accuracy between items that are popular and those that are not. Popularity bias occurs because there are limited supervisory signals
+We implement the state-of-the-art LightGCN to instantiate PAAC, aiming to investigate how it alleviates popularity bias. We
+compare PAAC with several debiased baselines, including re-weighting-based models, decorrelation-based models, and contrastive
+learning-based models.
+We utilize three widely used metrics, namely Recall@K, HR@K, and NDCG@K, to evaluate the performance of Top-K recommen-
+dation. Recall@K and HR@K assess the number of target items retrieved in the recommendation results, emphasizing coverage. In
+contrast, NDCG@K evaluates the positions of target items in the ranking list, with a focus on their positions in the list. We use
+ This approach has been demonstrated as a state-of-the-art
+method for alleviating popularity bias. It employs data augmentation techniques such as graph augmentation or feature
+augmentation to generate different views, maximizing positive pair consistency and minimizing negative pair consistency
+to promote more uniform representations. Specifically, Adap- τadjusts user/item embeddings to specific values, while
+SimGCL integrates InfoNCE loss to enhance representation uniformity and alleviate popularity bias.
+4.2 Representation Learning for CF
+Representation learning is crucial in recommendation systems, especially in modern collaborative filtering (CF) techniques. It
+creates personalized embeddings that capture user preferences and item characteristics. The quality of these representations critically

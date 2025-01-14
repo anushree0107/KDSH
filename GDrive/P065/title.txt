@@ -1,0 +1,21 @@
+Generating new samples from a trained diffusion model is accomplished by sampling xt−1∼pθ(xt−1|xt)for1≤t≤T, starting
+from a noise vector xT∼p(xT)sampled from the prior p(xT).
+The following assumption is made regarding the backward process.
+**Assumption 1.** It is assumed that for each 1≤t≤T, there exists a constant Kθ
+t>0such that for every x1, x2∈X,
+||gθ
+t(x1)−gθ
+t(x2)|| ≤Kθ
+t||x1−x2||.
+In other words, gθ
+A diffusion model consists of two discrete-time stochastic processes: a forward process and a backward process. Both processes are
+indexed by time 0≤t≤T, where the number of time steps Tis a predetermined choice.
+**The forward process.** The forward process transforms a data point x0∼μinto a noise distribution q(xT|x0)through a sequence
+of conditional distributions q(xt|xt−1)for1≤t≤T. It is assumed that the forward process is defined such that for sufficiently
+large T, the distribution q(xT|x0)is close to a simple noise distribution p(xT), which is referred to as the prior distribution. For
+method, which corresponds to EG in the setting of (non-Euclidean) Bregman distances.
+A version of EG with a different adaptive step size choice has been investigated, with the unique feature that it is able to achieve the
+optimal rates for both smooth and nonsmooth problems without modification. However, these rates are only for monotone VIs and
+are in terms of the gap function.
+One of the drawbacks of adaptive methods resides in the fact that the step sizes are typically required to be nonincreasing, which
+results in poor behavior if a high-curvature area was visited by the iterates before reaching a low-curvature region. To the best of our

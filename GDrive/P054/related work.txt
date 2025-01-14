@@ -1,0 +1,25 @@
+elements that are hard to deduce from a 2D image, underscoring the need for sophisticated techniques
+to tackle this problem. Current methods for estimating food portions are grouped into four categories.
+Stereo-Based Approaches use multiple images to reconstruct the 3D structure of food. Some methods
+estimate food volume using multi-view stereo reconstruction based on epipolar geometry, while
+others perform two-view dense reconstruction. Simultaneous Localization and Mapping (SLAM) has
+also been used for continuous, real-time food volume estimation. However, these methods are limited
+by their need for multiple images, which is not always practical.
+Model-Based Approaches use predefined shapes and templates to estimate volume. For instance,
+framework used in the challenge, and Sections 4, 5, and 6 discuss the methodologies and findings of
+the top three teams (V olETA, ININ-VIAUN, and FoodRiddle), respectively.
+2 Related Work
+Estimating food portions is a crucial part of image-based dietary assessment, aiming to determine the
+volume, energy content, or macronutrients directly from images of meals. Unlike the well-studied
+task of food recognition, estimating food portions is particularly challenging due to the lack of 3D
+information and physical size references necessary for accurately judging the actual size of food
+portions. Accurate portion size estimation requires understanding the volume and density of food,
+certain templates are assigned to foods from a library and transformed based on physical references to
+estimate the size and location of the food. Template matching approaches estimate food volume from
+a single image, but they struggle with variations in food shapes that differ from predefined templates.
+Recent work has used 3D food meshes as templates to align camera and object poses for portion size
+estimation.
+Depth Camera-Based Approaches use depth cameras to create depth maps, capturing the distance from
+the camera to the food. These depth maps form a voxel representation used for volume estimation.
+The main drawback is the need for high-quality depth maps and the extra processing required for
+consumer-grade depth sensors.

@@ -1,0 +1,25 @@
+Participants were tasked with creating 3D models of 20 distinct food items from 2D images, mim-
+icking scenarios where mobile devices equipped with depth-sensing cameras are used for dietary
+.
+recording and nutritional tracking. The challenge was segmented into three tiers of difficulty based
+on the number of images provided: approximately 200 images for easy, 30 for medium, and a single
+top-view image for hard. This design aimed to rigorously test the adaptability and resilience of
+proposed solutions under various realistic conditions. A notable feature of this challenge was the use
+of a visible checkerboard for physical referencing and the provision of depth images for each frame,
+01786 320×360 (238 ×257×2.353)
+2 Cinnamon bun 0.1043478261 0.02347 236×274 (363 ×419×2.353)
+3 Pork rib 0.1043478261 0.02381 246×270 (435 ×778×1.176)
+Easy 4 Corn 0.08823529412 0.01897 291×339 (262 ×976×2.353)
+5 French toast 0.1034482759 0.02202 266×292 (530 ×581×2.53)
+6 Sandwich 0.1276595745 0.applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.

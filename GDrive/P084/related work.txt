@@ -1,0 +1,26 @@
+3 53.4 57.2
+I3D + pyramid 53.2 56.7 58.7
+I3D + LSTM 48.2 53.1 53.1
+I3D + temporal conv 52.8 57.1 58.4
+I3D + sub-events 55.5 61.2 61.3
+Table 5 shows the average precision for each activity class. Learning temporal structure is particularly
+beneficial for frame-based features (e.g., InceptionV3), which capture less temporal information
+5
+compared to segment-based features (e.g., I3D). Sub-event learning significantly aids in detecting
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+Deep Learning Approaches utilize neural networks trained on large image datasets for portion
+estimation. Regression networks estimate the energy value of food from single images or from an
+"Energy Distribution Map" that maps input images to energy distributions. Some networks use both
+images and depth maps to estimate energy, mass, and macronutrient content. However, deep learning
+methods require extensive data for training and are not always interpretable, with performance
+degrading when test images significantly differ from training data.
+While these methods have advanced food portion estimation, they face limitations that hinder their
+widespread use and accuracy. Stereo-based methods are impractical for single images, model-based

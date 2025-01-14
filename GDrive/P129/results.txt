@@ -1,0 +1,29 @@
+both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective
+technologies are vital for fostering healthier eating behaviors and addressing health issues linked to
+diet.
+By concentrating on the development of accurate 3D models of food derived from various visual
+inputs, including multiple views and single perspectives, this challenge endeavors to bridge the
+disparity between current methodologies and practical needs. It promotes the creation of unique
+solutions capable of managing the intricacies of food morphology, texture, and illumination, while also
+meeting the real-world demands of dietary evaluation. This initiative gathers experts from computer
+vision, machine learning, and nutrition science to propel 3D food reconstruction technologies forward.
+These advancements have the potential to substantially enhance the precision and utility of food
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

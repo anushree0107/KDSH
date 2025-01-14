@@ -1,0 +1,17 @@
+credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7
+Participants were tasked with creating 3D models of 20 distinct food items from 2D images, mim-
+icking scenarios where mobile devices equipped with depth-sensing cameras are used for dietary
+.
+recording and nutritional tracking. The challenge was segmented into three tiers of difficulty based
+on the number of images provided: approximately 200 images for easy, 30 for medium, and a single
+top-view image for hard. This design aimed to rigorously test the adaptability and resilience of
+proposed solutions under various realistic conditions. A notable feature of this challenge was the use
+of a visible checkerboard for physical referencing and the provision of depth images for each frame,
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to

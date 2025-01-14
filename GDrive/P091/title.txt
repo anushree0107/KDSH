@@ -1,0 +1,22 @@
+sample, there will be a corresponding demographic feature data sample that is used to train a different binary classifier to predict
+whether a person with PD is ON or OFF medications.
+**Ethical approval:** Full approval from the NHS Wales Research Ethics Committee was granted on December 17, 2019, and
+Health Research Authority and Health and Care Research Wales approval was confirmed on January 14, 2020; the research was
+3
+conducted in accord with the Helsinki Declaration of 1975; written informed consent was gained from all study participants. In
+order to protect participant privacy, supporting data is not shared openly. It will be made available to bona fide researchers subject to
+a data access agreement.
+4 Methodologies and Framework
+ Since the objective is to accurately call questions throughout their
+entire duration, all forecasts with written justifications are included, regardless of factors such as
+justification length or the number of forecasts submitted by a single forecaster. Additionally, this
+approach prioritizes privacy, as no information about the individual forecasters is utilized.
+Table 1: Analysis of the questions from our dataset. Most questions are relatively long, contain two
+or more named entities, and are open for over one month.
+Metric Min Q1 Q2 (Median) Q3 Max Mean
+# tokens 8 16 20 28 48 21.94
+# entities 0 2 3 5 11 3.47
+semantic dependency parsing in PCEDT and NomBank. Future research will focus on incorporating
+additional natural language processing tasks defined using these frameworks to understand noun-noun
+compound interpretation using TL and MTL.
+9

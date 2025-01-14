@@ -1,0 +1,22 @@
+ These models may be required
+to satisfy specific input-output specifications to ensure the algorithms comply with physical laws,
+can be executed safely, and are consistent with prior domain knowledge. Furthermore, these models
+should demonstrate adversarial robustness, meaning their outputs should not change abruptly within
+small input regions – a property that neural networks often fail to satisfy.
+Recent studies have shown the capacity to verify formally input-output specifications and adversarial
+robustness properties of neural networks. For instance, the Satisability Modulo Theory (SMT) solver
+Reluplex was employed to verify properties of networks being used in the Next-Generation Aircraft
+Collision Avoidance System for Unmanned aircraft (ACAS Xu).I3D + super-events 38.7 38.6 39.1
+I3D + sub+super-events 38.2 39.4 40.4
+InceptionV3 31.2 31.8 31.9
+InceptionV3 + max-pooling 31.8 34.1 35.2
+InceptionV3 + pyramid 32.2 35.1 36.8
+InceptionV3 + LSTM 32.1 33.5 34.1
+InceptionV3 + temporal conv 28.4 34.4 33.4
+InceptionV3 + sub-events 32.Hamming distance for near image similarity was set to 12. For Gaussian kernel radius, even numbers
+in the range [0...30] were used for detecting blurry images. The diameter for removing isolated pieces
+was set to 5%. NeuS2 was run for 15,000 iterations with a mesh resolution of 512x512, a unit cube
+"aabb scale" of 1, "scale" of 0.15, and "offset" of [0.5, 0.5, 0.5] for each food scene.
+5
+4.2.2 VolETA Results
+The team extensively validated their approach on the challenge dataset and compared their results

@@ -1,0 +1,28 @@
+has been discovered that pooling intervals from varying locations and durations is advantageous for
+activity recognition. It was demonstrated that identifying and classifying key sub-event intervals can
+lead to better performance.
+Recently, segment-based 3D CNNs have been employed to capture spatio-temporal data concurrently
+for activity detection. These methods depend on the 3D CNN to capture temporal dynamics, which
+typically span only 16 frames. Although longer-term temporal structures have been explored, this was
+usually accomplished with temporal pooling of localized features or (spatio-)temporal convolutions
+with extended fixed intervals. Recurrent Neural Networks (RNNs) have also been applied to represent
+transitions in activity between frames.
+3 MLB-YouTube Dataset
+both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective
+Participants were tasked with creating 3D models of 20 distinct food items from 2D images, mim-
+icking scenarios where mobile devices equipped with depth-sensing cameras are used for dietary
+.
+recording and nutritional tracking. The challenge was segmented into three tiers of difficulty based
+on the number of images provided: approximately 200 images for easy, 30 for medium, and a single
+top-view image for hard. This design aimed to rigorously test the adaptability and resilience of
+proposed solutions under various realistic conditions. A notable feature of this challenge was the use
+of a visible checkerboard for physical referencing and the provision of depth images for each frame,

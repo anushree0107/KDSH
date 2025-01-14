@@ -1,0 +1,30 @@
+1 35.8 37.3
+InceptionV3 + super-events 31.5 36.2 39.6
+InceptionV3 + sub+super-events 34.2 40.2 40.9
+7 Conclusion
+This paper introduces MLB-YouTube, a novel and challenging dataset designed for detailed activity
+recognition in videos. We conduct a comparative analysis of various recognition techniques that
+employ temporal feature pooling for both segmented and continuous videos. Our findings reveal that
+learning sub-events to pinpoint temporal regions of interest significantly enhances performance in
+segmented video classification. In the context of activity detection in continuous videos, we establish
+PixSfM, which involves extracting features using SuperPoint, matching them with SuperGlue, and
+refining them. The outputs are the camera poses {Cj}k
+j=1, crucial for understanding the scene’s
+spatial layout.
+4
+In parallel, the team uses a tool called SAM for reference object segmentation. SAM segments
+the reference object with a user-provided prompt, producing a reference object mask MRfor each
+keyframe. This mask helps track the reference object across all frames. The XMem++ method
+extends the reference object mask MRto all frames, creating a comprehensive set of reference object
+masks {MR
+i}n
+i=1.This paper introduces MLB-YouTube, a novel dataset that includes densely annotated frames of activi-
+ties extracted from broadcast baseball videos. Unlike many current datasets for activity recognition or
+detection, our dataset emphasizes fine-grained activity recognition. The differences between activities
+are often minimal, primarily involving the movement of a single individual, with a consistent scene
+structure across activities. The determination of activity is based on a single camera perspective. This
+study compares various methods for temporal feature aggregation, both for classifying activities in
+segmented videos and for detecting them in continuous video streams.
+2 Related Work
+The field of activity recognition has garnered substantial attention in computer vision research. Initial
+successes were achieved with hand-engineered features such as dense trajectories.

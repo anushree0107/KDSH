@@ -1,0 +1,17 @@
+to utilize a recurrent neural network such as a long-short term memory (LSTM) approach. However, in LSTM layers, the local
+context is summarized based on the previous context and the current input. Two similar patterns separated by a long period of time
+might have different contexts if they are processed by the LSTM layers. We utilize a combination of causal convolution layers and
+self-attention layers, which we name Dual Convolutional Self-Attention (DCSA). The DCSA takes in a primary input ˆx1∈RN×d
+and a secondary input ˆx2∈RN×dand yields:
+and MTL models are trained using the same hyperparameters as the STL model.
+5.2 Transfer Learning Models
+In our experiments, transfer learning involves training an STL model on PCEDT relations and then
+using some of its weights to initialize another model for NomBank relations. Given the neural
+classifier architecture detailed in Section 5.1, we identify three ways to implement TL: 1) TLE:
+Transferring the embedding layer weights, 2) TLH: Transferring the hidden layer weights, and 3)
+TLEH: Transferring both the embedding and hidden layer weights. Furthermore, we differentiate
+between transfer learning from PCEDT to NomBank and vice versa. This results in six setups,
+ Inspired by utilizing multihead self-attention, we utilize our DCSA with various kernel lengths with the same
+aim: allowing asymmetric long-term learning. The multihead DCSA takes in two inputs ˆx1,ˆx2∈RN×dand yields:
+MDCSA k1,...,k n(ˆx1,ˆx2) = Ξ n(φk1,...,k n(ˆx1,ˆx2)) (4)
+with

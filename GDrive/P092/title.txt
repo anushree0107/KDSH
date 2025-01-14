@@ -1,0 +1,23 @@
+DCSA (ˆx1,ˆx2) =GRN (Norm (φ(ˆx1) + ˆx1), Norm (φ(ˆx2) + ˆx2)) (2)
+with
+φ(ˆx) =SA(Φk(ˆx)WQ,Φk(ˆx)WK,Φk(ˆx)WV) (3)
+where GRN (.)is the Gated Residual Network to integrate dual inputs into one integrated embedding, Norm (.)is a standard layer
+normalization, SA(.)is a scaled dot-product self-attention, Φk(.For Structure from Motion (SfM), the team enhanced the advanced COLMAP method by integrating
+SuperPoint and SuperGlue techniques. This integration significantly addressed the issue of limited
+keypoints in scenes with minimal texture, as illustrated in Figure 15.
+In the mesh reconstruction phase, the team’s approach builds upon 2D Gaussian Splatting, which
+employs a differentiable 2D Gaussian renderer and includes regularization terms for depth distortion
+9
+and normal consistency. The Truncated Signed Distance Function (TSDF) results are utilized to
+produce a dense point cloud.
+During post-processing, the team applied filtering and outlier removal methods, identified the outline
+order. For regularization, a normalization layer followed by a dropout layer is added after Equation 4.
+Following the modality positional embedding layer in subsection 4.1, the positional embeddings of RSSI hr= [hr
+1, ..., hr
+T]and
+accelerometer ha= [ha
+1, ..., ha
+T], produced by Eq. 1, are then fed to an MDCSA layer with various kernel sizes [k1, ..., k n]:
+h=MDCSA k1,...,k n(hr, ha) (6)
+to yield h= [h1, ..., h T]withht∈Rdandt < T .
+4.4 Final Layer and Loss Calculation

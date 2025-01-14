@@ -1,0 +1,25 @@
+t+bu) +τt (1)
+where Wu∈Ru×dandbu∈Rdare the weight and bias to learn, dis the embedding dimension, and τt∈Rdis the corresponding
+position encoding at time t.
+4.2 Locality Enhancement with Self-Attention
+Since it is time-series data, the importance of an RSSI or accelerometer value at each point in time can be identified in relation to its
+surrounding values - such as cyclical patterns, trends, or fluctuations. Utilizing historical context that can capture local patterns on
+top of point-wise values, performance improvements in attention-based architectures can be achieved. One straightforward option is
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples. Consequently, the representation of the question is concatenated with the representation of
+each forecast before being fed into the LSTM. Finally, the last hidden state of the LSTM is connected
+to a fully connected layer with a single neuron and sigmoid activation to produce the final prediction
+for the question.
+4.3 Architecture Ablation
+Experiments are carried out with the complete neural architecture, as described above, as well as
+with variations where certain components are disabled. Specifically, the representation of a forecast
+is manipulated by incorporating different combinations of information:
+4
+* Only the prediction. * The prediction and the representation of the question. * The prediction and
+the representation of the justification. * The prediction, the representation of the question, and the

@@ -1,0 +1,29 @@
+•Regarding the baselines for mitigating popularity bias, the improvement of some is relatively limited compared to the
+backbone model (LightGCN) and even performs worse in some cases. This may be because some are specifically designed
+for traditional data-splitting scenarios, where the test set still follows a long-tail distribution, leading to poor generalization.
+Some mitigate popularity bias by excluding item popularity information. Others use invariant learning to remove popularity
+information at the representation level, generally performing better than the formers. This shows the importance of
+addressing popularity bias at the representation level. Some outperform the other baselines, emphasizing the necessary to
+improve item representation consistency for mitigating popularity bias.
+preferences for recommendations.
+3 Experiments
+In this section, we assess the efficacy of PAAC through comprehensive experiments, aiming to address the following research
+questions:
+• How does PAAC compare to existing debiasing methods?
+• How do different designed components play roles in our proposed PAAC?
+3
+• How does PAAC alleviate the popularity bias?
+• How do different hyper-parameters affect the PAAC recommendation performance?
+3.1 Experiments Settings
+3.1.1 Datasets
+In our experiments, we use three widely public datasets: Amazon-book, Yelp2018, and Gowalla. We retained users and items with a
+minimum of 10 interactions.
+3.1.2 Baselines and Evaluation Metrics
+the full ranking strategy, considering all non-interacted items as candidate items to avoid selection bias during the test stage. We
+repeated each experiment five times with different random seeds and reported the average scores.
+3.2 Overall Performance
+As shown in Table 1, we compare our model with several baselines across three datasets. The best performance for each metric
+is highlighted in bold, while the second best is underlined. Our model consistently outperforms all compared methods across all
+metrics in every dataset.
+•Our proposed model PAAC consistently outperforms all baselines and significantly mitigates the popularity bias. Specif-
+ically, PAAC enhances LightGCN, achieving improvements of 282.65%, 180.

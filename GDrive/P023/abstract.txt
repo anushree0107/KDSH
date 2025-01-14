@@ -1,0 +1,23 @@
+is a 1D-convolutional layer with a kernel size {1, k}and a stride
+of 1,WK∈Rd×d, WQ∈Rd×d, WV∈Rd×dare weights for keys, queries, and values of the self-attention layer, and dis the
+embedding dimension. Note that all weights for GRN are shared across each time step t.
+4
+4.3 Multihead Dual Convolutional Self-Attention
+Our approach employs a self-attention mechanism to capture global dependencies across time steps. It is embedded as part of the
+DCSA architecture.π((t−xn)2+γ2n)exp(1−2|tanh( γ′
+n)|)
+where Znis a normalization constant, t∈ {1,2, . . . , T }, and n∈ {1,2, . . . , N }.
+The filters are combined with learned per-class soft-attention weights A, and the super-event repre-
+sentation is computed as:
+Sc=X
+nAc,nX
+tfn(t)·vt
+where vis the T×Dvideo representation. These filters enable the model to focus on relevant
+intervals for temporal context. The super-event representation is concatenated to each timestep and
+used for classification.t+bu) +τt (1)
+where Wu∈Ru×dandbu∈Rdare the weight and bias to learn, dis the embedding dimension, and τt∈Rdis the corresponding
+position encoding at time t.
+4.2 Locality Enhancement with Self-Attention
+Since it is time-series data, the importance of an RSSI or accelerometer value at each point in time can be identified in relation to its
+surrounding values - such as cyclical patterns, trends, or fluctuations. Utilizing historical context that can capture local patterns on
+top of point-wise values, performance improvements in attention-based architectures can be achieved. One straightforward option is

@@ -1,0 +1,25 @@
+several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.improve its F1 scores for less common yet more challenging semantic relations.
+1 Introduction
+Noun-noun compound interpretation involves determining the semantic connection between two
+nouns (or noun phrases in multi-word compounds). For instance, in the compound "street protest,"
+the task is to identify the semantic relationship between "street" and "protest," which is a locative
+relation in this example. Given the prevalence of noun-noun compounds in natural language and its
+significance to other natural language processing (NLP) tasks like question answering and information
+retrieval, understanding noun-noun compounds has been extensively studied in theoretical linguistics,
+psycholinguistics, and computational linguistics.

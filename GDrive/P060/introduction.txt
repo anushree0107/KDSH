@@ -1,0 +1,24 @@
+L/2,L/4, and L/8, resulting in 14 segments per window. Max-pooling is applied to each segment,
+and the pooled features are concatenated, yielding a 14×D-dimensional representation for each
+window, which is then used as input to the classifier.
+For temporal convolutional models in continuous videos, we modify the segmented video approach by
+learning a temporal convolutional kernel of length Land convolving it with the input video features.
+This operation transforms input of size T×Dinto output of size T×D, followed by a per-frame
+classifier. This enables the model to aggregate local temporal information.
+This paper introduces MLB-YouTube, a novel dataset that includes densely annotated frames of activi-
+ties extracted from broadcast baseball videos. Unlike many current datasets for activity recognition or
+detection, our dataset emphasizes fine-grained activity recognition. The differences between activities
+are often minimal, primarily involving the movement of a single individual, with a consistent scene
+structure across activities. The determination of activity is based on a single camera perspective. This
+study compares various methods for temporal feature aggregation, both for classifying activities in
+segmented videos and for detecting them in continuous video streams.
+2 Related Work
+The field of activity recognition has garnered substantial attention in computer vision research. Initial
+successes were achieved with hand-engineered features such as dense trajectories.an activity, eliminating the need for the model to identify the start and end of activities. Our methods
+are based on a CNN that generates a per-frame or per-segment representation, derived from standard
+two-stream CNNs using deep CNNs like I3D or InceptionV3.
+Given video features vof dimensions T×D, where Trepresents the video’s temporal length and D
+is the feature’s dimensionality, the usual approach for feature pooling involves max- or mean-pooling
+across the temporal dimension, followed by a fully-connected layer for video clip classification, as
+depicted in Fig. 5(a). This approach, however, yields a single representation for the entire video,
+losing temporal information.

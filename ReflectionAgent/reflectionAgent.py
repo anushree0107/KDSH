@@ -49,7 +49,7 @@ class IntrospectiveAgentManager:
         return introspective_worker_agent.as_agent(verbose=verbose)
 
 def main():
-    llm_model = "llama3-70b-8192"
+    llm_model = "llama-3.3-70b-versatile"
     embed_model_name = "BAAI/bge-small-en-v1.5"
 
     agent_manager = IntrospectiveAgentManager(

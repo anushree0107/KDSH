@@ -1,0 +1,29 @@
+reveals three primary themes: elections (including terms like "voting," "winners," and "candidate"),
+government actions (including terms like "negotiations," "announcements," "meetings," and "passing
+(a law)"), and wars and violent crimes (including terms like "groups," "killing," "civilian (casualties),"
+and "arms"). Although not explicitly represented in the LDA topics, the questions address both
+domestic and international events within these broad themes.
+Table 2: Analysis of the 96,664 written justifications submitted by forecasters in our dataset. The
+readability scores indicate that most justifications are easily understood by high school students (11th
+ However, since
+these improvements are relatively minor, we further analyze the results to understand if and how TL
+and MTL are beneficial.
+7 Results Analysis
+This section provides a detailed analysis of the models’ performance, drawing on insights from the
+dataset and the classification errors made by the models. The discussion in the following sections is
+primarily based on the results from the test split, as it is larger than the development split.
+7.1 Relation Distribution
+To illustrate the complexity of the task, we depict the distribution of the most frequent relations in
+NomBank and PCEDT across the three data splits in Figure 1. Notably, approximately 71.18% of the
+26% of right constituents of compounds annotated as AIM occur
+in other compounds annotated as RSTR. This explains the models’ inability to learn AIM but raises
+questions about their ability to learn relational representations, which we explore further in Section
+7.3.
+Table 8: Macro-average F1 score on the test split.
+Model NomBank PCEDT
+STL 52.66 40.15
+TLE 52.83 48.34
+TLH 52.98 46.52
+TLEH 53.31 47.12
+MTLE 53.21 47.23
+MTLF 42.07 40.73

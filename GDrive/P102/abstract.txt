@@ -1,0 +1,26 @@
+We have compiled an extensive dataset from 20 baseball games of the 2017 MLB postseason, available
+on YouTube, totaling over 42 hours of video. Our dataset includes two main parts: segmented videos
+intended for activity recognition and continuous videos designed for activity classification. The
+dataset’s complexity is amplified by the fact that it originates from televised baseball games, where a
+single camera perspective is shared among various activities. Additionally, there is minimal variance
+in motion and appearance among different activities, such as swinging a bat versus bunting. In
+contrast to datasets like THUMOS and ActivityNet, which encompass a broad spectrum of activities
+with diverse settings, scales, and camera angles, our dataset features activities where a single frame
+1 35.8 37.3
+InceptionV3 + super-events 31.5 36.2 39.6
+InceptionV3 + sub+super-events 34.2 40.2 40.9
+7 Conclusion
+This paper introduces MLB-YouTube, a novel and challenging dataset designed for detailed activity
+recognition in videos. We conduct a comparative analysis of various recognition techniques that
+employ temporal feature pooling for both segmented and continuous videos. Our findings reveal that
+learning sub-events to pinpoint temporal regions of interest significantly enhances performance in
+segmented video classification. In the context of activity detection in continuous videos, we establish
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow

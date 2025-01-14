@@ -1,0 +1,28 @@
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or

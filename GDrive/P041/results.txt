@@ -1,0 +1,29 @@
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to
+I3D + super-events 38.7 38.6 39.1
+I3D + sub+super-events 38.2 39.4 40.4
+InceptionV3 31.2 31.8 31.9
+InceptionV3 + max-pooling 31.8 34.1 35.2
+InceptionV3 + pyramid 32.2 35.1 36.8
+InceptionV3 + LSTM 32.1 33.5 34.1
+InceptionV3 + temporal conv 28.4 34.4 33.4
+InceptionV3 + sub-events 32. This ensures consistent reference object identification throughout the dataset.
+To create RGBA images, the team combines RGB images, reference object masks {MR
+i}n
+i=1, and
+food object masks {MF
+i}n
+i=1. This step, denoted as {IR
+i}n
+i=1, integrates various data sources into a
+unified format for further processing.
+The team converts the RGBA images {IR
+i}n
+i=1and camera poses {Cj}k
+j=1into meaningful metadata
+and modeled data Dm. This transformation facilitates accurate scene reconstruction.
+The modeled data Dmis input into NeuS2 for mesh reconstruction. NeuS2 generates colorful meshes

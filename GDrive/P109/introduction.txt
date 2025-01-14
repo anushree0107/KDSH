@@ -1,0 +1,23 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.In this work, we focus on aligning the representations of popular and unpopular items interacted with by the same user and re-
+weighting uniformity to mitigate representation separation. Our model PAAC uniquely addresses popularity bias by combining group
+alignment and contrastive learning, a first in the field. Unlike previous works that align positive user-item pairs or contrastive pairs,
+PAAC directly aligns popular and unpopular items, leveraging the rich information of popular items to enhance the representations
+of unpopular items and reduce overfitting. Additionally, we introduce targeted re-weighting from a popularity-centric perspective to
+achieve a more balanced representation.
+5 Conclusion
+is dominated by popular items, prioritizing unpopular items as positive samples widens the gap between popular and unpopular
+items in the representation space. Conversely, when negative samples follow a uniform distribution, focusing on popular items
+separates them from most unpopular ones, thus worsening the representation gap. Existing studies use the same weights for positive
+and negative samples in the contrastive loss function, without considering differences in item popularity. However, in real-world
+recommendation datasets, the impact of items varies due to dataset characteristics and interaction distributions. Neglecting this
+aspect could lead to suboptimal results and exacerbate representation separation.
+We propose to identify different influences by re-weighting different popularity items. To this end, we introduce re-weighting

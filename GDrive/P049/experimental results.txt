@@ -1,0 +1,15 @@
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to
+cross-validation: 1) We train our models on one PD subject (LOO-PD), 2) We train our models on one HC subject (LOO-HC), 3) We
+take one HC subject and use only roughly four minutes’ worth of data to train our models (4m-HC), 4) We take one PD subject and
+use only roughly four minutes’ worth of data to train our models (4m-PD). For all of our experiments, we test our trained models on
+all PD subjects (excluding the one used as training data for LOO-PD and 4m-PD). For room-level localization accuracy, we use
+ The improvement is more significant in the 4m-HC and 4m-PD validations, when the training data are limited, with an
+average improvement of almost 9% for the F1-score over the alternative to the state-of-the-art model.
+The LOO-HC and LOO-PD validations show that a model that has the ability to capture the temporal dynamics across time steps will
+perform better than a standard baseline technique such as a Random Forest. The modified transformer encoder and the state-of-the-art
+model perform better in those two validations due to their ability to capture asynchronous relations across modalities. However,

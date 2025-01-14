@@ -1,0 +1,25 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.**Justifications** A manual review of 400 justifications (200 associated with incorrect predictions
+and 200 with correct predictions) was conducted, focusing on those submitted on days when the best
+model made an incorrect prediction. The following observations were made:
+* A higher percentage of incorrect predictions (78%) were accompanied by short justifications
+(fewer than 20 tokens), compared to 65% for correct predictions. This supports the idea that longer
+user-generated text often indicates higher quality. * References to previous forecasts (either by the
+same or other forecasters, or the current crowd’s forecast) were more common in justifications for
+incorrect predictions (31.5%) than for correct predictions (16%).65 79.26 84.67
+Predictions + Question + Justifications 79.96 78.65 78.11 80.29 83.28
+Using Active Forecasts
+Baselines
+Majority V ote (predictions) 77.27 68.83 73.92 77.98 87.44
+Weighted V ote (predictions) 77.97 72.04 72.17 78.53 88.22
+Neural Network Variants
+Predictions Only 78.81 77.31 78.04 78.53 81.11
+Predictions + Question 79.35 76.05 78.

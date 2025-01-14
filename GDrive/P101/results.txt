@@ -1,0 +1,29 @@
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+ Fixed temporal pyramid pooling outperforms max-pooling, while LSTM and temporal
+6
+Table 7: Accuracy of pitch type classification using I3D for video inputs and InceptionV3 for pose
+heatmaps.
+Method Accuracy
+Random 17.0%
+I3D 25.8%
+I3D + LSTM 18.5%
+I3D + sub-events 34.5%
+Pose 28.4%
+Pose + LSTM 27.6%
+Pose + sub-events 36.4%
+convolution appear to overfit. Convolutional sub-events, especially when combined with super-event
+representation, significantly enhance performance, particularly for frame-based features.
+InceptionV3 + mean-pool 35.6 47.2 45.3
+InceptionV3 + max-pool 47.9 48.6 54.4
+InceptionV3 + pyramid 49.7 53.2 55.3
+InceptionV3 + LSTM 47.6 55.6 57.7
+InceptionV3 + temporal conv 47.2 55.2 56.1
+InceptionV3 + sub-events 56.2 62.5 62.6
+I3D + mean-pool 42.4 47.6 52.7
+I3D + max-pool 48.

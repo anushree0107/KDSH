@@ -1,0 +1,20 @@
+ However, overly strong contrastive loss may lead the model to neglect recommendation
+accuracy. Vertically, as λ1increases, the performance also initially increases and then decreases. This suggests that suitable
+alignment can provide beneficial supervisory signals for unpopular items, while too strong an alignment may introduce more noise
+from popular items to unpopular ones, thereby impacting recommendation performance.
+3.5.2 Effect of re-weighting coefficient αandβ
+To mitigate representation separation due to imbalanced positive and negative sampling, we introduce two hyperparameters into the
+contrastive loss. Specifically, αcontrols the weight difference between positive samples from popular and unpopular items, while β
+controls the influence of different popularity items as negative samples.
+In our experiments, while keeping other hyperparameters constant, we search αandβwithin the range {0, 0.2, 0.4, 0.6, 0.8, 1}. As
+αandβincrease, performance initially improves and then declines. The optimal hyperparameters for the Yelp2018 and Gowalla
+datasets are α= 0.8,β= 0.6andα= 0.2,β= 0.2, respectively. This may be attributed to the characteristics of the datasets. The
+Yelp2018 dataset, with a higher average interaction frequency per item, benefits more from a higher weight αfor popular items as
+positive samples.research suggests that gains in noun-noun compound interpretation using word embeddings and
+similar neural classification models might be due to lexical memorization. In other words, the models
+learn that specific nouns are strong indicators of specific relations. To assess the role of lexical
+memorization in our models, we quantify the number of unseen compounds that the STL, TL, and
+MTL models predict correctly.
+We differentiate between ’partly’ and ’completely’ unseen compounds. A compound is ’partly’
+unseen if one of its constituents (left or right) is not present in the training data. A ’completely’
+unseen compound is one where neither the left nor the right constituent appears in the training data.

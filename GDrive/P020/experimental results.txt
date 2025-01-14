@@ -1,0 +1,22 @@
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to
+Deep Learning Approaches utilize neural networks trained on large image datasets for portion
+estimation. Regression networks estimate the energy value of food from single images or from an
+"Energy Distribution Map" that maps input images to energy distributions. Some networks use both
+images and depth maps to estimate energy, mass, and macronutrient content. However, deep learning
+methods require extensive data for training and are not always interpretable, with performance
+degrading when test images significantly differ from training data.
+While these methods have advanced food portion estimation, they face limitations that hinder their
+widespread use and accuracy. Stereo-based methods are impractical for single images, model-based
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.

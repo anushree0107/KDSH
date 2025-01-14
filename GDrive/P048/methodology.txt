@@ -1,0 +1,21 @@
+01786 320×360 (238 ×257×2.353)
+2 Cinnamon bun 0.1043478261 0.02347 236×274 (363 ×419×2.353)
+3 Pork rib 0.1043478261 0.02381 246×270 (435 ×778×1.176)
+Easy 4 Corn 0.08823529412 0.01897 291×339 (262 ×976×2.353)
+5 French toast 0.1034482759 0.02202 266×292 (530 ×581×2.53)
+6 Sandwich 0.1276595745 0.02390 242×269 (201 ×303×1.176)
+13 Burrito 0.1034482759 0.02372 244×271 (251 ×917×2.353)
+14 Frankfurt sandwich 0.1034482759 0.02115 266×304 (400 ×1022×2.353)
+16 Everything bagel 0.08759124088 0.01747 306×368 (458 ×134×1.176)
+Hard 17 Croissant 0.1276595745 0.01751 319×367 (395 ×695×2.176)
+18 Shrimp 0.08759124088 0. Consequently, the representation of the question is concatenated with the representation of
+each forecast before being fed into the LSTM. Finally, the last hidden state of the LSTM is connected
+to a fully connected layer with a single neuron and sigmoid activation to produce the final prediction
+for the question.
+4.3 Architecture Ablation
+Experiments are carried out with the complete neural architecture, as described above, as well as
+with variations where certain components are disabled. Specifically, the representation of a forecast
+is manipulated by incorporating different combinations of information:
+4
+* Only the prediction. * The prediction and the representation of the question. * The prediction and
+the representation of the justification. * The prediction, the representation of the question, and the

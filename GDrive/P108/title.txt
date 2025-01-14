@@ -1,0 +1,16 @@
+L, which one can typically
+only hope for in adaptive methods. Our EG+ method with adaptive step size accomplishes this even without the added expense of a
+backtracking linesearch.article graphicx
+7
+generating the refined embedding at time step t, its decision is independent; it does not take into account the actual decision made by
+other refined embeddings t. We use a CRF layer to cover just that, i.e., to maximize the probability of the refined embeddings of all
+time steps, so it can better model cases where refined embeddings closest to one another must be compatible (i.e., minimizing the
+possibility for impossible room transitions). When finding the best sequence of room location ˆyt, the Viterbi Algorithm is used as a
+standard for the CRF layer.
+For the second layer, we choose a particular room as a reference and perform a binary classification at each time step t. The binary
+noisy estimate of the distance from the wearable to the access point. RSSI signals are not stable; they fluctuate randomly due to
+shadowing, fading, and multi-path effects. However, many techniques have been proposed in recent years to tackle these fluctuations
+and indirectly improve localization accuracy. Some works utilize deep neural networks (DNN) to generate coarse positioning
+estimates from RSSI signals, which are then refined by a hidden Markov model (HMM) to produce a final location estimate. Other
+works try to utilize a time series of RSSI data and exploit the temporal connections within each access point to estimate room-level
+position. A CNN is used to build localization models to further leverage the temporal dependencies across time-series readings.

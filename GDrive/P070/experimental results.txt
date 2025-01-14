@@ -1,0 +1,22 @@
+ "go," "come," "leave").
+The most frequent noun classes are "act" (e.g., "election," "support," "deal"), "communication" (e.g.,
+"questions," "forecast," "news"), "cognition" (e.g., "point," "issue," "possibility"), and "group" (e.g.,
+"government," "people," "party").
+4 Experiments and Results
+Experiments are conducted to address the challenge of accurately calling a question throughout
+its duration. The input consists of the question itself and the associated forecasts (predictions and
+justifications), while the output is an aggregated answer to the question derived from all forecasts.
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to

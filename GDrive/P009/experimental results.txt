@@ -1,0 +1,26 @@
+Assumption 2, consists of mindependent copies of the random pair (x, y). During training, the
+interpolation quality of a hypothesis function f:X → Y can only be assessed at the given random
+samples {xj}m
+j=1. Any algorithm therefore accesses each function fthrough its sketch samples
+S[f] = (f(x1), . . . , f (xm)),
+2
+where Sis the sample operator. After training, the quality of a resulting model is often measured by
+its generalization to new data not used during training. With Rd×Ras the input and output space,
+we quantify a function f’s generalization error with its expected risk:
+15 76.75 58.80 56.05
+MTLE 77.93 78.45 59.89 56.96
+MTLF 76.74 78.51 58.91 56.00
+Overall, the STL models’ accuracy declines when tested on the NomBank and PCEDT test splits,
+compared to their performance on the development split. This could suggest overfitting, especially
+since our stopping criterion selects the model with the best performance on the development split.
+Conversely, TL and MTL enhance accuracy on the test splits, despite using the same stopping criterion
+as STL. We interpret this as an improvement in the models’ ability to generalize. However, since
+these improvements are relatively minor, we further analyze the results to understand if and how TL
+and MTL are beneficial.
+7 Results Analysis
+This section provides a detailed analysis of the models’ performance, drawing on insights from the
+dataset and the classification errors made by the models. The discussion in the following sections is
+primarily based on the results from the test split, as it is larger than the development split.
+7.1 Relation Distribution
+To illustrate the complexity of the task, we depict the distribution of the most frequent relations in
+NomBank and PCEDT across the three data splits in Figure 1. Notably, approximately 71.18% of the

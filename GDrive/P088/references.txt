@@ -1,0 +1,28 @@
+ While these traditional complexity
+notions have been successful in classification problems, they do not apply to generic regression
+problems with unbounded risk functions, which are the focus of this study. Moreover, traditional
+tools in statistical learning theory have not been able to provide a fully satisfying generalization
+theory for neural networks.
+Understanding the risk surface during neural network training is crucial for establishing a strong
+theoretical foundation for neural network-based machine learning, particularly for understanding
+generalization. Recent studies on neural networks suggest intriguing properties of the risk surface.
+In large networks, local minima of the risk form a small bond at the global minimum. Surprisingly,
+global minima exist in each connected component of the risk’s sublevel set and are path-connected.
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned
+When used to produce proximity functions as given in Equation 1, these values help ensure safety.
+Figure 5 shows examples of the unsafeable region, distance function, and proximity function for the
+CL1500 advisory.
+C.3 Structure of Predictors
+The compressed versions of the policy tables from prior work are neural networks with six hidden
+layers, 45 dimensions in each layer, and ReLU activation functions. We use the same architecture
+for our standard, unconstrained network. For constrained predictors, we use a similar architecture.
+However, the first four hidden layers are shared between all of the predictors. This learns a single,
+shared input space representation, and also allows each predictor to adapt to its constraints. Each

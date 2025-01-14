@@ -1,0 +1,22 @@
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.InceptionV3 5.3 mph
+InceptionV3 + LSTM 4.5 mph
+InceptionV3 + sub-events 3.6 mph
+6.2.3 Pitch Type Classification
+We conducted experiments to determine the feasibility of predicting pitch types from video, a task
+made challenging by pitchers’ efforts to disguise their pitches from batters and the subtle differences
+between pitches, such as grip and rotation. We incorporated pose data extracted using OpenPose,
+utilizing heatmaps of joint and body part locations as input to a newly trained InceptionV3 CNN.
+Pose features were considered due to variations in body mechanics between different pitches. Our
+dataset includes six pitch types, with results presented in Table 7.Deep Learning Approaches utilize neural networks trained on large image datasets for portion
+estimation. Regression networks estimate the energy value of food from single images or from an
+"Energy Distribution Map" that maps input images to energy distributions. Some networks use both
+images and depth maps to estimate energy, mass, and macronutrient content. However, deep learning
+methods require extensive data for training and are not always interpretable, with performance
+degrading when test images significantly differ from training data.
+While these methods have advanced food portion estimation, they face limitations that hinder their
+widespread use and accuracy. Stereo-based methods are impractical for single images, model-based

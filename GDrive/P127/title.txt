@@ -1,0 +1,19 @@
+Broader Impact
+Supervised machine learning now affects both personal and public lives significantly. Generalization is
+critical to the reliability and safety of empirically trained models. Our analysis aims to achieve a deeper
+understanding of the relationships between generalization, architectural design, and available data.
+We have discussed the concepts and demonstrated the effectiveness of using uniform concentration
+events for generalization guarantees of common supervised machine learning algorithms.
+7
+sample, there will be a corresponding demographic feature data sample that is used to train a different binary classifier to predict
+whether a person with PD is ON or OFF medications.
+**Ethical approval:** Full approval from the NHS Wales Research Ethics Committee was granted on December 17, 2019, and
+Health Research Authority and Health and Care Research Wales approval was confirmed on January 14, 2020; the research was
+3
+conducted in accord with the Helsinki Declaration of 1975; written informed consent was gained from all study participants. In
+order to protect participant privacy, supporting data is not shared openly. It will be made available to bona fide researchers subject to
+a data access agreement.
+4 Methodologies and Framework
+credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7

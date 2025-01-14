@@ -1,0 +1,23 @@
+large groups, it is important to determine whether the individual inputs were made independently. If
+not, factors like group psychology and the influence of persuasive arguments can skew individual
+judgments, thus negating the positive effects of crowd wisdom.
+This paper focuses on forecasts concerning questions spanning political, economic, and social
+domains. Each forecast includes a prediction, estimating the probability of a particular event, and
+a written justification that explains the reasoning behind the prediction. Forecasts with identical
+predictions can have justifications of varying strength, which, in turn, affects the perceived reliability
+of the predictions. For instance, a justification that simply refers to an external source without
+reveals three primary themes: elections (including terms like "voting," "winners," and "candidate"),
+government actions (including terms like "negotiations," "announcements," "meetings," and "passing
+(a law)"), and wars and violent crimes (including terms like "groups," "killing," "civilian (casualties),"
+and "arms"). Although not explicitly represented in the LDA topics, the questions address both
+domestic and international events within these broad themes.
+Table 2: Analysis of the 96,664 written justifications submitted by forecasters in our dataset. The
+readability scores indicate that most justifications are easily understood by high school students (11th
+and have analyzed the traits that contribute to their success. These studies aim to identify and cultivate
+superforecasters but do not incorporate the written justifications accompanying forecasts. In contrast,
+the present research develops models to call questions without using any information about the
+forecasters themselves. Within the field of computational linguistics, researchers have evaluated the
+language used in high-quality justifications, focusing on aspects like rating, benefit, and influence.
+Other researchers have developed models to predict forecaster skill using the textual justifications
+from specific datasets, such as the Good Judgment Open data, and have also applied these models
+to predict the accuracy of individual forecasts in other contexts, such as company earnings reports.

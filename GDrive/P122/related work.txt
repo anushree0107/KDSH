@@ -1,0 +1,20 @@
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.L/2,L/4, and L/8, resulting in 14 segments per window. Max-pooling is applied to each segment,
+and the pooled features are concatenated, yielding a 14×D-dimensional representation for each
+window, which is then used as input to the classifier.
+For temporal convolutional models in continuous videos, we modify the segmented video approach by
+learning a temporal convolutional kernel of length Land convolving it with the input video features.
+This operation transforms input of size T×Dinto output of size T×D, followed by a per-frame
+classifier. This enables the model to aggregate local temporal information.
+three elements: (a) a binary flag indicating whether the forecast was submitted on the day the question
+is being called or on a previous day, (b) the prediction itself (a numerical value between 0.0 and 1.0),
+and (c) a representation of the justification. The representation of the justification is also obtained
+using BERT, followed by a fully connected layer with 256 neurons, ReLU activation, and dropout.
+The LSTM has a hidden state with a dimensionality of 256 and processes the sequence of forecasts
+as its input. During the tuning process, it was discovered that providing the representation of the
+question alongside each forecast is more effective than processing forecasts independently of the
+question.

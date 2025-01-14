@@ -1,0 +1,21 @@
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from
+We have compiled an extensive dataset from 20 baseball games of the 2017 MLB postseason, available
+on YouTube, totaling over 42 hours of video. Our dataset includes two main parts: segmented videos
+intended for activity recognition and continuous videos designed for activity classification. The
+dataset’s complexity is amplified by the fact that it originates from televised baseball games, where a
+single camera perspective is shared among various activities. Additionally, there is minimal variance
+in motion and appearance among different activities, such as swinging a bat versus bunting. In
+contrast to datasets like THUMOS and ActivityNet, which encompass a broad spectrum of activities
+with diverse settings, scales, and camera angles, our dataset features activities where a single frame

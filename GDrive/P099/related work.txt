@@ -1,0 +1,26 @@
+an activity, eliminating the need for the model to identify the start and end of activities. Our methods
+are based on a CNN that generates a per-frame or per-segment representation, derived from standard
+two-stream CNNs using deep CNNs like I3D or InceptionV3.
+Given video features vof dimensions T×D, where Trepresents the video’s temporal length and D
+is the feature’s dimensionality, the usual approach for feature pooling involves max- or mean-pooling
+across the temporal dimension, followed by a fully-connected layer for video clip classification, as
+depicted in Fig. 5(a). This approach, however, yields a single representation for the entire video,
+losing temporal information.Additionally, we compare a bi-directional LSTM with 512 hidden units, using the final hidden state
+as input to a fully-connected layer for classification. We frame our tasks as multi-label classification
+and train these models to minimize binary cross-entropy:
+L(v) =X
+czclog(p(c|G(v))) + (1 −zc) log(1 −p(c|G(v)))
+where G(v)is the function that pools the temporal information, and zcis the ground truth label for
+class c.
+5 Activity Detection in Continuous Videos
+Detecting activities in continuous videos poses a greater challenge. The goal here is to classify each
+frame according to the activities occurring. Unlike segmented videos, continuous videos feature
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow

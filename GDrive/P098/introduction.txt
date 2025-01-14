@@ -1,0 +1,21 @@
+the accuracy of our predictor remains the same as the unconstrained network, demonstrating we are
+not losing accuracy to achieve safety guarantees.
+3
+Table 1: Results of the best configurations of β-TCV AE on DCI, FactorV AE, SAP, MIG, and IRS
+metrics.
+NETWORK ACC (COC) VIOLATIONS (COC) ACC (CL1500) VIOLATIONS (CL1500)
+STANDARD 96.87 0.22 93.89 0.20
+SAFE 96.69 0.00 94.78 0.00
+4 Discussion and Future Work
+We propose an approach for designing a safe predictor that adheres to input-output specifications for
+credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7
+Appendix C: Details of VerticalCAS Experiment
+C.1 Safeability Constraints
+The "safeability" property, originally introduced and used to verify the safety of the VerticalCAS
+neural networks can be encoded into a set of input-output constraints. The "safeable region" for
+a given advisory represents input locations where that advisory can be selected such that future
+advisories exist that will prevent an NMAC. If no future advisories exist, the advisory is "unsafeable"
+and the corresponding input region is the "unsafeable region". Examples of these regions, and their
+proximity functions are shown in Figure 5 for the CL1500 advisory.

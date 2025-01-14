@@ -1,0 +1,30 @@
+We confirm the efficacy and logic of PAAC in reducing popularity bias through thorough experiments on three
+real-world datasets.
+1 Introduction
+Contemporary recommender systems are essential in reducing information overload. Personalized recommendations frequently
+employ collaborative filtering (CF) to assist users in discovering items that may interest them. CF-based techniques primarily
+learn user preferences and item attributes by matching the representations of users with the items they engage with. Despite their
+achievements, CF-based methods frequently encounter the issue of popularity bias, which leads to considerable disparities in
+accuracy between items that are popular and those that are not. Popularity bias occurs because there are limited supervisory signals
+preferences for recommendations.
+3 Experiments
+In this section, we assess the efficacy of PAAC through comprehensive experiments, aiming to address the following research
+questions:
+• How does PAAC compare to existing debiasing methods?
+• How do different designed components play roles in our proposed PAAC?
+3
+• How does PAAC alleviate the popularity bias?
+• How do different hyper-parameters affect the PAAC recommendation performance?
+3.1 Experiments Settings
+3.1.1 Datasets
+In our experiments, we use three widely public datasets: Amazon-book, Yelp2018, and Gowalla. We retained users and items with a
+minimum of 10 interactions.
+3.1.2 Baselines and Evaluation Metrics
+•Different metrics across various datasets show varying improvements in model performance. This suggests that different
+debiasing methods may need distinct optimization strategies for models. Additionally, we observe varying effects of PAAC
+across different datasets. This difference could be due to the sparser nature of the Gowalla dataset. Conversely, our model
+can directly provide supervisory signals for unpopular items and conduct intra-group optimization, consistently maintaining
+optimal performance across all metrics on the three datasets.
+3.3 Ablation Study
+To better understand the effectiveness of each component in PAAC, we conduct ablation studies on three datasets. Table 2 presents a
+comparison between PAAC and its variants on recommendation performance.

@@ -1,0 +1,23 @@
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+Table 9 shows that Transfer Learning (TL) and Multi-Task Learning (MTL) approaches reduce
+generalization error in NomBank across all scenarios, with the exception of TLH and TLEH for
+completely unseen compounds, where error increases. The greatest error reductions are achieved
+by MTL models across all three types of unseen compounds. Specifically, MTLE reduces the error
+by approximately six points for compounds with unseen right constituents and by eleven points for
+fully unseen compounds. Moreover, MTLF reduces the error by five points when the left constituent
+is unseen. It’s important to interpret these results in conjunction with the Count row in Table 9 for
+a comprehensive view.observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or

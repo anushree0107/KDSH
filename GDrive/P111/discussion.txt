@@ -1,0 +1,22 @@
+is a 1D-convolutional layer with a kernel size {1, k}and a stride
+of 1,WK∈Rd×d, WQ∈Rd×d, WV∈Rd×dare weights for keys, queries, and values of the self-attention layer, and dis the
+embedding dimension. Note that all weights for GRN are shared across each time step t.
+4
+4.3 Multihead Dual Convolutional Self-Attention
+Our approach employs a self-attention mechanism to capture global dependencies across time steps. It is embedded as part of the
+DCSA architecture.A key reason for utilizing multi-task learning is to enhance generalization by making use of the
+domain-specific details present in the training data of related tasks. In this study, we demonstrate that
+TL and MTL can serve as a form of regularization, enabling the prediction of infrequent relations
+within a dataset marked by a highly skewed distribution of relations. This dataset is particularly
+well-suited for TL and MTL experimentation, as elaborated in Section 3.
+Our contributions are summarized as follows:
+1. Through meticulous analysis of results, we discover that TL and MTL, especially when applied
+to the embedding layer, enhance overall accuracy and F1 scores for less frequent relations in a
+Deep Learning Approaches utilize neural networks trained on large image datasets for portion
+estimation. Regression networks estimate the energy value of food from single images or from an
+"Energy Distribution Map" that maps input images to energy distributions. Some networks use both
+images and depth maps to estimate energy, mass, and macronutrient content. However, deep learning
+methods require extensive data for training and are not always interpretable, with performance
+degrading when test images significantly differ from training data.
+While these methods have advanced food portion estimation, they face limitations that hinder their
+widespread use and accuracy. Stereo-based methods are impractical for single images, model-based

@@ -1,0 +1,22 @@
+ It was noted that the convergence proof for the golden ratio algorithm (GRAAL) is valid without any changes. While
+the assumption that a Minty solution exists is a generalization of the monotone setting, it is challenging to find non-monotone
+problems that possess such solutions. In our setting, as per Assumption 1, the Minty inequality (MVI) can be violated at any point
+by a factor proportional to the squared operator norm.
+Negative comonotonicity. Although previously studied under the term "cohypomonotonicity," the concept of negative comono-
+tonicity has recently been explored. On the other hand, extending the notion of cocoercivity to allow for negative coefficients, referred to as cohypomonotonicity,
+has received much less attention and is given by:
+⟨F(u)−F(v), u−v⟩ ≥ − γ∥F(u)−F(v)∥2.
+Clearly, if a Stampacchia solution exists for such an operator, then it also fulfills Assumption 1.
+Behavior with respect to the solution. While the above properties are standard assumptions in the literature, it is usually sufficient
+to require the corresponding condition to hold when one of the arguments is a (Stampacchia) solution. This means that instead of
+Cψ2≥0 :E"
+exp 
+|φ ̄p(x)−φ ̄q(x)|2
+C2
+ψ2!#
+≤2)
+.
+A small Sub-Gaussian metric between random variables indicates that their values are likely to be
+close. To capture the Sub-Gaussian structure of a process, we introduce ε-nets in the Sub-Gaussian
+metric. For a given ε >0, these are subsets  ̄Q⊆ ̄Psuch that for every  ̄p∈ ̄P, there is a  ̄q∈ ̄Q
+satisfying

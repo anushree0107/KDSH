@@ -1,0 +1,24 @@
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.

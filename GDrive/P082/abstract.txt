@@ -1,0 +1,21 @@
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+We use PyTorch for defining our networks and performing parameter optimization. We optimize both
+the unconstrained and safe predictors using the asymmetric loss function to select advisories while
+also accurately predicting scores. The data is split using an 80/20 train/test split with a random seed
+of 0. The optimizer is ADAM with a learning rate of 0.0003 and batch size of 216, with training for
+500 epochs.
+Appendix A: Proof of Theorem 2.1
+Proof. Letx∈Ai. Then, σi(x) = 0 , and for all b∈Owhere bi= 0,wb(x) = 0 . Thus,
+F(x) =X
+generating the refined embedding at time step t, its decision is independent; it does not take into account the actual decision made by
+other refined embeddings t. We use a CRF layer to cover just that, i.e., to maximize the probability of the refined embeddings of all
+time steps, so it can better model cases where refined embeddings closest to one another must be compatible (i.e., minimizing the
+possibility for impossible room transitions). When finding the best sequence of room location ˆyt, the Viterbi Algorithm is used as a
+standard for the CRF layer.
+For the second layer, we choose a particular room as a reference and perform a binary classification at each time step t. The binary

@@ -1,0 +1,26 @@
+intra-group uniformity and considering the impact of different popularity levels in the training. We prefer to push away items
+within the same group to optimize uniformity. This setup helps prevent over-optimizing the uniformity of different groups, thereby
+mitigating representation separation.
+The final re-weighting contrastive objective is the weighted sum of the user objective and the item objective:
+LCL=1
+2×(LCL
+item+LCL
+user). (6)
+In this way, we not only achieved consistency in representation but also reduced the risk of further separating items with similar
+characteristics into different representation spaces, thereby alleviating the issue of representation separation caused by popularity
+bias.
+2.3 Model Optimization
+different positive and negative samples to mitigate representation separation from a popularity-centric perspective. We incorporate
+this approach into contrastive learning to better optimize the consistency of representations. Specifically, we aim to reduce the risk
+of pushing items with varying popularity further apart. For example, when using a popular item as a positive sample, our goal is
+to avoid pushing unpopular items too far away. Thus, we introduce two hyperparameters to control the weights when items are
+considered positive and negative samples.
+To ensure balanced and equitable representations of items within our model, we first propose a dynamic strategy to categorize items
+into popular and unpopular groups for each mini-batch. Instead of relying on a fixed global threshold, which often leads to the
+We apply two different layers to produce two different outputs during training. The room-level predictions are produced via a single
+conditional random field (CRF) layer in combination with a linear layer applied to the output of Eq. 7 to produce the final predictions
+as:
+ˆyt=CRF (φ(ht)) (7)
+q′(ht) =Wpht+bp (8)
+where Wp∈Rd×mandbp∈Rmare the weight and bias to learn, mis the number of room locations, and h= [h1, ..., h T]∈RT×d
+is the refined embedding produced by Eq. 7. Even though the transformer can take into account neighbor information before

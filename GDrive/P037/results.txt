@@ -1,0 +1,23 @@
+the full ranking strategy, considering all non-interacted items as candidate items to avoid selection bias during the test stage. We
+repeated each experiment five times with different random seeds and reported the average scores.
+3.2 Overall Performance
+As shown in Table 1, we compare our model with several baselines across three datasets. The best performance for each metric
+is highlighted in bold, while the second best is underlined. Our model consistently outperforms all compared methods across all
+metrics in every dataset.
+•Our proposed model PAAC consistently outperforms all baselines and significantly mitigates the popularity bias. Specif-
+ically, PAAC enhances LightGCN, achieving improvements of 282.65%, 180.correctly) for all questions and for each quartile of difficulty: Q1 (easiest 25%), Q2 (25-50%), Q3
+(50-75%), and Q4 (hardest 25%).
+Question Difficulty (Based on Best Baseline)
+All Q1 Q2 Q3 Q4
+Using Active Forecasts
+Weighted V ote Baseline (Predictions) 77.97 99.40 99.55 86.01 29.30
+Neural Network with Components...
+Predictions + Question 79.35 94.58 88.01 78.04 58.73
+Predictions + Justifications 80.84 95.on accuracy scores is inadequate for evaluating the effectiveness of TL and MTL for this task and
+dataset.
+Secondly, with the exception of the MTLF model, all TL and MTL models consistently improve
+the F1 score for all PCEDT relations except PAT. Notably, the F1 scores for the relations TWHEN
+and ACT show a substantial increase compared to other PCEDT relations when only the embedding
+layer’s weights are shared (MTLE) or transferred (TLE). This outcome can be partially understood
+by examining the correspondence matrices between NomBank arguments and PCEDT functors,
+presented in Tables 7 and 6.

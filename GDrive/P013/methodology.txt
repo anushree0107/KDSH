@@ -1,0 +1,29 @@
+ E pθ(x1|x2)Epθ(ˆx0|x1)[||x0−ˆx0||].
+Hence, given a noise vector xTand a sample x0, the loss lθ(xT, x0)represents the average Euclidean distance between x0and any
+sample obtained by passing xTthrough the backward process.
+2.3 Our Approach
+The goal is to upper-bound the distance W1(μ, πθ(·)). Since the triangle inequality implies
+W1(μ, πθ(·))≤W1(μ, μθ
+n) +W1(μθ
+n, πθ(·)),
+0)defined by xi
+0itself. Hence, this term
+measures how well a noise vector xT∼q(xT|xi
+0)recovers the original sample xi
+0using the backward process, and averages over
+the set S={x1
+0, . . . , xn
+0}. * If the Lipschitz constants satisfy Kθ
+t<1for all 1≤t≤T, then the larger Tis, the smaller the upper
+bound gets. This is because the product of Kθ
+t’s then converges to 0. In Remark 3.2 below, we show that the assumption that Kθ
+t<1
+Assumption 2, consists of mindependent copies of the random pair (x, y). During training, the
+interpolation quality of a hypothesis function f:X → Y can only be assessed at the given random
+samples {xj}m
+j=1. Any algorithm therefore accesses each function fthrough its sketch samples
+S[f] = (f(x1), . . . , f (xm)),
+2
+where Sis the sample operator. After training, the quality of a resulting model is often measured by
+its generalization to new data not used during training. With Rd×Ras the input and output space,
+we quantify a function f’s generalization error with its expected risk:

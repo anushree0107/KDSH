@@ -1,0 +1,25 @@
+Safe Predictors for Input-Output Specification
+Enforcement
+Abstract
+This paper presents an approach for designing neural networks, along with other
+machine learning models, which adhere to a collection of input-output specifica-
+tions. Our method involves the construction of a constrained predictor for each set
+of compatible constraints, and combining these predictors in a safe manner using a
+convex combination of their predictions. We demonstrate the applicability of this
+method with synthetic datasets and on an aircraft collision avoidance problem.
+1 Introduction
+The increasing adoption of machine learning models, such as neural networks, in safety-critical
+applications, such as autonomous vehicles and aircraft collision avoidance, highlights an urgent
+need for the development of guarantees on safety and robustness.different positive and negative samples to mitigate representation separation from a popularity-centric perspective. We incorporate
+this approach into contrastive learning to better optimize the consistency of representations. Specifically, we aim to reduce the risk
+of pushing items with varying popularity further apart. For example, when using a popular item as a positive sample, our goal is
+to avoid pushing unpopular items too far away. Thus, we introduce two hyperparameters to control the weights when items are
+considered positive and negative samples.
+To ensure balanced and equitable representations of items within our model, we first propose a dynamic strategy to categorize items
+into popular and unpopular groups for each mini-batch. Instead of relying on a fixed global threshold, which often leads to the
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to

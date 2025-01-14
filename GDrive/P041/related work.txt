@@ -1,0 +1,23 @@
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to
+ A strong justification for a forecast can be considered a well-reasoned supporting argument.
+Previous work in this area includes identifying argument components such as claims, premises,
+backing, rebuttals, and refutations, as well as mining arguments that support or oppose a particular
+claim. Despite these efforts, it was found that crowdsourced justifications rarely adhere to these
+established argumentation frameworks, even though such justifications are valuable for aggregating
+forecasts.
+Finally, several studies have focused on forecasting using datasets similar or identical to the one used
+in this research. From a psychological perspective, researchers have explored strategies for enhancing
+forecasting accuracy, such as utilizing top-performing forecasters (often called "superforecasters"),
+provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from

@@ -1,0 +1,25 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every
+ Prior research includes
+both predictive models (using language samples to predict attributes about the author) and models
+that provide valuable insights (using language samples and author attributes to identify differentiating
+linguistic features). Previous studies have examined factors such as gender and age, political ideology,
+health outcomes, and personality traits. In this paper, models are constructed to predict outcomes
+based on crowd-sourced forecasts without knowledge of individual forecasters’ identities.
+Previous research has also explored how language use varies depending on the relationships between
+individuals. For instance, studies have analyzed language patterns in social networks, online commu-
+nities, and corporate emails to understand how individuals in positions of authority communicate.

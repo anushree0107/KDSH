@@ -1,0 +1,23 @@
+one of the feature pooling methods, and zt,cis the ground truth class at time t.
+A method to learn ’super-events’ (i.e., global video context) has been introduced and shown to be
+effective for activity detection in continuous videos. This approach involves learning a set of temporal
+structure filters modeled as NCauchy distributions. Each distribution is defined by a center xnand a
+width γn. Given the video length T, the filters are constructed by:
+xn=(T−1)(tanh( x′
+n) + 1)
+2
+fn(t) =1
+Znγn
+ The improvement is more significant in the 4m-HC and 4m-PD validations, when the training data are limited, with an
+average improvement of almost 9% for the F1-score over the alternative to the state-of-the-art model.
+The LOO-HC and LOO-PD validations show that a model that has the ability to capture the temporal dynamics across time steps will
+perform better than a standard baseline technique such as a Random Forest. The modified transformer encoder and the state-of-the-art
+model perform better in those two validations due to their ability to capture asynchronous relations across modalities. However,
+To extend the sub-event model to continuous videos, we follow a similar approach but set T=Lin
+Eq. 1, resulting in filters of length L. The T×Dvideo representation is convolved with the sub-event
+filters F, producing an N×D×T-dimensional representation used as input to a fully-connected
+layer for frame classification.
+The model is trained to minimize per-frame binary classification:
+L(v) =X
+t,czt,clog(p(c|H(vt))) + (1 −zt,c) log(1 −p(c|H(vt)))
+where vtis the per-frame or per-segment feature at time t,H(vt)is the sliding window application of

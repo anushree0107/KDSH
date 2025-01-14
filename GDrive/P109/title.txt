@@ -1,0 +1,19 @@
+where f(·)is a recommendation encoder and hi=f(i). By efficiently using the inherent information in the data, we provide more
+supervisory signals for unpopular items without introducing additional side information. This module enhances the representation of
+unpopular items, mitigating the overfitting issue.
+2.2 Re-weighting Contrast Module
+Recent research has indicated that popularity bias frequently leads to a noticeable separation in the representation of item embeddings.
+Although methods based on contrastive learning aim to enhance overall uniformity by distancing negative samples, their current
+sampling methods might unintentionally worsen this separation. When negative samples follow the popularity distribution, which
+different positive and negative samples to mitigate representation separation from a popularity-centric perspective. We incorporate
+this approach into contrastive learning to better optimize the consistency of representations. Specifically, we aim to reduce the risk
+of pushing items with varying popularity further apart. For example, when using a popular item as a positive sample, our goal is
+to avoid pushing unpopular items too far away. Thus, we introduce two hyperparameters to control the weights when items are
+considered positive and negative samples.
+To ensure balanced and equitable representations of items within our model, we first propose a dynamic strategy to categorize items
+into popular and unpopular groups for each mini-batch. Instead of relying on a fixed global threshold, which often leads to the
+IB=Ipop∪Iunpop ,∀i∈Ipop∧j∈Iunpop , p(i)> p(j), (2)
+where Ipop∈IBandIunpop∈IBare disjoint, with Ipopconsisting of the top x%of items in the batch. In this work, we dynamically
+divided items into popular and unpopular groups within each mini-batch based on their popularity, assigning the top 50% as popular
+items and the bottom 50% as unpopular items. This radio not only ensures equal representation of both groups in our contrastive
+learning but also allows items to be classified adaptively based on the batch’s current composition.

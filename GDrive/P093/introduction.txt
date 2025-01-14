@@ -1,0 +1,27 @@
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38. They select the best reconstruction results from these methods and
+extract the mesh. The extracted mesh is scaled using the estimated scale factor, and optimization
+techniques are applied to obtain a refined mesh.
+For the last five single-view objects, the team experiments with several single-view reconstruction
+methods, including Zero123, Zero123++, One2345, ZeroNVS, and DreamGaussian. They choose
+ZeroNVS to obtain a 3D food model consistent with the distribution of the input image. The
+intrinsic camera parameters from the fifteenth object are used, and an optimization method based
+on reprojection error refines the extrinsic parameters of the single camera. Due to limitations in
+In this work, we contribute to a generalization theory for shallow ReLU networks, by giving uniform
+generalization error bounds within the empirical risk’s sublevel set. We use methods from the analysis
+of convex linear regression, where generalization bounds for empirical risk minimizers are derived
+from recent advancements in stochastic processes’ chaining theory. Empirical risk minimization
+for non-convex hypothesis functions cannot generally be solved efficiently. However, under certain
+assumptions, it is still possible to derive generalization error bounds, as we demonstrate in this paper
+for shallow ReLU networks. Existing works have applied methods from compressed sensing to
+bound generalization errors for arbitrary hypothesis functions. However, they do not capture the

@@ -1,0 +1,37 @@
+approaches struggle with diverse food shapes, depth camera methods need specialized hardware,
+and deep learning approaches lack interpretability and struggle with out-of-distribution samples. 3D
+reconstruction offers a promising solution by providing comprehensive spatial information, adapting
+to various shapes, potentially working with single images, offering visually interpretable results,
+and enabling a standardized approach to food portion estimation. These benefits motivated the
+organization of the 3D Food Reconstruction challenge, aiming to overcome existing limitations and
+2
+develop more accurate, user-friendly, and widely applicable food portion estimation techniques,
+impacting nutritional assessment and dietary monitoring.
+3 Datasets and Evaluation Pipeline
+3.1 Dataset Description
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details
+ This ensures consistent reference object identification throughout the dataset.
+To create RGBA images, the team combines RGB images, reference object masks {MR
+i}n
+i=1, and
+food object masks {MF
+i}n
+i=1. This step, denoted as {IR
+i}n
+i=1, integrates various data sources into a
+unified format for further processing.
+The team converts the RGBA images {IR
+i}n
+i=1and camera poses {Cj}k
+j=1into meaningful metadata
+and modeled data Dm. This transformation facilitates accurate scene reconstruction.
+The modeled data Dmis input into NeuS2 for mesh reconstruction. NeuS2 generates colorful meshes

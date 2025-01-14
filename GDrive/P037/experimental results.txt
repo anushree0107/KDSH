@@ -1,0 +1,25 @@
+The number of instances corresponds to the total number of days all questions were open. Both
+simple baselines and a neural network are employed, considering both (a) daily forecasts and (b)
+active forecasts submitted up to ten days prior.
+The questions are divided into training, validation, and test subsets. Subsequently, all forecasts
+submitted throughout the duration of each question are assigned to their respective subsets. It’s
+important to note that randomly splitting the forecasts would be an inappropriate approach. This is
+because forecasts for the same question submitted on different days would be distributed across the
+training, validation, and test subsets, leading to data leakage and inaccurate performance evaluation.
+4.1 Baselines
+Two unsupervised baselines are considered. The "majority vote" baseline determines the answer to a
+question based on the most frequent prediction among the forecasts. The "weighted vote" baseline,
+on the other hand, assigns weights to the probabilities in the predictions and then aggregates them.
+4.2 Neural Network Architecture
+A neural network architecture is employed, which consists of three main components: one to generate
+a representation of the question, another to generate a representation of each forecast, and an LSTM
+to process the sequence of forecasts and ultimately call the question.
+The representation of a question is obtained using BERT, followed by a fully connected layer with 256
+neurons, ReLU activation, and dropout. The representation of a forecast is created by concatenating
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL

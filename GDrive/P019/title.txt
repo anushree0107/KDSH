@@ -1,0 +1,22 @@
+sample, there will be a corresponding demographic feature data sample that is used to train a different binary classifier to predict
+whether a person with PD is ON or OFF medications.
+**Ethical approval:** Full approval from the NHS Wales Research Ethics Committee was granted on December 17, 2019, and
+Health Research Authority and Health and Care Research Wales approval was confirmed on January 14, 2020; the research was
+3
+conducted in accord with the Helsinki Declaration of 1975; written informed consent was gained from all study participants. In
+order to protect participant privacy, supporting data is not shared openly. It will be made available to bona fide researchers subject to
+a data access agreement.
+4 Methodologies and Framework
+Gait quantification using wearables or smartphones is an area where a significant amount of work has been done. Cameras can
+also detect parkinsonian gait and some gait features, including step length and average walking speed. Time-of-flight devices,
+which measure distances between the subject and the camera, have been used to assess medication adherence through gait analysis.
+From free-living data, one approach to gait and room use evaluation in home settings is by emitting and detecting radio waves to
+non-invasively track movement. Gait analysis using radio wave technology shows promise to track disease progression, severity, and
+medication response. However, this approach cannot identify who is doing the movement and also suffers from technical issues
+include tracking of gait speed during rehabilitation from orthopedic surgery, monitoring wandering behavior in dementia, or
+triggering an alert for a possible fall (and long lie on the floor) if someone is in one room for an unusual length of time. Furthermore,
+accurate room use and room-to-room transfer statistics could be used in occupational settings, e.g., to check factory worker location.
+7
+Table 1: Room-level and medication state accuracy of all models. Standard deviation is shown in (.), the best performer is bold,
+while the second best is italicized. Note that our proposed model is the one named MDCSA1,4,7
+!Training ModelRoom-Level Localisation Medication State

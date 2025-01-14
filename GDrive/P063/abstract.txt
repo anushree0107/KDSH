@@ -1,0 +1,23 @@
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+A key reason for utilizing multi-task learning is to enhance generalization by making use of the
+domain-specific details present in the training data of related tasks. In this study, we demonstrate that
+TL and MTL can serve as a form of regularization, enabling the prediction of infrequent relations
+within a dataset marked by a highly skewed distribution of relations. This dataset is particularly
+well-suited for TL and MTL experimentation, as elaborated in Section 3.
+Our contributions are summarized as follows:
+1. Through meticulous analysis of results, we discover that TL and MTL, especially when applied
+to the embedding layer, enhance overall accuracy and F1 scores for less frequent relations in a
+and MTL models are trained using the same hyperparameters as the STL model.
+5.2 Transfer Learning Models
+In our experiments, transfer learning involves training an STL model on PCEDT relations and then
+using some of its weights to initialize another model for NomBank relations. Given the neural
+classifier architecture detailed in Section 5.1, we identify three ways to implement TL: 1) TLE:
+Transferring the embedding layer weights, 2) TLH: Transferring the hidden layer weights, and 3)
+TLEH: Transferring both the embedding and hidden layer weights. Furthermore, we differentiate
+between transfer learning from PCEDT to NomBank and vice versa. This results in six setups,

@@ -1,0 +1,28 @@
+ These tables illustrate how PCEDT functors map to NomBank arguments
+in the training split (Table 6) and vice versa (Table 7). Table 6 reveals that 80% of the compounds
+annotated as TWHEN in PCEDT were annotated as ARGM-TMP in NomBank. Additionally, 47% of
+ACT (Actor) relations map to ARG0 (Proto-Agent) in NomBank. While this mapping is not as distinct
+as one might hope, it is still relatively high when compared to how other PCEDT relations map to
+ARG0. The correspondence matrices also demonstrate that the presumed theoretical similarities
+between NomBank and PCEDT relations do not always hold in practice. This ensures consistent reference object identification throughout the dataset.
+To create RGBA images, the team combines RGB images, reference object masks {MR
+i}n
+i=1, and
+food object masks {MF
+i}n
+i=1. This step, denoted as {IR
+i}n
+i=1, integrates various data sources into a
+unified format for further processing.
+The team converts the RGBA images {IR
+i}n
+i=1and camera poses {Cj}k
+j=1into meaningful metadata
+and modeled data Dm. This transformation facilitates accurate scene reconstruction.
+The modeled data Dmis input into NeuS2 for mesh reconstruction. NeuS2 generates colorful meshes
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to

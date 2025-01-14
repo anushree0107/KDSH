@@ -1,0 +1,24 @@
+ This method refined the uniformity of representations and successfully reduced separation. We
+validated our method, PAAC, on three publicly available datasets, demonstrating its effectiveness and underlying rationale.
+In the future, we will explore deeper alignment and contrast adjustments tailored to specific tasks to further mitigate popularity
+bias. We aim to investigate the synergies between alignment and contrast and extend our approach to address other biases in
+recommendation systems.
+Acknowledgments
+This work was supported in part by grants from the National Key Research and Development Program of China, the National Natural
+Science Foundation of China, the Fundamental Research Funds for the Central Universities, and Quan Cheng Laboratory.
+8
+issues: firstly, the extraction of shared supervisory signals from popular items to enhance the representations of
+less popular items, and secondly, the reduction of representation separation caused by popularity bias. In this
+study, we present an empirical examination of popularity bias and introduce a method called Popularity-Aware
+Alignment and Contrast (PAAC) to tackle these two problems. Specifically, we utilize the common supervisory
+signals found in popular item representations and introduce an innovative popularity-aware supervised alignment
+module to improve the learning of representations for unpopular items. Furthermore, we propose adjusting the
+weights in the contrastive learning loss to decrease the separation of representations by focusing on popularity.
+ However, because unpopular items have
+limited interactions, they are usually modeled based on a small group of users. This limited focus can result in overfitting, as the
+representations of unpopular items might not fully capture their features.
+The disparity in the quantity of supervisory signals is essential for learning representations of both popular and unpopular items.
+Specifically, popular items gain from a wealth of supervisory signals during the alignment process, which helps in effectively
+learning their representations. On the other hand, unpopular items, which have a limited number of users providing supervision, are
+more susceptible to overfitting. This is because there is insufficient representation learning for unpopular items, emphasizing the
+effect of supervisory signal distribution on the quality of representation.

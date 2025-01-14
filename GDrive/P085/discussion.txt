@@ -1,0 +1,19 @@
+credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7
+sample, there will be a corresponding demographic feature data sample that is used to train a different binary classifier to predict
+whether a person with PD is ON or OFF medications.
+**Ethical approval:** Full approval from the NHS Wales Research Ethics Committee was granted on December 17, 2019, and
+Health Research Authority and Health and Care Research Wales approval was confirmed on January 14, 2020; the research was
+3
+conducted in accord with the Helsinki Declaration of 1975; written informed consent was gained from all study participants. In
+order to protect participant privacy, supporting data is not shared openly. It will be made available to bona fide researchers subject to
+a data access agreement.
+4 Methodologies and Framework
+ x∈
+Aunsafeable ,i⇒Fi(x)<max jFj(x), where Fj(x)is the output score for the jthadvisory.
+Table 1 shows the performance of a standard, unconstrained network and our safe predictor. For both
+networks, we present the percentage accuracy (ACC) and violations (percentage of inputs for which
+the network outputs an unsafe advisory). We train and test using PyTorch with two separate datasets,
+based on the previous advisory being Clear of Conflict (COC) and Climb at 1500 ft/min (CL1500).
+As shown in the table, our safe predictor adheres to the required safeability property. Furthermore,

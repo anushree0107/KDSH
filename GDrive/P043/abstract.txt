@@ -1,0 +1,26 @@
+that incorporating convolutional sub-events with a super-event representation, creating a three-level
+activity hierarchy, yields the most favorable outcomes.
+7
+1 35.8 37.3
+InceptionV3 + super-events 31.5 36.2 39.6
+InceptionV3 + sub+super-events 34.2 40.2 40.9
+7 Conclusion
+This paper introduces MLB-YouTube, a novel and challenging dataset designed for detailed activity
+recognition in videos. We conduct a comparative analysis of various recognition techniques that
+employ temporal feature pooling for both segmented and continuous videos. Our findings reveal that
+learning sub-events to pinpoint temporal regions of interest significantly enhances performance in
+segmented video classification. In the context of activity detection in continuous videos, we establish
+ Fixed temporal pyramid pooling outperforms max-pooling, while LSTM and temporal
+6
+Table 7: Accuracy of pitch type classification using I3D for video inputs and InceptionV3 for pose
+heatmaps.
+Method Accuracy
+Random 17.0%
+I3D 25.8%
+I3D + LSTM 18.5%
+I3D + sub-events 34.5%
+Pose 28.4%
+Pose + LSTM 27.6%
+Pose + sub-events 36.4%
+convolution appear to overfit. Convolutional sub-events, especially when combined with super-event
+representation, significantly enhance performance, particularly for frame-based features.

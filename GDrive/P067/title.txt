@@ -1,0 +1,25 @@
+ Besides differing in the NLP tasks they investigate, the aforementioned
+studies employ slightly varied definitions of TL and MTL. Our research aligns with certain studies in
+that we apply TL and MTL to learn different semantic annotations of noun-noun compounds using
+the same dataset. However, our experimental design is more akin to other work in that we experiment
+with initializing parameters across all layers of the neural network and concurrently train a single
+MTL model on two sets of relations.
+3 Task Definition and Dataset
+The objective of this task is to train a model to categorize the semantic relationships between pairs
+of nouns in a labeled dataset, where each pair forms a noun-noun compound. The complexity of
+our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.
+this task is influenced by factors such as the label set used and its distribution. For the experiments
+detailed in this paper, we utilize a noun-noun compounds dataset that features compounds annotated
+with two distinct taxonomies of relations. This means that each noun-noun compound is associated
+with two different relations, each based on different linguistic theories. This dataset is derived from
+established linguistic resources, including NomBank and the Prague Czech-English Dependency
+Treebank 2.0 (PCEDT). We chose this dataset for two primary reasons: firstly, the dual annotation of
+relations on the same set of compounds is ideal for exploring TL and MTL approaches; secondly,

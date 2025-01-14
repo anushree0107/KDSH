@@ -1,0 +1,29 @@
+65 79.26 84.67
+Predictions + Question + Justifications 79.96 78.65 78.11 80.29 83.28
+Using Active Forecasts
+Baselines
+Majority V ote (predictions) 77.27 68.83 73.92 77.98 87.44
+Weighted V ote (predictions) 77.97 72.04 72.17 78.53 88.22
+Neural Network Variants
+Predictions Only 78.81 77.31 78.04 78.53 81.11
+Predictions + Question 79.35 76.05 78.applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38. Utilizing the 60fps rate available in YouTube videos, we
+recalculated optical flow and extracted RGB frames at this higher rate. Employing a fully-connected
+layer with a single output for pitch speed prediction and minimizing the L1 loss between predicted
+and actual speeds, we achieved an average error of 3.6mph. Table 6 compares different models, and
+Fig. 8 illustrates the sub-events learned for various speeds.
+Table 6: Results for pitch speed regression on segmented videos, reporting root-mean-squared errors.
+Method Two-stream
+I3D 4.3 mph
+I3D + LSTM 4.1 mph
+I3D + sub-events 3.9 mph

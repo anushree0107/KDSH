@@ -1,0 +1,26 @@
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples. However, because unpopular items have
+limited interactions, they are usually modeled based on a small group of users. This limited focus can result in overfitting, as the
+representations of unpopular items might not fully capture their features.
+The disparity in the quantity of supervisory signals is essential for learning representations of both popular and unpopular items.
+Specifically, popular items gain from a wealth of supervisory signals during the alignment process, which helps in effectively
+learning their representations. On the other hand, unpopular items, which have a limited number of users providing supervision, are
+more susceptible to overfitting. This is because there is insufficient representation learning for unpopular items, emphasizing the
+effect of supervisory signal distribution on the quality of representation.applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.

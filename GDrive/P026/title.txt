@@ -1,0 +1,26 @@
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.InceptionV3 5.3 mph
+InceptionV3 + LSTM 4.5 mph
+InceptionV3 + sub-events 3.6 mph
+6.2.3 Pitch Type Classification
+We conducted experiments to determine the feasibility of predicting pitch types from video, a task
+made challenging by pitchers’ efforts to disguise their pitches from batters and the subtle differences
+between pitches, such as grip and rotation. We incorporated pose data extracted using OpenPose,
+utilizing heatmaps of joint and body part locations as input to a newly trained InceptionV3 CNN.
+Pose features were considered due to variations in body mechanics between different pitches. Our
+dataset includes six pitch types, with results presented in Table 7. Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.

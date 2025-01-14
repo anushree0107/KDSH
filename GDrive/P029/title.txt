@@ -1,0 +1,34 @@
+ Fixed temporal pyramid pooling outperforms max-pooling, while LSTM and temporal
+6
+Table 7: Accuracy of pitch type classification using I3D for video inputs and InceptionV3 for pose
+heatmaps.
+Method Accuracy
+Random 17.0%
+I3D 25.8%
+I3D + LSTM 18.5%
+I3D + sub-events 34.5%
+Pose 28.4%
+Pose + LSTM 27.6%
+Pose + sub-events 36.4%
+convolution appear to overfit. Convolutional sub-events, especially when combined with super-event
+representation, significantly enhance performance, particularly for frame-based features.
+PixSfM, which involves extracting features using SuperPoint, matching them with SuperGlue, and
+refining them. The outputs are the camera poses {Cj}k
+j=1, crucial for understanding the scene’s
+spatial layout.
+4
+In parallel, the team uses a tool called SAM for reference object segmentation. SAM segments
+the reference object with a user-provided prompt, producing a reference object mask MRfor each
+keyframe. This mask helps track the reference object across all frames. The XMem++ method
+extends the reference object mask MRto all frames, creating a comprehensive set of reference object
+masks {MR
+i}n
+i=1. We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow

@@ -1,0 +1,19 @@
+PAAC 0.0494* 0.0574* 0.0375* 0.1232* 0.1321* 0.0848* 0.0701* 0.0724* 0.0556*
+Imp. +9.78 % +10.81% +8.70% +3.18% +5.85% +5.47% +9.36% +6.78% 5.90%
+SimGCL in that we split the contrastive loss on the item side, LCL
+item, into two distinct losses: LCL
+popandLCL
+unpop . This approach
+0439 0.0304
+IPS 0.0104 0.0183 0.0158 0.0562 0.0670 0.0444 0.0488 0.0510 0.0365
+MACR 0.0402 0.0312 0.0265 0.0908 0.1086 0.0600 0.0515 0.0609 0.0487
+α-Adjnorm 0.0053 0.0088 0.0080 0.0328 0.0409 0.0267 0.0422 0.0450 0.The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

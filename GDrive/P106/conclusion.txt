@@ -1,0 +1,19 @@
+several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every
+and accelerometry traces in six spatial directions (corresponding to the three spatial directions (x, y, z) for each wearable) were
+recorded at each time point. The accelerometer data is resampled to 5Hz to synchronize the data with RSSI values. With a 5-second
+time window and a 5Hz sampling rate, each RSSI data sample has an input of size (25 x 20), and accelerometer data has an input of
+size (25 x 6). Imputation for missing values, specifically for RSSI data, is applied by replacing the missing values with a value that is
+not possible normally (i.e., -120dB).Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.

@@ -1,0 +1,22 @@
+parameter search for the number of trees (200, 250), the minimum number of samples in a leaf node (1, 5), and whether a warm start
+is needed. The Gini impurity is used to measure splits.
+**Evaluation Metrics:** We are interested in developing a system to monitor PD motor symptoms in home environments. For
+example, we will consider if there is any significant difference in the performance of the system when it is trained with PD data
+compared to being trained with healthy control (HC) data. We tailored our training procedure to test our hypothesis by performing
+variations of cross-validation. Apart from training our models on all HC subjects (ALL-HC), we also perform four different kinds of
+ This provides a common learned representation of the input space,
+while allowing each predictor to adapt to its own constraints. After the shared layers, each constrained
+predictor has an additional two hidden layers and their final outputs are projected onto our convex
+approximation of the safe region of the output space, using Gb(x) = min jGj(x). In our experiments,
+we set ε= 0.0001 .
+With this construction, we needed 30 separate predictors to enforce the VerticalCAS safeability
+constraints. The number of nodes for the unconstrained and safe implementations were 270 and 2880,
+respectively. Our safe predictor is orders of magnitude smaller than the original look-up tables.
+C.4 Parameter Optimization
+also proposed, which may incur extra gradient computations or require second-order information (in contrast to the adaptive step
+size we propose in Algorithm 3). A different approach is taken by focusing on the min-max setting and using multiple ascent steps
+per descent step, achieving the same O(1/k)rate as EG.
+Minty solutions. Numerous studies have presented various methods for scenarios where the problem at hand has a Minty solution.
+It was shown that weakly monotone VIs can be solved by iteratively adding a quadratic proximity term and repeatedly optimizing
+the resulting strongly monotone VI using any convergent method. The convergence of the OGDA method was proven, but without a
+specific rate.

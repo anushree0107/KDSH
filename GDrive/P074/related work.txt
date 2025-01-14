@@ -1,0 +1,26 @@
+preferences for recommendations.
+3 Experiments
+In this section, we assess the efficacy of PAAC through comprehensive experiments, aiming to address the following research
+questions:
+• How does PAAC compare to existing debiasing methods?
+• How do different designed components play roles in our proposed PAAC?
+3
+• How does PAAC alleviate the popularity bias?
+• How do different hyper-parameters affect the PAAC recommendation performance?
+3.1 Experiments Settings
+3.1.1 Datasets
+In our experiments, we use three widely public datasets: Amazon-book, Yelp2018, and Gowalla. We retained users and items with a
+minimum of 10 interactions.
+3.1.2 Baselines and Evaluation Metrics
+using the NDCG@20 metric across different popularity groups. We use ∆to denote the accuracy gap between the two groups. We
+draw the following conclusions:
+•Improving the performance of unpopular items is crucial for enhancing overall model performance. Specially, on the
+Yelp2018 dataset, PAAC shows reduced accuracy in recommending popular items, with a notable decrease of 20.14%
+compared to SimGCL. However, despite this decrease, the overall recommendation accuracy surpasses that of SimGCL
+by 11.94%, primarily due to a 6.81% improvement in recommending unpopular items. This improvement highlights the
+79%, and 82.89% in NDCG@20 on the
+Yelp2018, Gowalla, and Amazon-Book datasets, respectively. Compared to the strongest baselines, PAAC delivers better
+performance. The most significant improvements are observed on Yelp2018, where our model achieves an 8.70% increase
+in Recall@20, a 10.81% increase in HR@20, and a 30.2% increase in NDCG@20. This improvement can be attributed
+to our use of popularity-aware supervised alignment to enhance the representation of less popular items and re-weighted
+contrastive learning to address representation separation from a popularity-centric perspective.

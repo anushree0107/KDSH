@@ -1,0 +1,20 @@
+a common aspect of the aforementioned studies is that their bounds are contingent on the error of the score estimator. According to
+some, providing precise guarantees for the estimation of the score function is challenging, as it necessitates an understanding of the
+non-convex training dynamics of neural network optimization, which is currently beyond reach. Therefore, upper bounds are derived
+without making assumptions about the learned score function. Instead, the bound presented here is dependent on a reconstruction
+loss calculated over a finite independent and identically distributed (i.i.d.) sample. Intuitively, a loss function is defined, which
+quantifies the average Euclidean distance between a sample from the data-generating distribution and the reconstruction obtained by
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL

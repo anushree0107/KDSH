@@ -1,0 +1,19 @@
+provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from
+large groups, it is important to determine whether the individual inputs were made independently. If
+not, factors like group psychology and the influence of persuasive arguments can skew individual
+judgments, thus negating the positive effects of crowd wisdom.
+This paper focuses on forecasts concerning questions spanning political, economic, and social
+domains. Each forecast includes a prediction, estimating the probability of a particular event, and
+a written justification that explains the reasoning behind the prediction. Forecasts with identical
+predictions can have justifications of varying strength, which, in turn, affects the perceived reliability
+of the predictions. For instance, a justification that simply refers to an external source without
+credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7

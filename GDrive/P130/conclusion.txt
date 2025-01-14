@@ -1,0 +1,26 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.improve its F1 scores for less common yet more challenging semantic relations.
+1 Introduction
+Noun-noun compound interpretation involves determining the semantic connection between two
+nouns (or noun phrases in multi-word compounds). For instance, in the compound "street protest,"
+the task is to identify the semantic relationship between "street" and "protest," which is a locative
+relation in this example. Given the prevalence of noun-noun compounds in natural language and its
+significance to other natural language processing (NLP) tasks like question answering and information
+retrieval, understanding noun-noun compounds has been extensively studied in theoretical linguistics,
+psycholinguistics, and computational linguistics.
+provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from

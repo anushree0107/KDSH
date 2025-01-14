@@ -1,0 +1,32 @@
+several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every
+We have compiled an extensive dataset from 20 baseball games of the 2017 MLB postseason, available
+on YouTube, totaling over 42 hours of video. Our dataset includes two main parts: segmented videos
+intended for activity recognition and continuous videos designed for activity classification. The
+dataset’s complexity is amplified by the fact that it originates from televised baseball games, where a
+single camera perspective is shared among various activities. Additionally, there is minimal variance
+in motion and appearance among different activities, such as swinging a bat versus bunting. In
+contrast to datasets like THUMOS and ActivityNet, which encompass a broad spectrum of activities
+with diverse settings, scales, and camera angles, our dataset features activities where a single frame
+frame in these videos is annotated with the baseball activities that occur. On average, each continuous
+clip contains 7.2 activities, amounting to over 15,000 activity instances in total.
+Table 1: Activity classes and their instance counts in the segmented MLB-YouTube dataset.
+Activity Count
+No Activity 2983
+Ball 1434
+Strike 1799
+Swing 2506
+Hit 1391
+Foul 718
+In Play 679
+Bunt 24
+Hit by Pitch 14
+2
+4 Segmented Video Recognition Approach
+We investigate different techniques for aggregating temporal features in segmented video activity
+recognition. In segmented videos, the classification task is simpler because each frame corresponds to

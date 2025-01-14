@@ -1,0 +1,25 @@
+in the label sets, where it exists, can be leveraged through transfer and multi-task learning, especially
+since the overall distribution of relations differs between the two frameworks.
+4 Transfer vs. Multi-Task Learning
+In this section, we employ the terminology and definitions established by Pan and Yang (2010) to
+articulate our framework for transfer and multi-task learning. Our classification task can be described
+in terms of all training pairs (X, Y) and a probability distribution P(X), where X represents the input
+feature space, Y denotes the set of all labels, and N is the training data size. The domain of a task is
+defined by X, P(X).pθ(x0|x1) =gθ
+1(x1),
+where the variance parameters σ2
+t∈R≥0are defined by a fixed schedule, the mean functions gθ
+t:RD→RDare learned using a
+neural network (with parameters θ) for2≤t≤T, andgθ
+1:RD→Xis a separate function dependent on σ1. In practice, the same
+network has been used for the functions gθ
+tfor2≤t≤T, and a separate discrete decoder for gθ
+1.
+2
+ Our goal is to learn a function f(X) that predicts Y based on the input features X.
+Considering two ML tasks, Ta and Tb, we would train two distinct models to learn separate functions
+fa and fb for predicting Ya and Yb in a single-task learning scenario. However, if Ta and Tb are
+related, either explicitly or implicitly, TL and MTL can enhance the generalization of either or both
+tasks. Two tasks are deemed related when their domains are similar but their label sets differ, or when
+their domains are dissimilar but their label sets are identical. Consequently, noun-noun compound
+interpretation using the dataset is well-suited for TL and MTL, as the training examples are identical,

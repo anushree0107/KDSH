@@ -1,0 +1,37 @@
+several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every
+Detailed Action Identification in Baseball Game
+Recordings
+Abstract
+This research introduces MLB-YouTube, a new and complex dataset created for
+nuanced activity recognition in baseball videos. This dataset is structured to
+support two types of analysis: one for classifying activities in segmented videos
+and another for detecting activities in unsegmented, continuous video streams. This
+study evaluates several methods for recognizing activities, focusing on how they
+capture the temporal organization of activities in videos. This evaluation starts
+with categorizing segmented videos and progresses to applying these methods
+to continuous video feeds. Additionally, this paper assesses the effectiveness of
+different models in the challenging task of forecasting pitch velocity and type
+using baseball broadcast videos. The findings indicate that incorporating temporal
+frame in these videos is annotated with the baseball activities that occur. On average, each continuous
+clip contains 7.2 activities, amounting to over 15,000 activity instances in total.
+Table 1: Activity classes and their instance counts in the segmented MLB-YouTube dataset.
+Activity Count
+No Activity 2983
+Ball 1434
+Strike 1799
+Swing 2506
+Hit 1391
+Foul 718
+In Play 679
+Bunt 24
+Hit by Pitch 14
+2
+4 Segmented Video Recognition Approach
+We investigate different techniques for aggregating temporal features in segmented video activity
+recognition. In segmented videos, the classification task is simpler because each frame corresponds to

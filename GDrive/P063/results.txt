@@ -1,0 +1,24 @@
+ This method refined the uniformity of representations and successfully reduced separation. We
+validated our method, PAAC, on three publicly available datasets, demonstrating its effectiveness and underlying rationale.
+In the future, we will explore deeper alignment and contrast adjustments tailored to specific tasks to further mitigate popularity
+bias. We aim to investigate the synergies between alignment and contrast and extend our approach to address other biases in
+recommendation systems.
+Acknowledgments
+This work was supported in part by grants from the National Key Research and Development Program of China, the National Natural
+Science Foundation of China, the Fundamental Research Funds for the Central Universities, and Quan Cheng Laboratory.
+8
+It could be argued that all the localization models compared in Table 1 might not be statistically different due to the fairly high
+standard deviation across all types of cross-validations, which is caused by the relatively small number of participants. In order to
+compare multiple models over cross-validation sets and show the statistical significance of our proposed model, we perform the
+Friedman test to first reject the null hypothesis. We then performed a pairwise statistical comparison: the Wilcoxon signed-rank test
+with Holm’s alpha correction.
+9
+Table 4: PD participant room transition duration with ON and OFF medications comparison using Wilcoxon signed rank tests.
+OFF transitions Mean transition duration ON transitions Mean transition duration W z
+reveals three primary themes: elections (including terms like "voting," "winners," and "candidate"),
+government actions (including terms like "negotiations," "announcements," "meetings," and "passing
+(a law)"), and wars and violent crimes (including terms like "groups," "killing," "civilian (casualties),"
+and "arms"). Although not explicitly represented in the LDA topics, the questions address both
+domestic and international events within these broad themes.
+Table 2: Analysis of the 96,664 written justifications submitted by forecasters in our dataset. The
+readability scores indicate that most justifications are easily understood by high school students (11th

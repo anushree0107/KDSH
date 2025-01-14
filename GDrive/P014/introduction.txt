@@ -1,0 +1,32 @@
+was computed and clipped to [−20,20]. For InceptionV3, features were computed every 3 frames
+(8 fps), while for I3D, every frame was used, with I3D having a temporal stride of 8, resulting in
+3 features per second (3 fps). Models were implemented in PyTorch and trained using the Adam
+optimizer with a learning rate of 0.01, decayed by a factor of 0.1 every 10 epochs, for a total of 50
+epochs.
+4
+6.2 Segmented Video Activity Recognition
+We initially conducted binary pitch/non-pitch classification for each video segment. This task is
+ Fixed temporal pyramid pooling outperforms max-pooling, while LSTM and temporal
+6
+Table 7: Accuracy of pitch type classification using I3D for video inputs and InceptionV3 for pose
+heatmaps.
+Method Accuracy
+Random 17.0%
+I3D 25.8%
+I3D + LSTM 18.5%
+I3D + sub-events 34.5%
+Pose 28.4%
+Pose + LSTM 27.6%
+Pose + sub-events 36.4%
+convolution appear to overfit. Convolutional sub-events, especially when combined with super-event
+representation, significantly enhance performance, particularly for frame-based features.
+InceptionV3 5.3 mph
+InceptionV3 + LSTM 4.5 mph
+InceptionV3 + sub-events 3.6 mph
+6.2.3 Pitch Type Classification
+We conducted experiments to determine the feasibility of predicting pitch types from video, a task
+made challenging by pitchers’ efforts to disguise their pitches from batters and the subtle differences
+between pitches, such as grip and rotation. We incorporated pose data extracted using OpenPose,
+utilizing heatmaps of joint and body part locations as input to a newly trained InceptionV3 CNN.
+Pose features were considered due to variations in body mechanics between different pitches. Our
+dataset includes six pitch types, with results presented in Table 7.

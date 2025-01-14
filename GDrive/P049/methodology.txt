@@ -1,0 +1,22 @@
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.Deep Learning Approaches utilize neural networks trained on large image datasets for portion
+estimation. Regression networks estimate the energy value of food from single images or from an
+"Energy Distribution Map" that maps input images to energy distributions. Some networks use both
+images and depth maps to estimate energy, mass, and macronutrient content. However, deep learning
+methods require extensive data for training and are not always interpretable, with performance
+degrading when test images significantly differ from training data.
+While these methods have advanced food portion estimation, they face limitations that hinder their
+widespread use and accuracy. Stereo-based methods are impractical for single images, model-based

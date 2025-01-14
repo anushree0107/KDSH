@@ -1,0 +1,31 @@
+We have compiled an extensive dataset from 20 baseball games of the 2017 MLB postseason, available
+on YouTube, totaling over 42 hours of video. Our dataset includes two main parts: segmented videos
+intended for activity recognition and continuous videos designed for activity classification. The
+dataset’s complexity is amplified by the fact that it originates from televised baseball games, where a
+single camera perspective is shared among various activities. Additionally, there is minimal variance
+in motion and appearance among different activities, such as swinging a bat versus bunting. In
+contrast to datasets like THUMOS and ActivityNet, which encompass a broad spectrum of activities
+with diverse settings, scales, and camera angles, our dataset features activities where a single frame
+dynamics into models is beneficial for detailed activity recognition.
+1 Introduction
+Action recognition, a significant problem in computer vision, finds extensive use in sports. Profes-
+sional sporting events are extensively recorded for entertainment, and these recordings are invaluable
+for subsequent analysis by coaches, scouts, and media analysts. While numerous game statistics
+are currently gathered manually, the potential exists for these to be replaced by computer vision
+systems. Systems like PITCHf/x and Statcast have been employed by Major League Baseball (MLB)
+to automatically record pitch speed and movement, utilizing a network of high-speed cameras and
+radar to collect detailed data on each player. Access to much of this data is restricted from the public
+domain.
+Detailed Action Identification in Baseball Game
+Recordings
+Abstract
+This research introduces MLB-YouTube, a new and complex dataset created for
+nuanced activity recognition in baseball videos. This dataset is structured to
+support two types of analysis: one for classifying activities in segmented videos
+and another for detecting activities in unsegmented, continuous video streams. This
+study evaluates several methods for recognizing activities, focusing on how they
+capture the temporal organization of activities in videos. This evaluation starts
+with categorizing segmented videos and progresses to applying these methods
+to continuous video feeds. Additionally, this paper assesses the effectiveness of
+different models in the challenging task of forecasting pitch velocity and type
+using baseball broadcast videos. The findings indicate that incorporating temporal

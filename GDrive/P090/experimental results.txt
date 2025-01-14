@@ -1,0 +1,26 @@
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+ The focus of more
+recent studies has shifted towards the application of Convolutional Neural Networks (CNNs) for
+activity recognition. Two-stream CNN architectures utilize both spatial RGB frames and optical
+flow frames. To capture spatio-temporal characteristics, 3D XYT convolutional models have been
+developed. The development of these advanced CNN models has been supported by large datasets
+such as Kinetics, THUMOS, and ActivityNet.
+Several studies have investigated the aggregation of temporal features for the purpose of activity
+recognition. Research has compared several pooling techniques and determined that both Long Short-
+.
+Term Memory networks (LSTMs) and max-pooling across entire videos yielded the best outcomes. It
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL

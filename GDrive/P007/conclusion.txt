@@ -1,0 +1,19 @@
+semantic dependency parsing in PCEDT and NomBank. Future research will focus on incorporating
+additional natural language processing tasks defined using these frameworks to understand noun-noun
+compound interpretation using TL and MTL.
+9
+Several recent studies have conducted extensive experiments on the application of TL and MTL to a
+variety of NLP tasks, such as named entity recognition, semantic labeling, sentence-level sentiment
+classification, super-tagging, chunking, and semantic dependency parsing. The consensus among
+these studies is that the advantages of TL and MTL are largely contingent on the characteristics of the
+tasks involved, including the unevenness of the data distribution, the semantic relatedness between
+the source and target tasks, the learning trajectory of the auxiliary and main tasks (where target tasks
+that quickly reach a plateau benefit most from non-plateauing auxiliary tasks), and the structural
+similarity between the tasks.To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in

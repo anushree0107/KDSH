@@ -1,0 +1,33 @@
+26% of right constituents of compounds annotated as AIM occur
+in other compounds annotated as RSTR. This explains the models’ inability to learn AIM but raises
+questions about their ability to learn relational representations, which we explore further in Section
+7.3.
+Table 8: Macro-average F1 score on the test split.
+Model NomBank PCEDT
+STL 52.66 40.15
+TLE 52.83 48.34
+TLH 52.98 46.52
+TLEH 53.31 47.12
+MTLE 53.21 47.23
+MTLF 42.07 40.73
+preferences for recommendations.
+3 Experiments
+In this section, we assess the efficacy of PAAC through comprehensive experiments, aiming to address the following research
+questions:
+• How does PAAC compare to existing debiasing methods?
+• How do different designed components play roles in our proposed PAAC?
+3
+• How does PAAC alleviate the popularity bias?
+• How do different hyper-parameters affect the PAAC recommendation performance?
+3.1 Experiments Settings
+3.1.1 Datasets
+In our experiments, we use three widely public datasets: Amazon-book, Yelp2018, and Gowalla. We retained users and items with a
+minimum of 10 interactions.
+3.1.2 Baselines and Evaluation Metrics
+reveals three primary themes: elections (including terms like "voting," "winners," and "candidate"),
+government actions (including terms like "negotiations," "announcements," "meetings," and "passing
+(a law)"), and wars and violent crimes (including terms like "groups," "killing," "civilian (casualties),"
+and "arms"). Although not explicitly represented in the LDA topics, the questions address both
+domestic and international events within these broad themes.
+Table 2: Analysis of the 96,664 written justifications submitted by forecasters in our dataset. The
+readability scores indicate that most justifications are easily understood by high school students (11th

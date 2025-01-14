@@ -1,0 +1,21 @@
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.t+bu) +τt (1)
+where Wu∈Ru×dandbu∈Rdare the weight and bias to learn, dis the embedding dimension, and τt∈Rdis the corresponding
+position encoding at time t.
+4.2 Locality Enhancement with Self-Attention
+Since it is time-series data, the importance of an RSSI or accelerometer value at each point in time can be identified in relation to its
+surrounding values - such as cyclical patterns, trends, or fluctuations. Utilizing historical context that can capture local patterns on
+top of point-wise values, performance improvements in attention-based architectures can be achieved. One straightforward option is
+ The "majority vote" baseline determines the answer to a
+question based on the most frequent prediction among the forecasts. The "weighted vote" baseline,
+on the other hand, assigns weights to the probabilities in the predictions and then aggregates them.
+4.2 Neural Network Architecture
+A neural network architecture is employed, which consists of three main components: one to generate
+a representation of the question, another to generate a representation of each forecast, and an LSTM
+to process the sequence of forecasts and ultimately call the question.
+The representation of a question is obtained using BERT, followed by a fully connected layer with 256
+neurons, ReLU activation, and dropout. The representation of a forecast is created by concatenating

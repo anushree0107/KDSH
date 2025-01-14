@@ -1,0 +1,30 @@
+Generalization in ReLU Networks via Restricted
+Isometry and Norm Concentration
+Abstract
+Regression tasks, while aiming to model relationships across the entire input space,
+are often constrained by limited training data. Nevertheless, if the hypothesis func-
+tions can be represented effectively by the data, there is potential for identifying a
+model that generalizes well. This paper introduces the Neural Restricted Isometry
+Property (NeuRIPs), which acts as a uniform concentration event that ensures all
+shallow ReLU networks are sketched with comparable quality. To determine the
+sample complexity necessary to achieve NeuRIPs, we bound the covering numbers
+of the networks using the Sub-Gaussian metric and apply chaining techniques. As-
+approaches struggle with diverse food shapes, depth camera methods need specialized hardware,
+and deep learning approaches lack interpretability and struggle with out-of-distribution samples. 3D
+reconstruction offers a promising solution by providing comprehensive spatial information, adapting
+to various shapes, potentially working with single images, offering visually interpretable results,
+and enabling a standardized approach to food portion estimation. These benefits motivated the
+organization of the 3D Food Reconstruction challenge, aiming to overcome existing limitations and
+2
+develop more accurate, user-friendly, and widely applicable food portion estimation techniques,
+impacting nutritional assessment and dietary monitoring.
+3 Datasets and Evaluation Pipeline
+3.1 Dataset Description
+Deep Learning Approaches utilize neural networks trained on large image datasets for portion
+estimation. Regression networks estimate the energy value of food from single images or from an
+"Energy Distribution Map" that maps input images to energy distributions. Some networks use both
+images and depth maps to estimate energy, mass, and macronutrient content. However, deep learning
+methods require extensive data for training and are not always interpretable, with performance
+degrading when test images significantly differ from training data.
+While these methods have advanced food portion estimation, they face limitations that hinder their
+widespread use and accuracy. Stereo-based methods are impractical for single images, model-based

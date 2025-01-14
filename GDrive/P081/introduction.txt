@@ -1,0 +1,23 @@
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every
+IB=Ipop∪Iunpop ,∀i∈Ipop∧j∈Iunpop , p(i)> p(j), (2)
+where Ipop∈IBandIunpop∈IBare disjoint, with Ipopconsisting of the top x%of items in the batch. In this work, we dynamically
+divided items into popular and unpopular groups within each mini-batch based on their popularity, assigning the top 50% as popular
+items and the bottom 50% as unpopular items. This radio not only ensures equal representation of both groups in our contrastive
+learning but also allows items to be classified adaptively based on the batch’s current composition.

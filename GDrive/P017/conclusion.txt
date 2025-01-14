@@ -1,0 +1,26 @@
+This paper introduces MLB-YouTube, a novel dataset that includes densely annotated frames of activi-
+ties extracted from broadcast baseball videos. Unlike many current datasets for activity recognition or
+detection, our dataset emphasizes fine-grained activity recognition. The differences between activities
+are often minimal, primarily involving the movement of a single individual, with a consistent scene
+structure across activities. The determination of activity is based on a single camera perspective. This
+study compares various methods for temporal feature aggregation, both for classifying activities in
+segmented videos and for detecting them in continuous video streams.
+2 Related Work
+The field of activity recognition has garnered substantial attention in computer vision research. Initial
+successes were achieved with hand-engineered features such as dense trajectories.several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every
+ LSTMs performed worse than the
+baseline, likely due to overfitting, whereas learning sub-events proved beneficial. Fastballs were the
+easiest to detect (68% accuracy), followed by sliders (45%), while sinkers were the most difficult
+(12%).
+6.3 Continuous Video Activity Detection
+We evaluate models extended for continuous videos using per-frame mean average precision (mAP),
+with results shown in Table 8. This setting is more challenging than segmented videos, requiring
+the model to identify activity start and end times and handle ambiguous negative examples. All
+models improve upon the baseline per-frame classification, confirming the importance of temporal
+information.

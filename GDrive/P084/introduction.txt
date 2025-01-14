@@ -1,0 +1,20 @@
+Broader Impact
+Supervised machine learning now affects both personal and public lives significantly. Generalization is
+critical to the reliability and safety of empirically trained models. Our analysis aims to achieve a deeper
+understanding of the relationships between generalization, architectural design, and available data.
+We have discussed the concepts and demonstrated the effectiveness of using uniform concentration
+events for generalization guarantees of common supervised machine learning algorithms.
+7
+ This confirms the importance of re-weighting popular items in contrastive learning for mitigating popularity
+bias. Finally, PAAC consistently outperforms the three variants, demonstrating the effectiveness of combining supervised alignment
+and re-weighting contrastive learning. Based on the above analysis, we conclude that leveraging supervisory signals from popular
+item representations can better optimize representations for unpopular items, and re-weighting contrastive learning allows the model
+to focus on more informative or critical samples, thereby improving overall performance. All the proposed modules significantly
+contribute to alleviating popularity bias.
+Table 2: Ablation study of PAAC, highlighting the best-performing model on each dataset and metrics in bold. Specifically,
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to

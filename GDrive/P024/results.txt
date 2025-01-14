@@ -1,0 +1,25 @@
+ Reluplex has also been used to
+verify adversarial robustness. While Reluplex and other similar techniques can effectively determine
+if a network satisfies a given specification, they do not offer a way to guarantee that the network will
+meet those specifications. Therefore, additional methods are needed to adjust networks if it is found
+that they are not meeting the desired properties.
+There has been an increase in techniques for designing networks with certified adversarial robustness,
+but enforcing more general safety properties in neural networks is still largely unexplored. One ap-
+proach to achieving provably correct neural networks is through abstraction-refinement optimization.
+This approach has been applied to the ACAS-Xu dataset, but the network was not guaranteed to meet
+ x∈
+Aunsafeable ,i⇒Fi(x)<max jFj(x), where Fj(x)is the output score for the jthadvisory.
+Table 1 shows the performance of a standard, unconstrained network and our safe predictor. For both
+networks, we present the percentage accuracy (ACC) and violations (percentage of inputs for which
+the network outputs an unsafe advisory). We train and test using PyTorch with two separate datasets,
+based on the previous advisory being Clear of Conflict (COC) and Climb at 1500 ft/min (CL1500).
+As shown in the table, our safe predictor adheres to the required safeability property. Furthermore,
+note that this does not necessarily imply that we aim to use a single model to predict both label sets
+in practice.
+5 Neural Classification Models
+This section introduces the neural classification models utilized in our experiments. To discern the
+impact of TL and MTL, we initially present a single-task learning model, which acts as our baseline.
+Subsequently, we employ this same model to implement TL and MTL.
+5.1 Single-Task Learning Model
+In our single-task learning (STL) configuration, we train and fine-tune a feed-forward neural network
+inspired by the neural classifier proposed by Dima and Hinrichs (2015). This network comprises four

@@ -1,0 +1,25 @@
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in
+trained by Fares et al. (2017). If a word is not found during lookup in the embedding model, we
+check if the word is uppercased and attempt to find the lowercase version. For hyphenated words
+not found in the embedding vocabulary, we split the word at the hyphen and average the vectors of
+its parts, if they are present in the vocabulary. If the word remains unrepresented after these steps, a
+designated vector for unknown words is employed.
+5.1.1 Architecture and Hyperparameters
+Our selection of hyperparameters is informed by multiple rounds of experimentation with the single-
+task learning model, as well as the choices made by prior work. The weights of the embedding layer

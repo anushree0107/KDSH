@@ -1,0 +1,24 @@
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned
+use in safety-critical machine learning systems, demonstrating it on an aircraft collision avoidance
+problem. The novelty of our approach is its simplicity and guaranteed enforcement of specifications
+through combinations of convex output constraints during all stages of training. Future work includes
+adapting and using techniques from optimization and control barrier functions, as well as incorporating
+notions of adversarial robustness into our design, such as extending the work to bound the Lipschitz
+constant of our networks.
+Appendix A: Proof of Theorem 2.1
+Proof. Fixiand assume that x∈Ai. It follows that σi(x) = 0 , so for all b∈Owhere bi= 0,
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6

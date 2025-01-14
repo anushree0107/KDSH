@@ -1,0 +1,26 @@
+our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.
+ Besides differing in the NLP tasks they investigate, the aforementioned
+studies employ slightly varied definitions of TL and MTL. Our research aligns with certain studies in
+that we apply TL and MTL to learn different semantic annotations of noun-noun compounds using
+the same dataset. However, our experimental design is more akin to other work in that we experiment
+with initializing parameters across all layers of the neural network and concurrently train a single
+MTL model on two sets of relations.
+3 Task Definition and Dataset
+The objective of this task is to train a model to categorize the semantic relationships between pairs
+of nouns in a labeled dataset, where each pair forms a noun-noun compound. The complexity of
+Several recent studies have conducted extensive experiments on the application of TL and MTL to a
+variety of NLP tasks, such as named entity recognition, semantic labeling, sentence-level sentiment
+classification, super-tagging, chunking, and semantic dependency parsing. The consensus among
+these studies is that the advantages of TL and MTL are largely contingent on the characteristics of the
+tasks involved, including the unevenness of the data distribution, the semantic relatedness between
+the source and target tasks, the learning trajectory of the auxiliary and main tasks (where target tasks
+that quickly reach a plateau benefit most from non-plateauing auxiliary tasks), and the structural
+similarity between the tasks.

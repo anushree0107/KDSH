@@ -1,0 +1,23 @@
+the solution repels possible trajectories of iterates, thus "shielding" the solution. Later, it was noticed that, restricted to the box
+∥(x, y)∥∞<3, the above-mentioned solution is weak Minty with ρ≥2·0.477761 , which is much larger than1
+2L≈0.08. In line
+with these observations, we can see that none of the fixed step size methods with a step size bounded by1
+Lconverge. In light of this
+observation, a backtracking linesearch was proposed, which potentially allows for larger steps than predicted by the global Lipschitz
+constant.34 23.98
+20 130.96 119.83 15.59 31.05
+Table 4: Quantitative Comparison with Ground Truth Using MAPE and Chamfer Distance
+MAPE Ch. w/ t.m Ch. w/o t.m
+(%) sum mean sum mean
+10.973 0.130 0.007 1.715 0.095
+5 Second Place Team - ININ-VIAUN
+5.1 Methodology
+This section details the team’s proposed network, illustrating the step-by-step process from original
+images to final mesh models.
+5.1.1 Scale factor estimation
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.

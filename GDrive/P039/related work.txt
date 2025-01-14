@@ -1,0 +1,26 @@
+Hamming distance for near image similarity was set to 12. For Gaussian kernel radius, even numbers
+in the range [0...30] were used for detecting blurry images. The diameter for removing isolated pieces
+was set to 5%. NeuS2 was run for 15,000 iterations with a mesh resolution of 512x512, a unit cube
+"aabb scale" of 1, "scale" of 0.15, and "offset" of [0.5, 0.5, 0.5] for each food scene.
+5
+4.2.2 VolETA Results
+The team extensively validated their approach on the challenge dataset and compared their results
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38. They then projected the 3D
+object back onto the original 2D image to obtain a more precise scale for the object.
+6.2 Experimental Results
+Through a process of nonlinear optimization, the team sought to identify a transformation that
+minimizes the Chamfer distance between their mesh and the ground truth mesh. This optimization
+aimed to align the two meshes as closely as possible in three-dimensional space. Upon completion
+of this process, the average Chamfer dis- tance across the final reconstructions of the 20 objects
+amounted to 0.0032175 meters. As shown in Table 7, Team FoodRiddle achieved the best scores for

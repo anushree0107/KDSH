@@ -1,0 +1,26 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.improve its F1 scores for less common yet more challenging semantic relations.
+1 Introduction
+Noun-noun compound interpretation involves determining the semantic connection between two
+nouns (or noun phrases in multi-word compounds). For instance, in the compound "street protest,"
+the task is to identify the semantic relationship between "street" and "protest," which is a locative
+relation in this example. Given the prevalence of noun-noun compounds in natural language and its
+significance to other natural language processing (NLP) tasks like question answering and information
+retrieval, understanding noun-noun compounds has been extensively studied in theoretical linguistics,
+psycholinguistics, and computational linguistics.
+Several recent studies have conducted extensive experiments on the application of TL and MTL to a
+variety of NLP tasks, such as named entity recognition, semantic labeling, sentence-level sentiment
+classification, super-tagging, chunking, and semantic dependency parsing. The consensus among
+these studies is that the advantages of TL and MTL are largely contingent on the characteristics of the
+tasks involved, including the unevenness of the data distribution, the semantic relatedness between
+the source and target tasks, the learning trajectory of the auxiliary and main tasks (where target tasks
+that quickly reach a plateau benefit most from non-plateauing auxiliary tasks), and the structural
+similarity between the tasks.

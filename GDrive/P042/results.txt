@@ -1,0 +1,23 @@
+ Secondly, all TL models achieve improved accuracy on the NomBank test
+split, although transfer learning does not significantly enhance accuracy on the development split of
+the same dataset. The MTL models, especially MTLF, have a detrimental effect on the development
+accuracy of NomBank, yet we observe a similar improvement, as with TL, on the test split. Thirdly,
+both TL and MTL models demonstrate less consistent effects on PCEDT (on both development and
+test splits) compared to NomBank. For instance, all TL models yield an absolute improvement of
+4
+about 1.25 points in accuracy on NomBank, whereas in PCEDT, TLE clearly outperforms the other
+ Firstly, the MTLF model appears to be
+detrimental to both datasets, leading to significantly degraded F1 scores for four NomBank relations,
+including the locative modifier ARGM-LOC and the manner modifier ARGM-MNR (abbreviated as
+LOC and MNR in Table 4), which the model fails to predict altogether. This same model exhibits
+the lowest F1 score compared to all other models for two PCEDT relations: REG (expressing a
+circumstance) and PAT (patient). Considering that the MTLF model achieves the highest accuracy
+on the NomBank test split (as shown in Table 3), it becomes even more apparent that relying solely
+validation accuracy (NomBank’s or PCEDT’s) is monitored by the early stopping criterion. This
+leads to a total of four MTL models, as shown in Table 3.
+6 Experimental Results
+Tables 2 and 3 display the accuracies of the various TL and MTL models on the development and test
+splits for NomBank and PCEDT. The top row in both tables indicates the accuracy of the STL model.
+All models were trained solely on the training split. Several insights can be gleaned from these
+tables. Firstly, the accuracy of the STL models decreases when evaluated on the test split for both
+NomBank and PCEDT.

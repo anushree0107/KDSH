@@ -1,0 +1,19 @@
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples. - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e. Our goal is to learn a function f(X) that predicts Y based on the input features X.
+Considering two ML tasks, Ta and Tb, we would train two distinct models to learn separate functions
+fa and fb for predicting Ya and Yb in a single-task learning scenario. However, if Ta and Tb are
+related, either explicitly or implicitly, TL and MTL can enhance the generalization of either or both
+tasks. Two tasks are deemed related when their domains are similar but their label sets differ, or when
+their domains are dissimilar but their label sets are identical. Consequently, noun-noun compound
+interpretation using the dataset is well-suited for TL and MTL, as the training examples are identical,

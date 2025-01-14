@@ -1,0 +1,25 @@
+1 35.8 37.3
+InceptionV3 + super-events 31.5 36.2 39.6
+InceptionV3 + sub+super-events 34.2 40.2 40.9
+7 Conclusion
+This paper introduces MLB-YouTube, a novel and challenging dataset designed for detailed activity
+recognition in videos. We conduct a comparative analysis of various recognition techniques that
+employ temporal feature pooling for both segmented and continuous videos. Our findings reveal that
+learning sub-events to pinpoint temporal regions of interest significantly enhances performance in
+segmented video classification. In the context of activity detection in continuous videos, we establish
+which capture red-green-blue (RGB) and depth data 2-3 hours daily (during daylight hours at times when participants were at home).
+The videos were then manually annotated to the nearest millisecond to provide localization labels. Multiple human labelers used
+software called ELAN to watch up to 4 simultaneously-captured video files at a time. The resulting labeled data recorded the kitchen,
+hallway, dining room, living room, stairs, and porch. The duration of labeled data recorded by the cameras for PD and HC is 72.84
+and 75.31 hours, respectively, which provides a relatively balanced label set for our room-level classification. Finally, to evaluate
+of complexity: easy (200 images), medium (30 images), and hard (1 image). A
+total of 16 teams participated in the final assessment phase. The methodologies
+developed during this challenge have yielded highly encouraging outcomes in
+3D food reconstruction, showing great promise for refining portion estimation in
+dietary evaluations and nutritional tracking. Further information on this workshop
+challenge and the dataset is accessible via the provided URL.
+1 Introduction
+The convergence of computer vision technologies with culinary practices has pioneered innovative
+approaches to dietary monitoring and nutritional assessment. The MetaFood Workshop Challenge
+represents a landmark initiative in this emerging field, responding to the pressing demand for precise
+and scalable techniques for estimating food portions and monitoring nutritional consumption. Such

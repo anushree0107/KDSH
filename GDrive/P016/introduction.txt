@@ -1,0 +1,27 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.large groups, it is important to determine whether the individual inputs were made independently. If
+not, factors like group psychology and the influence of persuasive arguments can skew individual
+judgments, thus negating the positive effects of crowd wisdom.
+This paper focuses on forecasts concerning questions spanning political, economic, and social
+domains. Each forecast includes a prediction, estimating the probability of a particular event, and
+a written justification that explains the reasoning behind the prediction. Forecasts with identical
+predictions can have justifications of varying strength, which, in turn, affects the perceived reliability
+of the predictions. For instance, a justification that simply refers to an external source without
+industries as it enables them to anticipate and address potential challenges. This study focuses on
+questions spanning the political, economic, and social domains, utilizing forecasts submitted by a
+crowd of individuals without specialized training. Each forecast comprises a prediction and a natural
+language justification.
+6
+The research demonstrates that aggregating the weighted predictions of forecasters is a solid baseline
+for calling a question throughout its duration. However, models that incorporate both the question
+and the justifications achieve significantly better results, particularly during the first three quartiles of
+a question’s life. Importantly, the models developed in this study do not profile individual forecasters
+or utilize any information about their identities. This work lays the groundwork for evaluating the

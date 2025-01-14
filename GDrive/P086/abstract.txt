@@ -1,0 +1,20 @@
+their predictions on events that might not occur or have not yet occurred. The sentiment polarity of
+3
+the justifications is generally neutral. In terms of readability, both the Flesch and Dale-Chall scores
+suggest that approximately a quarter of the justifications require a college-level education for full
+comprehension.
+Regarding verbs and nouns, an analysis using WordNet lexical files reveals that the most common
+verb classes are "change" (e.g., "happen," "remain," "increase"), "social" (e.g., "vote," "support,"
+"help"), "cognition" (e.g., "think," "believe," "know"), and "motion" (e.g.02426 230×265 (294 ×431×2.353)
+7 Burger 0.1043478261 0.02435 208×264 (378 ×400×2.353)
+8 Cake 0.1276595745 0.02143 256×300 (298 ×310×4.706)
+9 Blueberry muffin 0.08759124088 0.01801 291×357 (441 ×443×2.353)
+10 Banana 0.08759124088 0.01705 315×377 (446 ×857×1.176)
+Medium 11 Salmon 0.1043478261 0.54 0 0 0.20 6.50
+Readability
+Flesch -49.68 50.33 65.76 80.62 121.22
+Dale-Chall 0.05 6.72 7.95 9.20 19.77
+Table 2 presents a fundamental analysis of the 96,664 forecast justifications in the dataset. The median
+length is relatively short, consisting of one sentence and 23 tokens. Justifications mention named
+entities less frequently than the questions themselves. Interestingly, half of the justifications contain
+at least one negation, and 25% include three or more. This suggests that forecasters sometimes base

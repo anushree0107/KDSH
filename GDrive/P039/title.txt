@@ -1,0 +1,22 @@
+A particularly difficult min-max toy example with a "Forsaken" solution was proposed and is given by:
+min
+x∈Rmax
+y∈Rx(y−0.45) + φ(x)−φ(y), (6)
+where φ(z) =1
+6z6−2
+4z4+1
+4z2−1
+2z. This problem exhibits a Stampacchia solution at (x∗, y∗)≈(0.08,0.4), but also two limit
+cycles not containing any critical point of the objective function. In addition, it was also observed that the limit cycle closer to
+ It offers a generalization of monotonicity, but in a direction distinct from the concept of Minty
+solutions, and only a limited number of studies have examined methods in this context. An anchored version of EG was studied, and
+an improved convergence rate of O(1/k2)(in terms of the squared operator norm) was shown. Similarly, an accelerated version of
+the reflected gradient method was investigated. Whether such acceleration is possible in the more general setting of weak Minty
+solutions remains an open question (any Stampacchia solution to the VI given by a negatively comonotone operator is a weak Minty
+solution).the solution repels possible trajectories of iterates, thus "shielding" the solution. Later, it was noticed that, restricted to the box
+∥(x, y)∥∞<3, the above-mentioned solution is weak Minty with ρ≥2·0.477761 , which is much larger than1
+2L≈0.08. In line
+with these observations, we can see that none of the fixed step size methods with a step size bounded by1
+Lconverge. In light of this
+observation, a backtracking linesearch was proposed, which potentially allows for larger steps than predicted by the global Lipschitz
+constant.

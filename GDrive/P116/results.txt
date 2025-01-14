@@ -1,0 +1,20 @@
+Broader Impact
+Supervised machine learning now affects both personal and public lives significantly. Generalization is
+critical to the reliability and safety of empirically trained models. Our analysis aims to achieve a deeper
+understanding of the relationships between generalization, architectural design, and available data.
+We have discussed the concepts and demonstrated the effectiveness of using uniform concentration
+events for generalization guarantees of common supervised machine learning algorithms.
+7
+the full ranking strategy, considering all non-interacted items as candidate items to avoid selection bias during the test stage. We
+repeated each experiment five times with different random seeds and reported the average scores.
+3.2 Overall Performance
+As shown in Table 1, we compare our model with several baselines across three datasets. The best performance for each metric
+is highlighted in bold, while the second best is underlined. Our model consistently outperforms all compared methods across all
+metrics in every dataset.
+•Our proposed model PAAC consistently outperforms all baselines and significantly mitigates the popularity bias. Specif-
+ically, PAAC enhances LightGCN, achieving improvements of 282.65%, 180.overrepresentation of popular items across various batches, we implement a hyperparameter x. This hyperparameter readjusts the
+classification of items within the current batch. By adjusting the hyperparameter x, we maintain a balance between different item
+popularity levels. This enhances the model’s ability to generalize across diverse item sets by accurately reflecting the popularity
+distribution in the current training context. Specifically, we denote the set of items within each batch as IB. And then we divide IB
+into a popular group Ipopand an unpopular group Iunpop based on their respective popularity levels, classifying the top x%of items
+asIpop:

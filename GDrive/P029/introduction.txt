@@ -1,0 +1,19 @@
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.to utilize a recurrent neural network such as a long-short term memory (LSTM) approach. However, in LSTM layers, the local
+context is summarized based on the previous context and the current input. Two similar patterns separated by a long period of time
+might have different contexts if they are processed by the LSTM layers. We utilize a combination of causal convolution layers and
+self-attention layers, which we name Dual Convolutional Self-Attention (DCSA). The DCSA takes in a primary input ˆx1∈RN×d
+and a secondary input ˆx2∈RN×dand yields:
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL

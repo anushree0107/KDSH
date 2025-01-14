@@ -1,0 +1,24 @@
+Detecting Medication Usage in Parkinson’s Disease Through
+Multi-modal Indoor Positioning: A Pilot Study in a Naturalistic
+Environment
+Abstract
+Parkinson’s disease (PD) is a progressive neurodegenerative disorder that leads to motor symptoms, including gait
+impairment. The effectiveness of levodopa therapy, a common treatment for PD, can fluctuate, causing periods of
+improved mobility ("on" state) and periods where symptoms re-emerge ("off" state). These fluctuations impact
+gait speed and increase in severity as the disease progresses. This paper proposes a transformer-based method that
+uses both Received Signal Strength Indicator (RSSI) and accelerometer data from wearable devices to enhance
+indoor localization accuracy. Evaluation on this dataset, including individuals with and
+without PD, demonstrates that our network outperforms other methods across all cross-validation categories.
+(2) We demonstrate how accurate room-level localization predictions can be transformed into in-home gait speed biomarkers (e.g.,
+number of room-to-room transitions, room-to-room transition duration). These biomarkers can effectively classify the OFF or ON
+medication state of a PD patient from this pilot study data.
+2 Related Work
+Extensive research has utilized home-based passive sensing systems to evaluate how the activities and behavior of individuals with
+neurological conditions, primarily cognitive dysfunction, change over time. However, there is limited work assessing room use in
+the home setting in people with Parkinson’s.
+localization accuracy, accelerometer data from wearable devices, along with RSSI, can be used to distinguish different activities
+(e.g., walking vs. standing). Since some activities are associated with specific rooms (e.g., stirring a pan on the stove is likely to
+occur in a kitchen), accelerometer data can enhance RSSI’s ability to differentiate between adjacent rooms, an area where RSSI
+alone may be insufficient.
+The heterogeneity of PD, where symptoms and their severity vary between patients, poses a challenge for generalizing accelerometer
+data across different individuals. Severe symptoms, such as tremors, can introduce bias and accumulated errors in accelerometer data,

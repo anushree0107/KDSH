@@ -1,0 +1,18 @@
+smartphone IMU sensor data and Wi-Fi-received signal strength indication (RSSI) measurements to estimate the exact location (in
+Euclidean position X, Y) of a person in indoor environments. The proposed sensor fusion framework uses location fingerprinting in
+combination with a pedestrian dead reckoning (PDR) algorithm to reduce positioning errors.
+Looking at this multi-modality classification/regression problem from a time series perspective, there has been a lot of exploration
+in tackling a problem where each modality can be categorized as multivariate time series data. LSTM and attention layers are
+often used in parallel to directly transform raw multivariate time series data into a low-dimensional feature representation for each
+modality.It has been suggested that we cannot rely on RSSI alone for indoor localization in home environments for PD subjects due to
+shadowing rooms with tight separation. Some researchers combine RSSI signals and inertial measurement unit (IMU) data to test
+the viability of leveraging other sensors in aiding the positioning system to produce a more accurate location estimate. Classic
+machine learning approaches such as Random Forest (RF), Artificial Neural Network (ANN), and k-Nearest Neighbor (k-NN) are
+tested, and the result shows that the RF outperforms other methods in tracking a person in indoor environments. Others combine
+undertake scripted activities such as moving from room to room) to fully validate the performance of our approach in other settings.
+6 Conclusion
+We have presented the MDCSA model, a new deep learning approach for indoor localization utilizing RSSI and wrist-worn
+accelerometer data. The evaluation on our unique real-world free-living pilot dataset, which includes subjects with and without PD,
+shows that MDCSA achieves state-of-the-art accuracy for indoor localization. The availability of accelerometer data does indeed
+enrich the RSSI features, which, in turn, improves the accuracy of indoor localization.
+Accurate room localization using these data modalities has a wide range of potential applications within healthcare. This could

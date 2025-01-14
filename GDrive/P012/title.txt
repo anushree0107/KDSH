@@ -1,0 +1,31 @@
+One should notice that, in Theorem 1, there is a tradeoff between the parameter s, which limits the
+deviation |∥ · ∥ m− ∥ · ∥ μ|, and the confidence parameter u. The lower bound on the corresponding
+sample size mis split into two scaling regimes when understanding the quotient uof|∥·∥m−∥·∥ μ|/s
+as a precision parameter. While in the regime of low deviations and high probabilities the sample size
+mmust scale quadratically with u/s, in the regime of less precise statements one observes a linear
+scaling.
+3
+4 Uniform Generalization of Sublevel Sets of the Empirical Risk
+Laplacian Smoothing method adjusts the position of each vertex to the average of its neighboring
+vertices:
+V(new)
+i =V(old)
+i+λ
+1
+|N(i)|X
+j∈N(i)V(old)
+j−V(old)
+i
+ (5)
+In their implementation, the smoothing factor λis set to 0.2, and 10 iterations are performed.
+5.2 Experimental Results
+5.2.1 Estimated scale factor
+The scale factors estimated using the described method are shown in Table 5. Each image and the
+It could be argued that all the localization models compared in Table 1 might not be statistically different due to the fairly high
+standard deviation across all types of cross-validations, which is caused by the relatively small number of participants. In order to
+compare multiple models over cross-validation sets and show the statistical significance of our proposed model, we perform the
+Friedman test to first reject the null hypothesis. We then performed a pairwise statistical comparison: the Wilcoxon signed-rank test
+with Holm’s alpha correction.
+9
+Table 4: PD participant room transition duration with ON and OFF medications comparison using Wilcoxon signed rank tests.
+OFF transitions Mean transition duration ON transitions Mean transition duration W z

@@ -1,0 +1,22 @@
+their predictions on events that might not occur or have not yet occurred. The sentiment polarity of
+3
+the justifications is generally neutral. In terms of readability, both the Flesch and Dale-Chall scores
+suggest that approximately a quarter of the justifications require a college-level education for full
+comprehension.
+Regarding verbs and nouns, an analysis using WordNet lexical files reveals that the most common
+verb classes are "change" (e.g., "happen," "remain," "increase"), "social" (e.g., "vote," "support,"
+"help"), "cognition" (e.g., "think," "believe," "know"), and "motion" (e.g.02021 249×318 (186 ×95×0.987)
+19 Waffle 0.01034482759 0.01902 294×338 (465 ×537×0.8)
+20 Pizza 0.01034482759 0.01913 292×336 (442 ×651×1.176)
+After finding keyframes, PixSfM estimated the poses and point cloud. After generating scaled meshes,
+the team calculated volumes and Chamfer distance with and without transformation metrics. Meshes
+were registered with ground truth meshes using ICP to obtain transformation metrics.
+Table 3 presents quantitative comparisons of the team’s volumes and Chamfer distance with and
+without estimated transformation metrics from ICP.54 0 0 0.20 6.50
+Readability
+Flesch -49.68 50.33 65.76 80.62 121.22
+Dale-Chall 0.05 6.72 7.95 9.20 19.77
+Table 2 presents a fundamental analysis of the 96,664 forecast justifications in the dataset. The median
+length is relatively short, consisting of one sentence and 23 tokens. Justifications mention named
+entities less frequently than the questions themselves. Interestingly, half of the justifications contain
+at least one negation, and 25% include three or more. This suggests that forecasters sometimes base

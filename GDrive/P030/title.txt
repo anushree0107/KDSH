@@ -1,0 +1,26 @@
+PixSfM, which involves extracting features using SuperPoint, matching them with SuperGlue, and
+refining them. The outputs are the camera poses {Cj}k
+j=1, crucial for understanding the scene’s
+spatial layout.
+4
+In parallel, the team uses a tool called SAM for reference object segmentation. SAM segments
+the reference object with a user-provided prompt, producing a reference object mask MRfor each
+keyframe. This mask helps track the reference object across all frames. The XMem++ method
+extends the reference object mask MRto all frames, creating a comprehensive set of reference object
+masks {MR
+i}n
+i=1.{Rf, Rr}for the reference and food objects, providing detailed 3D representations. The team uses the
+"Remove Isolated Pieces" technique to refine the meshes. Given that the scenes contain only one food
+item, the diameter threshold is set to 5% of the mesh size. This method deletes isolated connected
+components with diameters less than or equal to 5%, resulting in a cleaned mesh {RCf, RCr}. This
+step ensures that only significant parts of the mesh are retained.
+The team manually identifies an initial scaling factor Susing the reference mesh via MeshLab. This
+factor is fine-tuned to Sfusing depth information and food and reference masks, ensuring accurate
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in

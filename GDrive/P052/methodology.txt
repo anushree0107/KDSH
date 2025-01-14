@@ -1,0 +1,24 @@
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+We use PyTorch for defining our networks and performing parameter optimization. We optimize both
+the unconstrained and safe predictors using the asymmetric loss function to select advisories while
+also accurately predicting scores. The data is split using an 80/20 train/test split with a random seed
+of 0. The optimizer is ADAM with a learning rate of 0.0003 and batch size of 216, with training for
+500 epochs.
+Appendix A: Proof of Theorem 2.1
+Proof. Letx∈Ai. Then, σi(x) = 0 , and for all b∈Owhere bi= 0,wb(x) = 0 . Thus,
+F(x) =X
+neural network configurations, except for the one using only predictions and justifications.
+**Encoding Questions and Justifications** The neural network that only utilizes the prediction
+to represent a forecast surpasses both baseline methods. Notably, integrating the question, the
+justification, or both into the forecast representation yields further improvements. These results
+indicate that incorporating the question and forecaster-provided justifications into the model enhances
+the accuracy of question calling.
+**Calling Questions Throughout Their Life** When examining the results across the four quartiles of
+a question’s duration, it’s observed that while using active forecasts is beneficial across all quartiles
+for both baselines and all network configurations, the neural networks surprisingly outperform the

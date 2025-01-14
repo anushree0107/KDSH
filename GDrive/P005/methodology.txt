@@ -1,0 +1,32 @@
+PixSfM, which involves extracting features using SuperPoint, matching them with SuperGlue, and
+refining them. The outputs are the camera poses {Cj}k
+j=1, crucial for understanding the scene’s
+spatial layout.
+4
+In parallel, the team uses a tool called SAM for reference object segmentation. SAM segments
+the reference object with a user-provided prompt, producing a reference object mask MRfor each
+keyframe. This mask helps track the reference object across all frames. The XMem++ method
+extends the reference object mask MRto all frames, creating a comprehensive set of reference object
+masks {MR
+i}n
+i=1. The random sample x∈Rdand label y∈Rfollow a joint distribution μsuch that
+the marginal distribution μxof sample x is standard Gaussian with density
+1
+(2π)d/2exp
+−∥x∥2
+2
+.
+As available data, we assume independent copies {(xj, yj)}m
+j=1of the random pair (x, y), each
+distributed by μ.
+3 Concentration of the Empirical Norm
+Supervised learning algorithms interpolate labels yfor samples x, both distributed jointly by μon
+X × Y . This task is often solved under limited data accessibility. The training data, respecting
+in the label sets, where it exists, can be leveraged through transfer and multi-task learning, especially
+since the overall distribution of relations differs between the two frameworks.
+4 Transfer vs. Multi-Task Learning
+In this section, we employ the terminology and definitions established by Pan and Yang (2010) to
+articulate our framework for transfer and multi-task learning. Our classification task can be described
+in terms of all training pairs (X, Y) and a probability distribution P(X), where X represents the input
+feature space, Y denotes the set of all labels, and N is the training data size. The domain of a task is
+defined by X, P(X).

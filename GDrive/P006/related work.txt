@@ -1,0 +1,24 @@
+the full ranking strategy, considering all non-interacted items as candidate items to avoid selection bias during the test stage. We
+repeated each experiment five times with different random seeds and reported the average scores.
+3.2 Overall Performance
+As shown in Table 1, we compare our model with several baselines across three datasets. The best performance for each metric
+is highlighted in bold, while the second best is underlined. Our model consistently outperforms all compared methods across all
+metrics in every dataset.
+•Our proposed model PAAC consistently outperforms all baselines and significantly mitigates the popularity bias. Specif-
+ically, PAAC enhances LightGCN, achieving improvements of 282.65%, 180.{Rf, Rr}for the reference and food objects, providing detailed 3D representations. The team uses the
+"Remove Isolated Pieces" technique to refine the meshes. Given that the scenes contain only one food
+item, the diameter threshold is set to 5% of the mesh size. This method deletes isolated connected
+components with diameters less than or equal to 5%, resulting in a cleaned mesh {RCf, RCr}. This
+step ensures that only significant parts of the mesh are retained.
+The team manually identifies an initial scaling factor Susing the reference mesh via MeshLab. This
+factor is fine-tuned to Sfusing depth information and food and reference masks, ensuring accurate
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

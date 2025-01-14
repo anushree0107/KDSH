@@ -1,0 +1,24 @@
+A key reason for utilizing multi-task learning is to enhance generalization by making use of the
+domain-specific details present in the training data of related tasks. In this study, we demonstrate that
+TL and MTL can serve as a form of regularization, enabling the prediction of infrequent relations
+within a dataset marked by a highly skewed distribution of relations. This dataset is particularly
+well-suited for TL and MTL experimentation, as elaborated in Section 3.
+Our contributions are summarized as follows:
+1. Through meticulous analysis of results, we discover that TL and MTL, especially when applied
+to the embedding layer, enhance overall accuracy and F1 scores for less frequent relations in a
+Several recent studies have conducted extensive experiments on the application of TL and MTL to a
+variety of NLP tasks, such as named entity recognition, semantic labeling, sentence-level sentiment
+classification, super-tagging, chunking, and semantic dependency parsing. The consensus among
+these studies is that the advantages of TL and MTL are largely contingent on the characteristics of the
+tasks involved, including the unevenness of the data distribution, the semantic relatedness between
+the source and target tasks, the learning trajectory of the auxiliary and main tasks (where target tasks
+that quickly reach a plateau benefit most from non-plateauing auxiliary tasks), and the structural
+similarity between the tasks. Besides differing in the NLP tasks they investigate, the aforementioned
+studies employ slightly varied definitions of TL and MTL. Our research aligns with certain studies in
+that we apply TL and MTL to learn different semantic annotations of noun-noun compounds using
+the same dataset. However, our experimental design is more akin to other work in that we experiment
+with initializing parameters across all layers of the neural network and concurrently train a single
+MTL model on two sets of relations.
+3 Task Definition and Dataset
+The objective of this task is to train a model to categorize the semantic relationships between pairs
+of nouns in a labeled dataset, where each pair forms a noun-noun compound. The complexity of

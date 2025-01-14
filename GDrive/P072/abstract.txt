@@ -1,0 +1,25 @@
+ Reluplex has also been used to
+verify adversarial robustness. While Reluplex and other similar techniques can effectively determine
+if a network satisfies a given specification, they do not offer a way to guarantee that the network will
+meet those specifications. Therefore, additional methods are needed to adjust networks if it is found
+that they are not meeting the desired properties.
+There has been an increase in techniques for designing networks with certified adversarial robustness,
+but enforcing more general safety properties in neural networks is still largely unexplored. One ap-
+proach to achieving provably correct neural networks is through abstraction-refinement optimization.
+This approach has been applied to the ACAS-Xu dataset, but the network was not guaranteed to meet
+ These models may be required
+to satisfy specific input-output specifications to ensure the algorithms comply with physical laws,
+can be executed safely, and are consistent with prior domain knowledge. Furthermore, these models
+should demonstrate adversarial robustness, meaning their outputs should not change abruptly within
+small input regions – a property that neural networks often fail to satisfy.
+Recent studies have shown the capacity to verify formally input-output specifications and adversarial
+robustness properties of neural networks. For instance, the Satisability Modulo Theory (SMT) solver
+Reluplex was employed to verify properties of networks being used in the Next-Generation Aircraft
+Collision Avoidance System for Unmanned aircraft (ACAS Xu).use in safety-critical machine learning systems, demonstrating it on an aircraft collision avoidance
+problem. The novelty of our approach is its simplicity and guaranteed enforcement of specifications
+through combinations of convex output constraints during all stages of training. Future work includes
+adapting and using techniques from optimization and control barrier functions, as well as incorporating
+notions of adversarial robustness into our design, such as extending the work to bound the Lipschitz
+constant of our networks.
+Appendix A: Proof of Theorem 2.1
+Proof. Fixiand assume that x∈Ai. It follows that σi(x) = 0 , so for all b∈Owhere bi= 0,

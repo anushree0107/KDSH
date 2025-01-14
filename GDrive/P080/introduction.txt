@@ -1,0 +1,31 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.
+The Importance of Written Explanations in
+Aggregating Crowdsourced Predictions
+Abstract
+This study demonstrates that incorporating the written explanations provided by
+individuals when making predictions enhances the accuracy of aggregated crowd-
+sourced forecasts. The research shows that while majority and weighted vote
+methods are effective, the inclusion of written justifications improves forecast
+accuracy throughout most of a question’s duration, with the exception of its final
+phase. Furthermore, the study analyzes the attributes that differentiate reliable and
+unreliable justifications.
+1 Introduction
+The concept of the "wisdom of the crowd" posits that combining information from numerous non-
+expert individuals can produce answers that are as accurate as, or even more accurate than, those

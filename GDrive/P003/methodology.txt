@@ -1,0 +1,35 @@
+ This ensures consistent reference object identification throughout the dataset.
+To create RGBA images, the team combines RGB images, reference object masks {MR
+i}n
+i=1, and
+food object masks {MF
+i}n
+i=1. This step, denoted as {IR
+i}n
+i=1, integrates various data sources into a
+unified format for further processing.
+The team converts the RGBA images {IR
+i}n
+i=1and camera poses {Cj}k
+j=1into meaningful metadata
+and modeled data Dm. This transformation facilitates accurate scene reconstruction.
+The modeled data Dmis input into NeuS2 for mesh reconstruction. NeuS2 generates colorful meshes
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.Participants were tasked with creating 3D models of 20 distinct food items from 2D images, mim-
+icking scenarios where mobile devices equipped with depth-sensing cameras are used for dietary
+.
+recording and nutritional tracking. The challenge was segmented into three tiers of difficulty based
+on the number of images provided: approximately 200 images for easy, 30 for medium, and a single
+top-view image for hard. This design aimed to rigorously test the adaptability and resilience of
+proposed solutions under various realistic conditions. A notable feature of this challenge was the use
+of a visible checkerboard for physical referencing and the provision of depth images for each frame,

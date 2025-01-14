@@ -1,0 +1,29 @@
+trained by Fares et al. (2017). If a word is not found during lookup in the embedding model, we
+check if the word is uppercased and attempt to find the lowercase version. For hyphenated words
+not found in the embedding vocabulary, we split the word at the hyphen and average the vectors of
+its parts, if they are present in the vocabulary. If the word remains unrepresented after these steps, a
+designated vector for unknown words is employed.
+5.1.1 Architecture and Hyperparameters
+Our selection of hyperparameters is informed by multiple rounds of experimentation with the single-
+task learning model, as well as the choices made by prior work. The weights of the embedding layer
+ Besides differing in the NLP tasks they investigate, the aforementioned
+studies employ slightly varied definitions of TL and MTL. Our research aligns with certain studies in
+that we apply TL and MTL to learn different semantic annotations of noun-noun compounds using
+the same dataset. However, our experimental design is more akin to other work in that we experiment
+with initializing parameters across all layers of the neural network and concurrently train a single
+MTL model on two sets of relations.
+3 Task Definition and Dataset
+The objective of this task is to train a model to categorize the semantic relationships between pairs
+of nouns in a labeled dataset, where each pair forms a noun-noun compound. The complexity of
+Advanced techniques for through and contextually
+Interpreting Noun-Noun Compounds
+Abstract
+This study examines the effectiveness of transfer learning and multi-task learning
+in the context of a complex semantic classification problem: understanding the
+meaning of noun-noun compounds. Through a series of detailed experiments and
+an in-depth analysis of errors, we demonstrate that employing transfer learning by
+initializing parameters and multi-task learning through parameter sharing enables a
+neural classification model to better generalize across a dataset characterized by a
+highly uneven distribution of semantic relationships. Furthermore, we illustrate
+how utilizing dual annotations, which involve two distinct sets of relations applied
+to the same compounds, can enhance the overall precision of a neural classifier and

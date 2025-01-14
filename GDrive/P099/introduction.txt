@@ -1,0 +1,29 @@
+Additionally, we compare a bi-directional LSTM with 512 hidden units, using the final hidden state
+as input to a fully-connected layer for classification. We frame our tasks as multi-label classification
+and train these models to minimize binary cross-entropy:
+L(v) =X
+czclog(p(c|G(v))) + (1 −zc) log(1 −p(c|G(v)))
+where G(v)is the function that pools the temporal information, and zcis the ground truth label for
+class c.
+5 Activity Detection in Continuous Videos
+Detecting activities in continuous videos poses a greater challenge. The goal here is to classify each
+frame according to the activities occurring. Unlike segmented videos, continuous videos feature
+ The focus of more
+recent studies has shifted towards the application of Convolutional Neural Networks (CNNs) for
+activity recognition. Two-stream CNN architectures utilize both spatial RGB frames and optical
+flow frames. To capture spatio-temporal characteristics, 3D XYT convolutional models have been
+developed. The development of these advanced CNN models has been supported by large datasets
+such as Kinetics, THUMOS, and ActivityNet.
+Several studies have investigated the aggregation of temporal features for the purpose of activity
+recognition. Research has compared several pooling techniques and determined that both Long Short-
+.
+Term Memory networks (LSTMs) and max-pooling across entire videos yielded the best outcomes. It
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or

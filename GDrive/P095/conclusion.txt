@@ -1,0 +1,26 @@
+ Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.
+3 53.4 57.2
+I3D + pyramid 53.2 56.7 58.7
+I3D + LSTM 48.2 53.1 53.1
+I3D + temporal conv 52.8 57.1 58.4
+I3D + sub-events 55.5 61.2 61.3
+Table 5 shows the average precision for each activity class. Learning temporal structure is particularly
+beneficial for frame-based features (e.g., InceptionV3), which capture less temporal information
+5
+compared to segment-based features (e.g., I3D). Sub-event learning significantly aids in detecting
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to

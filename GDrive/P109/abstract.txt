@@ -1,0 +1,24 @@
+ This confirms the importance of re-weighting popular items in contrastive learning for mitigating popularity
+bias. Finally, PAAC consistently outperforms the three variants, demonstrating the effectiveness of combining supervised alignment
+and re-weighting contrastive learning. Based on the above analysis, we conclude that leveraging supervisory signals from popular
+item representations can better optimize representations for unpopular items, and re-weighting contrastive learning allows the model
+to focus on more informative or critical samples, thereby improving overall performance. All the proposed modules significantly
+contribute to alleviating popularity bias.
+Table 2: Ablation study of PAAC, highlighting the best-performing model on each dataset and metrics in bold. Specifically,
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.

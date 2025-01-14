@@ -1,0 +1,23 @@
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.PCEDT have distinctly high ratios compared to other relations in Figure 2. These relations also
+have the second-highest F1 score in their datasets—except for STL on PCEDT (see Tables 4 and
+5). Lexical memorization is therefore a likely cause of these high F1 scores. We also observed that
+lower ratios of relation-specific constituents correlate with lower F1 scores, such as APP and REG in
+PCEDT. Based on these insights, we can’t dismiss the possibility that our models show some degree
+of lexical memorization, despite manual analysis also presenting cases where models demonstrate
+generalization and correct predictions in situations where lexical memorization is impossible.
+8 Conclusion
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in

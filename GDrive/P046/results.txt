@@ -1,0 +1,24 @@
+ x∈
+Aunsafeable ,i⇒Fi(x)<max jFj(x), where Fj(x)is the output score for the jthadvisory.
+Table 1 shows the performance of a standard, unconstrained network and our safe predictor. For both
+networks, we present the percentage accuracy (ACC) and violations (percentage of inputs for which
+the network outputs an unsafe advisory). We train and test using PyTorch with two separate datasets,
+based on the previous advisory being Clear of Conflict (COC) and Climb at 1500 ft/min (CL1500).
+As shown in the table, our safe predictor adheres to the required safeability property. Furthermore,
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+suming the NeuRIPs event, we then provide bounds on the expected risk, applicable
+to networks within any sublevel set of the empirical risk. Our results show that all
+networks with sufficiently small empirical risk achieve uniform generalization.
+1 Introduction
+A fundamental requirement of any scientific model is a clear evaluation of its limitations. In recent
+years, supervised machine learning has seen the development of tools for automated model discovery
+from training data. However, these methods often lack a robust theoretical framework to estimate
+model limitations. Statistical learning theory quantifies the limitation of a trained model by the
+generalization error. This theory uses concepts such as the VC-dimension and Rademacher complexity
+to analyze generalization error bounds for classification problems.

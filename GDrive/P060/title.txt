@@ -1,0 +1,30 @@
+L/2,L/4, and L/8, resulting in 14 segments per window. Max-pooling is applied to each segment,
+and the pooled features are concatenated, yielding a 14×D-dimensional representation for each
+window, which is then used as input to the classifier.
+For temporal convolutional models in continuous videos, we modify the segmented video approach by
+learning a temporal convolutional kernel of length Land convolving it with the input video features.
+This operation transforms input of size T×Dinto output of size T×D, followed by a per-frame
+classifier. This enables the model to aggregate local temporal information.
+one of the feature pooling methods, and zt,cis the ground truth class at time t.
+A method to learn ’super-events’ (i.e., global video context) has been introduced and shown to be
+effective for activity detection in continuous videos. This approach involves learning a set of temporal
+structure filters modeled as NCauchy distributions. Each distribution is defined by a center xnand a
+width γn. Given the video length T, the filters are constructed by:
+xn=(T−1)(tanh( x′
+n) + 1)
+2
+fn(t) =1
+Znγn
+sequential processing of video features, whereas other methods can be fully parallelized.
+Table 3: Additional parameters required for models when added to the base model (e.g., I3D or
+Inception V3).
+Model # Parameters
+Max/Mean Pooling 16K
+Pyramid Pooling 115K
+LSTM 10.5M
+Temporal Conv 31.5M
+Sub-events 36K
+Table 4: Mean Average Precision (mAP) results on segmented videos for multi-label classification.
+Learning sub-intervals for pooling is found to be crucial for activity recognition.
+Method RGB Flow Two-stream
+Random 16.3 16.3 16.3

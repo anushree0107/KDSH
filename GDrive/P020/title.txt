@@ -1,0 +1,28 @@
+Generalization in ReLU Networks via Restricted
+Isometry and Norm Concentration
+Abstract
+Regression tasks, while aiming to model relationships across the entire input space,
+are often constrained by limited training data. Nevertheless, if the hypothesis func-
+tions can be represented effectively by the data, there is potential for identifying a
+model that generalizes well. This paper introduces the Neural Restricted Isometry
+Property (NeuRIPs), which acts as a uniform concentration event that ensures all
+shallow ReLU networks are sketched with comparable quality. To determine the
+sample complexity necessary to achieve NeuRIPs, we bound the covering numbers
+of the networks using the Sub-Gaussian metric and apply chaining techniques. As-
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned
+Table 9 shows that Transfer Learning (TL) and Multi-Task Learning (MTL) approaches reduce
+generalization error in NomBank across all scenarios, with the exception of TLH and TLEH for
+completely unseen compounds, where error increases. The greatest error reductions are achieved
+by MTL models across all three types of unseen compounds. Specifically, MTLE reduces the error
+by approximately six points for compounds with unseen right constituents and by eleven points for
+fully unseen compounds. Moreover, MTLF reduces the error by five points when the left constituent
+is unseen. It’s important to interpret these results in conjunction with the Count row in Table 9 for
+a comprehensive view.

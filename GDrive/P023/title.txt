@@ -1,0 +1,30 @@
+ Next, ICP registration is performed for further alignment, significantly
+reducing the Chamfer distance. Finally, gradient descent is used for additional fine-tuning to obtain
+the final transformation matrix.
+The total Chamfer distance between all 18 predicted models and the ground truths is 0.069441169.
+8
+Table 5: Estimated Scale Factors
+Object Index Food Item Scale Factor
+1 Strawberry 0.060058
+2 Cinnamon bun 0.081829
+3 Pork rib 0.073861
+4 Corn 0.083594
+5 French toast 0.078632
+6 Sandwich 0.088368
+7 Burger 0.103124
+8 Cake 0.068496
+L, which one can typically
+only hope for in adaptive methods. Our EG+ method with adaptive step size accomplishes this even without the added expense of a
+backtracking linesearch.article graphicx
+7
+L′
+unpop =X
+i∈Iunpoplogexp(h′
+ihi/τ)P
+j∈Iunpopexp(h′
+ihj/τ) +βP
+j∈Ipopexp(h′
+ihj/τ), (5)
+where the parameter βranges from 0 to 1, controlling the negative sample weighting in the contrastive loss. When β= 0, it means
+that only intra-group uniformity optimization is performed. Conversely, when β= 1, it means equal treatment of both popular and
+unpopular items in terms of their impact on positive samples. The setting of βallows for a flexible adjustment between prioritizing

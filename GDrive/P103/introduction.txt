@@ -1,0 +1,19 @@
+semantic dependency parsing in PCEDT and NomBank. Future research will focus on incorporating
+additional natural language processing tasks defined using these frameworks to understand noun-noun
+compound interpretation using TL and MTL.
+9
+Several recent studies have conducted extensive experiments on the application of TL and MTL to a
+variety of NLP tasks, such as named entity recognition, semantic labeling, sentence-level sentiment
+classification, super-tagging, chunking, and semantic dependency parsing. The consensus among
+these studies is that the advantages of TL and MTL are largely contingent on the characteristics of the
+tasks involved, including the unevenness of the data distribution, the semantic relatedness between
+the source and target tasks, the learning trajectory of the auxiliary and main tasks (where target tasks
+that quickly reach a plateau benefit most from non-plateauing auxiliary tasks), and the structural
+similarity between the tasks.The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are

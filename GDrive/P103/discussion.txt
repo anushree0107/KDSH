@@ -1,0 +1,26 @@
+ "go," "come," "leave").
+The most frequent noun classes are "act" (e.g., "election," "support," "deal"), "communication" (e.g.,
+"questions," "forecast," "news"), "cognition" (e.g., "point," "issue," "possibility"), and "group" (e.g.,
+"government," "people," "party").
+4 Experiments and Results
+Experiments are conducted to address the challenge of accurately calling a question throughout
+its duration. The input consists of the question itself and the associated forecasts (predictions and
+justifications), while the output is an aggregated answer to the question derived from all forecasts.
+industries as it enables them to anticipate and address potential challenges. This study focuses on
+questions spanning the political, economic, and social domains, utilizing forecasts submitted by a
+crowd of individuals without specialized training. Each forecast comprises a prediction and a natural
+language justification.
+6
+The research demonstrates that aggregating the weighted predictions of forecasters is a solid baseline
+for calling a question throughout its duration. However, models that incorporate both the question
+and the justifications achieve significantly better results, particularly during the first three quartiles of
+a question’s life. Importantly, the models developed in this study do not profile individual forecasters
+or utilize any information about their identities. This work lays the groundwork for evaluating the
+•Different metrics across various datasets show varying improvements in model performance. This suggests that different
+debiasing methods may need distinct optimization strategies for models. Additionally, we observe varying effects of PAAC
+across different datasets. This difference could be due to the sparser nature of the Gowalla dataset. Conversely, our model
+can directly provide supervisory signals for unpopular items and conduct intra-group optimization, consistently maintaining
+optimal performance across all metrics on the three datasets.
+3.3 Ablation Study
+To better understand the effectiveness of each component in PAAC, we conduct ablation studies on three datasets. Table 2 presents a
+comparison between PAAC and its variants on recommendation performance.

@@ -1,0 +1,31 @@
+isolated piece removal and scaling factor adjustments, enhance accuracy. This approach provides a
+thorough solution for accurate food volume assessment, with potential uses in nutrition analysis.
+4.1.2 The Team’s Proposal: VolETA
+The team starts by acquiring input data, specifically RGBD images and corresponding food object
+masks. The RGBD images, denoted as ID={IDi}n
+i=1, where nis the total number of frames,
+provide depth information alongside RGB images. The food object masks, {Mf
+i}n
+i=1, help identify
+regions of interest within these images.
+Next, the team selects keyframes. From the set {IDi}n
+i=1, keyframes {IK
+j}k
+j=1⊆ {IDi}n
+i=1are
+chosen. A method is implemented to detect and remove duplicate and blurry images, ensuring
+high-quality frames. This involves applying a Gaussian blurring kernel followed by the fast Fourier
+transform method. Near-Image Similarity uses perceptual hashing and Hamming distance threshold-
+ing to detect similar images and retain overlapping ones. Duplicates and blurry images are excluded
+to maintain data integrity and accuracy.
+Using the selected keyframes {IK
+j}k
+j=1, the team estimates camera poses through a method called
+framework used in the challenge, and Sections 4, 5, and 6 discuss the methodologies and findings of
+the top three teams (V olETA, ININ-VIAUN, and FoodRiddle), respectively.
+2 Related Work
+Estimating food portions is a crucial part of image-based dietary assessment, aiming to determine the
+volume, energy content, or macronutrients directly from images of meals. Unlike the well-studied
+task of food recognition, estimating food portions is particularly challenging due to the lack of 3D
+information and physical size references necessary for accurately judging the actual size of food
+portions. Accurate portion size estimation requires understanding the volume and density of food,

@@ -1,0 +1,22 @@
+ For instance, the temporal and locative relations in
+NomBank (ARGM-TMP and ARGM-LOC, respectively) and their PCEDT counterparts (TWHEN
+and LOC) exhibit relatively consistent behavior across frameworks, as they annotate many of the
+same compounds. However, some relations that are theoretically similar do not align well in practice.
+For example, the functor AIM in PCEDT and the modifier argument ARGM-PNC in NomBank
+express a somewhat related semantic concept (purpose), but there is minimal overlap between the
+sets of compounds they annotate. Nevertheless, it is reasonable to assume that the semantic similarity
+their predictions on events that might not occur or have not yet occurred. The sentiment polarity of
+3
+the justifications is generally neutral. In terms of readability, both the Flesch and Dale-Chall scores
+suggest that approximately a quarter of the justifications require a college-level education for full
+comprehension.
+Regarding verbs and nouns, an analysis using WordNet lexical files reveals that the most common
+verb classes are "change" (e.g., "happen," "remain," "increase"), "social" (e.g., "vote," "support,"
+"help"), "cognition" (e.g., "think," "believe," "know"), and "motion" (e.g.5
+Appendix C: Details of VerticalCAS Experiment
+C.1 Safeability Constraints
+The “safeability” property from prior work can be encoded into a set of input-output constraints. The
+“safeable region” for a given advisory is the set of input space locations where that advisory can be
+chosen, for which future advisories exist that will prevent an NMAC. If no future advisories exist for
+preventing an NMAC, the advisory is deemed “unsafeable,” and the corresponding input region is the
+“unsafeable region.” Figure 5 shows an example of these regions for the CL1500 advisory.

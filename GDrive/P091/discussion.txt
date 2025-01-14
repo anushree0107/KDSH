@@ -1,0 +1,24 @@
+trained by Fares et al. (2017). If a word is not found during lookup in the embedding model, we
+check if the word is uppercased and attempt to find the lowercase version. For hyphenated words
+not found in the embedding vocabulary, we split the word at the hyphen and average the vectors of
+its parts, if they are present in the vocabulary. If the word remains unrepresented after these steps, a
+designated vector for unknown words is employed.
+5.1.1 Architecture and Hyperparameters
+Our selection of hyperparameters is informed by multiple rounds of experimentation with the single-
+task learning model, as well as the choices made by prior work. The weights of the embedding layer
+A key reason for utilizing multi-task learning is to enhance generalization by making use of the
+domain-specific details present in the training data of related tasks. In this study, we demonstrate that
+TL and MTL can serve as a form of regularization, enabling the prediction of infrequent relations
+within a dataset marked by a highly skewed distribution of relations. This dataset is particularly
+well-suited for TL and MTL experimentation, as elaborated in Section 3.
+Our contributions are summarized as follows:
+1. Through meticulous analysis of results, we discover that TL and MTL, especially when applied
+to the embedding layer, enhance overall accuracy and F1 scores for less frequent relations in a
+PCEDT have distinctly high ratios compared to other relations in Figure 2. These relations also
+have the second-highest F1 score in their datasets—except for STL on PCEDT (see Tables 4 and
+5). Lexical memorization is therefore a likely cause of these high F1 scores. We also observed that
+lower ratios of relation-specific constituents correlate with lower F1 scores, such as APP and REG in
+PCEDT. Based on these insights, we can’t dismiss the possibility that our models show some degree
+of lexical memorization, despite manual analysis also presenting cases where models demonstrate
+generalization and correct predictions in situations where lexical memorization is impossible.
+8 Conclusion

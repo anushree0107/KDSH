@@ -1,0 +1,24 @@
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to
+ The "majority vote" baseline determines the answer to a
+question based on the most frequent prediction among the forecasts. The "weighted vote" baseline,
+on the other hand, assigns weights to the probabilities in the predictions and then aggregates them.
+4.2 Neural Network Architecture
+A neural network architecture is employed, which consists of three main components: one to generate
+a representation of the question, another to generate a representation of each forecast, and an LSTM
+to process the sequence of forecasts and ultimately call the question.
+The representation of a question is obtained using BERT, followed by a fully connected layer with 256
+neurons, ReLU activation, and dropout. The representation of a forecast is created by concatenating
+neural network configurations, except for the one using only predictions and justifications.
+**Encoding Questions and Justifications** The neural network that only utilizes the prediction
+to represent a forecast surpasses both baseline methods. Notably, integrating the question, the
+justification, or both into the forecast representation yields further improvements. These results
+indicate that incorporating the question and forecaster-provided justifications into the model enhances
+the accuracy of question calling.
+**Calling Questions Throughout Their Life** When examining the results across the four quartiles of
+a question’s duration, it’s observed that while using active forecasts is beneficial across all quartiles
+for both baselines and all network configurations, the neural networks surprisingly outperform the

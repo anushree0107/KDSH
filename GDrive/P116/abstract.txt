@@ -1,0 +1,23 @@
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+ This provides a common learned representation of the input space,
+while allowing each predictor to adapt to its own constraints. After the shared layers, each constrained
+predictor has an additional two hidden layers and their final outputs are projected onto our convex
+approximation of the safe region of the output space, using Gb(x) = min jGj(x). In our experiments,
+we set ε= 0.0001 .
+With this construction, we needed 30 separate predictors to enforce the VerticalCAS safeability
+constraints. The number of nodes for the unconstrained and safe implementations were 270 and 2880,
+respectively. Our safe predictor is orders of magnitude smaller than the original look-up tables.
+C.4 Parameter Optimization
+Broader Impact
+Supervised machine learning now affects both personal and public lives significantly. Generalization is
+critical to the reliability and safety of empirically trained models. Our analysis aims to achieve a deeper
+understanding of the relationships between generalization, architectural design, and available data.
+We have discussed the concepts and demonstrated the effectiveness of using uniform concentration
+events for generalization guarantees of common supervised machine learning algorithms.
+7

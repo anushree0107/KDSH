@@ -1,0 +1,28 @@
+surfaces, and intricate geometries common in culinary subjects.
+The competition involved 20 diverse food items, captured under various conditions and with differing
+numbers of input images, specifically designed to challenge participants in creating robust reconstruc-
+tion models. The evaluation was based on a two-phase process, assessing both portion size accuracy
+through Mean Absolute Percentage Error (MAPE) and shape accuracy using the Chamfer distance
+metric.
+Of all participating teams, three reached the final submission stage, presenting a range of innovative
+solutions. Team V olETA secured first place with the best overall performance in both Phase-I and
+Phase-II, followed by team ININ-VIAUN in second place. Additionally, the FoodRiddle team
+found with the data for object 12 (steak) and object 15 (chicken nugget), so these items were excluded
+from the final overall evaluation.
+4 First Place Team - VolETA
+4.1 Methodology
+The team’s research employs multi-view reconstruction to generate detailed food meshes and calculate
+precise food volumes.
+4.1.1 Overview
+The team’s method integrates computer vision and deep learning to accurately estimate food volume
+from RGBD images and masks. Keyframe selection ensures data quality, supported by perceptual
+hashing and blur detection. Camera pose estimation and object segmentation pave the way for neural
+surface reconstruction, creating detailed meshes for volume estimation. Refinement steps, including
+Participants were tasked with creating 3D models of 20 distinct food items from 2D images, mim-
+icking scenarios where mobile devices equipped with depth-sensing cameras are used for dietary
+.
+recording and nutritional tracking. The challenge was segmented into three tiers of difficulty based
+on the number of images provided: approximately 200 images for easy, 30 for medium, and a single
+top-view image for hard. This design aimed to rigorously test the adaptability and resilience of
+proposed solutions under various realistic conditions. A notable feature of this challenge was the use
+of a visible checkerboard for physical referencing and the provision of depth images for each frame,

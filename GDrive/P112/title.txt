@@ -1,0 +1,23 @@
+layers: 1) an input layer, 2) an embedding layer, 3) a hidden layer, and 4) an output layer. The input
+3
+layer consists of two integers that indicate the indices of a compound’s constituents in the embedding
+layer, where the word embedding vectors are stored. These selected vectors are then passed to a fully
+connected hidden layer, the size of which matches the dimensionality of the word embedding vectors.
+Finally, a softmax function is applied to the output layer to select the most probable relation.
+The compound’s constituents are represented using a 300-dimensional word embedding model trained
+on an English Wikipedia dump and the English Gigaword Fifth Edition. The embedding model was
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+We use PyTorch for defining our networks and performing parameter optimization. We optimize both
+the unconstrained and safe predictors using the asymmetric loss function to select advisories while
+also accurately predicting scores. The data is split using an 80/20 train/test split with a random seed
+of 0. The optimizer is ADAM with a learning rate of 0.0003 and batch size of 216, with training for
+500 epochs.
+Appendix A: Proof of Theorem 2.1
+Proof. Letx∈Ai. Then, σi(x) = 0 , and for all b∈Owhere bi= 0,wb(x) = 0 . Thus,
+F(x) =X

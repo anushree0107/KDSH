@@ -1,0 +1,30 @@
+However, none of these prior works have specifically aimed to call questions throughout their entire
+duration.
+2
+3 Dataset
+The research utilizes data from the Good Judgment Open, a platform where questions are posted, and
+individuals submit their forecasts. The questions primarily revolve around geopolitics, encompassing
+areas such as domestic and international politics, the economy, and social matters. For this study, all
+binary questions were collected, along with their associated forecasts, each comprising a prediction
+and a justification. In total, the dataset contains 441 questions and 96,664 forecasts submitted
+over 32,708 days. This dataset significantly expands upon previous research, nearly doubling the
+number of forecasts analyzed.industries as it enables them to anticipate and address potential challenges. This study focuses on
+questions spanning the political, economic, and social domains, utilizing forecasts submitted by a
+crowd of individuals without specialized training. Each forecast comprises a prediction and a natural
+language justification.
+6
+The research demonstrates that aggregating the weighted predictions of forecasters is a solid baseline
+for calling a question throughout its duration. However, models that incorporate both the question
+and the justifications achieve significantly better results, particularly during the first three quartiles of
+a question’s life. Importantly, the models developed in this study do not profile individual forecasters
+or utilize any information about their identities. This work lays the groundwork for evaluating the
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.

@@ -1,0 +1,27 @@
+intra-group uniformity and considering the impact of different popularity levels in the training. We prefer to push away items
+within the same group to optimize uniformity. This setup helps prevent over-optimizing the uniformity of different groups, thereby
+mitigating representation separation.
+The final re-weighting contrastive objective is the weighted sum of the user objective and the item objective:
+LCL=1
+2×(LCL
+item+LCL
+user). (6)
+In this way, we not only achieved consistency in representation but also reduced the risk of further separating items with similar
+characteristics into different representation spaces, thereby alleviating the issue of representation separation caused by popularity
+bias.
+2.3 Model Optimization
+A key reason for utilizing multi-task learning is to enhance generalization by making use of the
+domain-specific details present in the training data of related tasks. In this study, we demonstrate that
+TL and MTL can serve as a form of regularization, enabling the prediction of infrequent relations
+within a dataset marked by a highly skewed distribution of relations. This dataset is particularly
+well-suited for TL and MTL experimentation, as elaborated in Section 3.
+Our contributions are summarized as follows:
+1. Through meticulous analysis of results, we discover that TL and MTL, especially when applied
+to the embedding layer, enhance overall accuracy and F1 scores for less frequent relations in a
+layer for the constrained predictors, G0andG1. Training uses a sampled subset of points from
+the input space. Figure 3 shows an example of applying our safe predictor to a notional regression
+problem with a 2-D input and 1-D output, using two overlapping constraints. The unconstrained
+network has two hidden layers of dimension 20 and ReLU activations, followed by a fully connected
+layer. The constrained predictors, G00,G10,G01, and G11, share the hidden layers but also have an
+additional hidden layer of size 20 with ReLU, followed by a fully connected layer. Training uses a
+sampled subset of points from the input space.

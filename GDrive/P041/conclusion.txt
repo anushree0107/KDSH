@@ -1,0 +1,24 @@
+ A strong justification for a forecast can be considered a well-reasoned supporting argument.
+Previous work in this area includes identifying argument components such as claims, premises,
+backing, rebuttals, and refutations, as well as mining arguments that support or oppose a particular
+claim. Despite these efforts, it was found that crowdsourced justifications rarely adhere to these
+established argumentation frameworks, even though such justifications are valuable for aggregating
+forecasts.
+Finally, several studies have focused on forecasting using datasets similar or identical to the one used
+in this research. From a psychological perspective, researchers have explored strategies for enhancing
+forecasting accuracy, such as utilizing top-performing forecasters (often called "superforecasters"),
+explanation may appear to rely heavily on the prevailing opinion of the crowd and might be considered
+weaker than a justification that presents specific, verifiable facts from external resources.
+To clarify the terminology used: a "question" is defined as a statement that seeks information (e.g.,
+"Will new legislation be implemented before a certain date?"). Questions have a defined start and
+end date, and the period between these dates constitutes the "life" of the question. "Forecasters"
+are individuals who provide a "forecast," which consists of a "prediction" and a "justification." The
+prediction is a numerical representation of the likelihood of an event occurring. The justification
+is the text provided by the forecaster to support their prediction.their predictions on events that might not occur or have not yet occurred. The sentiment polarity of
+3
+the justifications is generally neutral. In terms of readability, both the Flesch and Dale-Chall scores
+suggest that approximately a quarter of the justifications require a college-level education for full
+comprehension.
+Regarding verbs and nouns, an analysis using WordNet lexical files reveals that the most common
+verb classes are "change" (e.g., "happen," "remain," "increase"), "social" (e.g., "vote," "support,"
+"help"), "cognition" (e.g., "think," "believe," "know"), and "motion" (e.g.

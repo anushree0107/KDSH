@@ -1,0 +1,25 @@
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+and MTL models are trained using the same hyperparameters as the STL model.
+5.2 Transfer Learning Models
+In our experiments, transfer learning involves training an STL model on PCEDT relations and then
+using some of its weights to initialize another model for NomBank relations. Given the neural
+classifier architecture detailed in Section 5.1, we identify three ways to implement TL: 1) TLE:
+Transferring the embedding layer weights, 2) TLH: Transferring the hidden layer weights, and 3)
+TLEH: Transferring both the embedding and hidden layer weights. Furthermore, we differentiate
+between transfer learning from PCEDT to NomBank and vice versa. This results in six setups,
+ The focus of more
+recent studies has shifted towards the application of Convolutional Neural Networks (CNNs) for
+activity recognition. Two-stream CNN architectures utilize both spatial RGB frames and optical
+flow frames. To capture spatio-temporal characteristics, 3D XYT convolutional models have been
+developed. The development of these advanced CNN models has been supported by large datasets
+such as Kinetics, THUMOS, and ActivityNet.
+Several studies have investigated the aggregation of temporal features for the purpose of activity
+recognition. Research has compared several pooling techniques and determined that both Long Short-
+.
+Term Memory networks (LSTMs) and max-pooling across entire videos yielded the best outcomes. It

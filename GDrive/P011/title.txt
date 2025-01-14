@@ -1,0 +1,30 @@
+sample, there will be a corresponding demographic feature data sample that is used to train a different binary classifier to predict
+whether a person with PD is ON or OFF medications.
+**Ethical approval:** Full approval from the NHS Wales Research Ethics Committee was granted on December 17, 2019, and
+Health Research Authority and Health and Care Research Wales approval was confirmed on January 14, 2020; the research was
+3
+conducted in accord with the Helsinki Declaration of 1975; written informed consent was gained from all study participants. In
+order to protect participant privacy, supporting data is not shared openly. It will be made available to bona fide researchers subject to
+a data access agreement.
+4 Methodologies and Framework
+•Different metrics across various datasets show varying improvements in model performance. This suggests that different
+debiasing methods may need distinct optimization strategies for models. Additionally, we observe varying effects of PAAC
+across different datasets. This difference could be due to the sparser nature of the Gowalla dataset. Conversely, our model
+can directly provide supervisory signals for unpopular items and conduct intra-group optimization, consistently maintaining
+optimal performance across all metrics on the three datasets.
+3.3 Ablation Study
+To better understand the effectiveness of each component in PAAC, we conduct ablation studies on three datasets. Table 2 presents a
+comparison between PAAC and its variants on recommendation performance.preferences for recommendations.
+3 Experiments
+In this section, we assess the efficacy of PAAC through comprehensive experiments, aiming to address the following research
+questions:
+• How does PAAC compare to existing debiasing methods?
+• How do different designed components play roles in our proposed PAAC?
+3
+• How does PAAC alleviate the popularity bias?
+• How do different hyper-parameters affect the PAAC recommendation performance?
+3.1 Experiments Settings
+3.1.1 Datasets
+In our experiments, we use three widely public datasets: Amazon-book, Yelp2018, and Gowalla. We retained users and items with a
+minimum of 10 interactions.
+3.1.2 Baselines and Evaluation Metrics

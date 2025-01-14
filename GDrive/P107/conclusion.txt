@@ -1,0 +1,26 @@
+credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7
+ ̄q∈ ̄Qy,εsatisfy
+∥φ ̄q−y∥μ≤η
+is at least
+1−17 exp
+−u
+4
+−C5v2exp
+−C4mv2
+2
+2
+.
+Proof sketch. (Complete proof in Appendix E) We first define and decompose the excess risk by
+E( ̄q, ̄p∗) :=∥φ ̄q−y∥2
+μ− ∥φ ̄p∗−y∥2
+When the NeuRIPs event occurs, the function norm || · || μ, which is related to the expected risk, is
+close to || · || m, which corresponds to the empirical risk. Motivated by this property, we aim to find
+a shallow ReLU network φ ̄pwith small expected risk by solving the empirical risk minimization
+problem:
+min
+ ̄p∈ ̄P∥φ ̄p−y∥2
+m.
+Since the set Φ ̄Pof shallow ReLU networks is non-convex, this minimization cannot be solved
+with efficient convex optimizers. Therefore, instead of analyzing only the solution φ∗

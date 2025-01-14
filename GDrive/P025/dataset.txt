@@ -1,0 +1,21 @@
+ The improvement is more significant in the 4m-HC and 4m-PD validations, when the training data are limited, with an
+average improvement of almost 9% for the F1-score over the alternative to the state-of-the-art model.
+The LOO-HC and LOO-PD validations show that a model that has the ability to capture the temporal dynamics across time steps will
+perform better than a standard baseline technique such as a Random Forest. The modified transformer encoder and the state-of-the-art
+model perform better in those two validations due to their ability to capture asynchronous relations across modalities. However,
+Table 8: Performance on continuous videos for multi-label activity classification (per-frame mAP).
+Method RGB Flow Two-stream
+Random 13.4 13.4 13.4
+I3D 33.8 35.1 34.2
+I3D + max-pooling 34.9 36.4 36.8
+I3D + pyramid 36.8 37.5 39.7
+I3D + LSTM 36.2 37.3 39.4
+I3D + temporal conv 35.2 38.1 39.2
+I3D + sub-events 35.5 37.5 38.5
+when the training data becomes limited, as in 4m-HC and 4m-PD validations, having extra capabilities is necessary to further
+extract temporal information and correlations. Due to being a vanilla transformer requiring a considerable amount of training
+data, the modified transformer encoder performs worst in these two validations. The state-of-the-art model performs quite well
+6
+due to its ability to capture local context via LSTM for each modality. However, in general, its performance suffers in both the
+LOO-PD and 4m-PD validations as the accelerometer data (and modality) may be erratic due to PD and should be excluded at
+times from contributing to room classification.

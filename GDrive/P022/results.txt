@@ -1,0 +1,31 @@
+ They then projected the 3D
+object back onto the original 2D image to obtain a more precise scale for the object.
+6.2 Experimental Results
+Through a process of nonlinear optimization, the team sought to identify a transformation that
+minimizes the Chamfer distance between their mesh and the ground truth mesh. This optimization
+aimed to align the two meshes as closely as possible in three-dimensional space. Upon completion
+of this process, the average Chamfer dis- tance across the final reconstructions of the 20 objects
+amounted to 0.0032175 meters. As shown in Table 7, Team FoodRiddle achieved the best scores for
+35 8.64
+20 117.43 119.83 20.03
+6 Best 3D Mesh Reconstruction Team - FoodRiddle
+6.1 Methodology
+To achieve high-fidelity food mesh reconstruction, the team developed two procedural pipelines as
+depicted in Figure 14. For simple and medium complexity cases, they employed a structure-from-
+motion strategy to ascertain the pose of each image, followed by mesh reconstruction. Subsequently,
+a sequence of post-processing steps was implemented to recalibrate the scale and improve mesh
+quality. For cases involving only a single image, the team utilized image generation techniques to
+facilitate model generation.
+6.1.1 Multi-View Reconstruction
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.

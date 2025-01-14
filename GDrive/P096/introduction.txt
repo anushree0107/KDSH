@@ -1,0 +1,25 @@
+relation ARG1, which is the most common in NomBank. Regarding the unseen right constituents,
+MTLE’s 24 improved compounds consist of 18 ARG1, 5 ARG0, and 1 ARG2 compounds. A
+similar pattern arises when examining TLE model improvements, where most gains come from better
+predictions of ARG1 and ARG0 relations.
+A large portion of unseen compounds, whether partly or entirely unseen, that were misclassified by
+every model, were not of type ARG1 in NomBank, or RSTR in PCEDT. This pattern, along with
+correctly predicted unseen compounds primarily annotated with the most common relations, suggests
+that classification models rely on lexical memorization to learn the compound relation interpretation.
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.their predictions on events that might not occur or have not yet occurred. The sentiment polarity of
+3
+the justifications is generally neutral. In terms of readability, both the Flesch and Dale-Chall scores
+suggest that approximately a quarter of the justifications require a college-level education for full
+comprehension.
+Regarding verbs and nouns, an analysis using WordNet lexical files reveals that the most common
+verb classes are "change" (e.g., "happen," "remain," "increase"), "social" (e.g., "vote," "support,"
+"help"), "cognition" (e.g., "think," "believe," "know"), and "motion" (e.g.

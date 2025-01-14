@@ -1,0 +1,33 @@
+35 8.64
+20 117.43 119.83 20.03
+6 Best 3D Mesh Reconstruction Team - FoodRiddle
+6.1 Methodology
+To achieve high-fidelity food mesh reconstruction, the team developed two procedural pipelines as
+depicted in Figure 14. For simple and medium complexity cases, they employed a structure-from-
+motion strategy to ascertain the pose of each image, followed by mesh reconstruction. Subsequently,
+a sequence of post-processing steps was implemented to recalibrate the scale and improve mesh
+quality. For cases involving only a single image, the team utilized image generation techniques to
+facilitate model generation.
+6.1.1 Multi-View Reconstruction
+ For overall method performance, Table 4 shows
+the MAPE and Chamfer distance with and without transformation metrics.
+Additionally, qualitative results on one- and few-shot 3D reconstruction from the challenge dataset
+are shown. The model excels in texture details, artifact correction, missing data handling, and color
+adjustment across different scene parts.
+Limitations: Despite promising results, several limitations need to be addressed in future work:
+•Manual processes: The current pipeline includes manual steps like providing segmentation
+prompts and identifying scaling factors, which should be automated to enhance efficiency.
+•Input requirements: The method requires extensive input information, including food
+masks and depth data. Streamlining these inputs would simplify the process and increase
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.

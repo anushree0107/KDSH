@@ -1,0 +1,24 @@
+•Regarding the baselines for mitigating popularity bias, the improvement of some is relatively limited compared to the
+backbone model (LightGCN) and even performs worse in some cases. This may be because some are specifically designed
+for traditional data-splitting scenarios, where the test set still follows a long-tail distribution, leading to poor generalization.
+Some mitigate popularity bias by excluding item popularity information. Others use invariant learning to remove popularity
+information at the representation level, generally performing better than the formers. This shows the importance of
+addressing popularity bias at the representation level. Some outperform the other baselines, emphasizing the necessary to
+improve item representation consistency for mitigating popularity bias.
+sample, there will be a corresponding demographic feature data sample that is used to train a different binary classifier to predict
+whether a person with PD is ON or OFF medications.
+**Ethical approval:** Full approval from the NHS Wales Research Ethics Committee was granted on December 17, 2019, and
+Health Research Authority and Health and Care Research Wales approval was confirmed on January 14, 2020; the research was
+3
+conducted in accord with the Helsinki Declaration of 1975; written informed consent was gained from all study participants. In
+order to protect participant privacy, supporting data is not shared openly. It will be made available to bona fide researchers subject to
+a data access agreement.
+4 Methodologies and Framework
+•Different metrics across various datasets show varying improvements in model performance. This suggests that different
+debiasing methods may need distinct optimization strategies for models. Additionally, we observe varying effects of PAAC
+across different datasets. This difference could be due to the sparser nature of the Gowalla dataset. Conversely, our model
+can directly provide supervisory signals for unpopular items and conduct intra-group optimization, consistently maintaining
+optimal performance across all metrics on the three datasets.
+3.3 Ablation Study
+To better understand the effectiveness of each component in PAAC, we conduct ablation studies on three datasets. Table 2 presents a
+comparison between PAAC and its variants on recommendation performance.

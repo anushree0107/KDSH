@@ -1,0 +1,25 @@
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+ The training uses a sampled subset of points from the input space and the learned
+predictors are shown for the continuous input space.
+Figure 3 shows an example of applying the safe predictor to a notional regression problem with a 2-D
+input and 1-D output and two overlapping constraints. The unconstrained network has two hidden
+layers of dimension 20 with ReLU activations, followed by a fully connected layer. The constrained
+predictors G00,G10,G01andG11share the hidden layers and have an additional hidden layer of size
+20 with ReLU followed by a fully connected layer. Again, training uses a sampled subset of points
+from the input space and the learned predictors are shown for the continuous input space.
+suming the NeuRIPs event, we then provide bounds on the expected risk, applicable
+to networks within any sublevel set of the empirical risk. Our results show that all
+networks with sufficiently small empirical risk achieve uniform generalization.
+1 Introduction
+A fundamental requirement of any scientific model is a clear evaluation of its limitations. In recent
+years, supervised machine learning has seen the development of tools for automated model discovery
+from training data. However, these methods often lack a robust theoretical framework to estimate
+model limitations. Statistical learning theory quantifies the limitation of a trained model by the
+generalization error. This theory uses concepts such as the VC-dimension and Rademacher complexity
+to analyze generalization error bounds for classification problems.

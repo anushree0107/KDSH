@@ -1,0 +1,25 @@
+Broader Impact
+Supervised machine learning now affects both personal and public lives significantly. Generalization is
+critical to the reliability and safety of empirically trained models. Our analysis aims to achieve a deeper
+understanding of the relationships between generalization, architectural design, and available data.
+We have discussed the concepts and demonstrated the effectiveness of using uniform concentration
+events for generalization guarantees of common supervised machine learning algorithms.
+7
+ We prove this property in a network
+recovery setting in Theorem 2, and also an agnostic learning setting in Theorem 3. These results
+ensure a small generalization error, when any optimization algorithm finds a network with a small
+empirical risk. We develop the key proof techniques for deriving the sample complexity of achieving
+NeuRIPs in Section V , by using the chaining theory of stochastic processes. The derived results are
+summarized in Section VI, where we also explore potential future research directions.
+2 Notation and Assumptions
+In this section, we will define the key notations and assumptions for the neural networks examined
+in this study. Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.

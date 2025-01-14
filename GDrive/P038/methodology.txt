@@ -1,0 +1,34 @@
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.Generalization in ReLU Networks via Restricted
+Isometry and Norm Concentration
+Abstract
+Regression tasks, while aiming to model relationships across the entire input space,
+are often constrained by limited training data. Nevertheless, if the hypothesis func-
+tions can be represented effectively by the data, there is potential for identifying a
+model that generalizes well. This paper introduces the Neural Restricted Isometry
+Property (NeuRIPs), which acts as a uniform concentration event that ensures all
+shallow ReLU networks are sketched with comparable quality. To determine the
+sample complexity necessary to achieve NeuRIPs, we bound the covering numbers
+of the networks using the Sub-Gaussian metric and apply chaining techniques. As-
+ Let ̄P⊆(Rd×R× ±1)nsatisfy Assumption 1. Then there exist universal constants
+C1,C2such that
+sup
+ ̄p∈P∥φ ̄p∥m− ∥φ ̄p∥μ≤r
+2
+π8n3/2cw(8cb+d+ 1)
+ln(2)p
+2 ln(2)
+.
+7 Conclusion
+In this study, we investigated the empirical risk surface of shallow ReLU networks in terms of uniform
+concentration events for the empirical norm. We defined the Neural Restricted Isometry Property

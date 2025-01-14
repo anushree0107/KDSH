@@ -1,0 +1,21 @@
+ establish a new convergence rate of O(1/k), measured by the squared operator norm, for a modified version of OGDA,
+which we call OGDA+. This rate matches that of EG and builds upon the recently introduced concept of weak solutions to
+the Minty variational inequality.
+2.Even when a stronger condition is imposed, specifically that the operator is also monotone, we enhance the range of feasible
+step sizes for OGDA+ and obtain the most favorable result known for the standard method ( γ= 1).
+3. We demonstrate a complexity bound of O(ε−2)for a stochastic variant of the OGDA+ method.
+4.We also introduce an adaptive step size version of EG+.A specific subset of nonconvex-nonconcave min-max problems was analyzed, and it was found that the extragradient method (EG)
+exhibited favorable convergence behavior in experimental settings. Surprisingly, these problems did not appear to possess any of
+the recognized favorable characteristics, such as monotonicity or Minty solutions. Subsequently, a suitable concept was identified
+(see Assumption 1), which is less restrictive than the presence of a Minty solution (a condition frequently employed in the existing
+literature) and also extends the idea of negative comonotonicity. Because of these properties that unify and generalize, the concept of
+weak Minty solutions was quickly investigated.
+Assumption 1 (Weak Minty solution).Addressing Min-Max Challenges in Nonconvex-Nonconcave Problems
+with Solutions Exhibiting Weak Minty Properties
+Abstract
+This research examines a specific category of structured nonconvex-nonconcave min-max problems that demon-
+strate a characteristic known as weak Minty solutions. This concept, which has only recently been defined, has
+already demonstrated its effectiveness by encompassing various generalizations of monotonicity at the same time.
+We establish new convergence findings for an enhanced variant of the optimistic gradient method (OGDA) within
+this framework, achieving a convergence rate of 1/k for the most effective iteration, measured by the squared
+operator norm, a result that aligns with the extragradient method (EG).

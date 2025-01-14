@@ -1,0 +1,22 @@
+isolated piece removal and scaling factor adjustments, enhance accuracy. This approach provides a
+thorough solution for accurate food volume assessment, with potential uses in nutrition analysis.
+4.1.2 The Team’s Proposal: VolETA
+The team starts by acquiring input data, specifically RGBD images and corresponding food object
+masks. The RGBD images, denoted as ID={IDi}n
+i=1, where nis the total number of frames,
+provide depth information alongside RGB images. The food object masks, {Mf
+i}n
+i=1, help identify
+regions of interest within these images.
+Next, the team selects keyframes. From the set {IDi}n
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.02426 230×265 (294 ×431×2.353)
+7 Burger 0.1043478261 0.02435 208×264 (378 ×400×2.353)
+8 Cake 0.1276595745 0.02143 256×300 (298 ×310×4.706)
+9 Blueberry muffin 0.08759124088 0.01801 291×357 (441 ×443×2.353)
+10 Banana 0.08759124088 0.01705 315×377 (446 ×857×1.176)
+Medium 11 Salmon 0.1043478261 0.

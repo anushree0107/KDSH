@@ -1,0 +1,22 @@
+generating the refined embedding at time step t, its decision is independent; it does not take into account the actual decision made by
+other refined embeddings t. We use a CRF layer to cover just that, i.e., to maximize the probability of the refined embeddings of all
+time steps, so it can better model cases where refined embeddings closest to one another must be compatible (i.e., minimizing the
+possibility for impossible room transitions). When finding the best sequence of room location ˆyt, the Viterbi Algorithm is used as a
+standard for the CRF layer.
+For the second layer, we choose a particular room as a reference and perform a binary classification at each time step t. The binary
+layers: 1) an input layer, 2) an embedding layer, 3) a hidden layer, and 4) an output layer. The input
+3
+layer consists of two integers that indicate the indices of a compound’s constituents in the embedding
+layer, where the word embedding vectors are stored. These selected vectors are then passed to a fully
+connected hidden layer, the size of which matches the dimensionality of the word embedding vectors.
+Finally, a softmax function is applied to the output layer to select the most probable relation.
+The compound’s constituents are represented using a 300-dimensional word embedding model trained
+on an English Wikipedia dump and the English Gigaword Fifth Edition. The embedding model was
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in

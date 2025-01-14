@@ -1,0 +1,19 @@
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+which capture red-green-blue (RGB) and depth data 2-3 hours daily (during daylight hours at times when participants were at home).
+The videos were then manually annotated to the nearest millisecond to provide localization labels. Multiple human labelers used
+software called ELAN to watch up to 4 simultaneously-captured video files at a time. The resulting labeled data recorded the kitchen,
+hallway, dining room, living room, stairs, and porch. The duration of labeled data recorded by the cameras for PD and HC is 72.84
+and 75.31 hours, respectively, which provides a relatively balanced label set for our room-level classification. Finally, to evaluate
+when the training data becomes limited, as in 4m-HC and 4m-PD validations, having extra capabilities is necessary to further
+extract temporal information and correlations. Due to being a vanilla transformer requiring a considerable amount of training
+data, the modified transformer encoder performs worst in these two validations. The state-of-the-art model performs quite well
+6
+due to its ability to capture local context via LSTM for each modality. However, in general, its performance suffers in both the
+LOO-PD and 4m-PD validations as the accelerometer data (and modality) may be erratic due to PD and should be excluded at
+times from contributing to room classification.

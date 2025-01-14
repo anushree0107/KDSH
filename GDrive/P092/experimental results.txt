@@ -1,0 +1,28 @@
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+sequential processing of video features, whereas other methods can be fully parallelized.
+Table 3: Additional parameters required for models when added to the base model (e.g., I3D or
+Inception V3).
+Model # Parameters
+Max/Mean Pooling 16K
+Pyramid Pooling 115K
+LSTM 10.5M
+Temporal Conv 31.5M
+Sub-events 36K
+Table 4: Mean Average Precision (mAP) results on segmented videos for multi-label classification.
+Learning sub-intervals for pooling is found to be crucial for activity recognition.
+Method RGB Flow Two-stream
+Random 16.3 16.3 16.3
+was computed and clipped to [−20,20]. For InceptionV3, features were computed every 3 frames
+(8 fps), while for I3D, every frame was used, with I3D having a temporal stride of 8, resulting in
+3 features per second (3 fps). Models were implemented in PyTorch and trained using the Adam
+optimizer with a learning rate of 0.01, decayed by a factor of 0.1 every 10 epochs, for a total of 50
+epochs.
+4
+6.2 Segmented Video Activity Recognition
+We initially conducted binary pitch/non-pitch classification for each video segment. This task is

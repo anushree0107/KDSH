@@ -1,0 +1,32 @@
+ Fixed temporal pyramid pooling outperforms max-pooling, while LSTM and temporal
+6
+Table 7: Accuracy of pitch type classification using I3D for video inputs and InceptionV3 for pose
+heatmaps.
+Method Accuracy
+Random 17.0%
+I3D 25.8%
+I3D + LSTM 18.5%
+I3D + sub-events 34.5%
+Pose 28.4%
+Pose + LSTM 27.6%
+Pose + sub-events 36.4%
+convolution appear to overfit. Convolutional sub-events, especially when combined with super-event
+representation, significantly enhance performance, particularly for frame-based features.
+ This provides a common learned representation of the input space,
+while allowing each predictor to adapt to its own constraints. After the shared layers, each constrained
+predictor has an additional two hidden layers and their final outputs are projected onto our convex
+approximation of the safe region of the output space, using Gb(x) = min jGj(x). In our experiments,
+we set ε= 0.0001 .
+With this construction, we needed 30 separate predictors to enforce the VerticalCAS safeability
+constraints. The number of nodes for the unconstrained and safe implementations were 270 and 2880,
+respectively. Our safe predictor is orders of magnitude smaller than the original look-up tables.
+C.4 Parameter Optimization
+3 53.4 57.2
+I3D + pyramid 53.2 56.7 58.7
+I3D + LSTM 48.2 53.1 53.1
+I3D + temporal conv 52.8 57.1 58.4
+I3D + sub-events 55.5 61.2 61.3
+Table 5 shows the average precision for each activity class. Learning temporal structure is particularly
+beneficial for frame-based features (e.g., InceptionV3), which capture less temporal information
+5
+compared to segment-based features (e.g., I3D). Sub-event learning significantly aids in detecting

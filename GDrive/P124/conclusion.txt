@@ -1,0 +1,20 @@
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e. Evaluation on this dataset, including individuals with and
+without PD, demonstrates that our network outperforms other methods across all cross-validation categories.
+(2) We demonstrate how accurate room-level localization predictions can be transformed into in-home gait speed biomarkers (e.g.,
+number of room-to-room transitions, room-to-room transition duration). These biomarkers can effectively classify the OFF or ON
+medication state of a PD patient from this pilot study data.
+2 Related Work
+Extensive research has utilized home-based passive sensing systems to evaluate how the activities and behavior of individuals with
+neurological conditions, primarily cognitive dysfunction, change over time. However, there is limited work assessing room use in
+the home setting in people with Parkinson’s.
+However, as the disease advances, a significant portion of patients begin to experience "wearing off" of their medication before
+the next scheduled dose, resulting in the reappearance of parkinsonian symptoms, such as slowed gait. These fluctuations in
+symptoms negatively impact patients’ quality of life and often necessitate adjustments to their medication regimen. The severity
+of motor symptoms can escalate to the point where they impede an individual’s ability to walk and move within their own home.
+Consequently, individuals may be inclined to remain confined to a single room, and when they do move, they may require more time
+to transition between rooms. These observations could potentially be used to identify periods when PD patients are experiencing

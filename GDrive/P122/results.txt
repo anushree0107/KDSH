@@ -1,0 +1,28 @@
+ A strong justification for a forecast can be considered a well-reasoned supporting argument.
+Previous work in this area includes identifying argument components such as claims, premises,
+backing, rebuttals, and refutations, as well as mining arguments that support or oppose a particular
+claim. Despite these efforts, it was found that crowdsourced justifications rarely adhere to these
+established argumentation frameworks, even though such justifications are valuable for aggregating
+forecasts.
+Finally, several studies have focused on forecasting using datasets similar or identical to the one used
+in this research. From a psychological perspective, researchers have explored strategies for enhancing
+forecasting accuracy, such as utilizing top-performing forecasters (often called "superforecasters"),
+34 23.98
+20 130.96 119.83 15.59 31.05
+Table 4: Quantitative Comparison with Ground Truth Using MAPE and Chamfer Distance
+MAPE Ch. w/ t.m Ch. w/o t.m
+(%) sum mean sum mean
+10.973 0.130 0.007 1.715 0.095
+5 Second Place Team - ININ-VIAUN
+5.1 Methodology
+This section details the team’s proposed network, illustrating the step-by-step process from original
+images to final mesh models.
+5.1.1 Scale factor estimation
+three elements: (a) a binary flag indicating whether the forecast was submitted on the day the question
+is being called or on a previous day, (b) the prediction itself (a numerical value between 0.0 and 1.0),
+and (c) a representation of the justification. The representation of the justification is also obtained
+using BERT, followed by a fully connected layer with 256 neurons, ReLU activation, and dropout.
+The LSTM has a hidden state with a dimensionality of 256 and processes the sequence of forecasts
+as its input. During the tuning process, it was discovered that providing the representation of the
+question alongside each forecast is more effective than processing forecasts independently of the
+question.

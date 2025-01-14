@@ -1,0 +1,26 @@
+ The central problem addressed in
+this work is termed "calling a question," which refers to the process of determining a final prediction
+by aggregating individual forecasts. Two strategies are employed for calling questions each day
+throughout their life: considering forecasts submitted on the given day ("daily") and considering the
+last forecast submitted by each forecaster ("active").
+Inspired by prior research on recognizing and fostering skilled forecasters, and analyzing written
+justifications to assess the quality of individual or collective forecasts, this paper investigates the
+automated calling of questions throughout their duration based on the forecasts available each day.
+The primary contributions are empirical findings that address the following research questions:
+explanation may appear to rely heavily on the prevailing opinion of the crowd and might be considered
+weaker than a justification that presents specific, verifiable facts from external resources.
+To clarify the terminology used: a "question" is defined as a statement that seeks information (e.g.,
+"Will new legislation be implemented before a certain date?"). Questions have a defined start and
+end date, and the period between these dates constitutes the "life" of the question. "Forecasters"
+are individuals who provide a "forecast," which consists of a "prediction" and a "justification." The
+prediction is a numerical representation of the likelihood of an event occurring. The justification
+is the text provided by the forecaster to support their prediction.* When making a prediction on a specific day, is it advantageous to include forecasts from previous
+days? (Yes) * Does the accuracy of the prediction improve when considering the question itself
+and the written justifications provided with the forecasts? (Yes) * Is it easier to make an accurate
+prediction toward the end of a question’s duration? (Yes) * Are written justifications more valuable
+when the crowd’s predictions are less accurate? (Yes)
+In addition, this research presents an examination of the justifications associated with both accurate
+and inaccurate forecasts. This analysis aims to identify the features that contribute to a justification
+being more or less credible.
+2 Related Work
+The language employed by individuals is indicative of various characteristics.

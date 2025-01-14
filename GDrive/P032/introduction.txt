@@ -1,0 +1,23 @@
+their predictions on events that might not occur or have not yet occurred. The sentiment polarity of
+3
+the justifications is generally neutral. In terms of readability, both the Flesch and Dale-Chall scores
+suggest that approximately a quarter of the justifications require a college-level education for full
+comprehension.
+Regarding verbs and nouns, an analysis using WordNet lexical files reveals that the most common
+verb classes are "change" (e.g., "happen," "remain," "increase"), "social" (e.g., "vote," "support,"
+"help"), "cognition" (e.g., "think," "believe," "know"), and "motion" (e.g.improve its F1 scores for less common yet more challenging semantic relations.
+1 Introduction
+Noun-noun compound interpretation involves determining the semantic connection between two
+nouns (or noun phrases in multi-word compounds). For instance, in the compound "street protest,"
+the task is to identify the semantic relationship between "street" and "protest," which is a locative
+relation in this example. Given the prevalence of noun-noun compounds in natural language and its
+significance to other natural language processing (NLP) tasks like question answering and information
+retrieval, understanding noun-noun compounds has been extensively studied in theoretical linguistics,
+psycholinguistics, and computational linguistics.
+ For instance, the temporal and locative relations in
+NomBank (ARGM-TMP and ARGM-LOC, respectively) and their PCEDT counterparts (TWHEN
+and LOC) exhibit relatively consistent behavior across frameworks, as they annotate many of the
+same compounds. However, some relations that are theoretically similar do not align well in practice.
+For example, the functor AIM in PCEDT and the modifier argument ARGM-PNC in NomBank
+express a somewhat related semantic concept (purpose), but there is minimal overlap between the
+sets of compounds they annotate. Nevertheless, it is reasonable to assume that the semantic similarity

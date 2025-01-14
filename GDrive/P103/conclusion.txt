@@ -1,0 +1,28 @@
+ However, since
+these improvements are relatively minor, we further analyze the results to understand if and how TL
+and MTL are beneficial.
+7 Results Analysis
+This section provides a detailed analysis of the models’ performance, drawing on insights from the
+dataset and the classification errors made by the models. The discussion in the following sections is
+primarily based on the results from the test split, as it is larger than the development split.
+7.1 Relation Distribution
+To illustrate the complexity of the task, we depict the distribution of the most frequent relations in
+NomBank and PCEDT across the three data splits in Figure 1. Notably, approximately 71.18% of the
+4m-PDMDCSA 4APS RSSI 58.59 (23.60) 57.68 (24.27)
+MDCSA 4APS 62.36 (18.98) 57.76 (20.07)
+MDCSA 70.47 (14.10) 64.64 (21.38)
+Table 3: Room-to-room transition accuracy (in seconds) of all models compared to the ground truth. Standard deviation is shown in
+(.), the best performer is bold, while the second best is italicized. A model that fails to capture a transition between particular rooms
+within a period that has the ground truth is assigned ’N/A’ score.
+!two TL models (TLE improves over the STL accuracy by 1.37 points).
+Table 2: Accuracy (%) of the transfer learning models.
+Model NomBank PCEDT
+Dev Test Dev Test
+STL 78.15 76.75 58.80 56.05
+TLE 78.37 78.05 59.57 57.42
+TLH 78.15 78.00 59.24 56.51
+TLEH 78.48 78.00 59.89 56.68
+Table 3: Accuracy (%) of the MTL models.
+Model NomBank PCEDT
+Dev Test Dev Test
+STL 78.

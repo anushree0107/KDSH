@@ -1,0 +1,18 @@
+While PD symptoms, including gait and balance parameters, can be measured continuously at home using wearable devices
+containing inertial motor units (IMUs) or smartphones, this data does not show the context in which the measurements are taken.
+Determining a person’s location within a home (indoor localization) could provide valuable contextual information for interpreting
+PD symptoms. For instance, symptoms like freezing of gait and turning in gait vary depending on the environment, so knowing a
+person’s location could help predict such symptoms or interpret their severity. Additionally, understanding how much time someone
+spends alone or with others in a room is a step towards understanding their social participation, which impacts quality of life in
+PD.However, as the disease advances, a significant portion of patients begin to experience "wearing off" of their medication before
+the next scheduled dose, resulting in the reappearance of parkinsonian symptoms, such as slowed gait. These fluctuations in
+symptoms negatively impact patients’ quality of life and often necessitate adjustments to their medication regimen. The severity
+of motor symptoms can escalate to the point where they impede an individual’s ability to walk and move within their own home.
+Consequently, individuals may be inclined to remain confined to a single room, and when they do move, they may require more time
+to transition between rooms. These observations could potentially be used to identify periods when PD patients are experiencing
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.

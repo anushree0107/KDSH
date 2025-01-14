@@ -1,0 +1,33 @@
+preferences for recommendations.
+3 Experiments
+In this section, we assess the efficacy of PAAC through comprehensive experiments, aiming to address the following research
+questions:
+• How does PAAC compare to existing debiasing methods?
+• How do different designed components play roles in our proposed PAAC?
+3
+• How does PAAC alleviate the popularity bias?
+• How do different hyper-parameters affect the PAAC recommendation performance?
+3.1 Experiments Settings
+3.1.1 Datasets
+In our experiments, we use three widely public datasets: Amazon-book, Yelp2018, and Gowalla. We retained users and items with a
+minimum of 10 interactions.
+3.1.2 Baselines and Evaluation Metrics
+The Importance of Written Explanations in
+Aggregating Crowdsourced Predictions
+Abstract
+This study demonstrates that incorporating the written explanations provided by
+individuals when making predictions enhances the accuracy of aggregated crowd-
+sourced forecasts. The research shows that while majority and weighted vote
+methods are effective, the inclusion of written justifications improves forecast
+accuracy throughout most of a question’s duration, with the exception of its final
+phase. Furthermore, the study analyzes the attributes that differentiate reliable and
+unreliable justifications.
+1 Introduction
+The concept of the "wisdom of the crowd" posits that combining information from numerous non-
+expert individuals can produce answers that are as accurate as, or even more accurate than, those
+We implement the state-of-the-art LightGCN to instantiate PAAC, aiming to investigate how it alleviates popularity bias. We
+compare PAAC with several debiased baselines, including re-weighting-based models, decorrelation-based models, and contrastive
+learning-based models.
+We utilize three widely used metrics, namely Recall@K, HR@K, and NDCG@K, to evaluate the performance of Top-K recommen-
+dation. Recall@K and HR@K assess the number of target items retrieved in the recommendation results, emphasizing coverage. In
+contrast, NDCG@K evaluates the positions of target items in the ranking list, with a focus on their positions in the list. We use

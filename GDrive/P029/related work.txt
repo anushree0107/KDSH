@@ -1,0 +1,20 @@
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.several activities, this is considered a multi-label classification task. Table 1 presents the complete
+list of activities and their respective counts within the dataset. Additionally, clips featuring a pitch
+were annotated with the type of pitch (e.g., fastball, curveball, slider) and its speed. Furthermore, a
+collection of 2,983 hard negative examples, where no action is present, was gathered. These instances
+include views of the crowd, the field, or players standing idly before or after a pitch. Examples of
+activities and hard negatives are depicted in Figure 2.
+Our continuous video dataset includes 2,128 clips, each lasting between 1 and 2 minutes. Every
+an activity, eliminating the need for the model to identify the start and end of activities. Our methods
+are based on a CNN that generates a per-frame or per-segment representation, derived from standard
+two-stream CNNs using deep CNNs like I3D or InceptionV3.
+Given video features vof dimensions T×D, where Trepresents the video’s temporal length and D
+is the feature’s dimensionality, the usual approach for feature pooling involves max- or mean-pooling
+across the temporal dimension, followed by a fully-connected layer for video clip classification, as
+depicted in Fig. 5(a). This approach, however, yields a single representation for the entire video,
+losing temporal information.

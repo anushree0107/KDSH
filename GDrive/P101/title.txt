@@ -1,0 +1,34 @@
+ The focus of more
+recent studies has shifted towards the application of Convolutional Neural Networks (CNNs) for
+activity recognition. Two-stream CNN architectures utilize both spatial RGB frames and optical
+flow frames. To capture spatio-temporal characteristics, 3D XYT convolutional models have been
+developed. The development of these advanced CNN models has been supported by large datasets
+such as Kinetics, THUMOS, and ActivityNet.
+Several studies have investigated the aggregation of temporal features for the purpose of activity
+recognition. Research has compared several pooling techniques and determined that both Long Short-
+.
+Term Memory networks (LSTMs) and max-pooling across entire videos yielded the best outcomes. It
+Additionally, we compare a bi-directional LSTM with 512 hidden units, using the final hidden state
+as input to a fully-connected layer for classification. We frame our tasks as multi-label classification
+and train these models to minimize binary cross-entropy:
+L(v) =X
+czclog(p(c|G(v))) + (1 −zc) log(1 −p(c|G(v)))
+where G(v)is the function that pools the temporal information, and zcis the ground truth label for
+class c.
+5 Activity Detection in Continuous Videos
+Detecting activities in continuous videos poses a greater challenge. The goal here is to classify each
+frame according to the activities occurring. Unlike segmented videos, continuous videos feature
+ Fixed temporal pyramid pooling outperforms max-pooling, while LSTM and temporal
+6
+Table 7: Accuracy of pitch type classification using I3D for video inputs and InceptionV3 for pose
+heatmaps.
+Method Accuracy
+Random 17.0%
+I3D 25.8%
+I3D + LSTM 18.5%
+I3D + sub-events 34.5%
+Pose 28.4%
+Pose + LSTM 27.6%
+Pose + sub-events 36.4%
+convolution appear to overfit. Convolutional sub-events, especially when combined with super-event
+representation, significantly enhance performance, particularly for frame-based features.

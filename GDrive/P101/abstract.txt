@@ -1,0 +1,25 @@
+ The focus of more
+recent studies has shifted towards the application of Convolutional Neural Networks (CNNs) for
+activity recognition. Two-stream CNN architectures utilize both spatial RGB frames and optical
+flow frames. To capture spatio-temporal characteristics, 3D XYT convolutional models have been
+developed. The development of these advanced CNN models has been supported by large datasets
+such as Kinetics, THUMOS, and ActivityNet.
+Several studies have investigated the aggregation of temporal features for the purpose of activity
+recognition. Research has compared several pooling techniques and determined that both Long Short-
+.
+Term Memory networks (LSTMs) and max-pooling across entire videos yielded the best outcomes. It
+approaches struggle with diverse food shapes, depth camera methods need specialized hardware,
+and deep learning approaches lack interpretability and struggle with out-of-distribution samples. 3D
+reconstruction offers a promising solution by providing comprehensive spatial information, adapting
+to various shapes, potentially working with single images, offering visually interpretable results,
+and enabling a standardized approach to food portion estimation. These benefits motivated the
+organization of the 3D Food Reconstruction challenge, aiming to overcome existing limitations and
+2
+develop more accurate, user-friendly, and widely applicable food portion estimation techniques,
+impacting nutritional assessment and dietary monitoring.
+3 Datasets and Evaluation Pipeline
+3.1 Dataset Description
+ Inspired by utilizing multihead self-attention, we utilize our DCSA with various kernel lengths with the same
+aim: allowing asymmetric long-term learning. The multihead DCSA takes in two inputs ˆx1,ˆx2∈RN×dand yields:
+MDCSA k1,...,k n(ˆx1,ˆx2) = Ξ n(φk1,...,k n(ˆx1,ˆx2)) (4)
+with

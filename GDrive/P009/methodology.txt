@@ -1,0 +1,21 @@
+In this section, we discuss the setting where, instead of the exact operator F, we only have access to a collection of independent
+estimators F(·, ξi)at every iteration. We assume here that the estimator Fis unbiased, i.e., E[F(uk, ξ)|uk−1] =F(uk), and has
+bounded variance E[∥F(uk, ξ)−F(uk)∥2]≤σ2. We show that we can still guarantee convergence by using batch sizes Bof order
+O(ε−1).
+Algorithm 2 stochastic OGDA+
+assumptions about the data distribution or the learned score function, and with simple proofs that do not need the SDE toolkit.
+Furthermore, the bounds presented here do not involve any complex discretization steps, as the forward and backward processes are
+considered discrete-time from the beginning, rather than being viewed as discretizations of continuous-time processes.
+1.1 Related Works
+There has been an increasing amount of research aimed at providing theoretical findings on the convergence of SGMs. However,
+these studies frequently depend on restrictive assumptions regarding the data-generating distribution, produce non-quantitative upper
+bounds, or exhibit exponential dependencies on certain parameters. This work successfully circumvents all three of these limitations.
+Assumption 2, consists of mindependent copies of the random pair (x, y). During training, the
+interpolation quality of a hypothesis function f:X → Y can only be assessed at the given random
+samples {xj}m
+j=1. Any algorithm therefore accesses each function fthrough its sketch samples
+S[f] = (f(x1), . . . , f (xm)),
+2
+where Sis the sample operator. After training, the quality of a resulting model is often measured by
+its generalization to new data not used during training. With Rd×Ras the input and output space,
+we quantify a function f’s generalization error with its expected risk:

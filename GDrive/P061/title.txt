@@ -1,0 +1,26 @@
+intra-group uniformity and considering the impact of different popularity levels in the training. We prefer to push away items
+within the same group to optimize uniformity. This setup helps prevent over-optimizing the uniformity of different groups, thereby
+mitigating representation separation.
+The final re-weighting contrastive objective is the weighted sum of the user objective and the item objective:
+LCL=1
+2×(LCL
+item+LCL
+user). (6)
+In this way, we not only achieved consistency in representation but also reduced the risk of further separating items with similar
+characteristics into different representation spaces, thereby alleviating the issue of representation separation caused by popularity
+bias.
+2.3 Model Optimization
+where f(·)is a recommendation encoder and hi=f(i). By efficiently using the inherent information in the data, we provide more
+supervisory signals for unpopular items without introducing additional side information. This module enhances the representation of
+unpopular items, mitigating the overfitting issue.
+2.2 Re-weighting Contrast Module
+Recent research has indicated that popularity bias frequently leads to a noticeable separation in the representation of item embeddings.
+Although methods based on contrastive learning aim to enhance overall uniformity by distancing negative samples, their current
+sampling methods might unintentionally worsen this separation. When negative samples follow the popularity distribution, which
+ This confirms the importance of re-weighting popular items in contrastive learning for mitigating popularity
+bias. Finally, PAAC consistently outperforms the three variants, demonstrating the effectiveness of combining supervised alignment
+and re-weighting contrastive learning. Based on the above analysis, we conclude that leveraging supervisory signals from popular
+item representations can better optimize representations for unpopular items, and re-weighting contrastive learning allows the model
+to focus on more informative or critical samples, thereby improving overall performance. All the proposed modules significantly
+contribute to alleviating popularity bias.
+Table 2: Ablation study of PAAC, highlighting the best-performing model on each dataset and metrics in bold. Specifically,

@@ -1,0 +1,27 @@
+both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective
+ The scaling factor S=lreal/lavgis applied to the clean food mesh
+RCf, resulting in the final scaled food mesh RFfin meters.
+The team uses depth information along with food and reference object masks to validate the scaling
+factors. The method for assessing food size involves using overhead RGB images for each scene.
+Initially, the pixel-per-unit (PPU) ratio (in meters) is determined using the reference object. Subse-
+quently, the food width ( fw) and length ( fl) are extracted using a food object mask. To determine the
+food height ( fh), a two-step process is followed. First, binary image segmentation is performed using
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

@@ -1,0 +1,20 @@
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.has been discovered that pooling intervals from varying locations and durations is advantageous for
+activity recognition. It was demonstrated that identifying and classifying key sub-event intervals can
+lead to better performance.
+Recently, segment-based 3D CNNs have been employed to capture spatio-temporal data concurrently
+for activity detection. These methods depend on the 3D CNN to capture temporal dynamics, which
+typically span only 16 frames. Although longer-term temporal structures have been explored, this was
+usually accomplished with temporal pooling of localized features or (spatio-)temporal convolutions
+with extended fixed intervals. Recurrent Neural Networks (RNNs) have also been applied to represent
+transitions in activity between frames.
+3 MLB-YouTube Dataset
+to utilize a recurrent neural network such as a long-short term memory (LSTM) approach. However, in LSTM layers, the local
+context is summarized based on the previous context and the current input. Two similar patterns separated by a long period of time
+might have different contexts if they are processed by the LSTM layers. We utilize a combination of causal convolution layers and
+self-attention layers, which we name Dual Convolutional Self-Attention (DCSA). The DCSA takes in a primary input ˆx1∈RN×d
+and a secondary input ˆx2∈RN×dand yields:

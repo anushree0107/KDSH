@@ -1,0 +1,20 @@
+is a 1D-convolutional layer with a kernel size {1, k}and a stride
+of 1,WK∈Rd×d, WQ∈Rd×d, WV∈Rd×dare weights for keys, queries, and values of the self-attention layer, and dis the
+embedding dimension. Note that all weights for GRN are shared across each time step t.
+4
+4.3 Multihead Dual Convolutional Self-Attention
+Our approach employs a self-attention mechanism to capture global dependencies across time steps. It is embedded as part of the
+DCSA architecture.are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6

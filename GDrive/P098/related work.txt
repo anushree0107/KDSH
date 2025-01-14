@@ -1,0 +1,23 @@
+Detecting Medication Usage in Parkinson’s Disease Through
+Multi-modal Indoor Positioning: A Pilot Study in a Naturalistic
+Environment
+Abstract
+Parkinson’s disease (PD) is a progressive neurodegenerative disorder that leads to motor symptoms, including gait
+impairment. The effectiveness of levodopa therapy, a common treatment for PD, can fluctuate, causing periods of
+improved mobility ("on" state) and periods where symptoms re-emerge ("off" state). These fluctuations impact
+gait speed and increase in severity as the disease progresses. This paper proposes a transformer-based method that
+uses both Received Signal Strength Indicator (RSSI) and accelerometer data from wearable devices to enhance
+indoor localization accuracy.motor fluctuations related to their medication being in an ON or OFF state, thereby providing valuable information to both clinicians
+and patients.
+A sensitive and accurate ecologically-validated biomarker for PD progression is currently unavailable, which has contributed to
+failures in clinical trials for neuroprotective therapies in PD. Gait parameters are sensitive to disease progression in unmedicated
+early-stage PD and show promise as markers of disease progression, making measuring gait parameters potentially useful in clinical
+trials of disease-modifying interventions. Clinical evaluations of PD are typically conducted in artificial clinic or laboratory settings,
+which only capture a limited view of an individual’s motor function. Continuous monitoring could capture symptom progression,
+including motor fluctuations, and sensitively quantify them over time.
+Gait quantification using wearables or smartphones is an area where a significant amount of work has been done. Cameras can
+also detect parkinsonian gait and some gait features, including step length and average walking speed. Time-of-flight devices,
+which measure distances between the subject and the camera, have been used to assess medication adherence through gait analysis.
+From free-living data, one approach to gait and room use evaluation in home settings is by emitting and detecting radio waves to
+non-invasively track movement. Gait analysis using radio wave technology shows promise to track disease progression, severity, and
+medication response. However, this approach cannot identify who is doing the movement and also suffers from technical issues

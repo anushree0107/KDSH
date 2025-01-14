@@ -1,0 +1,25 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation. Prior research includes
+both predictive models (using language samples to predict attributes about the author) and models
+that provide valuable insights (using language samples and author attributes to identify differentiating
+linguistic features). Previous studies have examined factors such as gender and age, political ideology,
+health outcomes, and personality traits. In this paper, models are constructed to predict outcomes
+based on crowd-sourced forecasts without knowledge of individual forecasters’ identities.
+Previous research has also explored how language use varies depending on the relationships between
+individuals. For instance, studies have analyzed language patterns in social networks, online commu-
+nities, and corporate emails to understand how individuals in positions of authority communicate.
+50% on the Gowalla and Yelp2018 datasets, respectively.
+This indicates that our method treats items from different groups fairly, effectively alleviating the impact of popularity
+bias. This success can be attributed to our re-weighted contrast module, which addresses representation separation from a
+popularity-centric perspective, resulting in more consistent recommendation results across different groups.
+3.5 Hyperparameter Sensitivities
+In this section, we analyze the impact of hyperparameters in PAAC. Firstly, we investigate the influence of λ1andλ2, which
+respectively control the impact of the popularity-aware supervised alignment and re-weighting contrast loss. Additionally, in the

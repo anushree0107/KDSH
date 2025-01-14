@@ -1,0 +1,25 @@
+ This indicates that popular items receive more
+supervisory information than unpopular items, resulting in poorer recommendation performance for unpopular items.
+To tackle the issue of insufficient representation learning for unpopular items, we utilize the concept that items interacted with by the
+same user share some similar characteristics. Specifically, we use similar supervisory signals in popular item representations to
+improve the representations of unpopular items. We align the representations of items to provide more supervisory information to
+unpopular items and improve their representation, as follows:
+LSA=X
+u∈U1
+|Iu|X
+i∈Iupop,j∈Iuunpop||f(i)−f(j)||2, (1)
+•Different metrics across various datasets show varying improvements in model performance. This suggests that different
+debiasing methods may need distinct optimization strategies for models. Additionally, we observe varying effects of PAAC
+across different datasets. This difference could be due to the sparser nature of the Gowalla dataset. Conversely, our model
+can directly provide supervisory signals for unpopular items and conduct intra-group optimization, consistently maintaining
+optimal performance across all metrics on the three datasets.
+3.3 Ablation Study
+To better understand the effectiveness of each component in PAAC, we conduct ablation studies on three datasets. Table 2 presents a
+comparison between PAAC and its variants on recommendation performance.unpopular items. α-AdjNorm enhances the focus on unpopular items by controlling the normalization strength during the
+neighborhood aggregation process in GCN-based models.
+•Decorrelation-based methods aim to effectively remove the correlations between item representations (or prediction scores)
+and popularity. For instance, MACR uses counterfactual reasoning to eliminate the direct impact of popularity on item
+outcomes. In contrast, InvCF operates on the principle that item representations remain invariant to changes in popularity
+semantics, filtering out unstable or outdated popularity characteristics to learn unbiased representations.
+•Contrastive-learning-based methods aim to achieve overall uniformity in item representations using InfoNCE, preserving
+more inherent characteristics of items to mitigate popularity bias.

@@ -1,0 +1,31 @@
+approaches struggle with diverse food shapes, depth camera methods need specialized hardware,
+and deep learning approaches lack interpretability and struggle with out-of-distribution samples. 3D
+reconstruction offers a promising solution by providing comprehensive spatial information, adapting
+to various shapes, potentially working with single images, offering visually interpretable results,
+and enabling a standardized approach to food portion estimation. These benefits motivated the
+organization of the 3D Food Reconstruction challenge, aiming to overcome existing limitations and
+2
+develop more accurate, user-friendly, and widely applicable food portion estimation techniques,
+impacting nutritional assessment and dietary monitoring.
+3 Datasets and Evaluation Pipeline
+3.1 Dataset Description
+Advancements in 3D Food Modeling: A Review of the
+MetaFood Challenge Techniques and Outcomes
+Abstract
+The growing focus on leveraging computer vision for dietary oversight and nutri-
+tion tracking has spurred the creation of sophisticated 3D reconstruction methods
+for food. The lack of comprehensive, high-fidelity data, coupled with limited
+collaborative efforts between academic and industrial sectors, has significantly
+hindered advancements in this domain. This study addresses these obstacles by
+introducing the MetaFood Challenge, aimed at generating precise, volumetrically
+accurate 3D food models from 2D images, utilizing a checkerboard for size cal-
+ibration. The challenge was structured around 20 food items across three levels
+portion estimation across diverse applications, from individual health tracking to extensive nutritional
+investigations.
+Conventional methods for assessing diet, like 24-Hour Recall or Food Frequency Questionnaires
+(FFQs), are frequently reliant on manual data entry, which is prone to inaccuracies and can be
+burdensome. The lack of 3D data in 2D RGB food images further complicates the use of regression-
+based methods for estimating food portions directly from images of eating occasions. By enhancing
+3D reconstruction for food, the aim is to provide more accurate and intuitive nutritional assessment
+tools. This technology could revolutionize the sharing of culinary experiences and significantly
+impact nutrition science and public health.

@@ -1,0 +1,21 @@
+ This provides a common learned representation of the input space,
+while allowing each predictor to adapt to its own constraints. After the shared layers, each constrained
+predictor has an additional two hidden layers and their final outputs are projected onto our convex
+approximation of the safe region of the output space, using Gb(x) = min jGj(x). In our experiments,
+we set ε= 0.0001 .
+With this construction, we needed 30 separate predictors to enforce the VerticalCAS safeability
+constraints. The number of nodes for the unconstrained and safe implementations were 270 and 2880,
+respectively. Our safe predictor is orders of magnitude smaller than the original look-up tables.
+C.4 Parameter Optimization
+L, which one can typically
+only hope for in adaptive methods. Our EG+ method with adaptive step size accomplishes this even without the added expense of a
+backtracking linesearch.article graphicx
+7
+Obthus represents the overlap regions for each combination of
+input constraints. For example, O101is the set of points in A1andA3, but not in A2, and O0...0is
+the set where no input constraints apply. We also define Oas the set of bit strings, b, such that Ob
+is non-empty, and define k=|O|. The sets {Ob:b∈O}create a partition of Xaccording to the
+combination of input constraints that apply.
+Given:
+•c different input constraint proximity functions, σi:X→[0,1], where σiis continuous and
+∀x∈Ai,σi(x) = 0 ,

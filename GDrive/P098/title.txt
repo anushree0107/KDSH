@@ -1,0 +1,22 @@
+ A strong justification for a forecast can be considered a well-reasoned supporting argument.
+Previous work in this area includes identifying argument components such as claims, premises,
+backing, rebuttals, and refutations, as well as mining arguments that support or oppose a particular
+claim. Despite these efforts, it was found that crowdsourced justifications rarely adhere to these
+established argumentation frameworks, even though such justifications are valuable for aggregating
+forecasts.
+Finally, several studies have focused on forecasting using datasets similar or identical to the one used
+in this research. From a psychological perspective, researchers have explored strategies for enhancing
+forecasting accuracy, such as utilizing top-performing forecasters (often called "superforecasters"),
+However, none of these prior works have specifically aimed to call questions throughout their entire
+duration.
+2
+3 Dataset
+The research utilizes data from the Good Judgment Open, a platform where questions are posted, and
+individuals submit their forecasts. The questions primarily revolve around geopolitics, encompassing
+areas such as domestic and international politics, the economy, and social matters. For this study, all
+binary questions were collected, along with their associated forecasts, each comprising a prediction
+and a justification. In total, the dataset contains 441 questions and 96,664 forecasts submitted
+over 32,708 days. This dataset significantly expands upon previous research, nearly doubling the
+number of forecasts analyzed.credibility of anonymous forecasts, enabling the development of robust aggregation strategies that do
+not require tracking individual forecasters.
+7

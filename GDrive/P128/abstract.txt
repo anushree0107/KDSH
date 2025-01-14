@@ -1,0 +1,26 @@
+highly skewed dataset, compared to a robust single-task learning baseline. 2. Although our research
+concentrates on TL and MTL, we present, to our knowledge, the first experimental results on the
+relatively recent dataset from Fares (2016).
+2 Related Work
+Approaches to interpreting noun-noun compounds differ based on the classification of compound
+relations, as well as the machine learning models and features employed to learn these relations. For
+instance, some define a broad set of relations, while others employ a more detailed classification.
+Some researchers challenge the idea that noun-noun compounds can be interpreted using a fixed,
+predetermined set of relations, proposing alternative methods based on paraphrasing. We center
+our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.
+Several recent studies have conducted extensive experiments on the application of TL and MTL to a
+variety of NLP tasks, such as named entity recognition, semantic labeling, sentence-level sentiment
+classification, super-tagging, chunking, and semantic dependency parsing. The consensus among
+these studies is that the advantages of TL and MTL are largely contingent on the characteristics of the
+tasks involved, including the unevenness of the data distribution, the semantic relatedness between
+the source and target tasks, the learning trajectory of the auxiliary and main tasks (where target tasks
+that quickly reach a plateau benefit most from non-plateauing auxiliary tasks), and the structural
+similarity between the tasks.

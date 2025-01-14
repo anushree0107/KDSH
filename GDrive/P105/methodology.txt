@@ -1,0 +1,18 @@
+π((t−xn)2+γ2n)exp(1−2|tanh( γ′
+n)|)
+where Znis a normalization constant, t∈ {1,2, . . . , T }, and n∈ {1,2, . . . , N }.
+The filters are combined with learned per-class soft-attention weights A, and the super-event repre-
+sentation is computed as:
+Sc=X
+nAc,nX
+tfn(t)·vt
+where vis the T×Dvideo representation. These filters enable the model to focus on relevant
+intervals for temporal context. The super-event representation is concatenated to each timestep and
+used for classification.represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.that incorporating convolutional sub-events with a super-event representation, creating a three-level
+activity hierarchy, yields the most favorable outcomes.
+7

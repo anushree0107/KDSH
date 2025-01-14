@@ -1,0 +1,25 @@
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+In computational linguistics, noun-noun compound interpretation is typically treated as an automatic
+classification task. Various machine learning (ML) algorithms and models, such as Maximum
+Entropy, Support Vector Machines, and Neural Networks, have been employed to decipher the
+semantics of nominal compounds. These models utilize information from lexical semantics, like
+WordNet-based features, and distributional semantics, such as word embeddings. However, noun-
+noun compound interpretation remains a challenging NLP problem due to the high productivity
+of noun-noun compounding as a linguistic structure and the difficulty in deriving the semantics of
+noun-noun compounds from their constituents. Our research contributes to advancing NLP research
+ Besides differing in the NLP tasks they investigate, the aforementioned
+studies employ slightly varied definitions of TL and MTL. Our research aligns with certain studies in
+that we apply TL and MTL to learn different semantic annotations of noun-noun compounds using
+the same dataset. However, our experimental design is more akin to other work in that we experiment
+with initializing parameters across all layers of the neural network and concurrently train a single
+MTL model on two sets of relations.
+3 Task Definition and Dataset
+The objective of this task is to train a model to categorize the semantic relationships between pairs
+of nouns in a labeled dataset, where each pair forms a noun-noun compound. The complexity of

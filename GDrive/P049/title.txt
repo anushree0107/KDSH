@@ -1,0 +1,22 @@
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+ Our goal is to learn a function f(X) that predicts Y based on the input features X.
+Considering two ML tasks, Ta and Tb, we would train two distinct models to learn separate functions
+fa and fb for predicting Ya and Yb in a single-task learning scenario. However, if Ta and Tb are
+related, either explicitly or implicitly, TL and MTL can enhance the generalization of either or both
+tasks. Two tasks are deemed related when their domains are similar but their label sets differ, or when
+their domains are dissimilar but their label sets are identical. Consequently, noun-noun compound
+interpretation using the dataset is well-suited for TL and MTL, as the training examples are identical,
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are

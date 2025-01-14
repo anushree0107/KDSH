@@ -1,0 +1,25 @@
+26% of right constituents of compounds annotated as AIM occur
+in other compounds annotated as RSTR. This explains the models’ inability to learn AIM but raises
+questions about their ability to learn relational representations, which we explore further in Section
+7.3.
+Table 8: Macro-average F1 score on the test split.
+Model NomBank PCEDT
+STL 52.66 40.15
+TLE 52.83 48.34
+TLH 52.98 46.52
+TLEH 53.31 47.12
+MTLE 53.21 47.23
+MTLF 42.07 40.73
+I3D + super-events 38.7 38.6 39.1
+I3D + sub+super-events 38.2 39.4 40.4
+InceptionV3 31.2 31.8 31.9
+InceptionV3 + max-pooling 31.8 34.1 35.2
+InceptionV3 + pyramid 32.2 35.1 36.8
+InceptionV3 + LSTM 32.1 33.5 34.1
+InceptionV3 + temporal conv 28.4 34.4 33.4
+InceptionV3 + sub-events 32.the RSSI signals, in particular to help distinguish adjacent rooms, which RSSI-only systems typically struggle with. If it will, how
+can we incorporate these extra features (and modalities) into the existing features for accurate room predictions, particularly in the
+context of PD where the acceleration signal may be significantly impacted by the disease itself?
+(2) Modeling local and global temporal dynamics. The true correlations between inputs both intra-modality (i.e., RSSI signal among
+access points) and inter-modality (i.e., RSSI signal against accelerometer fluctuation) are dynamic. These dynamics can affect one
+another within a local context (e.g., cyclical patterns) or across long-term relationships.

@@ -1,0 +1,27 @@
+π((t−xn)2+γ2n)exp(1−2|tanh( γ′
+n)|)
+where Znis a normalization constant, t∈ {1,2, . . . , T }, and n∈ {1,2, . . . , N }.
+The filters are combined with learned per-class soft-attention weights A, and the super-event repre-
+sentation is computed as:
+Sc=X
+nAc,nX
+tfn(t)·vt
+where vis the T×Dvideo representation. These filters enable the model to focus on relevant
+intervals for temporal context. The super-event representation is concatenated to each timestep and
+used for classification.t+bu) +τt (1)
+where Wu∈Ru×dandbu∈Rdare the weight and bias to learn, dis the embedding dimension, and τt∈Rdis the corresponding
+position encoding at time t.
+4.2 Locality Enhancement with Self-Attention
+Since it is time-series data, the importance of an RSSI or accelerometer value at each point in time can be identified in relation to its
+surrounding values - such as cyclical patterns, trends, or fluctuations. Utilizing historical context that can capture local patterns on
+top of point-wise values, performance improvements in attention-based architectures can be achieved. One straightforward option is
+one of the feature pooling methods, and zt,cis the ground truth class at time t.
+A method to learn ’super-events’ (i.e., global video context) has been introduced and shown to be
+effective for activity detection in continuous videos. This approach involves learning a set of temporal
+structure filters modeled as NCauchy distributions. Each distribution is defined by a center xnand a
+width γn. Given the video length T, the filters are constructed by:
+xn=(T−1)(tanh( x′
+n) + 1)
+2
+fn(t) =1
+Znγn

@@ -1,0 +1,29 @@
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.layers: 1) an input layer, 2) an embedding layer, 3) a hidden layer, and 4) an output layer. The input
+3
+layer consists of two integers that indicate the indices of a compound’s constituents in the embedding
+layer, where the word embedding vectors are stored. These selected vectors are then passed to a fully
+connected hidden layer, the size of which matches the dimensionality of the word embedding vectors.
+Finally, a softmax function is applied to the output layer to select the most probable relation.
+The compound’s constituents are represented using a 300-dimensional word embedding model trained
+on an English Wikipedia dump and the English Gigaword Fifth Edition. The embedding model was
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

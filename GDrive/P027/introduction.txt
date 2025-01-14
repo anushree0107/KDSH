@@ -1,0 +1,27 @@
+Similarly, researchers have examined how language provides insights into interpersonal interactions
+and relationships. In terms of language form and function, prior research has investigated politeness,
+empathy, advice, condolences, usefulness, and deception. Related to the current study’s focus,
+researchers have examined the influence of Wikipedia editors and studied influence levels within
+online communities. Persuasion has also been analyzed from a computational perspective, including
+within the context of dialogue systems. The work presented here complements these previous studies.
+The goal is to identify credible justifications to improve the aggregation of crowdsourced forecasts,
+without explicitly targeting any of the aforementioned characteristics.
+Within the field of computational linguistics, the task most closely related to this research is argumen-
+tation.improve its F1 scores for less common yet more challenging semantic relations.
+1 Introduction
+Noun-noun compound interpretation involves determining the semantic connection between two
+nouns (or noun phrases in multi-word compounds). For instance, in the compound "street protest,"
+the task is to identify the semantic relationship between "street" and "protest," which is a locative
+relation in this example. Given the prevalence of noun-noun compounds in natural language and its
+significance to other natural language processing (NLP) tasks like question answering and information
+retrieval, understanding noun-noun compounds has been extensively studied in theoretical linguistics,
+psycholinguistics, and computational linguistics.
+our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.

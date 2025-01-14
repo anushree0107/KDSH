@@ -1,0 +1,23 @@
+We confirm the efficacy and logic of PAAC in reducing popularity bias through thorough experiments on three
+real-world datasets.
+1 Introduction
+Contemporary recommender systems are essential in reducing information overload. Personalized recommendations frequently
+employ collaborative filtering (CF) to assist users in discovering items that may interest them. CF-based techniques primarily
+learn user preferences and item attributes by matching the representations of users with the items they engage with. Despite their
+achievements, CF-based methods frequently encounter the issue of popularity bias, which leads to considerable disparities in
+accuracy between items that are popular and those that are not. Popularity bias occurs because there are limited supervisory signals
+We implement the state-of-the-art LightGCN to instantiate PAAC, aiming to investigate how it alleviates popularity bias. We
+compare PAAC with several debiased baselines, including re-weighting-based models, decorrelation-based models, and contrastive
+learning-based models.
+We utilize three widely used metrics, namely Recall@K, HR@K, and NDCG@K, to evaluate the performance of Top-K recommen-
+dation. Recall@K and HR@K assess the number of target items retrieved in the recommendation results, emphasizing coverage. In
+contrast, NDCG@K evaluates the positions of target items in the ranking list, with a focus on their positions in the list. We use
+Addressing Popularity Bias with Popularity-Conscious Alignment and
+Contrastive Learning
+Abstract
+Collaborative Filtering (CF) often encounters substantial difficulties with popularity bias because of the skewed
+distribution of items in real-world datasets. This tendency creates a notable difference in accuracy between items
+that are popular and those that are not. This discrepancy impedes the accurate comprehension of user preferences
+and intensifies the Matthew effect within recommendation systems. To counter popularity bias, current methods
+concentrate on highlighting less popular items or on differentiating the correlation between item representations
+and their popularity. Despite their effectiveness, current approaches continue to grapple with two significant

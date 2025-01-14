@@ -1,0 +1,26 @@
+Require: Starting point u0=u−1∈Rd, step size a >0, parameter 0< γ≤1and batch size B.
+fork= 0,1, ...do
+Sample i.i.d. (ξi)B
+i=1and compute estimator  ̃gk=1
+BPB
+i=1F(uk, ξk
+i)
+uk+1=uk−a((1 + γ) ̃gk− ̃gk−1)
+end for
+4
+Theorem 3.3. LetF:Rd→RdbeL-Lipschitz satisfying Assumption 1 with1
+where ε, ε′∼N(0, I).
+**Proof.** Using the definition of W1, the trivial coupling, the definitions of μθ
+nandπθ(·), and Lemma 3.4, we get the desired result.
+Combining Lemmas 3.2 and 3.5 with the triangle inequality yields Theorem 3.1.
+3.3 Special case using the forward process of Ho et al. (2020)
+Theorem 3.1 establishes a general upper bound that holds for any forward process, as long as the backward process satisfies
+Assumption 1. In this section, we specialize the statement of the theorem to the particular case of the forward process defined in
+. All of these
+only deal with the case γ= 1. The only other reference that deals with a generalized (i.e., not necessarily γ= 1) version of OGDA
+is another work, where the resulting step size condition is a≤2−γ
+4L, which is strictly worse than ours for any γ. To summarize, not
+only do we show for the first time that the step size of a generalization of OGDA can go above1
+2L, but we also provide the least
+restrictive bound for any value of γ.
+3.2 OGDA+ stochastic

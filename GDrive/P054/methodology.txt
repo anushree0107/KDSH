@@ -1,0 +1,30 @@
+found with the data for object 12 (steak) and object 15 (chicken nugget), so these items were excluded
+from the final overall evaluation.
+4 First Place Team - VolETA
+4.1 Methodology
+The team’s research employs multi-view reconstruction to generate detailed food meshes and calculate
+precise food volumes.
+4.1.1 Overview
+The team’s method integrates computer vision and deep learning to accurately estimate food volume
+from RGBD images and masks. Keyframe selection ensures data quality, supported by perceptual
+hashing and blur detection. Camera pose estimation and object segmentation pave the way for neural
+surface reconstruction, creating detailed meshes for volume estimation. Refinement steps, including
+isolated piece removal and scaling factor adjustments, enhance accuracy. This approach provides a
+thorough solution for accurate food volume assessment, with potential uses in nutrition analysis.
+4.1.2 The Team’s Proposal: VolETA
+The team starts by acquiring input data, specifically RGBD images and corresponding food object
+masks. The RGBD images, denoted as ID={IDi}n
+i=1, where nis the total number of frames,
+provide depth information alongside RGB images. The food object masks, {Mf
+i}n
+i=1, help identify
+regions of interest within these images.
+Next, the team selects keyframes. From the set {IDi}n
+with ground truth meshes using MAPE and Chamfer distance metrics. The team’s approach was
+applied separately to each food scene. A one-shot food volume estimation approach was used if
+the number of keyframes kequaled 1; otherwise, a few-shot food volume estimation was applied.
+Notably, the keyframe selection process chose 34.8% of the total frames for the rest of the pipeline,
+showing the minimum frames with the highest information.
+Table 2: List of Extracted Information Using RGBD and Masks
+Level Id Label Sf PPU Rw×Rl (fw×fl×fh)
+1 Strawberry 0.08955223881 0.

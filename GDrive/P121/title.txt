@@ -1,0 +1,22 @@
+offer little to no inductive bias for NomBank relations. Conversely, the mapping from NomBank to
+PCEDT shows that although many NomBank arguments map to RSTR in PCEDT, the percentages
+are lower, making the mapping more diverse and discriminative, which seems to aid TL and MTL
+models in learning less frequent PCEDT relations.
+To understand why the PCEDT functor AIM is never predicted despite being more frequent than
+TWHEN, we found that AIM is almost always misclassified as RSTR by all models. Furthermore,
+AIM and RSTR have the highest lexical overlap in the training set among all PCEDT relation pairs:
+78.35% of left constituents and 73. These tables illustrate how PCEDT functors map to NomBank arguments
+in the training split (Table 6) and vice versa (Table 7). Table 6 reveals that 80% of the compounds
+annotated as TWHEN in PCEDT were annotated as ARGM-TMP in NomBank. Additionally, 47% of
+ACT (Actor) relations map to ARG0 (Proto-Agent) in NomBank. While this mapping is not as distinct
+as one might hope, it is still relatively high when compared to how other PCEDT relations map to
+ARG0. The correspondence matrices also demonstrate that the presumed theoretical similarities
+between NomBank and PCEDT relations do not always hold in practice. Nevertheless, even such
+imperfect correspondences can provide a training signal that assists the TL and MTL models in
+learning relations like TWHEN and ACT.
+Since the TLE model outperforms STL in predicting REG by ten absolute points, we examined
+all REG compounds correctly classified by TLE but misclassified by STL. We found that STL
+misclassified them as RSTR, indicating that TL from NomBank helps TLE recover from STL’s
+overgeneralization in RSTR prediction.
+The two NomBank relations that receive the highest boost in F1 score (about five absolute points)
+are ARG0 and ARGM-MNR, but the improvement in the latter corresponds to only one additional

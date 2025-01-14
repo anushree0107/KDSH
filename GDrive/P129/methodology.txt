@@ -1,0 +1,32 @@
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.isolated piece removal and scaling factor adjustments, enhance accuracy. This approach provides a
+thorough solution for accurate food volume assessment, with potential uses in nutrition analysis.
+4.1.2 The Team’s Proposal: VolETA
+The team starts by acquiring input data, specifically RGBD images and corresponding food object
+masks. The RGBD images, denoted as ID={IDi}n
+i=1, where nis the total number of frames,
+provide depth information alongside RGB images. The food object masks, {Mf
+i}n
+i=1, help identify
+regions of interest within these images.
+Next, the team selects keyframes. From the set {IDi}n
+both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective

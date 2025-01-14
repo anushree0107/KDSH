@@ -1,0 +1,14 @@
+DCSA (ˆx1,ˆx2) =GRN (Norm (φ(ˆx1) + ˆx1), Norm (φ(ˆx2) + ˆx2)) (2)
+with
+φ(ˆx) =SA(Φk(ˆx)WQ,Φk(ˆx)WK,Φk(ˆx)WV) (3)
+where GRN (.)is the Gated Residual Network to integrate dual inputs into one integrated embedding, Norm (.)is a standard layer
+normalization, SA(.)is a scaled dot-product self-attention, Φk(.We apply two different layers to produce two different outputs during training. The room-level predictions are produced via a single
+conditional random field (CRF) layer in combination with a linear layer applied to the output of Eq. 7 to produce the final predictions
+as:
+ˆyt=CRF (φ(ht)) (7)
+q′(ht) =Wpht+bp (8)
+where Wp∈Rd×mandbp∈Rmare the weight and bias to learn, mis the number of room locations, and h= [h1, ..., h T]∈RT×d
+is the refined embedding produced by Eq. 7. Even though the transformer can take into account neighbor information before
+φki(ˆx1,ˆx2) =SA(Φki(ˆx1)WQ,Φki(ˆx2)WK,Φki(ˆx1,ˆx2)WV) (5)
+where Φki(.)is a 1D-convolutional layer with a kernel size {1, ki}and a stride ki,WK∈Rd×d, WQ∈Rd×d, WV∈Rd×dare
+weights for keys, queries, and values of the self-attention layer, and Ξn(.)concatenates the output of each DCSA ki(.)in temporal

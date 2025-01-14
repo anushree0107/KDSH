@@ -1,0 +1,23 @@
+The procedure for estimating the scale factor at the coordinate level is illustrated in Figure 9. The
+team adheres to a method involving corner projection matching. Specifically, utilizing the COLMAP
+dense model, the team acquires the pose of each image along with dense point cloud data. For any
+given image imgkand its extrinsic parameters [R|t]k, the team initially performs threshold-based
+corner detection, setting the threshold at 240. This step allows them to obtain the pixel coordinates
+of all detected corners. Subsequently, using the intrinsic parameters kand the extrinsic parameters
+[R|t]k, the point cloud is projected onto the image plane. Based on the pixel coordinates of the
+ They select the best reconstruction results from these methods and
+extract the mesh. The extracted mesh is scaled using the estimated scale factor, and optimization
+techniques are applied to obtain a refined mesh.
+For the last five single-view objects, the team experiments with several single-view reconstruction
+methods, including Zero123, Zero123++, One2345, ZeroNVS, and DreamGaussian. They choose
+ZeroNVS to obtain a 3D food model consistent with the distribution of the input image. The
+intrinsic camera parameters from the fifteenth object are used, and an optimization method based
+on reprojection error refines the extrinsic parameters of the single camera. Due to limitations in
+02021 249×318 (186 ×95×0.987)
+19 Waffle 0.01034482759 0.01902 294×338 (465 ×537×0.8)
+20 Pizza 0.01034482759 0.01913 292×336 (442 ×651×1.176)
+After finding keyframes, PixSfM estimated the poses and point cloud. After generating scaled meshes,
+the team calculated volumes and Chamfer distance with and without transformation metrics. Meshes
+were registered with ground truth meshes using ICP to obtain transformation metrics.
+Table 3 presents quantitative comparisons of the team’s volumes and Chamfer distance with and
+without estimated transformation metrics from ICP.

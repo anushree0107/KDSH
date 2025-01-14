@@ -1,0 +1,20 @@
+Data Models Kitch-Livin Kitch-Dinin Dinin-Livin
+Ground Truth 18.71 (18.52) 14.65 (6.03) 10.64 (11.99)
+ALL-HCRF 16.18 (12.08) 14.58 (10.22) 10.19 (9.46)
+TENER 15.58 (8.75) 16.30 (12.94) 12.01 (13.01)
+Alt DTML 15.27 (7.51) 13.40 (6.43) 10.84 (10.81)
+MDCSA 17.70 (16. Specifically, PAAC-w/o P refers to the variant where
+the re-weighting contrastive loss of popular items is removed, focusing instead on optimizing the consistency of representations for
+unpopular items. Similarly, PAAC-w/o U denotes the removal of the re-weighting contrastive loss for unpopular items. PAAC-w/o
+A refers to the variant without the popularity-aware supervised alignment loss. It’s worth noting that PAAC-w/o A differs from
+4
+Table 1: Performance comparison on three public datasets with K = 20. The best performance is indicated in bold, while the
+second-best performance is underlined. The superscripts * indicate p ≤0.05 for the paired t-test of PAAC vs.For Structure from Motion (SfM), the team enhanced the advanced COLMAP method by integrating
+SuperPoint and SuperGlue techniques. This integration significantly addressed the issue of limited
+keypoints in scenes with minimal texture, as illustrated in Figure 15.
+In the mesh reconstruction phase, the team’s approach builds upon 2D Gaussian Splatting, which
+employs a differentiable 2D Gaussian renderer and includes regularization terms for depth distortion
+9
+and normal consistency. The Truncated Signed Distance Function (TSDF) results are utilized to
+produce a dense point cloud.
+During post-processing, the team applied filtering and outlier removal methods, identified the outline

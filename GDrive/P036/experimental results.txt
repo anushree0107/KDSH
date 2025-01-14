@@ -1,0 +1,23 @@
+connected layer is used for classification, as illustrated in Fig. 5(c).
+While temporal pyramid pooling retains some structure, the intervals are fixed and predetermined.
+Previous studies have shown that learning the sub-interval to pool is beneficial for activity recognition.
+These learned intervals are defined by three parameters: a center g, a width σ, and a stride δ,
+parameterizing NGaussians. Given the video length T, the positions of the strided Gaussians are
+first calculated as:
+gn= 0.5−T−(gn+ 1)
+N−1forn = 0,1, . . . , N −1
+pt,n=gn+ (t−0.5T+ 0.3 53.4 57.2
+I3D + pyramid 53.2 56.7 58.7
+I3D + LSTM 48.2 53.1 53.1
+I3D + temporal conv 52.8 57.1 58.4
+I3D + sub-events 55.5 61.2 61.3
+Table 5 shows the average precision for each activity class. Learning temporal structure is particularly
+beneficial for frame-based features (e.g., InceptionV3), which capture less temporal information
+5
+compared to segment-based features (e.g., I3D). Sub-event learning significantly aids in detecting
+localization accuracy, accelerometer data from wearable devices, along with RSSI, can be used to distinguish different activities
+(e.g., walking vs. standing). Since some activities are associated with specific rooms (e.g., stirring a pan on the stove is likely to
+occur in a kitchen), accelerometer data can enhance RSSI’s ability to differentiate between adjacent rooms, an area where RSSI
+alone may be insufficient.
+The heterogeneity of PD, where symptoms and their severity vary between patients, poses a challenge for generalizing accelerometer
+data across different individuals. Severe symptoms, such as tremors, can introduce bias and accumulated errors in accelerometer data,

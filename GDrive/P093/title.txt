@@ -1,0 +1,24 @@
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.Examining the Convergence of Denoising Diffusion Probabilistic
+Models: A Quantitative Analysis
+Abstract
+Deep generative models, particularly diffusion models, are a significant family within deep learning. This study
+provides a precise upper limit for the Wasserstein distance between a learned distribution by a diffusion model
+and the target distribution. In contrast to earlier research, this analysis does not rely on presumptions regarding
+the learned score function. Furthermore, the findings are applicable to any data-generating distributions within
+restricted instance spaces, even those lacking a density relative to the Lebesgue measure, and the upper limit is not
+exponentially dependent on the ambient space dimension. The primary finding expands upon recent research by
+an activity, eliminating the need for the model to identify the start and end of activities. Our methods
+are based on a CNN that generates a per-frame or per-segment representation, derived from standard
+two-stream CNNs using deep CNNs like I3D or InceptionV3.
+Given video features vof dimensions T×D, where Trepresents the video’s temporal length and D
+is the feature’s dimensionality, the usual approach for feature pooling involves max- or mean-pooling
+across the temporal dimension, followed by a fully-connected layer for video clip classification, as
+depicted in Fig. 5(a). This approach, however, yields a single representation for the entire video,
+losing temporal information.

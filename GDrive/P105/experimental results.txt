@@ -1,0 +1,28 @@
+both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective
+{Rf, Rr}for the reference and food objects, providing detailed 3D representations. The team uses the
+"Remove Isolated Pieces" technique to refine the meshes. Given that the scenes contain only one food
+item, the diameter threshold is set to 5% of the mesh size. This method deletes isolated connected
+components with diameters less than or equal to 5%, resulting in a cleaned mesh {RCf, RCr}. This
+step ensures that only significant parts of the mesh are retained.
+The team manually identifies an initial scaling factor Susing the reference mesh via MeshLab. This
+factor is fine-tuned to Sfusing depth information and food and reference masks, ensuring accurate
+found with the data for object 12 (steak) and object 15 (chicken nugget), so these items were excluded
+from the final overall evaluation.
+4 First Place Team - VolETA
+4.1 Methodology
+The team’s research employs multi-view reconstruction to generate detailed food meshes and calculate
+precise food volumes.
+4.1.1 Overview
+The team’s method integrates computer vision and deep learning to accurately estimate food volume
+from RGBD images and masks. Keyframe selection ensures data quality, supported by perceptual
+hashing and blur detection. Camera pose estimation and object segmentation pave the way for neural
+surface reconstruction, creating detailed meshes for volume estimation. Refinement steps, including

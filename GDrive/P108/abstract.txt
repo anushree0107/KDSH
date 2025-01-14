@@ -1,0 +1,23 @@
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+this task is influenced by factors such as the label set used and its distribution. For the experiments
+detailed in this paper, we utilize a noun-noun compounds dataset that features compounds annotated
+with two distinct taxonomies of relations. This means that each noun-noun compound is associated
+with two different relations, each based on different linguistic theories. This dataset is derived from
+established linguistic resources, including NomBank and the Prague Czech-English Dependency
+Treebank 2.0 (PCEDT). We chose this dataset for two primary reasons: firstly, the dual annotation of
+relations on the same set of compounds is ideal for exploring TL and MTL approaches; secondly,
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in

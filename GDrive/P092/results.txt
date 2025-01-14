@@ -1,0 +1,21 @@
+ x∈
+Aunsafeable ,i⇒Fi(x)<max jFj(x), where Fj(x)is the output score for the jthadvisory.
+Table 1 shows the performance of a standard, unconstrained network and our safe predictor. For both
+networks, we present the percentage accuracy (ACC) and violations (percentage of inputs for which
+the network outputs an unsafe advisory). We train and test using PyTorch with two separate datasets,
+based on the previous advisory being Clear of Conflict (COC) and Climb at 1500 ft/min (CL1500).
+As shown in the table, our safe predictor adheres to the required safeability property. Furthermore,
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+ For the modified transformer encoder, at each time step t, RSSI xr
+tand accelerometer xa
+tfeatures are combined via a
+linear layer before they are processed by the networks. A grid search on the parameters of each network is performed to find the best
+parameter for each model. The parameters to tune are the embedding dimension din 128, 256, the number of epochs in 200, 300,
+and the learning rate in 0.01, 0.0001. The dropout rate is set to 0.15, and a specific optimizer in combination with a Look-Ahead
+algorithm is used for the training with early stopping using the validation performance. For the RF, we perform a cross-validated

@@ -1,0 +1,17 @@
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.77 (13.19) 48.61 (12.03) 76.39 (12.23)
+Demographic Features 36.69 (18.15) 50.53 (15.60)
+In naturalistic settings, in-home mobility can be measured through the use of indoor localization models. We have shown, using
+room transition duration results, that our PD cohort takes longer on average to perform a room transition when they withhold
+medications. With accurate in-home gait speed features, a classifier model can then differentiate accurately if a person with PD is in
+an ON or OFF medication state. Such changes show the promise of these localization outputs to detect the dopamine-related gait
+ the time spent in the hallway) to 60 seconds to exclude
+transitions likely to be prolonged and thus may not be representative of the person’s mobility.
+These in-home gait speed features are produced by an indoor-localization model by feeding RSSI signals and accelerometer data
+from 12 PD participants from 6 a.m. to 10 p.m. daily, which are aggregated into 4-hour windows. From this, each PD participant
+will have 20 data samples (four data samples for each of the five days), each of which contains six features (three for the mean of
+room-to-room transition duration and three for the number of room-to-room transitions). There is only one 4-hour window during

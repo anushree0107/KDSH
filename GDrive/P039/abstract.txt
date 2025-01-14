@@ -1,0 +1,31 @@
+both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details
+35 8.64
+20 117.43 119.83 20.03
+6 Best 3D Mesh Reconstruction Team - FoodRiddle
+6.1 Methodology
+To achieve high-fidelity food mesh reconstruction, the team developed two procedural pipelines as
+depicted in Figure 14. For simple and medium complexity cases, they employed a structure-from-
+motion strategy to ascertain the pose of each image, followed by mesh reconstruction. Subsequently,
+a sequence of post-processing steps was implemented to recalibrate the scale and improve mesh
+quality. For cases involving only a single image, the team utilized image generation techniques to
+facilitate model generation.
+6.1.1 Multi-View Reconstruction

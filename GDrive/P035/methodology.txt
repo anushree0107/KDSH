@@ -1,0 +1,25 @@
+ Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.
+(NeuRIPs) and determined the sample complexity required to achieve NeuRIPs, which depends on
+realistic parameter bounds and the network architecture. We applied our findings to derive upper
+bounds on the expected risk, which are valid uniformly across sublevel sets of the empirical risk.
+If a network optimization algorithm can identify a network with a small empirical risk, our results
+guarantee that this network will generalize well. By deriving uniform concentration statements, we
+have resolved the problem of independence between the termination of an optimization algorithm at
+a certain network and the empirical risk concentration at that network. Future studies may focus on
+performing uniform empirical norm concentration on the critical points of the empirical risk, which
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6

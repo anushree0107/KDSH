@@ -1,0 +1,24 @@
+PCEDT functors appear less than 20 times), making it doubtful whether any ML model could learn
+them under any circumstances.
+Given this imbalanced distribution, it is evident that accuracy alone is insufficient to determine the
+best-performing model. Therefore, in the subsequent section, we report and analyze the F1 scores of
+the predicted NomBank and PCEDT relations across all STL, TL, and MTL models.
+7.2 Per-Relation F1 Scores
+Tables 4 and 5 present the per-relation F1 scores for NomBank and PCEDT, respectively. We only
+include results for relations that are actually predicted by at least one of the models.
+5
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+and MTL models are trained using the same hyperparameters as the STL model.
+5.2 Transfer Learning Models
+In our experiments, transfer learning involves training an STL model on PCEDT relations and then
+using some of its weights to initialize another model for NomBank relations. Given the neural
+classifier architecture detailed in Section 5.1, we identify three ways to implement TL: 1) TLE:
+Transferring the embedding layer weights, 2) TLH: Transferring the hidden layer weights, and 3)
+TLEH: Transferring both the embedding and hidden layer weights. Furthermore, we differentiate
+between transfer learning from PCEDT to NomBank and vice versa. This results in six setups,

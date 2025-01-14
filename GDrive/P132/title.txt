@@ -1,0 +1,29 @@
+01786 320×360 (238 ×257×2.353)
+2 Cinnamon bun 0.1043478261 0.02347 236×274 (363 ×419×2.353)
+3 Pork rib 0.1043478261 0.02381 246×270 (435 ×778×1.176)
+Easy 4 Corn 0.08823529412 0.01897 291×339 (262 ×976×2.353)
+5 French toast 0.1034482759 0.02202 266×292 (530 ×581×2.53)
+6 Sandwich 0.1276595745 0.surfaces, and intricate geometries common in culinary subjects.
+The competition involved 20 diverse food items, captured under various conditions and with differing
+numbers of input images, specifically designed to challenge participants in creating robust reconstruc-
+tion models. The evaluation was based on a two-phase process, assessing both portion size accuracy
+through Mean Absolute Percentage Error (MAPE) and shape accuracy using the Chamfer distance
+metric.
+Of all participating teams, three reached the final submission stage, presenting a range of innovative
+solutions. Team V olETA secured first place with the best overall performance in both Phase-I and
+Phase-II, followed by team ININ-VIAUN in second place. Additionally, the FoodRiddle team
+ Next, ICP registration is performed for further alignment, significantly
+reducing the Chamfer distance. Finally, gradient descent is used for additional fine-tuning to obtain
+the final transformation matrix.
+The total Chamfer distance between all 18 predicted models and the ground truths is 0.069441169.
+8
+Table 5: Estimated Scale Factors
+Object Index Food Item Scale Factor
+1 Strawberry 0.060058
+2 Cinnamon bun 0.081829
+3 Pork rib 0.073861
+4 Corn 0.083594
+5 French toast 0.078632
+6 Sandwich 0.088368
+7 Burger 0.103124
+8 Cake 0.068496

@@ -1,0 +1,26 @@
+explanation may appear to rely heavily on the prevailing opinion of the crowd and might be considered
+weaker than a justification that presents specific, verifiable facts from external resources.
+To clarify the terminology used: a "question" is defined as a statement that seeks information (e.g.,
+"Will new legislation be implemented before a certain date?"). Questions have a defined start and
+end date, and the period between these dates constitutes the "life" of the question. "Forecasters"
+are individuals who provide a "forecast," which consists of a "prediction" and a "justification." The
+prediction is a numerical representation of the likelihood of an event occurring. The justification
+is the text provided by the forecaster to support their prediction.* When making a prediction on a specific day, is it advantageous to include forecasts from previous
+days? (Yes) * Does the accuracy of the prediction improve when considering the question itself
+and the written justifications provided with the forecasts? (Yes) * Is it easier to make an accurate
+prediction toward the end of a question’s duration? (Yes) * Are written justifications more valuable
+when the crowd’s predictions are less accurate? (Yes)
+In addition, this research presents an examination of the justifications associated with both accurate
+and inaccurate forecasts. This analysis aims to identify the features that contribute to a justification
+being more or less credible.
+2 Related Work
+The language employed by individuals is indicative of various characteristics.industries as it enables them to anticipate and address potential challenges. This study focuses on
+questions spanning the political, economic, and social domains, utilizing forecasts submitted by a
+crowd of individuals without specialized training. Each forecast comprises a prediction and a natural
+language justification.
+6
+The research demonstrates that aggregating the weighted predictions of forecasters is a solid baseline
+for calling a question throughout its duration. However, models that incorporate both the question
+and the justifications achieve significantly better results, particularly during the first three quartiles of
+a question’s life. Importantly, the models developed in this study do not profile individual forecasters
+or utilize any information about their identities. This work lays the groundwork for evaluating the

@@ -1,0 +1,24 @@
+ We prove this property in a network
+recovery setting in Theorem 2, and also an agnostic learning setting in Theorem 3. These results
+ensure a small generalization error, when any optimization algorithm finds a network with a small
+empirical risk. We develop the key proof techniques for deriving the sample complexity of achieving
+NeuRIPs in Section V , by using the chaining theory of stochastic processes. The derived results are
+summarized in Section VI, where we also explore potential future research directions.
+2 Notation and Assumptions
+In this section, we will define the key notations and assumptions for the neural networks examined
+in this study.The latter is an upper bound on the empirical risk, which real-world optimization algorithms can be
+expected to achieve.
+5 Size Control of Stochastic Processes on Shallow Networks
+In this section, we introduce the key techniques for deriving concentration statements for the em-
+pirical norm, uniformly valid for sets of shallow ReLU networks. We begin by rewriting the event
+NeuRIPs(  ̄P) by treating μas a stochastic process, indexed by the parameter set  ̄P. The event
+NeuRIPs(  ̄P) holds if and only if we have
+sup
+ Conversely, SGMs
+employ score-matching methods to approximate the score function of the data-generating distribution, subsequently generating new
+samples through Langevin dynamics. Recognizing that real-world distributions might lack a defined score function, adding varying
+noise levels to training samples to encompass the entire instance space and training a neural network to concurrently learn the score
+function for all noise levels has been proposed.
+Although DDPMs and SGMs may initially seem distinct, it has been demonstrated that DDPMs implicitly approximate the score
+function, with the sampling process resembling Langevin dynamics. Moreover, a unified perspective of both methods using stochastic
+differential equations (SDEs) has been derived.

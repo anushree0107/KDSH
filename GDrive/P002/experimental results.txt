@@ -1,0 +1,28 @@
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e.Detailed Action Identification in Baseball Game
+Recordings
+Abstract
+This research introduces MLB-YouTube, a new and complex dataset created for
+nuanced activity recognition in baseball videos. This dataset is structured to
+support two types of analysis: one for classifying activities in segmented videos
+and another for detecting activities in unsegmented, continuous video streams. This
+study evaluates several methods for recognizing activities, focusing on how they
+capture the temporal organization of activities in videos. This evaluation starts
+with categorizing segmented videos and progresses to applying these methods
+to continuous video feeds. Additionally, this paper assesses the effectiveness of
+different models in the challenging task of forecasting pitch velocity and type
+using baseball broadcast videos. The findings indicate that incorporating temporal
+InceptionV3 5.3 mph
+InceptionV3 + LSTM 4.5 mph
+InceptionV3 + sub-events 3.6 mph
+6.2.3 Pitch Type Classification
+We conducted experiments to determine the feasibility of predicting pitch types from video, a task
+made challenging by pitchers’ efforts to disguise their pitches from batters and the subtle differences
+between pitches, such as grip and rotation. We incorporated pose data extracted using OpenPose,
+utilizing heatmaps of joint and body part locations as input to a newly trained InceptionV3 CNN.
+Pose features were considered due to variations in body mechanics between different pitches. Our
+dataset includes six pitch types, with results presented in Table 7.

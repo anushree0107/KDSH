@@ -1,0 +1,23 @@
+We apply two different layers to produce two different outputs during training. The room-level predictions are produced via a single
+conditional random field (CRF) layer in combination with a linear layer applied to the output of Eq. 7 to produce the final predictions
+as:
+ˆyt=CRF (φ(ht)) (7)
+q′(ht) =Wpht+bp (8)
+where Wp∈Rd×mandbp∈Rmare the weight and bias to learn, mis the number of room locations, and h= [h1, ..., h T]∈RT×d
+is the refined embedding produced by Eq. 7. Even though the transformer can take into account neighbor information before
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+when the training data becomes limited, as in 4m-HC and 4m-PD validations, having extra capabilities is necessary to further
+extract temporal information and correlations. Due to being a vanilla transformer requiring a considerable amount of training
+data, the modified transformer encoder performs worst in these two validations. The state-of-the-art model performs quite well
+6
+due to its ability to capture local context via LSTM for each modality. However, in general, its performance suffers in both the
+LOO-PD and 4m-PD validations as the accelerometer data (and modality) may be erratic due to PD and should be excluded at
+times from contributing to room classification.

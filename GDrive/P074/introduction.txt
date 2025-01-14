@@ -1,0 +1,30 @@
+approaches struggle with diverse food shapes, depth camera methods need specialized hardware,
+and deep learning approaches lack interpretability and struggle with out-of-distribution samples. 3D
+reconstruction offers a promising solution by providing comprehensive spatial information, adapting
+to various shapes, potentially working with single images, offering visually interpretable results,
+and enabling a standardized approach to food portion estimation. These benefits motivated the
+organization of the 3D Food Reconstruction challenge, aiming to overcome existing limitations and
+2
+develop more accurate, user-friendly, and widely applicable food portion estimation techniques,
+impacting nutritional assessment and dietary monitoring.
+3 Datasets and Evaluation Pipeline
+3.1 Dataset Description
+Deep Learning Approaches utilize neural networks trained on large image datasets for portion
+estimation. Regression networks estimate the energy value of food from single images or from an
+"Energy Distribution Map" that maps input images to energy distributions. Some networks use both
+images and depth maps to estimate energy, mass, and macronutrient content. However, deep learning
+methods require extensive data for training and are not always interpretable, with performance
+degrading when test images significantly differ from training data.
+While these methods have advanced food portion estimation, they face limitations that hinder their
+widespread use and accuracy. Stereo-based methods are impractical for single images, model-based
+found with the data for object 12 (steak) and object 15 (chicken nugget), so these items were excluded
+from the final overall evaluation.
+4 First Place Team - VolETA
+4.1 Methodology
+The team’s research employs multi-view reconstruction to generate detailed food meshes and calculate
+precise food volumes.
+4.1.1 Overview
+The team’s method integrates computer vision and deep learning to accurately estimate food volume
+from RGBD images and masks. Keyframe selection ensures data quality, supported by perceptual
+hashing and blur detection. Camera pose estimation and object segmentation pave the way for neural
+surface reconstruction, creating detailed meshes for volume estimation. Refinement steps, including

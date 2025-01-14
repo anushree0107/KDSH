@@ -1,0 +1,24 @@
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+trained by Fares et al. (2017). If a word is not found during lookup in the embedding model, we
+check if the word is uppercased and attempt to find the lowercase version. For hyphenated words
+not found in the embedding vocabulary, we split the word at the hyphen and average the vectors of
+its parts, if they are present in the vocabulary. If the word remains unrepresented after these steps, a
+designated vector for unknown words is employed.
+5.1.1 Architecture and Hyperparameters
+Our selection of hyperparameters is informed by multiple rounds of experimentation with the single-
+task learning model, as well as the choices made by prior work. The weights of the embedding layer
+our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.

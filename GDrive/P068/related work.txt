@@ -1,0 +1,24 @@
+has been discovered that pooling intervals from varying locations and durations is advantageous for
+activity recognition. It was demonstrated that identifying and classifying key sub-event intervals can
+lead to better performance.
+Recently, segment-based 3D CNNs have been employed to capture spatio-temporal data concurrently
+for activity detection. These methods depend on the 3D CNN to capture temporal dynamics, which
+typically span only 16 frames. Although longer-term temporal structures have been explored, this was
+usually accomplished with temporal pooling of localized features or (spatio-)temporal convolutions
+with extended fixed intervals. Recurrent Neural Networks (RNNs) have also been applied to represent
+transitions in activity between frames.
+3 MLB-YouTube Dataset
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+ The improvement is more significant in the 4m-HC and 4m-PD validations, when the training data are limited, with an
+average improvement of almost 9% for the F1-score over the alternative to the state-of-the-art model.
+The LOO-HC and LOO-PD validations show that a model that has the ability to capture the temporal dynamics across time steps will
+perform better than a standard baseline technique such as a Random Forest. The modified transformer encoder and the state-of-the-art
+model perform better in those two validations due to their ability to capture asynchronous relations across modalities. However,

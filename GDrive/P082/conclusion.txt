@@ -1,0 +1,22 @@
+generating the refined embedding at time step t, its decision is independent; it does not take into account the actual decision made by
+other refined embeddings t. We use a CRF layer to cover just that, i.e., to maximize the probability of the refined embeddings of all
+time steps, so it can better model cases where refined embeddings closest to one another must be compatible (i.e., minimizing the
+possibility for impossible room transitions). When finding the best sequence of room location ˆyt, the Viterbi Algorithm is used as a
+standard for the CRF layer.
+For the second layer, we choose a particular room as a reference and perform a binary classification at each time step t. The binary
+We apply two different layers to produce two different outputs during training. The room-level predictions are produced via a single
+conditional random field (CRF) layer in combination with a linear layer applied to the output of Eq. 7 to produce the final predictions
+as:
+ˆyt=CRF (φ(ht)) (7)
+q′(ht) =Wpht+bp (8)
+where Wp∈Rd×mandbp∈Rmare the weight and bias to learn, mis the number of room locations, and h= [h1, ..., h T]∈RT×d
+is the refined embedding produced by Eq. 7. Even though the transformer can take into account neighbor information before
+3 53.4 57.2
+I3D + pyramid 53.2 56.7 58.7
+I3D + LSTM 48.2 53.1 53.1
+I3D + temporal conv 52.8 57.1 58.4
+I3D + sub-events 55.5 61.2 61.3
+Table 5 shows the average precision for each activity class. Learning temporal structure is particularly
+beneficial for frame-based features (e.g., InceptionV3), which capture less temporal information
+5
+compared to segment-based features (e.g., I3D). Sub-event learning significantly aids in detecting

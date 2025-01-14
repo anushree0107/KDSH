@@ -1,0 +1,27 @@
+Generalization in ReLU Networks via Restricted
+Isometry and Norm Concentration
+Abstract
+Regression tasks, while aiming to model relationships across the entire input space,
+are often constrained by limited training data. Nevertheless, if the hypothesis func-
+tions can be represented effectively by the data, there is potential for identifying a
+model that generalizes well. This paper introduces the Neural Restricted Isometry
+Property (NeuRIPs), which acts as a uniform concentration event that ensures all
+shallow ReLU networks are sketched with comparable quality. To determine the
+sample complexity necessary to achieve NeuRIPs, we bound the covering numbers
+of the networks using the Sub-Gaussian metric and apply chaining techniques. As-
+ A Rectified Linear Unit (ReLU) function φ:R→Ris given by φ(x) := max( x,0).
+Given a weight vector w∈Rd, a bias b∈R, and a sign κ∈ {± 1}, a ReLU neuron is a function
+φ(w, b, κ ) :Rd→Rdefined as
+φ(w, b, κ )(x) =κφ(wTx+b).
+Shallow neural networks are constructed as weighted sums of neurons. Typically they are represented
+by a graph with nneurons in a single hidden layer. When using the ReLU activation function, we can
+apply a symmetry procedure to represent these as sums:
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned

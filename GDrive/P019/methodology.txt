@@ -1,0 +1,23 @@
+sample, there will be a corresponding demographic feature data sample that is used to train a different binary classifier to predict
+whether a person with PD is ON or OFF medications.
+**Ethical approval:** Full approval from the NHS Wales Research Ethics Committee was granted on December 17, 2019, and
+Health Research Authority and Health and Care Research Wales approval was confirmed on January 14, 2020; the research was
+3
+conducted in accord with the Helsinki Declaration of 1975; written informed consent was gained from all study participants. In
+order to protect participant privacy, supporting data is not shared openly. It will be made available to bona fide researchers subject to
+a data access agreement.
+4 Methodologies and Framework
+include tracking of gait speed during rehabilitation from orthopedic surgery, monitoring wandering behavior in dementia, or
+triggering an alert for a possible fall (and long lie on the floor) if someone is in one room for an unusual length of time. Furthermore,
+accurate room use and room-to-room transfer statistics could be used in occupational settings, e.g., to check factory worker location.
+7
+Table 1: Room-level and medication state accuracy of all models. Standard deviation is shown in (.), the best performer is bold,
+while the second best is italicized. Note that our proposed model is the one named MDCSA1,4,7
+!Training ModelRoom-Level Localisation Medication State
+ Later, various processes are done to further extract correlations across modalities through the use of various layers (e.g.,
+concatenation, CNN layer, transformer, self-attention). Our work is inspired by prior research where we only utilize accelerometer
+2
+data to enrich the RSSI, instead of utilizing all IMU sensors, in order to reduce battery consumption. In addition, unlike previous
+work that stops at predicting room locations, we go a step further and use room-to-room transition behaviors as features for a binary
+classifier predicting whether people with PD are taking their medications or withholding them.
+3 Cohort and Dataset

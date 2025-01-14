@@ -1,0 +1,28 @@
+35 8.64
+20 117.43 119.83 20.03
+6 Best 3D Mesh Reconstruction Team - FoodRiddle
+6.1 Methodology
+To achieve high-fidelity food mesh reconstruction, the team developed two procedural pipelines as
+depicted in Figure 14. For simple and medium complexity cases, they employed a structure-from-
+motion strategy to ascertain the pose of each image, followed by mesh reconstruction. Subsequently,
+a sequence of post-processing steps was implemented to recalibrate the scale and improve mesh
+quality. For cases involving only a single image, the team utilized image generation techniques to
+facilitate model generation.
+6.1.1 Multi-View Reconstruction
+would also increase the generalizability of the results to the wider population. Future work in this matter could also include the
+construction of a semi-synthetic dataset based on collected data to facilitate a parallel and large-scale evaluation.
+This smart home’s layout and parameters remain constant for all the participants, and we acknowledge that the transfer of this deep
+learning model to other varied home settings may introduce variations in localization accuracy. For future ecological validation and
+based on our current results, we anticipate the need for pre-training (e.g., a brief walkaround which is labeled) for each home, and
+also suggest that some small amount of ground-truth data will need to be collected (e.g., researcher prompting of study participants to
+found with the data for object 12 (steak) and object 15 (chicken nugget), so these items were excluded
+from the final overall evaluation.
+4 First Place Team - VolETA
+4.1 Methodology
+The team’s research employs multi-view reconstruction to generate detailed food meshes and calculate
+precise food volumes.
+4.1.1 Overview
+The team’s method integrates computer vision and deep learning to accurately estimate food volume
+from RGBD images and masks. Keyframe selection ensures data quality, supported by perceptual
+hashing and blur detection. Camera pose estimation and object segmentation pave the way for neural
+surface reconstruction, creating detailed meshes for volume estimation. Refinement steps, including

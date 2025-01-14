@@ -1,0 +1,41 @@
+Object Index Food Item Difficulty Level Number of Frames
+1 Strawberry Easy 199
+2 Cinnamon bun Easy 200
+3 Pork rib Easy 200
+4 Corn Easy 200
+5 French toast Easy 200
+6 Sandwich Easy 200
+7 Burger Easy 200
+8 Cake Easy 200
+9 Blueberry muffin Medium 30
+10 Banana Medium 30
+11 Salmon Medium 30
+12 Steak Medium 30
+13 Burrito Medium 30
+14 Hotdog Medium 30
+15 Chicken nugget Medium 30
+16 Everything bagel Hard 1
+17 Croissant Hard 1
+18 Shrimp Hard 1
+19 Waffle Hard 1
+20 Pizza Hard 1
+3.both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

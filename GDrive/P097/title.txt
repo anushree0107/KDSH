@@ -1,0 +1,20 @@
+ It offers a generalization of monotonicity, but in a direction distinct from the concept of Minty
+solutions, and only a limited number of studies have examined methods in this context. An anchored version of EG was studied, and
+an improved convergence rate of O(1/k2)(in terms of the squared operator norm) was shown. Similarly, an accelerated version of
+the reflected gradient method was investigated. Whether such acceleration is possible in the more general setting of weak Minty
+solutions remains an open question (any Stampacchia solution to the VI given by a negatively comonotone operator is a weak Minty
+solution). On the other hand, extending the notion of cocoercivity to allow for negative coefficients, referred to as cohypomonotonicity,
+has received much less attention and is given by:
+⟨F(u)−F(v), u−v⟩ ≥ − γ∥F(u)−F(v)∥2.
+Clearly, if a Stampacchia solution exists for such an operator, then it also fulfills Assumption 1.
+Behavior with respect to the solution. While the above properties are standard assumptions in the literature, it is usually sufficient
+to require the corresponding condition to hold when one of the arguments is a (Stampacchia) solution. This means that instead of
+ Another intriguing observation was made, where for cohypomonotone problems, a monotonically decreasing gradient
+norm was demonstrated when using EG. However, we did not observe this in our experiments, emphasizing the need to differentiate
+this class from problems with weak Minty solutions.
+2
+Interaction dominance. The concept of α-interaction dominance for nonconvex-nonconcave min-max problems was investigated,
+and it was shown that the proximal-point method converges sublinearly if this condition is met in yand linearly if it is met in both
+components. Furthermore, it was demonstrated that if a problem is interaction dominant in both components, it is also negatively
+comonotone.
+Optimism.

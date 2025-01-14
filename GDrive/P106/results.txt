@@ -1,0 +1,15 @@
+ The MDCSA network has all the capabilities that the state-of-the-art model has,
+with an improvement in suppressing the accelerometer modality when needed via the GRN layer embedded in DCSA. Suppressing
+the noisy modality seems to have a strong impact on maintaining the performance of the network when the training data is limited.
+This is validated by how the alternative to the state-of-the-art model (i.e., the state-of-the-art model with added GRN and CRF
+layers) outperforms the standard state-of-the-art model by an average of 2.2% for the F1-score in the 4m-HC and 4m-PD validations.
+the RSSI signals, in particular to help distinguish adjacent rooms, which RSSI-only systems typically struggle with. If it will, how
+can we incorporate these extra features (and modalities) into the existing features for accurate room predictions, particularly in the
+context of PD where the acceleration signal may be significantly impacted by the disease itself?
+(2) Modeling local and global temporal dynamics. The true correlations between inputs both intra-modality (i.e., RSSI signal among
+access points) and inter-modality (i.e., RSSI signal against accelerometer fluctuation) are dynamic. These dynamics can affect one
+another within a local context (e.g., cyclical patterns) or across long-term relationships.and accelerometry traces in six spatial directions (corresponding to the three spatial directions (x, y, z) for each wearable) were
+recorded at each time point. The accelerometer data is resampled to 5Hz to synchronize the data with RSSI values. With a 5-second
+time window and a 5Hz sampling rate, each RSSI data sample has an input of size (25 x 20), and accelerometer data has an input of
+size (25 x 6). Imputation for missing values, specifically for RSSI data, is applied by replacing the missing values with a value that is
+not possible normally (i.e., -120dB).

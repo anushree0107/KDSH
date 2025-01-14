@@ -1,0 +1,19 @@
+ The improvement is more significant in the 4m-HC and 4m-PD validations, when the training data are limited, with an
+average improvement of almost 9% for the F1-score over the alternative to the state-of-the-art model.
+The LOO-HC and LOO-PD validations show that a model that has the ability to capture the temporal dynamics across time steps will
+perform better than a standard baseline technique such as a Random Forest. The modified transformer encoder and the state-of-the-art
+model perform better in those two validations due to their ability to capture asynchronous relations across modalities. However,
+are updated during the training of all models. We utilize the Adaptive Moment Estimation (Adam)
+optimization function across all models, with a learning rate set to 0.001. The loss function employed
+is the negative-log likelihood. A Sigmoid activation function is used for the units in the hidden layer.
+All models are trained with mini-batches of size five. The maximum number of epochs is capped
+at 50, but an early stopping criterion based on the model’s accuracy on the validation split is also
+implemented. This means that training is halted if the validation accuracy does not improve over five
+consecutive epochs. All models are implemented in Keras, using TensorFlow as the backend. The TL
+ For the modified transformer encoder, at each time step t, RSSI xr
+tand accelerometer xa
+tfeatures are combined via a
+linear layer before they are processed by the networks. A grid search on the parameters of each network is performed to find the best
+parameter for each model. The parameters to tune are the embedding dimension din 128, 256, the number of epochs in 200, 300,
+and the learning rate in 0.01, 0.0001. The dropout rate is set to 0.15, and a specific optimizer in combination with a Look-Ahead
+algorithm is used for the training with early stopping using the validation performance. For the RF, we perform a cross-validated

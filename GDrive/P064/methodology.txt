@@ -1,0 +1,24 @@
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or
+as shown in Table 2. We do not apply TL (or MTL) to the output layer because it is task- or
+dataset-specific.
+5.3 Multi-Task Learning Models
+In MTL, we train a single model to simultaneously learn both PCEDT and NomBank relations,
+meaning all MTL models have two objective functions and two output layers. We implement two
+MTL setups: MTLE, which features a shared embedding layer but two task-specific hidden layers,
+and MTLF, which has no task-specific layers aside from the output layer (i.e., both the embedding
+and hidden layers are shared). We distinguish between the auxiliary and main tasks based on which

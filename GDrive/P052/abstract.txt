@@ -1,0 +1,25 @@
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+neural network configurations, except for the one using only predictions and justifications.
+**Encoding Questions and Justifications** The neural network that only utilizes the prediction
+to represent a forecast surpasses both baseline methods. Notably, integrating the question, the
+justification, or both into the forecast representation yields further improvements. These results
+indicate that incorporating the question and forecaster-provided justifications into the model enhances
+the accuracy of question calling.
+**Calling Questions Throughout Their Life** When examining the results across the four quartiles of
+a question’s duration, it’s observed that while using active forecasts is beneficial across all quartiles
+for both baselines and all network configurations, the neural networks surprisingly outperform the
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or

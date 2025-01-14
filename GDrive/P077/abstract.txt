@@ -1,0 +1,25 @@
+layers: 1) an input layer, 2) an embedding layer, 3) a hidden layer, and 4) an output layer. The input
+3
+layer consists of two integers that indicate the indices of a compound’s constituents in the embedding
+layer, where the word embedding vectors are stored. These selected vectors are then passed to a fully
+connected hidden layer, the size of which matches the dimensionality of the word embedding vectors.
+Finally, a softmax function is applied to the output layer to select the most probable relation.
+The compound’s constituents are represented using a 300-dimensional word embedding model trained
+on an English Wikipedia dump and the English Gigaword Fifth Edition. The embedding model was
+In computational linguistics, noun-noun compound interpretation is typically treated as an automatic
+classification task. Various machine learning (ML) algorithms and models, such as Maximum
+Entropy, Support Vector Machines, and Neural Networks, have been employed to decipher the
+semantics of nominal compounds. These models utilize information from lexical semantics, like
+WordNet-based features, and distributional semantics, such as word embeddings. However, noun-
+noun compound interpretation remains a challenging NLP problem due to the high productivity
+of noun-noun compounding as a linguistic structure and the difficulty in deriving the semantics of
+noun-noun compounds from their constituents. Our research contributes to advancing NLP research
+ The "majority vote" baseline determines the answer to a
+question based on the most frequent prediction among the forecasts. The "weighted vote" baseline,
+on the other hand, assigns weights to the probabilities in the predictions and then aggregates them.
+4.2 Neural Network Architecture
+A neural network architecture is employed, which consists of three main components: one to generate
+a representation of the question, another to generate a representation of each forecast, and an LSTM
+to process the sequence of forecasts and ultimately call the question.
+The representation of a question is obtained using BERT, followed by a fully connected layer with 256
+neurons, ReLU activation, and dropout. The representation of a forecast is created by concatenating

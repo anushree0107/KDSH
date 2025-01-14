@@ -1,0 +1,24 @@
+ The central problem addressed in
+this work is termed "calling a question," which refers to the process of determining a final prediction
+by aggregating individual forecasts. Two strategies are employed for calling questions each day
+throughout their life: considering forecasts submitted on the given day ("daily") and considering the
+last forecast submitted by each forecaster ("active").
+Inspired by prior research on recognizing and fostering skilled forecasters, and analyzing written
+justifications to assess the quality of individual or collective forecasts, this paper investigates the
+automated calling of questions throughout their duration based on the forecasts available each day.
+The primary contributions are empirical findings that address the following research questions:
+ - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.the accuracy of our predictor remains the same as the unconstrained network, demonstrating we are
+not losing accuracy to achieve safety guarantees.
+3
+Table 1: Results of the best configurations of β-TCV AE on DCI, FactorV AE, SAP, MIG, and IRS
+metrics.
+NETWORK ACC (COC) VIOLATIONS (COC) ACC (CL1500) VIOLATIONS (CL1500)
+STANDARD 96.87 0.22 93.89 0.20
+SAFE 96.69 0.00 94.78 0.00
+4 Discussion and Future Work
+We propose an approach for designing a safe predictor that adheres to input-output specifications for

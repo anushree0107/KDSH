@@ -1,0 +1,27 @@
+provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from
+industries as it enables them to anticipate and address potential challenges. This study focuses on
+questions spanning the political, economic, and social domains, utilizing forecasts submitted by a
+crowd of individuals without specialized training. Each forecast comprises a prediction and a natural
+language justification.
+6
+The research demonstrates that aggregating the weighted predictions of forecasters is a solid baseline
+for calling a question throughout its duration. However, models that incorporate both the question
+and the justifications achieve significantly better results, particularly during the first three quartiles of
+a question’s life. Importantly, the models developed in this study do not profile individual forecasters
+or utilize any information about their identities. This work lays the groundwork for evaluating the
+ A strong justification for a forecast can be considered a well-reasoned supporting argument.
+Previous work in this area includes identifying argument components such as claims, premises,
+backing, rebuttals, and refutations, as well as mining arguments that support or oppose a particular
+claim. Despite these efforts, it was found that crowdsourced justifications rarely adhere to these
+established argumentation frameworks, even though such justifications are valuable for aggregating
+forecasts.
+Finally, several studies have focused on forecasting using datasets similar or identical to the one used
+in this research. From a psychological perspective, researchers have explored strategies for enhancing
+forecasting accuracy, such as utilizing top-performing forecasters (often called "superforecasters"),

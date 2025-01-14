@@ -1,0 +1,25 @@
+Overall, nearly 20% of the compounds in the test split have an unseen left constituent, about 16%
+have an unseen right constituent, and 4% are completely unseen. Table 9 compares the performance
+of the different models on these three groups in terms of the proportion of compounds misclassified
+in each group.
+Table 9: Generalization error on the subset of unseen compounds in the test split. L: Left constituent.
+R: Right constituent. L&R: Completely unseen.
+NomBank PCEDT
+Model L R L&R L R L&R
+Count 351 286 72 351 286 72
+STL 27.92 39.51 50.00 45.The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+Table 9 shows that Transfer Learning (TL) and Multi-Task Learning (MTL) approaches reduce
+generalization error in NomBank across all scenarios, with the exception of TLH and TLEH for
+completely unseen compounds, where error increases. The greatest error reductions are achieved
+by MTL models across all three types of unseen compounds. Specifically, MTLE reduces the error
+by approximately six points for compounds with unseen right constituents and by eleven points for
+fully unseen compounds. Moreover, MTLF reduces the error by five points when the left constituent
+is unseen. It’s important to interpret these results in conjunction with the Count row in Table 9 for
+a comprehensive view.

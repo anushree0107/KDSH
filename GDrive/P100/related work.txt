@@ -1,0 +1,23 @@
+Cψ2≥0 :E"
+exp 
+|φ ̄p(x)−φ ̄q(x)|2
+C2
+ψ2!#
+≤2)
+.
+A small Sub-Gaussian metric between random variables indicates that their values are likely to be
+close. To capture the Sub-Gaussian structure of a process, we introduce ε-nets in the Sub-Gaussian
+metric. For a given ε >0, these are subsets  ̄Q⊆ ̄Psuch that for every  ̄p∈ ̄P, there is a  ̄q∈ ̄Q
+satisfying
+ Given that general non-monotone operators may display erratic behavior, such as periodic cycles and
+spurious attractors, it is reasonable to seek settings that extend the monotone framework while remaining manageable. First and
+foremost is the extensively studied setting of ν-weak monotonicity:
+⟨F(u)−F(v), u−v⟩ ≥ − ν∥u−v∥2.
+Such operators arise as the gradients of the well-studied class of weakly convex functions, a rather general class of functions as it
+includes all functions without upward cusps. In particular, every smooth function with a Lipschitz gradient turns out to fulfill this
+property.02426 230×265 (294 ×431×2.353)
+7 Burger 0.1043478261 0.02435 208×264 (378 ×400×2.353)
+8 Cake 0.1276595745 0.02143 256×300 (298 ×310×4.706)
+9 Blueberry muffin 0.08759124088 0.01801 291×357 (441 ×443×2.353)
+10 Banana 0.08759124088 0.01705 315×377 (446 ×857×1.176)
+Medium 11 Salmon 0.1043478261 0.

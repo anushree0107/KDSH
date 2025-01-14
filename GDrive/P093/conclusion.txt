@@ -1,0 +1,16 @@
+medication state prediction and maintain their performance across all cross-validations thanks to the addition of Eq. 13 in the loss
+function.
+**Limitations and future research:** One limitation of this study is the relatively small sample size (which was planned as this is
+an exploratory pilot study). We believe our sample size is ample to show proof of concept. This is also the first such work with
+unobtrusive ground truth validation from embedded cameras. Future work should validate our approach further on a large cohort
+of people with PD and consider stratifying for sub-groups within PD (e.g., akinetic-rigid or tremor-dominant phenotypes), which
+ The improvement is more significant in the 4m-HC and 4m-PD validations, when the training data are limited, with an
+average improvement of almost 9% for the F1-score over the alternative to the state-of-the-art model.
+The LOO-HC and LOO-PD validations show that a model that has the ability to capture the temporal dynamics across time steps will
+perform better than a standard baseline technique such as a Random Forest. The modified transformer encoder and the state-of-the-art
+model perform better in those two validations due to their ability to capture asynchronous relations across modalities. However,
+ The MDCSA network has all the capabilities that the state-of-the-art model has,
+with an improvement in suppressing the accelerometer modality when needed via the GRN layer embedded in DCSA. Suppressing
+the noisy modality seems to have a strong impact on maintaining the performance of the network when the training data is limited.
+This is validated by how the alternative to the state-of-the-art model (i.e., the state-of-the-art model with added GRN and CRF
+layers) outperforms the standard state-of-the-art model by an average of 2.2% for the F1-score in the 4m-HC and 4m-PD validations.

@@ -1,0 +1,26 @@
+ Evaluation on this dataset, including individuals with and
+without PD, demonstrates that our network outperforms other methods across all cross-validation categories.
+(2) We demonstrate how accurate room-level localization predictions can be transformed into in-home gait speed biomarkers (e.g.,
+number of room-to-room transitions, room-to-room transition duration). These biomarkers can effectively classify the OFF or ON
+medication state of a PD patient from this pilot study data.
+2 Related Work
+Extensive research has utilized home-based passive sensing systems to evaluate how the activities and behavior of individuals with
+neurological conditions, primarily cognitive dysfunction, change over time. However, there is limited work assessing room use in
+the home setting in people with Parkinson’s.
+ Later, various processes are done to further extract correlations across modalities through the use of various layers (e.g.,
+concatenation, CNN layer, transformer, self-attention). Our work is inspired by prior research where we only utilize accelerometer
+2
+data to enrich the RSSI, instead of utilizing all IMU sensors, in order to reduce battery consumption. In addition, unlike previous
+work that stops at predicting room locations, we go a step further and use room-to-room transition behaviors as features for a binary
+classifier predicting whether people with PD are taking their medications or withholding them.
+3 Cohort and Dataset
+Detecting Medication Usage in Parkinson’s Disease Through
+Multi-modal Indoor Positioning: A Pilot Study in a Naturalistic
+Environment
+Abstract
+Parkinson’s disease (PD) is a progressive neurodegenerative disorder that leads to motor symptoms, including gait
+impairment. The effectiveness of levodopa therapy, a common treatment for PD, can fluctuate, causing periods of
+improved mobility ("on" state) and periods where symptoms re-emerge ("off" state). These fluctuations impact
+gait speed and increase in severity as the disease progresses. This paper proposes a transformer-based method that
+uses both Received Signal Strength Indicator (RSSI) and accelerometer data from wearable devices to enhance
+indoor localization accuracy.

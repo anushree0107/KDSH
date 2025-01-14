@@ -1,0 +1,26 @@
+ This method refined the uniformity of representations and successfully reduced separation. We
+validated our method, PAAC, on three publicly available datasets, demonstrating its effectiveness and underlying rationale.
+In the future, we will explore deeper alignment and contrast adjustments tailored to specific tasks to further mitigate popularity
+bias. We aim to investigate the synergies between alignment and contrast and extend our approach to address other biases in
+recommendation systems.
+Acknowledgments
+This work was supported in part by grants from the National Key Research and Development Program of China, the National Natural
+Science Foundation of China, the Fundamental Research Funds for the Central Universities, and Quan Cheng Laboratory.
+8
+ Prior research includes
+both predictive models (using language samples to predict attributes about the author) and models
+that provide valuable insights (using language samples and author attributes to identify differentiating
+linguistic features). Previous studies have examined factors such as gender and age, political ideology,
+health outcomes, and personality traits. In this paper, models are constructed to predict outcomes
+based on crowd-sourced forecasts without knowledge of individual forecasters’ identities.
+Previous research has also explored how language use varies depending on the relationships between
+individuals. For instance, studies have analyzed language patterns in social networks, online commu-
+nities, and corporate emails to understand how individuals in positions of authority communicate.
+provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from

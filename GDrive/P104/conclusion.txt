@@ -1,0 +1,26 @@
+highly skewed dataset, compared to a robust single-task learning baseline. 2. Although our research
+concentrates on TL and MTL, we present, to our knowledge, the first experimental results on the
+relatively recent dataset from Fares (2016).
+2 Related Work
+Approaches to interpreting noun-noun compounds differ based on the classification of compound
+relations, as well as the machine learning models and features employed to learn these relations. For
+instance, some define a broad set of relations, while others employ a more detailed classification.
+Some researchers challenge the idea that noun-noun compounds can be interpreted using a fixed,
+predetermined set of relations, proposing alternative methods based on paraphrasing. We center
+our attention on methods that frame the interpretation problem as a classification task involving a
+fixed, predetermined set of relations. Various machine learning models have been applied to this
+task, including nearest neighbor classifiers that use semantic similarity based on lexical resources,
+kernel-based methods like SVMs that utilize lexical and relational features, Maximum Entropy
+models that incorporate a wide range of lexical and surface form features, and neural networks that
+rely on word embeddings or combine word embeddings with path embeddings. Among these studies,
+some have utilized the same dataset. To our knowledge, TL and MTL have not been previously
+applied to compound interpretation. Therefore, we review prior research on TL and MTL in other
+NLP tasks.
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in

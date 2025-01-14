@@ -1,0 +1,28 @@
+To better comprehend lexical memorization’s impact, we present the ratio of relation-specific con-
+stituents in both NomBank and PCEDT, as depicted in Figure 2. We define a relation-specific
+constituent as a left or right constituent that appears with only one specific relation within the training
+data. Its ratio is calculated as its proportion in the full set of left or right constituents for each
+8
+relation. Analyzing Figure 2 reveals that NomBank relations possess higher ratios of relation-specific
+constituents compared to PCEDT. This potentially makes learning the former easier if the model
+solely relies on lexical memorization. Additionally, ARGM-TMP in NomBank and TWHEN in
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or
+ Consequently, the representation of the question is concatenated with the representation of
+each forecast before being fed into the LSTM. Finally, the last hidden state of the LSTM is connected
+to a fully connected layer with a single neuron and sigmoid activation to produce the final prediction
+for the question.
+4.3 Architecture Ablation
+Experiments are carried out with the complete neural architecture, as described above, as well as
+with variations where certain components are disabled. Specifically, the representation of a forecast
+is manipulated by incorporating different combinations of information:
+4
+* Only the prediction. * The prediction and the representation of the question. * The prediction and
+the representation of the justification. * The prediction, the representation of the question, and the

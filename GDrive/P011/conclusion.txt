@@ -1,0 +1,25 @@
+ ̄pof the opti-
+mization problem, we introduce a tolerance ε >0for the empirical risk and provide bounds on the
+generalization error, which hold uniformly on the sublevel set
+ ̄Qy,ε:=
+ ̄p∈ ̄P:∥φ ̄p−y∥2
+m≤ε	
+.
+Before considering generic regression problems, we will initially assume the label yto be a neural
+network itself, parameterized by a tuple p∗within the hypothesis set P. For all (x, y)in the support of
+ For example, the eleven-point error decrease in fully unseen compounds
+represents eight compounds. In PCEDT, the largest error reduction is on unseen left constituents,
+which is about 1.14 points, corresponding to four compounds; it’s 0.35 on unseen right constituents
+(one compound) and 2.7 on fully unseen compounds, or two compounds.
+Upon manual inspection of compounds that led to substantial reductions in the generalization error,
+specifically within NomBank, we examined the distribution of relations within correctly predicted
+unseen compound sets. Compared to the STL model, MTLE reduces generalization error for
+completely unseen compounds by a total of eight compounds, of which seven are annotated with the
+Table 9 shows that Transfer Learning (TL) and Multi-Task Learning (MTL) approaches reduce
+generalization error in NomBank across all scenarios, with the exception of TLH and TLEH for
+completely unseen compounds, where error increases. The greatest error reductions are achieved
+by MTL models across all three types of unseen compounds. Specifically, MTLE reduces the error
+by approximately six points for compounds with unseen right constituents and by eleven points for
+fully unseen compounds. Moreover, MTLF reduces the error by five points when the left constituent
+is unseen. It’s important to interpret these results in conjunction with the Count row in Table 9 for
+a comprehensive view.

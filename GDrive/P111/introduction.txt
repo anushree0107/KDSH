@@ -1,0 +1,24 @@
+Here, Σiis a set of parameters σ1∈(0,∞)andσ2∈(1,∞), which can be specified based on
+engineering judgment, or learned using optimization over training data. In our experiments in
+this paper, we use proximity functions of this form and learn independent parameters for each
+input-constrained region. We plan to explore other choices for proximity functions in future work.
+2
+2.2 Learning
+If we have families of differentiable functions Gb(x;θb), continuously parameterized by θb, and
+ Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.
+is equal to the support of the learned distribution, and generalizes the bound to all f-divergences. Assuming L2 accurate score
+estimation, some establish Wasserstein distance upper bounds under weaker assumptions on the data-generating distribution, but
+their Wasserstein-based bounds are not quantitative. Quantitative Wasserstein distance upper bounds under the manifold hypothesis
+have been derived, but these bounds exhibit exponential dependencies on some of the problem parameters.
+1.2 Our contributions
+In this study, strong assumptions about the data-generating distribution are avoided, and a quantitative upper bound on the Wasserstein
+distance is established without exponential dependencies on problem parameters, including the ambient space dimension. Moreover,

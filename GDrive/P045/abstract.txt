@@ -1,0 +1,28 @@
+is a 1D-convolutional layer with a kernel size {1, k}and a stride
+of 1,WK∈Rd×d, WQ∈Rd×d, WV∈Rd×dare weights for keys, queries, and values of the self-attention layer, and dis the
+embedding dimension. Note that all weights for GRN are shared across each time step t.
+4
+4.3 Multihead Dual Convolutional Self-Attention
+Our approach employs a self-attention mechanism to capture global dependencies across time steps. It is embedded as part of the
+DCSA architecture. We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow
+sequential processing of video features, whereas other methods can be fully parallelized.
+Table 3: Additional parameters required for models when added to the base model (e.g., I3D or
+Inception V3).
+Model # Parameters
+Max/Mean Pooling 16K
+Pyramid Pooling 115K
+LSTM 10.5M
+Temporal Conv 31.5M
+Sub-events 36K
+Table 4: Mean Average Precision (mAP) results on segmented videos for multi-label classification.
+Learning sub-intervals for pooling is found to be crucial for activity recognition.
+Method RGB Flow Two-stream
+Random 16.3 16.3 16.3

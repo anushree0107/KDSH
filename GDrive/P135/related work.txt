@@ -1,0 +1,24 @@
+ Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.also proposed, which may incur extra gradient computations or require second-order information (in contrast to the adaptive step
+size we propose in Algorithm 3). A different approach is taken by focusing on the min-max setting and using multiple ascent steps
+per descent step, achieving the same O(1/k)rate as EG.
+Minty solutions. Numerous studies have presented various methods for scenarios where the problem at hand has a Minty solution.
+It was shown that weakly monotone VIs can be solved by iteratively adding a quadratic proximity term and repeatedly optimizing
+the resulting strongly monotone VI using any convergent method. The convergence of the OGDA method was proven, but without a
+specific rate.

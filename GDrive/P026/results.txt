@@ -1,0 +1,24 @@
+3 53.4 57.2
+I3D + pyramid 53.2 56.7 58.7
+I3D + LSTM 48.2 53.1 53.1
+I3D + temporal conv 52.8 57.1 58.4
+I3D + sub-events 55.5 61.2 61.3
+Table 5 shows the average precision for each activity class. Learning temporal structure is particularly
+beneficial for frame-based features (e.g., InceptionV3), which capture less temporal information
+5
+compared to segment-based features (e.g., I3D). Sub-event learning significantly aids in detecting
+•Regarding the baselines for mitigating popularity bias, the improvement of some is relatively limited compared to the
+backbone model (LightGCN) and even performs worse in some cases. This may be because some are specifically designed
+for traditional data-splitting scenarios, where the test set still follows a long-tail distribution, leading to poor generalization.
+Some mitigate popularity bias by excluding item popularity information. Others use invariant learning to remove popularity
+information at the representation level, generally performing better than the formers. This shows the importance of
+addressing popularity bias at the representation level. Some outperform the other baselines, emphasizing the necessary to
+improve item representation consistency for mitigating popularity bias.
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples.

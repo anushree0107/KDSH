@@ -1,0 +1,27 @@
+9 Blueberry muffin 0.059292
+10 Banana 0.058236
+11 Salmon 0.083821
+13 Burrito 0.069663
+14 Hotdog 0.073766
+Table 6: Metric of V olume
+Object Index Predicted V olume Ground Truth Error Percentage
+1 44.51 38.53 15.52
+2 321.26 280.36 14.59
+3 336.11 249.67 34.62
+4 347.54 295.13 17.76
+5 389.28 392.58 0.84
+6 197.82 218.44 9.In computational linguistics, noun-noun compound interpretation is typically treated as an automatic
+classification task. Various machine learning (ML) algorithms and models, such as Maximum
+Entropy, Support Vector Machines, and Neural Networks, have been employed to decipher the
+semantics of nominal compounds. These models utilize information from lexical semantics, like
+WordNet-based features, and distributional semantics, such as word embeddings. However, noun-
+noun compound interpretation remains a challenging NLP problem due to the high productivity
+of noun-noun compounding as a linguistic structure and the difficulty in deriving the semantics of
+noun-noun compounds from their constituents. Our research contributes to advancing NLP research
+Hamming distance for near image similarity was set to 12. For Gaussian kernel radius, even numbers
+in the range [0...30] were used for detecting blurry images. The diameter for removing isolated pieces
+was set to 5%. NeuS2 was run for 15,000 iterations with a mesh resolution of 512x512, a unit cube
+"aabb scale" of 1, "scale" of 0.15, and "offset" of [0.5, 0.5, 0.5] for each food scene.
+5
+4.2.2 VolETA Results
+The team extensively validated their approach on the challenge dataset and compared their results

@@ -1,0 +1,27 @@
+ Inspired by utilizing multihead self-attention, we utilize our DCSA with various kernel lengths with the same
+aim: allowing asymmetric long-term learning. The multihead DCSA takes in two inputs ˆx1,ˆx2∈RN×dand yields:
+MDCSA k1,...,k n(ˆx1,ˆx2) = Ξ n(φk1,...,k n(ˆx1,ˆx2)) (4)
+with
+ This ensures consistent reference object identification throughout the dataset.
+To create RGBA images, the team combines RGB images, reference object masks {MR
+i}n
+i=1, and
+food object masks {MF
+i}n
+i=1. This step, denoted as {IR
+i}n
+i=1, integrates various data sources into a
+unified format for further processing.
+The team converts the RGBA images {IR
+i}n
+i=1and camera poses {Cj}k
+j=1into meaningful metadata
+and modeled data Dm. This transformation facilitates accurate scene reconstruction.
+The modeled data Dmis input into NeuS2 for mesh reconstruction. NeuS2 generates colorful meshes
+ y T]∈RTis the
+actual room locations, and f= [f1, ..., f T]∈RTis the binary value whether at time tthe room is the referenced room or not.
+P(yi|yi−1)denotes the conditional probability, and P(yt|yt−1)denotes the transition matrix cost of having transitioned from yt−1
+toyt.
+5 Experiments and Results
+We compare our proposed network, MDCSA1,4,7 (MDCSA with 3 kernels of size 1, 4, and 7), with:
+- Random Forest (RF) as a baseline technique, which has been shown to work well for indoor localization.

@@ -1,0 +1,27 @@
+ This method refined the uniformity of representations and successfully reduced separation. We
+validated our method, PAAC, on three publicly available datasets, demonstrating its effectiveness and underlying rationale.
+In the future, we will explore deeper alignment and contrast adjustments tailored to specific tasks to further mitigate popularity
+bias. We aim to investigate the synergies between alignment and contrast and extend our approach to address other biases in
+recommendation systems.
+Acknowledgments
+This work was supported in part by grants from the National Key Research and Development Program of China, the National Natural
+Science Foundation of China, the Fundamental Research Funds for the Central Universities, and Quan Cheng Laboratory.
+8
+0q
+lnN(Φ, dψ2, ε)dε and ∆(Φ) := sup
+φ∈Φ∥φ∥ψ2.
+Then, for any u≥2, we have with probability at least 1−17 exp( −u/4)that
+sup
+φ∈Φ|∥φ∥m− ∥φ∥μ| ≤u√m
+N(Φ) +10
+3∆(Φ)
+.
+The bounds on the sample complexity for achieving the NeuRIPs event, from Theorem 1, are proven
+by applying these Lemmata.
+this task is influenced by factors such as the label set used and its distribution. For the experiments
+detailed in this paper, we utilize a noun-noun compounds dataset that features compounds annotated
+with two distinct taxonomies of relations. This means that each noun-noun compound is associated
+with two different relations, each based on different linguistic theories. This dataset is derived from
+established linguistic resources, including NomBank and the Prague Czech-English Dependency
+Treebank 2.0 (PCEDT). We chose this dataset for two primary reasons: firstly, the dual annotation of
+relations on the same set of compounds is ideal for exploring TL and MTL approaches; secondly,

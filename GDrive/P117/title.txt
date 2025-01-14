@@ -1,0 +1,25 @@
+note that this does not necessarily imply that we aim to use a single model to predict both label sets
+in practice.
+5 Neural Classification Models
+This section introduces the neural classification models utilized in our experiments. To discern the
+impact of TL and MTL, we initially present a single-task learning model, which acts as our baseline.
+Subsequently, we employ this same model to implement TL and MTL.
+5.1 Single-Task Learning Model
+In our single-task learning (STL) configuration, we train and fine-tune a feed-forward neural network
+inspired by the neural classifier proposed by Dima and Hinrichs (2015). This network comprises four
+in the label sets, where it exists, can be leveraged through transfer and multi-task learning, especially
+since the overall distribution of relations differs between the two frameworks.
+4 Transfer vs. Multi-Task Learning
+In this section, we employ the terminology and definitions established by Pan and Yang (2010) to
+articulate our framework for transfer and multi-task learning. Our classification task can be described
+in terms of all training pairs (X, Y) and a probability distribution P(X), where X represents the input
+feature space, Y denotes the set of all labels, and N is the training data size. The domain of a task is
+defined by X, P(X). We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow

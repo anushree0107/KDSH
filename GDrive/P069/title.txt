@@ -1,0 +1,29 @@
+InceptionV3 5.3 mph
+InceptionV3 + LSTM 4.5 mph
+InceptionV3 + sub-events 3.6 mph
+6.2.3 Pitch Type Classification
+We conducted experiments to determine the feasibility of predicting pitch types from video, a task
+made challenging by pitchers’ efforts to disguise their pitches from batters and the subtle differences
+between pitches, such as grip and rotation. We incorporated pose data extracted using OpenPose,
+utilizing heatmaps of joint and body part locations as input to a newly trained InceptionV3 CNN.
+Pose features were considered due to variations in body mechanics between different pitches. Our
+dataset includes six pitch types, with results presented in Table 7.pθ(x0|x1) =gθ
+1(x1),
+where the variance parameters σ2
+t∈R≥0are defined by a fixed schedule, the mean functions gθ
+t:RD→RDare learned using a
+neural network (with parameters θ) for2≤t≤T, andgθ
+1:RD→Xis a separate function dependent on σ1. In practice, the same
+network has been used for the functions gθ
+tfor2≤t≤T, and a separate discrete decoder for gθ
+1.
+2
+connected layer is used for classification, as illustrated in Fig. 5(c).
+While temporal pyramid pooling retains some structure, the intervals are fixed and predetermined.
+Previous studies have shown that learning the sub-interval to pool is beneficial for activity recognition.
+These learned intervals are defined by three parameters: a center g, a width σ, and a stride δ,
+parameterizing NGaussians. Given the video length T, the positions of the strided Gaussians are
+first calculated as:
+gn= 0.5−T−(gn+ 1)
+N−1forn = 0,1, . . . , N −1
+pt,n=gn+ (t−0.5T+ 0.

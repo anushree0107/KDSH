@@ -1,0 +1,26 @@
+Here, Σiis a set of parameters σ1∈(0,∞)andσ2∈(1,∞), which can be specified based on
+engineering judgment, or learned using optimization over training data. In our experiments in
+this paper, we use proximity functions of this form and learn independent parameters for each
+input-constrained region. We plan to explore other choices for proximity functions in future work.
+2
+2.2 Learning
+If we have families of differentiable functions Gb(x;θb), continuously parameterized by θb, and
+ Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.
+the distance W1(μ, πθ(·))can be upper-bounded by upper-bounding the two expressions on the right-hand side separately. The
+upper bound on W1(μ, μθ
+n)is obtained using a straightforward adaptation of a proof. First, W1(μ, μθ
+n)is upper-bounded using the
+expectation of the loss function lθ, then the resulting expression is upper-bounded using a PAC-Bayesian-style expression dependent
+on the empirical risk and the prior-matching term.
+The upper bound on the second term W1(μθ
+n, πθ(·))uses the definition of μθ
+n.

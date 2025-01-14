@@ -1,0 +1,24 @@
+ Consequently, the representation of the question is concatenated with the representation of
+each forecast before being fed into the LSTM. Finally, the last hidden state of the LSTM is connected
+to a fully connected layer with a single neuron and sigmoid activation to produce the final prediction
+for the question.
+4.3 Architecture Ablation
+Experiments are carried out with the complete neural architecture, as described above, as well as
+with variations where certain components are disabled. Specifically, the representation of a forecast
+is manipulated by incorporating different combinations of information:
+4
+* Only the prediction. * The prediction and the representation of the question. * The prediction and
+the representation of the justification. * The prediction, the representation of the question, and the
+three elements: (a) a binary flag indicating whether the forecast was submitted on the day the question
+is being called or on a previous day, (b) the prediction itself (a numerical value between 0.0 and 1.0),
+and (c) a representation of the justification. The representation of the justification is also obtained
+using BERT, followed by a fully connected layer with 256 neurons, ReLU activation, and dropout.
+The LSTM has a hidden state with a dimensionality of 256 and processes the sequence of forecasts
+as its input. During the tuning process, it was discovered that providing the representation of the
+question alongside each forecast is more effective than processing forecasts independently of the
+question. - A modified transformer
+encoder in combination with a CRF layer representing a model with the capability to capture global dependency and enforce
+dependencies in temporal aspects. - A state-of-the-art model for multimodal and multivariate time series with a transformer encoder
+to learn asymmetric correlations across modalities. - An alternative to the previous model, representing it with a GRN layer replacing
+the context aggregation layer and a CRF layer added as the last layer. - MDCSA1,4,7 4APS, as an ablation study, with our proposed
+network (i.e.

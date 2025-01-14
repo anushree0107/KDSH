@@ -1,0 +1,20 @@
+02426 230×265 (294 ×431×2.353)
+7 Burger 0.1043478261 0.02435 208×264 (378 ×400×2.353)
+8 Cake 0.1276595745 0.02143 256×300 (298 ×310×4.706)
+9 Blueberry muffin 0.08759124088 0.01801 291×357 (441 ×443×2.353)
+10 Banana 0.08759124088 0.01705 315×377 (446 ×857×1.176)
+Medium 11 Salmon 0.1043478261 0.02390 242×269 (201 ×303×1.176)
+13 Burrito 0.1034482759 0.02372 244×271 (251 ×917×2.353)
+14 Frankfurt sandwich 0.1034482759 0.02115 266×304 (400 ×1022×2.353)
+16 Everything bagel 0.08759124088 0.01747 306×368 (458 ×134×1.176)
+Hard 17 Croissant 0.1276595745 0.01751 319×367 (395 ×695×2.176)
+18 Shrimp 0.08759124088 0.both multi- view and single-view reconstructions, outperforming other teams in the competition.
+Table 7: Total Errors for Different Teams on Multi-view and Single-view Data
+Team Multi-view (1-14) Single-view (16-20)
+FoodRiddle 0.036362 0.019232
+ININ-VIAUN 0.041552 0.027889
+V olETA 0.071921 0.058726
+7 Conclusion
+This report examines and compiles the techniques and findings from the MetaFood Workshop
+challenge on 3D Food Reconstruction. The challenge sought to enhance 3D reconstruction methods
+by concentrating on food items, tackling the distinct difficulties presented by varied textures, reflective

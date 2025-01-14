@@ -1,0 +1,24 @@
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are
+as shown in Table 2. We do not apply TL (or MTL) to the output layer because it is task- or
+dataset-specific.
+5.3 Multi-Task Learning Models
+In MTL, we train a single model to simultaneously learn both PCEDT and NomBank relations,
+meaning all MTL models have two objective functions and two output layers. We implement two
+MTL setups: MTLE, which features a shared embedding layer but two task-specific hidden layers,
+and MTLF, which has no task-specific layers aside from the output layer (i.e., both the embedding
+and hidden layers are shared). We distinguish between the auxiliary and main tasks based on which
+on noun-noun compound interpretation through the application of transfer and multi-task learning.
+The application of transfer learning (TL) and multi-task learning (MTL) in NLP has gained significant
+attention in recent years, yielding varying outcomes based on the specific tasks, model architectures,
+and datasets involved. These varying results, combined with the fact that neither TL nor MTL has
+been previously applied to noun-noun compound interpretation, motivate our thorough empirical
+investigation into the use of TL and MTL for this task. Our aim is not only to add to the existing
+research on the effectiveness of TL and MTL for semantic NLP tasks generally but also to ascertain
+their specific advantages for compound interpretation.

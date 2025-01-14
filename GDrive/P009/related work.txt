@@ -1,0 +1,26 @@
+Examining the Convergence of Denoising Diffusion Probabilistic
+Models: A Quantitative Analysis
+Abstract
+Deep generative models, particularly diffusion models, are a significant family within deep learning. This study
+provides a precise upper limit for the Wasserstein distance between a learned distribution by a diffusion model
+and the target distribution. In contrast to earlier research, this analysis does not rely on presumptions regarding
+the learned score function. Furthermore, the findings are applicable to any data-generating distributions within
+restricted instance spaces, even those lacking a density relative to the Lebesgue measure, and the upper limit is not
+exponentially dependent on the ambient space dimension. The primary finding expands upon recent research by
+suming the NeuRIPs event, we then provide bounds on the expected risk, applicable
+to networks within any sublevel set of the empirical risk. Our results show that all
+networks with sufficiently small empirical risk achieve uniform generalization.
+1 Introduction
+A fundamental requirement of any scientific model is a clear evaluation of its limitations. In recent
+years, supervised machine learning has seen the development of tools for automated model discovery
+from training data. However, these methods often lack a robust theoretical framework to estimate
+model limitations. Statistical learning theory quantifies the limitation of a trained model by the
+generalization error. This theory uses concepts such as the VC-dimension and Rademacher complexity
+to analyze generalization error bounds for classification problems. Conversely, SGMs
+employ score-matching methods to approximate the score function of the data-generating distribution, subsequently generating new
+samples through Langevin dynamics. Recognizing that real-world distributions might lack a defined score function, adding varying
+noise levels to training samples to encompass the entire instance space and training a neural network to concurrently learn the score
+function for all noise levels has been proposed.
+Although DDPMs and SGMs may initially seem distinct, it has been demonstrated that DDPMs implicitly approximate the score
+function, with the sampling process resembling Langevin dynamics. Moreover, a unified perspective of both methods using stochastic
+differential equations (SDEs) has been derived.

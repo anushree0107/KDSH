@@ -1,0 +1,30 @@
+ Conversely, SGMs
+employ score-matching methods to approximate the score function of the data-generating distribution, subsequently generating new
+samples through Langevin dynamics. Recognizing that real-world distributions might lack a defined score function, adding varying
+noise levels to training samples to encompass the entire instance space and training a neural network to concurrently learn the score
+function for all noise levels has been proposed.
+Although DDPMs and SGMs may initially seem distinct, it has been demonstrated that DDPMs implicitly approximate the score
+function, with the sampling process resembling Langevin dynamics. Moreover, a unified perspective of both methods using stochastic
+differential equations (SDEs) has been derived. The random sample x∈Rdand label y∈Rfollow a joint distribution μsuch that
+the marginal distribution μxof sample x is standard Gaussian with density
+1
+(2π)d/2exp
+−∥x∥2
+2
+.
+As available data, we assume independent copies {(xj, yj)}m
+j=1of the random pair (x, y), each
+distributed by μ.
+3 Concentration of the Empirical Norm
+Supervised learning algorithms interpolate labels yfor samples x, both distributed jointly by μon
+X × Y . This task is often solved under limited data accessibility. The training data, respecting
+suming the NeuRIPs event, we then provide bounds on the expected risk, applicable
+to networks within any sublevel set of the empirical risk. Our results show that all
+networks with sufficiently small empirical risk achieve uniform generalization.
+1 Introduction
+A fundamental requirement of any scientific model is a clear evaluation of its limitations. In recent
+years, supervised machine learning has seen the development of tools for automated model discovery
+from training data. However, these methods often lack a robust theoretical framework to estimate
+model limitations. Statistical learning theory quantifies the limitation of a trained model by the
+generalization error. This theory uses concepts such as the VC-dimension and Rademacher complexity
+to analyze generalization error bounds for classification problems.

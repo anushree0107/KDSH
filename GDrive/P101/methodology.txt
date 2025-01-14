@@ -1,0 +1,25 @@
+ Secondly, all TL models achieve improved accuracy on the NomBank test
+split, although transfer learning does not significantly enhance accuracy on the development split of
+the same dataset. The MTL models, especially MTLF, have a detrimental effect on the development
+accuracy of NomBank, yet we observe a similar improvement, as with TL, on the test split. Thirdly,
+both TL and MTL models demonstrate less consistent effects on PCEDT (on both development and
+test splits) compared to NomBank. For instance, all TL models yield an absolute improvement of
+4
+about 1.25 points in accuracy on NomBank, whereas in PCEDT, TLE clearly outperforms the other
+Finally, to demonstrate the benefits of TL and MTL for NomBank and PCEDT, we report the F1
+macro-average scores in Table 8. This is arguably the appropriate evaluation measure for imbalanced
+classification problems. Note that relations not predicted by any model are excluded from the macro-
+average calculation. Table 8 clearly shows that TL and MTL on the embedding layer yield significant
+improvements for PCEDT, with about a 7-8 point increase in macro-average F1, compared to just
+0.65 in the best case for NomBank.
+7
+7.3 Generalization on Unseen Compounds
+We now analyze the models’ ability to generalize to compounds not seen during training. Recent
+15 76.75 58.80 56.05
+MTLE 77.93 78.45 59.89 56.96
+MTLF 76.74 78.51 58.91 56.00
+Overall, the STL models’ accuracy declines when tested on the NomBank and PCEDT test splits,
+compared to their performance on the development split. This could suggest overfitting, especially
+since our stopping criterion selects the model with the best performance on the development split.
+Conversely, TL and MTL enhance accuracy on the test splits, despite using the same stopping criterion
+as STL. We interpret this as an improvement in the models’ ability to generalize.

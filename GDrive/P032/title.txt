@@ -1,0 +1,15 @@
+I3D + super-events 38.7 38.6 39.1
+I3D + sub+super-events 38.2 39.4 40.4
+InceptionV3 31.2 31.8 31.9
+InceptionV3 + max-pooling 31.8 34.1 35.2
+InceptionV3 + pyramid 32.2 35.1 36.8
+InceptionV3 + LSTM 32.1 33.5 34.1
+InceptionV3 + temporal conv 28.4 34.4 33.4
+InceptionV3 + sub-events 32.that incorporating convolutional sub-events with a super-event representation, creating a three-level
+activity hierarchy, yields the most favorable outcomes.
+7
+4 10.3 1.1 4.5
+InceptionV3 + max-pool 60.2 84.7 85.9 80.8 40.3 74.2 10.2 15.7
+InceptionV3 + sub-events 66.9 93.9 90.3 90.9 60.7 89.7 12.4 29.2
+I3D + max-pool 59.4 90.3 87.7 85.9 48.1 76.1 14.3 18.2
+I3D + sub-events 62.5 91.

@@ -1,0 +1,24 @@
+particularly when collected from wrist-worn devices, which are a common and well-accepted placement location. Naively combining
+accelerometer data with RSSI may degrade indoor localization performance due to varying tremor levels in the acceleration signal.
+This work makes two primary contributions to address these challenges.
+(1) We detail the use of RSSI, augmented by accelerometer data, to achieve room-level localization. Our proposed network
+intelligently selects accelerometer features that can enhance RSSI performance in indoor localization. To rigorously assess our
+method, we utilize a free-living dataset (where individuals live without external intervention) developed by our group, encompassing
+diverse and unstructured movements as expected in real-world scenarios.dynamics into models is beneficial for detailed activity recognition.
+1 Introduction
+Action recognition, a significant problem in computer vision, finds extensive use in sports. Profes-
+sional sporting events are extensively recorded for entertainment, and these recordings are invaluable
+for subsequent analysis by coaches, scouts, and media analysts. While numerous game statistics
+are currently gathered manually, the potential exists for these to be replaced by computer vision
+systems. Systems like PITCHf/x and Statcast have been employed by Major League Baseball (MLB)
+to automatically record pitch speed and movement, utilizing a network of high-speed cameras and
+radar to collect detailed data on each player. Access to much of this data is restricted from the public
+domain.
+provided by a single expert. A classic example of this concept is the observation that the median
+estimate of an ox’s weight from a large group of fair attendees was remarkably close to the actual
+weight. While generally supported, the idea is not without its limitations. Historical examples
+demonstrate instances where crowds behaved irrationally, and even a world chess champion was able
+to defeat the combined moves of a crowd.
+In the current era, the advantages of collective intelligence are widely utilized. For example, Wikipedia
+relies on the contributions of volunteers, and community-driven question-answering platforms have
+garnered significant attention from the research community. When compiling information from

@@ -1,0 +1,29 @@
+ Besides differing in the NLP tasks they investigate, the aforementioned
+studies employ slightly varied definitions of TL and MTL. Our research aligns with certain studies in
+that we apply TL and MTL to learn different semantic annotations of noun-noun compounds using
+the same dataset. However, our experimental design is more akin to other work in that we experiment
+with initializing parameters across all layers of the neural network and concurrently train a single
+MTL model on two sets of relations.
+3 Task Definition and Dataset
+The objective of this task is to train a model to categorize the semantic relationships between pairs
+of nouns in a labeled dataset, where each pair forms a noun-noun compound. The complexity of
+Advanced techniques for through and contextually
+Interpreting Noun-Noun Compounds
+Abstract
+This study examines the effectiveness of transfer learning and multi-task learning
+in the context of a complex semantic classification problem: understanding the
+meaning of noun-noun compounds. Through a series of detailed experiments and
+an in-depth analysis of errors, we demonstrate that employing transfer learning by
+initializing parameters and multi-task learning through parameter sharing enables a
+neural classification model to better generalize across a dataset characterized by a
+highly uneven distribution of semantic relationships. Furthermore, we illustrate
+how utilizing dual annotations, which involve two distinct sets of relations applied
+to the same compounds, can enhance the overall precision of a neural classifier and
+The application of transfer and multi-task learning in natural language processing has gained sig-
+nificant traction, yet considerable ambiguity persists regarding the effectiveness of particular task
+characteristics and experimental setups. This research endeavors to clarify the benefits of TL and
+MTL in the context of semantic interpretation of noun-noun compounds. By executing a sequence of
+minimally contrasting experiments and conducting thorough analysis of results and prediction errors,
+we demonstrate how both TL and MTL can mitigate the effects of class imbalance and drastically
+enhance predictions for low-frequency relations. Overall, our TL, and particularly our MTL models,
+are better at making predictions both quantitatively and qualitatively. Notably, the improvements are

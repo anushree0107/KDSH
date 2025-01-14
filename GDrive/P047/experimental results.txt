@@ -1,0 +1,28 @@
+applicability.
+•Complex backgrounds and objects: The method has not been tested in environments with
+complex backgrounds or highly intricate food objects.
+•Capturing complexities: The method has not been evaluated under different capturing
+complexities, such as varying distances and camera speeds.
+•Pipeline complexity: For one-shot neural rendering, the team currently uses One-2-3-45.
+They aim to use only the 2D diffusion model, Zero123, to reduce complexity and improve
+efficiency.
+6
+Table 3: Quantitative Comparison with Ground Truth Using Chamfer Distance
+L Id Team’s V ol. GT V ol. Ch. w/ t.m Ch. w/o t.m
+1 40.06 38.02021 249×318 (186 ×95×0.987)
+19 Waffle 0.01034482759 0.01902 294×338 (465 ×537×0.8)
+20 Pizza 0.01034482759 0.01913 292×336 (442 ×651×1.176)
+After finding keyframes, PixSfM estimated the poses and point cloud. After generating scaled meshes,
+the team calculated volumes and Chamfer distance with and without transformation metrics. Meshes
+were registered with ground truth meshes using ICP to obtain transformation metrics.
+Table 3 presents quantitative comparisons of the team’s volumes and Chamfer distance with and
+without estimated transformation metrics from ICP.3.2.2 Phase-II: Shape Accuracy
+Teams that perform well in Phase-I are asked to submit complete 3D mesh files for each food item.
+This phase involves several steps to ensure precision and fairness:
+•Model Verification: Submitted models are checked against the final Phase-I submissions for
+consistency, and visual inspections are conducted to prevent rule violations.
+•Model Alignment: Participants receive ground truth 3D models and a script to compute the
+final Chamfer distance. They must align their models with the ground truth and prepare a
+transformation matrix for each submitted object. The final Chamfer distance is calculated
+using these models and matrices.
+•Chamfer Distance Calculation: Shape accuracy is assessed using the Chamfer distance

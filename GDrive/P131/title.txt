@@ -1,0 +1,26 @@
+ The focus of more
+recent studies has shifted towards the application of Convolutional Neural Networks (CNNs) for
+activity recognition. Two-stream CNN architectures utilize both spatial RGB frames and optical
+flow frames. To capture spatio-temporal characteristics, 3D XYT convolutional models have been
+developed. The development of these advanced CNN models has been supported by large datasets
+such as Kinetics, THUMOS, and ActivityNet.
+Several studies have investigated the aggregation of temporal features for the purpose of activity
+recognition. Research has compared several pooling techniques and determined that both Long Short-
+.
+Term Memory networks (LSTMs) and max-pooling across entire videos yielded the best outcomes. It
+ An alternative is to employ a fixed temporal pyramid with various
+lengths, as shown in Fig 5(b), dividing the video into intervals of lengths 1/2, 1/4, and 1/8, and
+max-pooling each. The pooled features are concatenated, creating a K×Drepresentation, where K
+is the number of intervals in the temporal pyramid, and a fully-connected layer classifies the clip.
+We also explore learning temporal convolution filters to aggregate local temporal structures. A kernel
+of size L×1is applied to each frame, enabling each timestep representation to incorporate information
+from adjacent frames. After applying max-pooling to the output of the temporal convolution, a fully-
+ We also experiment with combining the super- and sub-event representations
+to form a three-level hierarchy for event representation.
+6 Experiments
+6.1 Implementation Details
+For our base per-segment CNN, we utilize the I3D network, pre-trained on the ImageNet and Kinetics
+datasets. I3D has achieved state-of-the-art performance on segmented video tasks, providing a reliable
+feature representation. We also employ a two-stream version of InceptionV3, pre-trained on Imagenet
+and Kinetics, as our base per-frame CNN for comparison. InceptionV3 was chosen for its depth
+compared to previous two-stream CNNs. Frames were extracted at 25 fps, and TVL1 optical flow

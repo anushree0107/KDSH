@@ -63,22 +63,7 @@ class PaperGrader:
         )
         self.retrieval_grader = self.grade_prompt | self.structured_llm_grader
 
-    def grade_review(self, paper_details, router_response):
-        retriever_classes = {
-            "KDD": KDDRulebook,
-            "CVPR": CVPRRulebook,
-            "EMNLP": EMNLPRulebook,
-            "NeurIPS": NeurIPSRulebook,
-            "TMLR": TMLRRulebook,
-        }
-        retrieved_contexts = []
-        
-        for conference in router_response:
-            if conference in retriever_classes:
-                retriver = retriever_classes[conference]()
-                response = retriver.query_vector_store(paper_details)
-                retrieved_contexts.append({"conference": conference, "retrieved_context": response})
-                break
+    def grade_review(self, paper_details, retrieved_contexts):
         
         score = self.retrieval_grader.invoke(
             {"paper_details": paper_details, "review": retrieved_contexts}
@@ -100,8 +85,11 @@ painting. The network was trained using the QuickDraw data set, enabling it to c
 strokes. For integration with Tina and Charly’s style, the learning was refined using a sketch database
 from previous paintings by the artists."""
 
+    retrieved_contexts = [
+        {'text': "However, the lack of hyperparameter optimization and embedding analysis slightly\ndetracts from its rigor.\n● Excitement (4/5):\nThe findings challenge traditional approaches and offer a fresh perspective on\nknowledge injection. The simplicity of the method and its potential impact on\nresearch directions make it exciting.\n● Reproducibility (4/5):\nThe methodology is clear and reproducible, but slight variations may arise due to\nsample variance or reliance on prior hyperparameter settings.\n● Ethical Concerns: None identified.\n● Reviewer Confidence (4/5):\nThe reviewer has carefully analyzed the claims and findings and is confident about\nthe paper's strengths and limitations.\nReasons for Acceptance\n1. Novel Insight:\n", 'score': 0.7314755320549011}, 
+    ]
+
     grader = PaperGrader()
-    router_response = ["EMNLP", "ICML"]
-    response = grader.grade_review(paper_details=paper_details, router_response=router_response)
+    response = grader.grade_review(paper_details=paper_details, retrieved_contexts=retrieved_contexts)
     print(f"Grade for paper acceptance: {response['acceptance']}")
     print("Retrived contexts" , response['review'])

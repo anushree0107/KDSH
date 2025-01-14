@@ -1,0 +1,25 @@
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned
+Mbacke et al. (2023), and the proofs presented are fundamental.
+1 Introduction
+Diffusion models, alongside generative adversarial networks and variational autoencoders (V AEs), are among the most influential
+families of deep generative models. These models have demonstrated remarkable empirical results in generating images and audio,
+as well as in various other applications.
+Two primary methods exist for diffusion models: denoising diffusion probabilistic models (DDPMs) and score-based generative
+models (SGMs). DDPMs incrementally convert samples from the desired distribution into noise via a forward process, while
+simultaneously training a backward process to reverse this transformation, enabling the creation of new samples. Reluplex has also been used to
+verify adversarial robustness. While Reluplex and other similar techniques can effectively determine
+if a network satisfies a given specification, they do not offer a way to guarantee that the network will
+meet those specifications. Therefore, additional methods are needed to adjust networks if it is found
+that they are not meeting the desired properties.
+There has been an increase in techniques for designing networks with certified adversarial robustness,
+but enforcing more general safety properties in neural networks is still largely unexplored. One ap-
+proach to achieving provably correct neural networks is through abstraction-refinement optimization.
+This approach has been applied to the ACAS-Xu dataset, but the network was not guaranteed to meet

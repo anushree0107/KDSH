@@ -1,0 +1,29 @@
+ Consequently, the representation of the question is concatenated with the representation of
+each forecast before being fed into the LSTM. Finally, the last hidden state of the LSTM is connected
+to a fully connected layer with a single neuron and sigmoid activation to produce the final prediction
+for the question.
+4.3 Architecture Ablation
+Experiments are carried out with the complete neural architecture, as described above, as well as
+with variations where certain components are disabled. Specifically, the representation of a forecast
+is manipulated by incorporating different combinations of information:
+4
+* Only the prediction. * The prediction and the representation of the question. * The prediction and
+the representation of the justification. * The prediction, the representation of the question, and the
+ They then projected the 3D
+object back onto the original 2D image to obtain a more precise scale for the object.
+6.2 Experimental Results
+Through a process of nonlinear optimization, the team sought to identify a transformation that
+minimizes the Chamfer distance between their mesh and the ground truth mesh. This optimization
+aimed to align the two meshes as closely as possible in three-dimensional space. Upon completion
+of this process, the average Chamfer dis- tance across the final reconstructions of the 20 objects
+amounted to 0.0032175 meters. As shown in Table 7, Team FoodRiddle achieved the best scores for
+The dataset for the MetaFood Challenge features 20 carefully chosen food items from the MetaFood3D
+dataset, each scanned in 3D and accompanied by video recordings. To ensure precise size accuracy
+in the reconstructed 3D models, each food item was captured alongside a checkerboard and pattern
+mat, serving as physical scaling references. The challenge is divided into three levels of difficulty,
+determined by the quantity of 2D images provided for reconstruction:
+• Easy: Around 200 images taken from video.
+• Medium: 30 images.
+• Hard: A single image from a top-down perspective.
+Table 1 details the food items included in the dataset.
+Table 1: MetaFood Challenge Data Details

@@ -1,0 +1,25 @@
+research suggests that gains in noun-noun compound interpretation using word embeddings and
+similar neural classification models might be due to lexical memorization. In other words, the models
+learn that specific nouns are strong indicators of specific relations. To assess the role of lexical
+memorization in our models, we quantify the number of unseen compounds that the STL, TL, and
+MTL models predict correctly.
+We differentiate between ’partly’ and ’completely’ unseen compounds. A compound is ’partly’
+unseen if one of its constituents (left or right) is not present in the training data. A ’completely’
+unseen compound is one where neither the left nor the right constituent appears in the training data.
+improve its F1 scores for less common yet more challenging semantic relations.
+1 Introduction
+Noun-noun compound interpretation involves determining the semantic connection between two
+nouns (or noun phrases in multi-word compounds). For instance, in the compound "street protest,"
+the task is to identify the semantic relationship between "street" and "protest," which is a locative
+relation in this example. Given the prevalence of noun-noun compounds in natural language and its
+significance to other natural language processing (NLP) tasks like question answering and information
+retrieval, understanding noun-noun compounds has been extensively studied in theoretical linguistics,
+psycholinguistics, and computational linguistics.
+In computational linguistics, noun-noun compound interpretation is typically treated as an automatic
+classification task. Various machine learning (ML) algorithms and models, such as Maximum
+Entropy, Support Vector Machines, and Neural Networks, have been employed to decipher the
+semantics of nominal compounds. These models utilize information from lexical semantics, like
+WordNet-based features, and distributional semantics, such as word embeddings. However, noun-
+noun compound interpretation remains a challenging NLP problem due to the high productivity
+of noun-noun compounding as a linguistic structure and the difficulty in deriving the semantics of
+noun-noun compounds from their constituents. Our research contributes to advancing NLP research

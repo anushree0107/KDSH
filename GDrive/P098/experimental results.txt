@@ -1,0 +1,25 @@
+Participants were tasked with creating 3D models of 20 distinct food items from 2D images, mim-
+icking scenarios where mobile devices equipped with depth-sensing cameras are used for dietary
+.
+recording and nutritional tracking. The challenge was segmented into three tiers of difficulty based
+on the number of images provided: approximately 200 images for easy, 30 for medium, and a single
+top-view image for hard. This design aimed to rigorously test the adaptability and resilience of
+proposed solutions under various realistic conditions. A notable feature of this challenge was the use
+of a visible checkerboard for physical referencing and the provision of depth images for each frame,
+include tracking of gait speed during rehabilitation from orthopedic surgery, monitoring wandering behavior in dementia, or
+triggering an alert for a possible fall (and long lie on the floor) if someone is in one room for an unusual length of time. Furthermore,
+accurate room use and room-to-room transfer statistics could be used in occupational settings, e.g., to check factory worker location.
+7
+Table 1: Room-level and medication state accuracy of all models. Standard deviation is shown in (.), the best performer is bold,
+while the second best is italicized. Note that our proposed model is the one named MDCSA1,4,7
+!Training ModelRoom-Level Localisation Medication State
+Detecting Medication Usage in Parkinson’s Disease Through
+Multi-modal Indoor Positioning: A Pilot Study in a Naturalistic
+Environment
+Abstract
+Parkinson’s disease (PD) is a progressive neurodegenerative disorder that leads to motor symptoms, including gait
+impairment. The effectiveness of levodopa therapy, a common treatment for PD, can fluctuate, causing periods of
+improved mobility ("on" state) and periods where symptoms re-emerge ("off" state). These fluctuations impact
+gait speed and increase in severity as the disease progresses. This paper proposes a transformer-based method that
+uses both Received Signal Strength Indicator (RSSI) and accelerometer data from wearable devices to enhance
+indoor localization accuracy.

@@ -1,0 +1,26 @@
+ This provides a common learned representation of the input space,
+while allowing each predictor to adapt to its own constraints. After the shared layers, each constrained
+predictor has an additional two hidden layers and their final outputs are projected onto our convex
+approximation of the safe region of the output space, using Gb(x) = min jGj(x). In our experiments,
+we set ε= 0.0001 .
+With this construction, we needed 30 separate predictors to enforce the VerticalCAS safeability
+constraints. The number of nodes for the unconstrained and safe implementations were 270 and 2880,
+respectively. Our safe predictor is orders of magnitude smaller than the original look-up tables.
+C.4 Parameter Optimization
+We define our networks and perform parameter optimization using PyTorch. We optimize the
+parameters of both the unconstrained network and our safe predictor using the asymmetric loss
+function, guiding the network to select optimal advisories while accurately predicting scores from
+the look-up tables. Each dataset is split using an 80/20 train/test split, with a random seed of 0. The
+optimizer is ADAM, with a learning rate of 0.0003, a batch size of 216, and the number of training
+epochs is 500.
+6
+suming the NeuRIPs event, we then provide bounds on the expected risk, applicable
+to networks within any sublevel set of the empirical risk. Our results show that all
+networks with sufficiently small empirical risk achieve uniform generalization.
+1 Introduction
+A fundamental requirement of any scientific model is a clear evaluation of its limitations. In recent
+years, supervised machine learning has seen the development of tools for automated model discovery
+from training data. However, these methods often lack a robust theoretical framework to estimate
+model limitations. Statistical learning theory quantifies the limitation of a trained model by the
+generalization error. This theory uses concepts such as the VC-dimension and Rademacher complexity
+to analyze generalization error bounds for classification problems.

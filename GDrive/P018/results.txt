@@ -1,0 +1,24 @@
+but the label sets are distinct.
+For clarity, we differentiate between transfer learning and multi-task learning in this paper, despite
+these terms sometimes being used interchangeably in the literature. We define TL as the utilization of
+parameters from a model trained on Ta to initialize another model for Tb. In contrast, MTL involves
+training parts of the same model to learn both Ta and Tb, essentially learning one set of parameters
+for both tasks. The concept is to train a single model simultaneously on both tasks, where one task
+introduces an inductive bias that aids the model in generalizing over the main task. It is important to
+ The training uses a sampled subset of points from the input space and the learned
+predictors are shown for the continuous input space.
+Figure 3 shows an example of applying the safe predictor to a notional regression problem with a 2-D
+input and 1-D output and two overlapping constraints. The unconstrained network has two hidden
+layers of dimension 20 with ReLU activations, followed by a fully connected layer. The constrained
+predictors G00,G10,G01andG11share the hidden layers and have an additional hidden layer of size
+20 with ReLU followed by a fully connected layer. Again, training uses a sampled subset of points
+from the input space and the learned predictors are shown for the continuous input space.
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or

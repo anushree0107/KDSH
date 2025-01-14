@@ -1,0 +1,15 @@
+that incorporating convolutional sub-events with a super-event representation, creating a three-level
+activity hierarchy, yields the most favorable outcomes.
+7
+represents how active PD subjects are within a certain period of time, while ’Room-to-room Transition Duration’ may provide
+insight into how severe their disease is by the speed with which they navigate their home environment. With the layout of the house
+where participants stayed, the hallway is used as a hub connecting all other rooms labeled, and ’Room-to-room Transition’ shows
+the transition duration (in seconds) between two rooms connected by the hallway. The transition between (1) kitchen and living
+room, (2) kitchen and dining room, and (3) dining room and living room are chosen as the features due to their commonality across
+all participants. For these features, we limit the transition time duration (i.e. Later, various processes are done to further extract correlations across modalities through the use of various layers (e.g.,
+concatenation, CNN layer, transformer, self-attention). Our work is inspired by prior research where we only utilize accelerometer
+2
+data to enrich the RSSI, instead of utilizing all IMU sensors, in order to reduce battery consumption. In addition, unlike previous
+work that stops at predicting room locations, we go a step further and use room-to-room transition behaviors as features for a binary
+classifier predicting whether people with PD are taking their medications or withholding them.
+3 Cohort and Dataset

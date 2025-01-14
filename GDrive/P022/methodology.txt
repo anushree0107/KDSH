@@ -1,0 +1,23 @@
+35 8.64
+20 117.43 119.83 20.03
+6 Best 3D Mesh Reconstruction Team - FoodRiddle
+6.1 Methodology
+To achieve high-fidelity food mesh reconstruction, the team developed two procedural pipelines as
+depicted in Figure 14. For simple and medium complexity cases, they employed a structure-from-
+motion strategy to ascertain the pose of each image, followed by mesh reconstruction. Subsequently,
+a sequence of post-processing steps was implemented to recalibrate the scale and improve mesh
+quality. For cases involving only a single image, the team utilized image generation techniques to
+facilitate model generation.
+6.1.1 Multi-View Reconstruction
+particularly when collected from wrist-worn devices, which are a common and well-accepted placement location. Naively combining
+accelerometer data with RSSI may degrade indoor localization performance due to varying tremor levels in the acceleration signal.
+This work makes two primary contributions to address these challenges.
+(1) We detail the use of RSSI, augmented by accelerometer data, to achieve room-level localization. Our proposed network
+intelligently selects accelerometer features that can enhance RSSI performance in indoor localization. To rigorously assess our
+method, we utilize a free-living dataset (where individuals live without external intervention) developed by our group, encompassing
+diverse and unstructured movements as expected in real-world scenarios. A secondary goal is to determine if indoor localization, particularly in-home gait
+speed features (like the time to walk between rooms), can be used to identify motor fluctuations by detecting if a
+person with PD is taking their levodopa medication or not. The method is evaluated using a real-world dataset
+collected in a free-living setting, where movements are varied and unstructured. Twenty-four participants, living
+in pairs (one with PD and one control), resided in a sensor-equipped smart home for five days. The results show
+that the proposed network surpasses other methods for indoor localization. The evaluation of the secondary goal

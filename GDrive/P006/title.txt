@@ -1,0 +1,22 @@
+the full ranking strategy, considering all non-interacted items as candidate items to avoid selection bias during the test stage. We
+repeated each experiment five times with different random seeds and reported the average scores.
+3.2 Overall Performance
+As shown in Table 1, we compare our model with several baselines across three datasets. The best performance for each metric
+is highlighted in bold, while the second best is underlined. Our model consistently outperforms all compared methods across all
+metrics in every dataset.
+•Our proposed model PAAC consistently outperforms all baselines and significantly mitigates the popularity bias. Specif-
+ically, PAAC enhances LightGCN, achieving improvements of 282.65%, 180. This method refined the uniformity of representations and successfully reduced separation. We
+validated our method, PAAC, on three publicly available datasets, demonstrating its effectiveness and underlying rationale.
+In the future, we will explore deeper alignment and contrast adjustments tailored to specific tasks to further mitigate popularity
+bias. We aim to investigate the synergies between alignment and contrast and extend our approach to address other biases in
+recommendation systems.
+Acknowledgments
+This work was supported in part by grants from the National Key Research and Development Program of China, the National Natural
+Science Foundation of China, the Fundamental Research Funds for the Central Universities, and Quan Cheng Laboratory.
+8
+ the best baseline (the
+relative improvements are denoted as Imp.).
+!ModelYelp2018 Gowalla Amazon-book
+Recall@20 HR@20 NDCG@20 Recall@20 HR@20 NDCG@20 Recall@20 HR@20 NDCG@20
+MF 0.0050 0.0109 0.0093 0.0343 0.0422 0.0280 0.0370 0.0388 0.0270
+LightGCN 0.0048 0.0111 0.0098 0.0380 0.0468 0.0302 0.0421 0.

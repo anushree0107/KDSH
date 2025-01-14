@@ -1,0 +1,19 @@
+L, which one can typically
+only hope for in adaptive methods. Our EG+ method with adaptive step size accomplishes this even without the added expense of a
+backtracking linesearch.article graphicx
+7
+Obthus represents the overlap regions for each combination of
+input constraints. For example, O101is the set of points in A1andA3, but not in A2, and O0...0is
+the set where no input constraints apply. We also define Oas the set of bit strings, b, such that Ob
+is non-empty, and define k=|O|. The sets {Ob:b∈O}create a partition of Xaccording to the
+combination of input constraints that apply.
+Given:
+•c different input constraint proximity functions, σi:X→[0,1], where σiis continuous and
+∀x∈Ai,σi(x) = 0 ,
+In practice, large batch sizes of order O(ε−1)are typically not desirable; instead, a small or decreasing step size is preferred. In the
+weak Minty setting, this causes additional trouble due to the necessity of large step sizes to guarantee convergence. Unfortunately,
+the current analysis does not allow for variable γ.
+4 EG+ with adaptive step sizes
+In this section, we present Algorithm 3, which is able to solve the previously mentioned problems without any knowledge of the
+Lipschitz constant L, as it is typically difficult to compute in practice. Additionally, it is well known that rough estimates will lead to
+small step sizes and slow convergence behavior.

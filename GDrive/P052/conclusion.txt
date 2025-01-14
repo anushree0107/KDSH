@@ -1,0 +1,21 @@
+79%, and 82.89% in NDCG@20 on the
+Yelp2018, Gowalla, and Amazon-Book datasets, respectively. Compared to the strongest baselines, PAAC delivers better
+performance. The most significant improvements are observed on Yelp2018, where our model achieves an 8.70% increase
+in Recall@20, a 10.81% increase in HR@20, and a 30.2% increase in NDCG@20. This improvement can be attributed
+to our use of popularity-aware supervised alignment to enhance the representation of less popular items and re-weighted
+contrastive learning to address representation separation from a popularity-centric perspective.
+In computational linguistics, noun-noun compound interpretation is typically treated as an automatic
+classification task. Various machine learning (ML) algorithms and models, such as Maximum
+Entropy, Support Vector Machines, and Neural Networks, have been employed to decipher the
+semantics of nominal compounds. These models utilize information from lexical semantics, like
+WordNet-based features, and distributional semantics, such as word embeddings. However, noun-
+noun compound interpretation remains a challenging NLP problem due to the high productivity
+of noun-noun compounding as a linguistic structure and the difficulty in deriving the semantics of
+noun-noun compounds from their constituents. Our research contributes to advancing NLP research
+different positive and negative samples to mitigate representation separation from a popularity-centric perspective. We incorporate
+this approach into contrastive learning to better optimize the consistency of representations. Specifically, we aim to reduce the risk
+of pushing items with varying popularity further apart. For example, when using a popular item as a positive sample, our goal is
+to avoid pushing unpopular items too far away. Thus, we introduce two hyperparameters to control the weights when items are
+considered positive and negative samples.
+To ensure balanced and equitable representations of items within our model, we first propose a dynamic strategy to categorize items
+into popular and unpopular groups for each mini-batch. Instead of relying on a fixed global threshold, which often leads to the

@@ -1,0 +1,24 @@
+t=1LBCE(ˆft, ft) (10)
+LLL(ˆe, y) =TX
+i=0P(φ(hi))qT
+i(yi|yi−1)−TX
+i=0P(φ(hi))[qT
+i(yi|yi−1)] (11)
+5
+LBCE(ˆf, f) =−1
+TTX
+t=0ftlog(ˆft) + (1 −ft) log(1 −ˆft) (12)
+where LLL(.)represents the negative log-likelihood and LBCE(.)denotes the binary cross-entropy, y= [y1, ...previous work.
+LetX⊆RD. The forward process is a Gauss-Markov process with transition densities defined as
+q(xt|xt−1) =N(xt;√αtxt−1,(1−αt)I),
+where α1, . . . , α Tis a fixed noise schedule such that 0< αt<1for all t. This definition implies that at each time step 1≤t≤T,
+5
+q(xt|x0) =N(xt;√ ̄αtx0,(1− ̄αt)I),with ̄αt=tY
+i=1αi.
+ Given that general non-monotone operators may display erratic behavior, such as periodic cycles and
+spurious attractors, it is reasonable to seek settings that extend the monotone framework while remaining manageable. First and
+foremost is the extensively studied setting of ν-weak monotonicity:
+⟨F(u)−F(v), u−v⟩ ≥ − ν∥u−v∥2.
+Such operators arise as the gradients of the well-studied class of weakly convex functions, a rather general class of functions as it
+includes all functions without upward cusps. In particular, every smooth function with a Lipschitz gradient turns out to fulfill this
+property.

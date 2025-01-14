@@ -1,0 +1,30 @@
+sequential processing of video features, whereas other methods can be fully parallelized.
+Table 3: Additional parameters required for models when added to the base model (e.g., I3D or
+Inception V3).
+Model # Parameters
+Max/Mean Pooling 16K
+Pyramid Pooling 115K
+LSTM 10.5M
+Temporal Conv 31.5M
+Sub-events 36K
+Table 4: Mean Average Precision (mAP) results on segmented videos for multi-label classification.
+Learning sub-intervals for pooling is found to be crucial for activity recognition.
+Method RGB Flow Two-stream
+Random 16.3 16.3 16.3
+the specifications until after training. Our work seeks to design networks with enforced input-output
+constraints even before training has been completed. This will allow for online learning scenarios
+where a system has to guarantee safety throughout its operation.
+This paper presents an approach for designing a safe predictor (a neural network or any other
+machine learning model) that will always meet a set of constraints on the input-output relationship.
+This assumes that the constrained output regions can be formulated to be convex. Our correct-
+by-construction safe predictor is guaranteed to satisfy the constraints, even before training, and at
+every training step. We describe our approach in Section 2, and show its use in an aircraft collision
+avoidance problem in Section 3.• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned

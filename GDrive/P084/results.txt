@@ -1,0 +1,23 @@
+baselines only in the first three quartiles. In the last quartile, the neural networks perform significantly
+worse than the baselines. This suggests that while modeling questions and justifications is generally
+helpful, it becomes detrimental toward the end of a question’s life. This phenomenon can be attributed
+to the increasing wisdom of the crowd as more evidence becomes available and more forecasters
+contribute, making their aggregated predictions more accurate.
+5
+Table 4: Results with the test questions, categorized by question difficulty as determined by the best
+baseline model. The table presents the accuracy (average percentage of days a question is predicted
+reveals three primary themes: elections (including terms like "voting," "winners," and "candidate"),
+government actions (including terms like "negotiations," "announcements," "meetings," and "passing
+(a law)"), and wars and violent crimes (including terms like "groups," "killing," "civilian (casualties),"
+and "arms"). Although not explicitly represented in the LDA topics, the questions address both
+domestic and international events within these broad themes.
+Table 2: Analysis of the 96,664 written justifications submitted by forecasters in our dataset. The
+readability scores indicate that most justifications are easily understood by high school students (11th
+PCEDT have distinctly high ratios compared to other relations in Figure 2. These relations also
+have the second-highest F1 score in their datasets—except for STL on PCEDT (see Tables 4 and
+5). Lexical memorization is therefore a likely cause of these high F1 scores. We also observed that
+lower ratios of relation-specific constituents correlate with lower F1 scores, such as APP and REG in
+PCEDT. Based on these insights, we can’t dismiss the possibility that our models show some degree
+of lexical memorization, despite manual analysis also presenting cases where models demonstrate
+generalization and correct predictions in situations where lexical memorization is impossible.
+8 Conclusion

@@ -1,0 +1,30 @@
+ The random sample x∈Rdand label y∈Rfollow a joint distribution μsuch that
+the marginal distribution μxof sample x is standard Gaussian with density
+1
+(2π)d/2exp
+−∥x∥2
+2
+.
+As available data, we assume independent copies {(xj, yj)}m
+j=1of the random pair (x, y), each
+distributed by μ.
+3 Concentration of the Empirical Norm
+Supervised learning algorithms interpolate labels yfor samples x, both distributed jointly by μon
+X × Y . This task is often solved under limited data accessibility. The training data, respecting
+• a standard neural network architecture gb:X→Rm,
+and then defining Gb(x;θb) =hb(gb(x;θb)).
+The framework proposed here does not require an entirely separate network for each b. In many
+applications, it may be advantageous for the constrained predictors to share earlier layers, thus
+creating a shared representation of the input space. In addition, our definition of the safe predictor is
+general and is not limited to neural networks.
+In Appendix B, we show examples of applying our approach to synthetic datasets in 2-D and 3-D
+with simple neural networks. These examples show that our safe predictor can enforce arbitrary
+input-output specifications using convex output constraints on neural networks, and that the learned
+in the label sets, where it exists, can be leveraged through transfer and multi-task learning, especially
+since the overall distribution of relations differs between the two frameworks.
+4 Transfer vs. Multi-Task Learning
+In this section, we employ the terminology and definitions established by Pan and Yang (2010) to
+articulate our framework for transfer and multi-task learning. Our classification task can be described
+in terms of all training pairs (X, Y) and a probability distribution P(X), where X represents the input
+feature space, Y denotes the set of all labels, and N is the training data size. The domain of a task is
+defined by X, P(X).

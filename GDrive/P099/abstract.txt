@@ -1,0 +1,28 @@
+observed on the ’most challenging’ inputs that include at least one constituent that was not present in
+the training data. However, clear indications of ’lexical memorization’ effects are evident in our error
+analysis of unseen compounds.
+Typically, the transfer of representations or sharing between tasks is more effective at the embedding
+layers, which represent the model’s internal representation of the compound constituents. Furthermore,
+in multi-task learning, the complete sharing of model architecture across tasks degrades its capacity
+to generalize when it comes to less frequent relations.
+The dataset provided by Fares (2016) is an appealing resource for new neural approaches to compound
+interpretation because it links this sub-problem with broad-coverage semantic role labeling or
+ Besides differing in the NLP tasks they investigate, the aforementioned
+studies employ slightly varied definitions of TL and MTL. Our research aligns with certain studies in
+that we apply TL and MTL to learn different semantic annotations of noun-noun compounds using
+the same dataset. However, our experimental design is more akin to other work in that we experiment
+with initializing parameters across all layers of the neural network and concurrently train a single
+MTL model on two sets of relations.
+3 Task Definition and Dataset
+The objective of this task is to train a model to categorize the semantic relationships between pairs
+of nouns in a labeled dataset, where each pair forms a noun-noun compound. The complexity of
+Additionally, we compare a bi-directional LSTM with 512 hidden units, using the final hidden state
+as input to a fully-connected layer for classification. We frame our tasks as multi-label classification
+and train these models to minimize binary cross-entropy:
+L(v) =X
+czclog(p(c|G(v))) + (1 −zc) log(1 −p(c|G(v)))
+where G(v)is the function that pools the temporal information, and zcis the ground truth label for
+class c.
+5 Activity Detection in Continuous Videos
+Detecting activities in continuous videos poses a greater challenge. The goal here is to classify each
+frame according to the activities occurring. Unlike segmented videos, continuous videos feature

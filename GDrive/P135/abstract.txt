@@ -1,0 +1,27 @@
+ Furthermore, we introduce a modified
+version of EG that incorporates an adaptive step size, eliminating the need for prior knowledge of the problem’s
+specific parameters.
+1 Introduction
+The recent advancements in machine learning models, particularly those that can be formulated as min-max optimization problems,
+have generated significant interest in saddle point problems. Examples of these models include generative adversarial networks,
+adversarial learning frameworks, adversarial example games, and actor-critic methods. While practical methods have been developed
+that generally perform well, the theoretical understanding of scenarios where the objective function is nonconvex in the minimization
+component and nonconcave in the maximization component remains limited, with some research even suggesting intractability in
+certain cases.
+Addressing Min-Max Challenges in Nonconvex-Nonconcave Problems
+with Solutions Exhibiting Weak Minty Properties
+Abstract
+This research examines a specific category of structured nonconvex-nonconcave min-max problems that demon-
+strate a characteristic known as weak Minty solutions. This concept, which has only recently been defined, has
+already demonstrated its effectiveness by encompassing various generalizations of monotonicity at the same time.
+We establish new convergence findings for an enhanced variant of the optimistic gradient method (OGDA) within
+this framework, achieving a convergence rate of 1/k for the most effective iteration, measured by the squared
+operator norm, a result that aligns with the extragradient method (EG). We prove this property in a network
+recovery setting in Theorem 2, and also an agnostic learning setting in Theorem 3. These results
+ensure a small generalization error, when any optimization algorithm finds a network with a small
+empirical risk. We develop the key proof techniques for deriving the sample complexity of achieving
+NeuRIPs in Section V , by using the chaining theory of stochastic processes. The derived results are
+summarized in Section VI, where we also explore potential future research directions.
+2 Notation and Assumptions
+In this section, we will define the key notations and assumptions for the neural networks examined
+in this study.

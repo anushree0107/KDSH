@@ -1,0 +1,38 @@
+ Next, ICP registration is performed for further alignment, significantly
+reducing the Chamfer distance. Finally, gradient descent is used for additional fine-tuning to obtain
+the final transformation matrix.
+The total Chamfer distance between all 18 predicted models and the ground truths is 0.069441169.
+8
+Table 5: Estimated Scale Factors
+Object Index Food Item Scale Factor
+1 Strawberry 0.060058
+2 Cinnamon bun 0.081829
+3 Pork rib 0.073861
+4 Corn 0.083594
+5 French toast 0.078632
+6 Sandwich 0.088368
+7 Burger 0.103124
+8 Cake 0.068496
+metric. Given two point sets XandY, the Chamfer distance is defined as:
+dCD(X, Y ) =1
+|X|X
+x∈Xmin
+y∈Y∥x−y∥2
+2+1
+|Y|X
+y∈Ymin
+x∈X∥x−y∥2
+2 (2)
+This metric offers a comprehensive measure of similarity between the reconstructed 3D models and
+the ground truth. The final ranking is determined by combining scores from both Phase-I (volume
+accuracy) and Phase-II (shape accuracy). Note that after the Phase-I evaluation, quality issues were
+ For overall method performance, Table 4 shows
+the MAPE and Chamfer distance with and without transformation metrics.
+Additionally, qualitative results on one- and few-shot 3D reconstruction from the challenge dataset
+are shown. The model excels in texture details, artifact correction, missing data handling, and color
+adjustment across different scene parts.
+Limitations: Despite promising results, several limitations need to be addressed in future work:
+•Manual processes: The current pipeline includes manual steps like providing segmentation
+prompts and identifying scaling factors, which should be automated to enhance efficiency.
+•Input requirements: The method requires extensive input information, including food
+masks and depth data. Streamlining these inputs would simplify the process and increase
