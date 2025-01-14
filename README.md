@@ -23,7 +23,7 @@ ARCS employs a modular architecture with the following key components:
 - **Hallucination Grader Agent:** Assesses the factual accuracy of generated responses to mitigate hallucinations.
 - **Introspective Agent:** Performs comprehensive analysis to ensure the response meets user needs.
 
-![Pipeline Diagram](https://imgur.com/a/70xHgBh)
+![Pipeline Diagram](Pipeline.png)
 
 ---
 
@@ -62,4 +62,9 @@ ARCS employs a modular architecture with the following key components:
    ```bash
    python main_recommendation.py
    ```
-   
+
+## Usage
+
+1. **Input a research paper:** Upload the PDF of the research paper you wish to evaluate.
+2. **System processing:** ARCS will parse the PDF, evaluate its content, and generate similarity and evaluation scores.
+3. **Receive recommendations:** The system will classify the paper and suggest suitable conferences for submission.
