@@ -5,11 +5,17 @@ from llama_index.llms.groq import Groq
 from llama_index.core import Settings
 from llama_index.core.agent import FunctionCallingAgentWorker
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.tools.tavily_research.base import TavilyToolSpec
+from langchain.agents import AgentExecutor, create_react_agent, load_tools
 from langchain.globals import set_llm_cache
+from llama_index.tools.tavily_research.base import TavilyToolSpec
 from langchain.cache import InMemoryCache
 set_llm_cache(InMemoryCache())
 load_dotenv()
+
+tools = load_tools(
+    ["arxiv"],
+)
+
 
 class IntrospectiveAgentManager:
     def __init__(self, llm_model: str, embed_model_name: str):
@@ -20,8 +26,8 @@ class IntrospectiveAgentManager:
 
 
     def create_introspective_agent(self, verbose: bool = True):
+        self.tools = tools
         tavily_tool = TavilyToolSpec(api_key=self.tavily_api_key)
-
         llm = Groq(
             model=self.llm_model,
             temperature=0.0,
@@ -33,10 +39,11 @@ class IntrospectiveAgentManager:
 
         self_reflection_agent_worker = SelfReflectionAgentWorker.from_defaults(
             llm=llm,
+            tools = self.tools,
             verbose=verbose
         )
-
         tool_list = tavily_tool.to_tool_list()
+
         main_agent_worker = FunctionCallingAgentWorker.from_tools(
             tools=tool_list,
             llm=llm,

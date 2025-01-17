@@ -8,6 +8,7 @@ from pathway.xpacks.llm import embedders
 from typing import List
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
+from pathway.xpacks.llm.rerankers import CrossEncoderReranker
 
 
 load_dotenv()
@@ -17,10 +18,12 @@ class EMNLPRulebook:
         self.data_sources = []
         self.vector_server = None
         self.client = None
-
+        self.rerankers = CrossEncoderReranker(model_name="cross-encoder/ms-marco-TinyBERT-L-2-v2")
         self.read_data_sources()
         self.initialize_vector_server()
         self.initialize_client()
+    
+
 
     def read_data_sources(self):
         """Reads data from the output file into data_sources."""
@@ -55,10 +58,13 @@ class EMNLPRulebook:
         
         PATHWAY_PORT = 8020
 
+        print(type(self.data_sources[0]))
+
         self.vector_server = VectorStoreServer(
             *self.data_sources,
             embedder=embedder,
             splitter=text_splitter,
+            # doc_post_processors=[self.rerankers]
         )
         self.vector_server.run_server(
             host="127.0.0.1", 
@@ -106,7 +112,7 @@ class EMNLPAgent:
             This is the query of the user : {query}
             These are the retrieved results from the rulebook:
             {retrieved_results}
-"""
+        """
         messages = [
             ("system", "Think yourself as a EMNLP reviewer, based on the tool results and your knowledge, what would be the best answer to the following question?"),
             ("user", final_prompt)
@@ -117,10 +123,18 @@ class EMNLPAgent:
     
 if __name__ == "__main__":
     rulebook = EMNLPRulebook()
-    query = "What are the rules to getting selected in EMNLP?"
-    results = rulebook.query_vector_store(query)
+    queries = [
+        "What are the rules to getting selected in EMNLP?",
+        "Hello bhai",
+        "peace hain"
+    ]
+    results = []
+    for elem in queries:
+        res = rulebook.query_vector_store(elem)
+        results.append(res)
+
     print("retrieved results: ", results)
     
-    agent = EMNLPAgent()
-    response = agent.query(query, results)
-    print("response: ", response)
+    # agent = EMNLPAgent()
+    # response = agent.query(query, results)
+    # print("response: ", response)

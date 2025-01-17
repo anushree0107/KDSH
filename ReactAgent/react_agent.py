@@ -1,18 +1,27 @@
 import os
 from langchain import hub
-from langchain.agents import AgentExecutor, create_react_agent
+from langchain.agents import AgentExecutor, create_react_agent, load_tools
 from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_community.tools.google_scholar import GoogleScholarQueryRun
+from langchain_community.utilities.google_scholar import GoogleScholarAPIWrapper
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 from langchain.globals import set_llm_cache
 from langchain.cache import InMemoryCache
 set_llm_cache(InMemoryCache())
 
+load_dotenv()
+
+
+# google_scholar_tool = GoogleScholarQueryRun(api_wrapper=GoogleScholarAPIWrapper())
+
+
+# tool_list.append(google_scholar_tool.to_tool_list())
+
 class PaperReviewAgent:
     def __init__(self):
-        load_dotenv()
+        
 
-        self.tools = [TavilySearchResults(max_results=1)]
 
         self.system_prompt = """
         You are an expert reviewer and evaluator for academic research papers submitted to leading journals and conferences. Your task is to assess the quality of a paper based on its novelty, strengths, weaknesses, and relevance to the target journal. When given a retrieved context about a paper, you must analyze it to explain why the paper might get selected by the journal. Ensure your explanation highlights:
@@ -31,6 +40,9 @@ class PaperReviewAgent:
             model="llama3-70b-8192",
             max_retries=5,
             api_key=os.getenv("GROQ_API_KEY")
+        )
+        self.tools = load_tools(
+            ["arxiv"],
         )
 
         self.prompt = hub.pull("hwchase17/react")

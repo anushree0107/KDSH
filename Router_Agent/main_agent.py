@@ -20,11 +20,8 @@ tool = TavilySearchResults(
 
 
 def router_agent_response(query):
-    answer = tool.invoke({"query": query})
-    print("web search response: ", answer)
-    websearch_response = []
-    # for elem in answer:
-    #     websearch_response.append(elem["content"])
+
+    # websearch_response.append(elem["content"])
     prompt = ChatPromptTemplate(
         [
             ("system", """You are a Router Agent for research conferences. Your role is to evaluate the content of a research paper and recommend exactly 2 most relevant conferences from the following list:
@@ -69,8 +66,7 @@ You have to give 2 conference names at any cost.
     llm = ChatGroq(model="llama3-70b-8192", api_key=os.getenv("GROQ_API_KEY"))
     answer = llm.invoke(input_query)
     response = answer.content
-    list_response = ast.literal_eval(response)
-    return list_response
+    return response
 
 if __name__ == "__main__":
     text = "This paper introduces a novel algorithm for graph-based fraud detection in large datasets."
