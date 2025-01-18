@@ -121,19 +121,19 @@ class EMNLPAgent:
         return response.content
     
     
-if __name__ == "__main__":
-    rulebook = EMNLPRulebook()
-    queries = [
-        "What are the rules to getting selected in EMNLP?",
-        "Hello bhai",
-        "peace hain"
-    ]
-    results = []
-    for elem in queries:
-        res = rulebook.query_vector_store(elem)
-        results.append(res)
+# if __name__ == "__main__":
+#     rulebook = EMNLPRulebook()
+#     queries = [
+#         "What are the rules to getting selected in EMNLP?",
+#         "Hello bhai",
+#         "peace hain"
+#     ]
+#     results = []
+#     for elem in queries:
+#         res = rulebook.query_vector_store(elem)
+#         results.append(res)
 
-    print("retrieved results: ", results)
+#     print("retrieved results: ", results)
     
     # agent = EMNLPAgent()
     # response = agent.query(query, results)

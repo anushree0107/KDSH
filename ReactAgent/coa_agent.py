@@ -1,10 +1,12 @@
 import os
-from langchain import hub
-from langchain.agents import AgentExecutor, create_tool_calling_agent, load_tools
-from langchain_community.tools.tavily_search import TavilySearchResults
-from langchain_community.tools.google_scholar import GoogleScholarQueryRun
-from langchain_community.utilities.google_scholar import GoogleScholarAPIWrapper
-from langchain_groq import ChatGroq
+from typing import List, Dict
+from llama_index.core.tools import QueryEngineTool, ToolMetadata
+from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index.core import Settings
+from llama_index.agent.coa import CoAAgentWorker
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.llms.groq import Groq
+from langchain_community.utilities.arxiv import ArxivAPIWrapper
 from dotenv import load_dotenv
 from langchain.globals import set_llm_cache
 from langchain.cache import InMemoryCache
@@ -12,7 +14,6 @@ set_llm_cache(InMemoryCache())
 import hashlib
 from gptcache import Cache
 from langchain.globals import set_llm_cache
-from langchain_core.prompts import ChatPromptTemplate
 from gptcache.manager.factory import manager_factory
 from gptcache.processor.pre import get_prompt
 from langchain_community.cache import GPTCache
@@ -34,95 +35,87 @@ set_llm_cache(GPTCache(init_gptcache))
 
 load_dotenv()
 
-
-# google_scholar_tool = GoogleScholarQueryRun(api_wrapper=GoogleScholarAPIWrapper())
-
-
-# tool_list.append(google_scholar_tool.to_tool_list())
-
-
+# ... existing cache-related imports and setup ...
 
 class PaperReviewAgent:
     def __init__(self):
-        # Initialize the LLM
-        self.llm = ChatGroq(
+        load_dotenv()
+        self._setup_models()
+        self.tools = []
+        self.setup_tools()
+        self.worker = self.setup_agent()
+        
+    def _setup_models(self) -> None:
+        """Initialize LLM and embedding models"""
+        Settings.llm = Groq(
             model="llama3-70b-8192",
-            max_retries=5,
+            temperature=0.0,
             api_key=os.getenv("GROQ_API_KEY")
         )
-
-        # Load tools
-        self.tools = load_tools(
-            ["arxiv"],  # Add the "arxiv" tool as required
+        Settings.embed_model = HuggingFaceEmbedding(
+            model_name="BAAI/bge-small-en-v1.5"
         )
-        self.tool_names = [tool.name for tool in self.tools]
 
-        # Define the system prompt
-        self.system_prompt = """
+    def setup_tools(self) -> None:
+        """Setup tools for the agent"""
+        arxiv = ArxivAPIWrapper()
+        arxiv_tool = QueryEngineTool(
+            query_engine=arxiv,
+            metadata=ToolMetadata(
+                name="arxiv_tool",
+                description="Tool for searching and analyzing academic papers from arXiv. Use this for finding and evaluating research papers.",
+            ),
+        )
+        self.tools.append(arxiv_tool)
+
+    def setup_agent(self) -> CoAAgentWorker:
+        """Setup the CoA agent with the tools"""
+        system_prompt = """
         You are an expert reviewer and evaluator for academic research papers submitted to leading journals and conferences. 
         Your task is to assess the quality of a paper based on its novelty, strengths, weaknesses, and relevance to the target journal. 
-
-        Tools Available: {tool_names}
-
-        When evaluating a research paper, ensure your response highlights:
-        1. Key strengths (e.g., novelty, impactful findings, methodological advancements).
-        2. How the paper aligns with the journal's focus and audience.
-        3. Any limitations and their impact on quality.
-        4. The potential impact or contribution to the field.
-        5. Specific reasons for acceptance or rejection.
-
-        Your responses must be clear, concise, and based on retrieved context.
+        When given a retrieved context about a paper, analyze it to explain why the paper might get selected by the journal. 
+        
+        Ensure your explanation highlights:
+        1. The key strengths of the paper (novelty, impactful findings, methodological advancements)
+        2. How the paper aligns with the journal's focus and audience
+        3. Any limitations acknowledged and their impact on quality
+        4. The potential impact or contribution to the field
+        5. Specific reasons why the paper might not meet journal criteria
+        
+        Tailor your response to match the specific journal's criteria and expectations.
         """
-
-        # Create a ChatPromptTemplate
-        self.prompt = ChatPromptTemplate.from_messages(
-            [
-                ("system", self.system_prompt),
-                ("placeholder", "{agent_scratchpad}"),
-                ("human", "{input}"),
-                ("placeholder", "{tool_names}"),
-                ("placeholder", "{context}")
-            ]
-        )
-
-        # Construct the agent
-        self.agent = create_tool_calling_agent(
-            llm=self.llm,
+        
+        return CoAAgentWorker.from_tools(
             tools=self.tools,
-            prompt=self.prompt
-        )
-
-        # Initialize the AgentExecutor
-        self.agent_executor = AgentExecutor(
-            agent=self.agent,
-            tools=self.tools,
+            llm=Settings.llm,
+            system_prompt=system_prompt,
             verbose=True
         )
 
-    def analyze_paper(self, query, retrieved_contexts):
-        """
-        Analyzes a research paper based on the query and retrieved contexts.
-
-        Args:
-            query (str): The input query about the research paper.
-            retrieved_contexts (list of dict): Retrieved contexts with each containing a 'text' field.
-
-        Returns:
-            str: The agent's evaluation of the research paper.
-        """
-        # Combine all retrieved contexts into a single string
+    def analyze_paper(self, query: str, retrieved_contexts: List[Dict[str, str]]) -> str:
+        """Analyze a paper using the CoA agent"""
         combined_context = "\n\n".join([ctx['text'] for ctx in retrieved_contexts])
+        
+        # Combine the query and context for the agent
+        full_query = f"Based on the following context:\n{combined_context}\n\nAnalyze: {query}"
+        
+        agent = self.worker.as_agent()
+        response = agent.chat(full_query)
+        
+        # Add error handling for response
+        if response is None or str(response).strip() == '':
+            return "Error: Received empty response from agent"
+        
+        try:
+            # If response is already a string, return it directly
+            if isinstance(response, str):
+                return response
+            # If response is a dict or other object, convert to string
+            return str(response)
+        except Exception as e:
+            return f"Error processing response: {str(e)}"
 
-        # Invoke the agent executor with the required inputs
-        modified_query = query + "\n\n" + combined_context
-        answer = self.agent_executor.invoke({
-            "input": modified_query,
-        })
-
-        return answer
-
-
-
+# ... existing main block remains the same ...
 if __name__ == "__main__":
     retrieved_contexts = [
         {'text': "However, the lack of hyperparameter optimization and embedding analysis slightly\ndetracts from its rigor.\n● Excitement (4/5):\nThe findings challenge traditional approaches and offer a fresh perspective on\nknowledge injection. The simplicity of the method and its potential impact on\nresearch directions make it exciting.\n● Reproducibility (4/5):\nThe methodology is clear and reproducible, but slight variations may arise due to\nsample variance or reliance on prior hyperparameter settings.\n● Ethical Concerns: None identified.\n● Reviewer Confidence (4/5):\nThe reviewer has carefully analyzed the claims and findings and is confident about\nthe paper's strengths and limitations.\nReasons for Acceptance\n1. Novel Insight:\n", 'score': 0.7314755320549011}, 
@@ -170,4 +163,4 @@ if __name__ == "__main__":
 
     result = agent.analyze_paper(combined_query, retrieved_contexts)
 
-    print(result['output'])
+    print(result["output"])

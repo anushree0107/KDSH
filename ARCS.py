@@ -1,5 +1,7 @@
 import streamlit as st
 import fitz  # PyMuPDF
+from final_pipeline import pipeline
+from Retriever.emnlp_retriever import EMNLPRulebook
 
 # Function to extract text and sections from a PDF
 def extract_text_from_pdf(uploaded_file):
@@ -96,23 +98,40 @@ def extract_text_from_pdf(uploaded_file):
     return sections
 
 # Streamlit App
-st.title("Research Paper Upload and Evaluation")
+st.title("Research Paper Evaluation and Conference Recommendation")
 
 uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
 
 if uploaded_file is not None:
+    print(uploaded_file.name)
     st.write(f"Uploaded file: {uploaded_file.name}")
 
     if st.button("Evaluate"):
         try:
             extracted_sections = extract_text_from_pdf(uploaded_file)
 
-            st.success("PDF processed successfully!")
-            st.write("### Extracted Sections:")
+            query_list = []
 
             for section, content in extracted_sections.items():
-                st.write(f"**{section.capitalize()}:**")
-                st.text(content)
+                query_list.append({
+                    "section": section,
+                    "content": content
+                })
+
+            retriver = EMNLPRulebook()
+            retrived_contexts = []
+            for query in query_list:
+                retrived_context = retriver.query_vector_store(query["content"])
+                retrived_contexts.append(retrived_context)
+
+            query = query_list[0]["content"]
+            retrieved_context = retriver.query_vector_store(query)
+
+            # for i in range(len(query_list)):
+            final_conference, rationale = pipeline(retriver, query, retrieved_context)
+            st.success("PDF evaluated successfully!")
+            st.write("### Recommended Conference: ", final_conference)
+            st.write("**Rationale**: ", rationale)
 
         except Exception as e:
             st.error(f"An error occurred: {e}")

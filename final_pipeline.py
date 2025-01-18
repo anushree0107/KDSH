@@ -8,7 +8,7 @@ from Retriever.emnlp_retriever import EMNLPRulebook
 
 from dotenv import load_dotenv
 load_dotenv()
-from Router_Agent.main_agent import router_agent_response
+from Router_Agent.main_agent import RouterAgent
 from Grader.grader_agent import PaperGrader
 from Hallucinator.hallucination_agent import HallucinationGrader
 from Question_Rewriter.question_rewriter import QueryRewriter
@@ -22,21 +22,22 @@ from langchain_groq import ChatGroq
 set_llm_cache(InMemoryCache())
 
 
-query_list = [
-    "Tell me about this paper, should it be accepted in KDD", 
-    "Give the rules for getting accepted in TMLR"
-]
+# query_list = [
+#     "Tell me the strength of an accepeted paper in NeurIPS", 
+#     "Give the rules for getting accepted in TMLR"
+# ]
 
-retriver = EMNLPRulebook()
-retrived_contexts = []
-for elem in query_list:
-    retrived_context = retriver.query_vector_store(elem)
-    retrived_contexts.append(retrived_context)
+# retrived_contexts = []
+# for elem in query_list:
+#     retrived_context = retriver.query_vector_store(elem)
+#     retrived_contexts.append(retrived_context)
 
 def pipeline(query, retrieved_context):
-
-    possible_conferences = router_agent_response(query)
-    print(possible_conferences)
+    if len(query.strip()) > 150:
+        query = summarization_agent(query)
+    router_agent = RouterAgent()
+    possible_conferences = router_agent.route_paper(query)
+    final_conference = possible_conferences
     grader = PaperGrader()
     response = grader.grade_review(paper_details=query, retrieved_contexts=retrieved_context)
     print(f"Grade for paper acceptance: {response['acceptance']}")
@@ -80,8 +81,9 @@ def pipeline(query, retrieved_context):
                 response = introspective_agent.chat(combined_context)
             except Exception as e:
                 response = introspective_agent.chat(combined_context)
-            final_response = response['output']
-            print("Final Pipeline Response: ", final_response)
+            print(dir(response))    
+            final_response = str(response)
+            return final_conference, final_response
         else:
             Mathagent = MathAgent()
             llm = ChatGroq(
@@ -105,18 +107,28 @@ def pipeline(query, retrieved_context):
                 ]
                 answer = llm.invoke(messages)
                 pipeline_response = answer.content
-                print("Final Pipeline response: ", pipeline_response)
+                return final_conference, pipeline_response
             else:
                 pipeline_response = answer['output']
-                print("Final Pipeline response: ", pipeline_response)
+                return final_conference, pipeline_response
     else:
         query_transformer = QueryRewriter()
         modified_query = query_transformer.apply_hyde(query)
-        new_retrieved_context = retriver.query_vector_store(modified_query)
-        pipeline(modified_query, new_retrieved_context)
+        new_retrieved_context = retriever.query_vector_store(modified_query)
+        return pipeline(retriever, modified_query, new_retrieved_context)
 
 
-if __name__ == "__main__":
-    for i in range(len(query_list)):
-        pipeline(query_list[i], retrived_contexts[i])
-    
+# if __name__ == "__main__":
+#     for i in range(len(query_list)):
+#         pipeline(query_list[i], retrived_contexts[i])
+
+retriever = EMNLPRulebook()
+
+
+query = "Leveraging Clustering Techniques for Enhanced Drone Monitoring and Position Estimation"
+retrieved_context = retriever.query_vector_store(query)
+
+final_conference, pipeline_response = pipeline(query, retrieved_context)
+
+print(final_conference)
+print(pipeline_response)
