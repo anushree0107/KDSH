@@ -32,7 +32,7 @@ set_llm_cache(InMemoryCache())
 #     retrived_context = retriver.query_vector_store(elem)
 #     retrived_contexts.append(retrived_context)
 
-def pipeline(query, retrieved_context):
+def pipeline(retriever, query, retrieved_context):
     if len(query.strip()) > 150:
         query = summarization_agent(query)
     router_agent = RouterAgent()
@@ -122,13 +122,13 @@ def pipeline(query, retrieved_context):
 #     for i in range(len(query_list)):
 #         pipeline(query_list[i], retrived_contexts[i])
 
-retriever = EMNLPRulebook()
+# retriever = EMNLPRulebook()
 
 
-query = "Leveraging Clustering Techniques for Enhanced Drone Monitoring and Position Estimation"
-retrieved_context = retriever.query_vector_store(query)
+# query = "Leveraging Clustering Techniques for Enhanced Drone Monitoring and Position Estimation"
+# retrieved_context = retriever.query_vector_store(query)
 
-final_conference, pipeline_response = pipeline(query, retrieved_context)
+# final_conference, pipeline_response = pipeline(query, retrieved_context)
 
-print(final_conference)
-print(pipeline_response)
+# print(final_conference)
+# print(pipeline_response)

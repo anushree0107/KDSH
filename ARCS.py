@@ -2,6 +2,7 @@ import streamlit as st
 import fitz  # PyMuPDF
 from final_pipeline import pipeline
 from Retriever.emnlp_retriever import EMNLPRulebook
+from selector import SelectorAgent
 
 # Function to extract text and sections from a PDF
 def extract_text_from_pdf(uploaded_file):
@@ -97,6 +98,7 @@ def extract_text_from_pdf(uploaded_file):
 
     return sections
 
+selector = SelectorAgent()
 # Streamlit App
 st.title("Research Paper Evaluation and Conference Recommendation")
 
@@ -110,25 +112,19 @@ if uploaded_file is not None:
         try:
             extracted_sections = extract_text_from_pdf(uploaded_file)
 
-            query_list = []
-
-            for section, content in extracted_sections.items():
-                query_list.append({
-                    "section": section,
-                    "content": content
-                })
+            router_journals = []
+            retrieved_context = []
+            pipeline_response = []
 
             retriver = EMNLPRulebook()
-            retrived_contexts = []
-            for query in query_list:
-                retrived_context = retriver.query_vector_store(query["content"])
-                retrived_contexts.append(retrived_context)
+            for section, content in extracted_sections.items():
+                context = retriver.query_vector_store(content)
+                retrieved_context.append(context)
+                conference, response = pipeline(retriver, content, context)
+                router_journals.append(conference)
+                pipeline_response.append(response)
 
-            query = query_list[0]["content"]
-            retrieved_context = retriver.query_vector_store(query)
-
-            # for i in range(len(query_list)):
-            final_conference, rationale = pipeline(retriver, query, retrieved_context)
+            final_conference, rationale = selector.select_conference(router_journals, retrieved_context, pipeline_response)
             st.success("PDF evaluated successfully!")
             st.write("### Recommended Conference: ", final_conference)
             st.write("**Rationale**: ", rationale)
