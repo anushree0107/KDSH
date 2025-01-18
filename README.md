@@ -60,7 +60,7 @@ ARCS employs a modular architecture with the following key components:
 5. **Run the application**:
 
    ```bash
-   python main_recommendation.py
+   python final_pipeline.py
    ```
 
 ## Usage
